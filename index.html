@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>客服后台</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/layui.css">
+  <link rel="stylesheet" href="./css/mystyle.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  	<div class="layui-header">
+  	  	<div class="layui-row">
+		    <div class="layui-col-md9">
+		        <div id="hostname_n"> 
+				   	<div class="left">
+				    	<img src="./images/de_per_logo.jpg" title="超级管理员" />
+				   	</div> 
+				   	<h1>小计</h1> 
+				   	<span class="name">超级管理员</span> 
+				   	<span><a href="http://www.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" target="_blank" class="fc_white">群英首页</a></span> 
+				   	<span class="line_s">|</span> 
+				   	<span class="gr_app_box"><a href="javascript:;" class="top_application">个人应用</a> 
+				    	<div class="pop_up_box" style="display: none;"> 
+				     		<div class="pop_up_box_top"></div> 
+						    <div class="top_pop_content"> 
+						      	<ul> 
+							       <li> <a href="http://domain.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="域名管理" target="_blank">域名管理</a> </li> 
+							       <li> <a href="http://dns.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="智能DNS" target="_blank">智能DNS</a> </li> 
+							       <li> <a href="http://host.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="虚拟主机" target="_blank">虚拟主机</a> </li> 
+							       <li> <a href="http://uc.qy.com.cn/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="CDN管理" target="_blank">CDN管理</a> </li> 
+							       <li> <a href="http://cloud.qycn.com/user/synlogin?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="云主机" target="_blank">云主机</a> </li> 
+							       <li> <a href="http://idc.qy.com.cn/login.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="IDC管理" target="_blank">IDC管理</a> </li> 
+							       <li> <a href="http://icp.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" title="网站备案" target="_blank">网站备案</a> </li> 
+						      	</ul> 
+						    </div> 
+				    	</div> 
+				    </span> 
+				</div>
+		    </div>
+		    <div class="layui-col-md3">
+		      	<div id="mtright_n">
+					<div id="mtr_funs_n">
+						<a href="index.php" class="fc_white">主页</a>
+						<span>|</span>
+						<a href="http://www.qycn.com/cckf_download.php" class="fc_white" target="_blank">下载CC客服</a>
+						<span>|</span>
+						<a href="javascript:;" class="fc_white" onclick="document.getElementById('if_content').contentWindow.location.reload();return false;">刷新</a>
+						<span>|</span>
+						<a href="http://www.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks&amp;url=http%3A%2F%2Fwww.qycn.com%2Ffeedback%2Ffeedback_add.php%3Fproduct_id%3D2" target="_blank" class="fc_white">问题反馈</a>
+						<span>|</span>
+						<a href="synlogin.php?a=logout" class="fc_white" onclick="javascript: return confirm('确定退出?');">退出</a>
+					</div>
+					<form style="display:none" id="search_form" name="search_form" action="" method="post" target="if_content_t">
+						<div id="mtr_Search_n">
+							<input name="keyword" id="keyword" class="mtr_key" type="text" value="全文搜索" onclick="enterChaneg()" onblur="exitChangec()">
+							<img class="qm_search_cf" src="./images/button_ser.gif" onclick="$('#search_form').submit();" title="快速搜索" style="cursor:pointer;">
+						</div>
+					</form>
+				</div>
+		    </div>
+		</div>
+  	</div>
+  	<div id="nav_n">
+		<ul class="navul_n">
+			<li class="index01 frist_li" style="">
+			<span>
+			<a href="http://uc.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" class="fc_white my_c_bg">我的企业</a>
+			</span>
+			</li>
+			<li class="" style=""><span><a class="fc_white" href="synlogin.php?outer=https%3A%2F%2Fqycc.qycn.com%2Fsynlogin.php%3Fcfgid%3D6">群英CC</a></span></li>
+			<li class="index" style=""><span><a class="fc_white" href="index.php">CC客服</a></span></li>
+			<li class="last_but_hidden" style="display: none;">
+			<img src="./images/button_more.gif">
+			<div id="nav_menu" style="display:none">
+				<ul>
+				</ul>
+			</div>
+			</li>
+		</ul>
+	</div>
+	<div id="nav_n_2">
+		<div style="float:left;height:36px;">
+			<ul class="navul_n_2">
+				<li rel="account_center" item="item-11-1" class="nav_nindex" style="margin-left:5px"><span style=" cursor: pointer">账号中心</span></li>
+				<li rel="web_manage" link="?c=Urlmanage" class=""><span style=" cursor: pointer">商家站点 </span></li>
+				<li rel="clerk_manage" link="?c=ClerkManage" class=""><span style=" cursor: pointer">客服管理 </span></li>
+				<li rel="roleset" link="?c=RoleSet" class=""><span style=" cursor: pointer">权限管理 </span></li>
+				<li chk-web="0" rel="nav_setting_center" item="item-1-1" style="position:relative;" class=""><span style=" cursor: pointer">设置中心</span>
+				<div style="display:none;width: 23px;height: 21px;background: url(./images/new_z2.gif) no-repeat;position: absolute;left: 66px;top: 2px;">
+				</div>
+				</li>
+				<li chk-web="0" rel="clerk_monitor" item="item-5-1" class=""><span style=" cursor: pointer">客服监控 </span></li>
+				<li chk-web="0" rel="visitor_manage" item="item-6-1" class=""><span style=" cursor: pointer">客户管理 </span></li>
+				<li chk-web="0" rel="recode" item="item-7-2" class=""><span style=" cursor: pointer">记录中心 </span></li>
+			</ul>
+		</div>
+		<div id="select_website" style="display: none;">
+			<div class="select2-container" id="s2id_select_website_slt" style="width:218px;height:36px;">
+				<a href="javascript:void(0)" class="select2-choice" tabindex="-1"><span class="select2-chosen" id="select2-chosen-1">http://linheqin.com</span><abbr class="select2-search-choice-close"></abbr><span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1" tabindex="0">
+				<div class="select2-drop select2-display-none select2-with-searchbox">
+					<div class="select2-search">
+						<label for="s2id_autogen1_search" class="select2-offscreen"></label><input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">
+					</div>
+					<ul class="select2-results" role="listbox" id="select2-results-1">
+					</ul>
+				</div>
+			</div>
+			<select name="website" id="select_website_slt" style="width:218px;height:36px;" tabindex="-1" title="" class="select2-offscreen">
+				<option value="133299" selected="">http://linheqin.com</option>
+			</select>
+		</div>
+		<div class="slc_web_tip_ft">
+		</div>
+		<div class="slc_web_tip">
+			<div class="inner">
+				<div class="close">
+				</div>
+				<div class="know">
+				</div>
+			</div>
+		</div>
+	</div>
+  	<div class="layuiCon">
+  		<iframe src="module_page/accountInfo/accountInfo.html" frameborder="0"></iframe>
+  	</div>
+</div>
+<script src="./js/jq.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/layui.js"></script>
+<script>
+	//JavaScript代码区域
+	layui.use('element', function(){
+	  var element = layui.element;
+	  
+	});
+</script>
+</body>
+</html>
