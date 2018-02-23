@@ -83,17 +83,18 @@
 	<div id="nav_n_2">
 		<div style="float:left;height:36px;">
 			<ul class="navul_n_2">
-				<li rel="account_center" item="item-11-1" class="nav_nindex" style="margin-left:5px"><span style=" cursor: pointer">账号中心</span></li>
-				<li rel="web_manage" link="?c=Urlmanage" class=""><span style=" cursor: pointer">商家站点 </span></li>
-				<li rel="clerk_manage" link="?c=ClerkManage" class=""><span style=" cursor: pointer">客服管理 </span></li>
-				<li rel="roleset" link="?c=RoleSet" class=""><span style=" cursor: pointer">权限管理 </span></li>
-				<li chk-web="0" rel="nav_setting_center" item="item-1-1" style="position:relative;" class=""><span style=" cursor: pointer">设置中心</span>
-				<div style="display:none;width: 23px;height: 21px;background: url(./images/new_z2.gif) no-repeat;position: absolute;left: 66px;top: 2px;">
-				</div>
+				<li rel="account_center" item="item-11-1" class="nav_top_btn nav_nindex" style="margin-left:5px"><span style=" cursor: pointer">账号中心</span></li>
+				<li rel="url_manage" class="nav_top_btn"><span style=" cursor: pointer">商家站点 </span></li>
+				<li rel="clerk_manage" class="nav_top_btn"><span style=" cursor: pointer">客服管理 </span></li>
+				<li rel="role_set" class="nav_top_btn"><span style=" cursor: pointer">权限管理 </span></li>
+				<li rel="nav_setting_center" style="position:relative;" class="nav_top_btn">
+					<span style=" cursor: pointer">设置中心</span>
+					<div style="display:none;width: 23px;height: 21px;background: url(./images/new_z2.gif) no-repeat;position: absolute;left: 66px;top: 2px;">
+					</div>
 				</li>
-				<li chk-web="0" rel="clerk_monitor" item="item-5-1" class=""><span style=" cursor: pointer">客服监控 </span></li>
-				<li chk-web="0" rel="visitor_manage" item="item-6-1" class=""><span style=" cursor: pointer">客户管理 </span></li>
-				<li chk-web="0" rel="recode" item="item-7-2" class=""><span style=" cursor: pointer">记录中心 </span></li>
+				<li chk-web="0" rel="clerk_monitor" class="nav_top_btn"><span style=" cursor: pointer">客服监控 </span></li>
+				<li chk-web="0" rel="visitor_manage" class="nav_top_btn"><span style=" cursor: pointer">客户管理 </span></li>
+				<li chk-web="0" rel="recode" class="nav_top_btn"><span style=" cursor: pointer">记录中心 </span></li>
 			</ul>
 		</div>
 		<div id="select_website" style="display: none;">
@@ -123,18 +124,12 @@
 		</div>
 	</div>
   	<div class="layuiCon">
-  		<iframe src="module_page/accountInfo/accountInfo.html" frameborder="0"></iframe>
+  		<iframe src="module_page/account_center/account_center.html" frameborder="0"></iframe>
   	</div>
 </div>
 <script src="./js/jq.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/layui.js"></script>
-<script>
-	//JavaScript代码区域
-	layui.use('element', function(){
-	  var element = layui.element;
-	  
-	});
-</script>
+<script src="./js/myscript.js"></script>
 </body>
 </html>

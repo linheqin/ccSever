@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layout 后台大布局 - Layui</title>
+    <title>账号中心</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/layui.css">
     <!--引入wangEditor.css-->
@@ -608,35 +608,6 @@
     <script src="../../js/layui.js"></script>
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
-    <script>
-        layui.use('element', function(){
-          var element = layui.element;
-        });
-        $(document).ready(function() {
-            $('.mynavi li').click(function(){
-                $(this).siblings().css('background','none').end().css('background','url('+$(this).attr('bg')+')');
-                $('.mynavi .help_info').hide();
-                $('.mynavi #' +  $(this).attr('class')).show();
-            });
-            $(".layui-nav dd").on("click",function(){
-                var thisIndex = $(this).attr("data-index");
-                console.log(thisIndex);
-                $(".nav_tab_item").eq(thisIndex).removeClass("none").siblings("div.nav_tab_item").addClass("none");
-                $('.summernote1').summernote({
-                    width: 750,
-                    height: 120,
-                    tabsize: 2,
-                    lang: 'zh-CN'
-                });
-                 $('.summernote2').summernote({
-                    width: 750,
-                    height: 120,
-                    tabsize: 2,
-                    lang: 'zh-CN'
-                });
-            })
-        })
-    </script>
-
+    <script src="../../js/myscript.js"></script>
 </body>
 </html>
