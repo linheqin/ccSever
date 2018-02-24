@@ -899,7 +899,17 @@ textarea,input,select {
   *padding: 2px 0 0 0;
   background: url(../images/bu_bgs.gif) no-repeat;
 }
-
+.button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8, .button9 {
+  border: none;
+  height: 23px;
+  cursor: pointer;
+  background: url(../images/bu_bgs.gif) no-repeat;
+}
+.button6 {
+  width: 88px;
+  color: #1A5094;
+  background-position: left -400px;
+}
 .button1 {
   width: 50px;
   color: #4E7586;
@@ -917,7 +927,25 @@ textarea,input,select {
   color: #587293;
   background-position: left -400px;
 }
-
+.layui-layer .layui-layer-title {
+  background: url("../images/bg-repeated1.gif") repeat;
+  height: 28px;
+  line-height: 28px;
+  color: #fff;
+}
+.layui-layer .layui-layer-setwin {
+  top: 8px;
+}
+.layui-layer .layui-layer-btn a {
+  background: url(../images/bt10.png) no-repeat;
+  border: 0px;
+  width: 68px;
+  height: 24px;
+  line-height: 24px;
+  margin-right: 10px;
+  color: #1A5094;
+  cursor: pointer;
+}
 .button_21,.button_22 {
   padding: 0px 12px 0;
   *padding: 2px 10px 0;
@@ -927,7 +955,12 @@ textarea,input,select {
   border-bottom: solid 1px #404040;
   border-right: solid 1px #404040;
 }
-
+.mytable td a {
+  color: #003E7E;
+}
+.mytable td a:hover {
+  color: #f20;
+}
 .button_21 {
   width: 75px
 }

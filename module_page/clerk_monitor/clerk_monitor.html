@@ -58,6 +58,7 @@
             padding: 0px;
             margin: 0px;
         }
+
         .mynavi ul {
             width: 751px;
             height: 45px;
@@ -114,36 +115,39 @@
         <div class="nav_tab_item">
             <div class="location">您当前的位置：CC客服 &gt; <span>客服监控</span> &gt; <span>客服团队</span></div>
             <form class="layui-form"> 
-              <div class="layui-form-item layerui_wrap">
-                <div class="layui-inline">
-                    时间：
+                <div class="layui-form-item layerui_wrap">
+                    <div class="layui-inline">
+                        时间：
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <input type="text" class="layui-input" id="test1">
+                    </div>
+                    <div class="layui-inline">
+                        至
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <input type="text" class="layui-input" id="test1">
+                    </div>
+                    <div class="layui-inline">
+                        客服组
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <select name="city" lay-verify="">
+                          <option value="">不限</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        客服人员
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <select name="city" lay-verify="">
+                          <option value="">不限</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <input type="submit" value="查询" class="button2">
+                    </div>
                 </div>
-                <div class="layui-inline layui-inline1">
-                    <input type="text" class="layui-input" id="test1">
-                </div>
-                <div class="layui-inline">
-                    至
-                </div>
-                <div class="layui-inline layui-inline1">
-                    <input type="text" class="layui-input" id="test1">
-                </div>
-                <div class="layui-inline">
-                    客服组
-                </div>
-                <div class="layui-inline layui-inline1">
-                    <select name="city" lay-verify="">
-                      <option value="">不限</option>
-                    </select> 
-                </div>
-                <div class="layui-inline">
-                    客服人员
-                </div>
-                <div class="layui-inline layui-inline1">
-                    <select name="city" lay-verify="">
-                      <option value="">不限</option>
-                    </select> 
-                </div>
-              </div>
             </form>
             <table class="layui-table" lay-skin="line" lay-size="sm" style="text-align:center">
                 <thead style="text-align:center">

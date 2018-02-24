@@ -135,4 +135,25 @@ $(document).ready(function() {
         $(this).addClass('sel').siblings().removeClass('sel');
         $("#qxSet .list-group").addClass('none').eq(thisIndex).removeClass('none')
     })
+
+    // 点击添加对话分类
+
+    var addTallTypeStr =
+        '<form action="">' +
+            '<div class="layui-form-item" style="padding: 0 15px;">' +
+                '<input type="text" name="title" required id="roleName" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">'+
+            '</div>'+
+            '<p style="padding: 10px 15px 5px;">提示：最多可输入100个字符</p>'+
+        '</form>';
+    $("#addTallType").on("click", function(){
+        layer.open({
+            type: 1,
+            area: ['300px', '160px'],
+            btn: ['确认', '取消'],
+            content: addTallTypeStr,
+            success: function(layero, index){
+                
+            }
+        })
+    })
 })

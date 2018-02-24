@@ -115,21 +115,21 @@
     </div>
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <!-- 账号信息 -->
+        <!-- 对话记录 -->
         <div class="nav_tab_item">
-            <div class="location">您当前的位置：CC客服 &gt; <span>账户中心</span> &gt; <span>账户信息</span></div>
+            <div class="location">您当前的位置：CC客服 &gt; <span>记录中心</span> &gt; <span>留言记录</span></div>
             <div id="chat_record" class="chat_record mt10">
                 <div class="fc_3">
-                    <form class="layui-form"> 
+                    <form class="layui-form">
                         <div class="layui-form-item layerui_wrap layerui_wrap1">
                             <div class="layui-inline">
-                                对话分类: 
+                                对话分类:
                             </div>
                             <div class="layui-inline layui-inline1">
                                 <select name="city" lay-verify="">
                                     <option value="">不限</option>
                                     <option value="1">未分类</option>
-                                </select> 
+                                </select>
                             </div>
                             <div class="layui-inline">
                                 处理状态
@@ -139,7 +139,7 @@
                                     <option value="">不限</option>
                                     <option value="1">未处理</option>
                                     <option value="2">已处理</option>
-                                </select> 
+                                </select>
                             </div>
                             <div class="layui-inline">
                                 时间
@@ -160,18 +160,18 @@
                             <div class="layui-inline">
                                  <div class="search_ss search_ss_bgp">精简搜索</div>
                             </div>
-                           
+
                         </div>
                     </form>
-                    <form class="layui-form nones"> 
+                    <form class="layui-form nones">
                         <div class="layui-form-item layerui_wrap layerui_wrap1" style="margin-top:2px">
                             <div class="layui-inline">
-                                 客服组: 
+                                 客服组:
                             </div>
                             <div class="layui-inline layui-inline1">
                                 <select name="city" lay-verify="">
                                     <option value="">不限</option>
-                                </select> 
+                                </select>
                             </div>
                             <div class="layui-inline">
                                 客服人员
@@ -179,7 +179,7 @@
                             <div class="layui-inline layui-inline1">
                                 <select name="city" lay-verify="">
                                     <option value="">不限</option>
-                                </select> 
+                                </select>
                             </div>
 
                         </div>
@@ -259,223 +259,79 @@
 
                         </div>
                     </div>
-                   
+
                 </div>
-            </div>
-        </div>
-         <!-- 对话记录 -->
-        <div class="nav_tab_item none">
-            <div class="location">您当前的位置：CC客服 &gt; <span>账户中心</span> &gt; <span>账户明细</span></div>
-            <div class="tipsbar_default" style="height:42px;line-height:42px;padding:0;">
-                <p style="padding-left:10px;">
-                    <span style="color:#f60;">温馨提醒：</span>
-                             您正在使用的是“
-                    <span style="color:#FF6600;">试用版</span>”套餐，<span style="color:#f30;">已于2018-01-09 11:21过期</span>，继续使用，请续费！如有疑问，请<a href="javascript:;" onclick="window.open('http://kefu.qycn.com/vclient/chat/?websiteid=7987&amp;groupid=24573&amp;originPageTitle=%E8%87%AA%E5%8A%A9%E8%B4%AD%E4%B9%B0-%E8%B4%A6%E6%88%B7%E6%98%8E%E7%BB%86-CC2292391', '_blank', 'toolbar=no,scrollbars=yes,menubar=no,status=no,resizable=yes,location=no')" style="color:#459ae9;"> 联系我们</a>！
-                    <a href="?c=AccountCenter&amp;a=userorder&amp;addBackBtn=1" style="display:block;cursor:pointer;height:22px;line-height:22px;margin-top:8px;margin-right:5px;float:right;padding:2px 6px;;background-color:#4FB910;color:white;border-radius:3px;">我的订单</a>
-                </p>
-            </div>
-            <div style="margin-top:20px;">
-                <table class="service_tab" width="100%" border="0" cellspacing="0">
-                    <tbody>
-                        <tr class="service_tab_th">
-                            <td>
-                                套餐
-                            </td>
-                            <td>
-                                产品名称
-                            </td>
-                            <td>
-                                数量
-                            </td>
-                            <td>
-                                到期时间
-                            </td>
-                            <td>
-                                剩余时间
-                            </td>
-                            <td>
-                                操作
-                            </td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" style="border-right:1px solid #e8e8e8;font-weight:bold;color:#2f8ebc;">
-                                试用版
-                            </td>
-                            <td>
-                                客服坐席
-                            </td>
-                            <td>
-                                <span style="color:#006633;">0</span>个
-                            </td>
-                            <td>
-                                2018-01-09 11:21
-                            </td>
-                            <td>
-                                <span style="color:red;">0</span>天
-                            </td>
-                            <td width="186">
-                                <a href="?c=AccountCenter&amp;a=purchaseService&amp;act=5">在线购买</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                商家站点
-                            </td>
-                            <td>
-                                <span style="color:#006633;">2</span>个
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                <a href="?c=AccountCenter&amp;a=purchaseService&amp;act=6">增加站点</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div style="margin-top:20px;color:#444;">
-                <p style="font-size:15px;font-weight:bold;color:#f60;">
-                    购买提醒
-                </p>
-                <p style="padding-left:10px;line-height:18px;margin-bottom:5px;padding-bottom: 5px;">
-                    <span style="color:#007FF4;line-height:24px;font-weight:bold;">1、CC客服价格？</span><br>
-                            CC在线客服系统有
-                    <span style="color:#FF3300;">企业版</span>和<span style="color:#FF3300;">高级商务版</span>。<br>
-                    企业版，是按客服人数收费的，<span style="color:#FF3300;">599元/年/坐席</span>（含全部功能）；<br>
-                            高级商务版，是
-                    <span style="color:#FF3300;">3999元/年</span>，无限坐席的（含全部功能），详细你可以在这里了解一下：
-                    <a href="http://www.qycn.com/kf/index_35.html?fr=kfbe" target="_blank" style="color:#007FF4;">http://www.qycn.com/kf/index_35.html</a>
-                </p>
-                <p style="padding-left:10px;line-height:18px;margin-bottom:5px;padding-bottom: 5px;">
-                    <span style="color:#007FF4;line-height:24px;font-weight:bold;">2、什么是客服坐席？</span><br>
-                            客服坐席，是指客服人员的并发，同时登录使用的客服人员不能超过购买的坐席数量。比如某公司有10个客服人员，购买了5个坐席，那么同时只能有5个客服人员登录接待访客。
-                </p>
-                <p style="padding-left:10px;line-height:18px;">
-                    <span style="color:#007FF4;line-height:24px;font-weight:bold;">3、使用一段时间后增加坐席，费用如何计算？</span><br>
-                            新增坐席的有效期将与原坐席相同。
-                    <span style="color:#FF3300;">599元/坐席/年</span>，系统会自动根据使用时间折算费用。例如，现有坐席还有100天到期，需新增2个坐席，则费用计算公式为：100/365*599*2=328.22
-                </p>
             </div>
         </div>
          <!-- 留言记录 -->
         <div class="nav_tab_item none">
-            <div class="location">
-                您当前的位置：CC客服 &gt; <span>账户中心</span> &gt; <span>我的订单</span>
-            </div>
-            <div style="height:28px;border-bottom:1px solid #C9D2CB;position: relative;margin-bottom:10px;">
-                <div style="height:28px;width:77px;border-bottom:2px solid #44b549;font-size:18px;color:#346699">
-                    我的订单
+            <div class="location">您当前的位置：CC客服 &gt; 记录中心 &gt; <span>留言记录</span></div>
+            <div class="pjmsg_ts17">免费开启留言转发功能，客服离线商机不离线！&nbsp;<a target="_self" href="">立即设置</a></div>
+            <form class="layui-form">
+                <div class="layui-form-item layerui_wrap layerui_wrap1">
+                    <div class="layui-inline">
+                        处理状态
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <select name="city" lay-verify="">
+                            <option value="">不限</option>
+                            <option value="1">已处理</option>
+                            <option value="2">未处理</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        时间：
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <input type="text" class="layui-input" id="test1">
+                    </div>
+                    <div class="layui-inline">
+                        至
+                    </div>
+                    <div class="layui-inline layui-inline1">
+                        <input type="text" class="layui-input" id="test1">
+                    </div>
+                    <div class="layui-inline">
+                        <input type="submit" value="搜索" class="button2">
+                    </div>
+                    <div class="layui-inline">
+                        共 <span style="color:#f20">0</span> 条留言， 其中 已处理(<span style="color:#f20">0</span>) 未处理(<span style="color:#f20">0</span>)
+                    </div>
                 </div>
-            </div>
-            <div style="margin-top:20px;">
-                <table id="orderinfo_table" class="service_tab" width="100%" border="0" cellspacing="0">
-                    <tbody>
-                    <tr class="service_tab_th">
-                        <td>
-                            订单编号
-                        </td>
-                        <td>
-                            产品名称
-                        </td>
-                        <td>
-                            创建时间
-                        </td>
-                        <td>
-                            金额（元）
-                        </td>
-                        <td>
-                            状态
-                        </td>
-                        <td>
-                            操作
-                        </td>
-                    </tr>
-                    <tr id="orderinfo_loading">
-                        <td>
-                            32342
-                        </td>
-                        <td>
-                            打的费
-                        </td>
-                        <td>
-                            2017-12-12 12:12:21
-                        </td>
-                        <td>
-                            122
-                        </td>
-                        <td>
-                            搜索
-                        </td>
-                        <td>
-                            <button type="button" class="layui-btn layui-btn-normal smoll_btn">删除</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            </form>
+            <ul class="list-group">
+                <li class="list-group-item">留言1 时间2017-12-1</li>
+                <li class="list-group-item">留言2 时间2017-12-2</li>
+                <li class="list-group-item">留言3 时间2017-12-3</li>
+                <li class="list-group-item">留言4 时间2017-12-4</li>
+            </ul>
         </div>
          <!-- 对话分类 -->
         <div class="nav_tab_item none">
-            <div class="location">
-                您当前的位置：CC客服 &gt; <span>账号中心</span> &gt; <span>修改密码</span>
-            </div>
-            <div class="tipsbar_default" style="padding-left:10px;">
-                <p style="line-height:20px;">
-                    <span class="span_dot">●&nbsp;</span>定期更换密码可以让您的账户更加安全，建议密码采用字母和数字混合，并且不短于6位。
-                </p>
-            </div>
-            <div style="width:636px;margin:0 auto;margin-top:25px;">
-                <form id="changepwdform" name="changepwdform" action="index.php?c=AccountCenter&amp;a=changepwd" method="post">
-                    <table border="0" cellspacing="0" cellpadding="0" class="tab_21">
-                    <tbody>
+            <div class="location">您当前的位置：CC客服 &gt; <span>记录中心</span> &gt; <span>设置对话分类</span></div>
+            <div><input type="button" id="addTallType" value="添加对话分类" class="button6" rel="type_window"></div>
+            <table class="layui-table mytable" lay-skin="line" lay-size="sm" style="text-align:center">
+                <thead style="text-align:center">
                     <tr>
-                        <th scope="row">
-                            <span class="fc_red">* </span>请输入原密码：
-                        </th>
-                        <td>
-                            <input type="text" name="stpzdtx1" style="display:none;"><input type="password" name="stpzdtx1" style="display:none;"><input name="oldPassword" id="oldPassword" type="password" class="clktext" style=" width:200px;">&nbsp;
-                        </td>
-                        <td class="td_hint_str">
-                            <div id="oldPasswordTip" style="height: 32px; margin: 0px; padding: 0px; background: transparent;">
-                            </div>
+                        <th style="text-align: left">对话分类名称</th>
+                        <th style="text-align: right">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left">sdfasdf</td>
+                        <td style="text-align: right">
+                            <a href="">上移</a>
+                            <span>|</span>
+                            <a href="">下移</a>
+                            <span>|</span>
+                            <a href="">编辑</a>
+                            <span>|</span>
+                            <a href="">删除</a>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row">
-                            <span class="fc_red">* </span>请输入新密码：
-                        </th>
-                        <td>
-                            <input type="text" name="stpzdtx1" style="display:none;"><input type="password" name="stpzdtx2" style="display:none;"><input name="password1" id="password1" type="password" class="clktext" style=" width:200px;">&nbsp;
-                        </td>
-                        <td class="td_hint_str">
-                            <div id="password1Tip" style="height: 32px; margin: 0px; padding: 0px; background: transparent;">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <span class="fc_red">* </span>请确认新密码：
-                        </th>
-                        <td>
-                            <input name="password2" id="password2" type="password" class="clktext" style=" width:200px;">&nbsp;
-                        </td>
-                        <td class="td_hint_str">
-                            <div id="password2Tip" style="height: 32px; margin: 0px; padding: 0px; background: transparent;">
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    <div style="margin-left:120px;margin-top:20px;">
-                        <input type="button" id="submitcppwd" class="button12 button12-save" value="保存">
-                        <input type="reset" id="reset" class="button12 button12-cancel" style="margin-left:20px;" value="重置">
-                    </div>
-                </form>
-            </div>
+                </tbody>
+            </table>
         </div>
        
     </div>
