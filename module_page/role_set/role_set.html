@@ -112,7 +112,7 @@
         .list-group-item span,.panel-heading span,.list-group-item a,.panel-heading span {
             color: #365C8D;
         }
-        .list-group-item.sel,.list-groups .list-group-item:hover {
+        .list-groups .list-group-item.sel, .list-groups .list-group-item:hover {
             background-color: #A3DAFF;
         }
         .list-group-item.sel .left,.list-groups .list-group-item:hover .left {
@@ -132,15 +132,15 @@
                     <a href="javascript:void(0);" class="right addRole">+添加角色</a>
                 </div>
                 <div class="list-group list-groups">
-                    <a href="#" class="list-group-item sel clearfix">
+                    <a href="#" class="list-group-item sel clearfix" data-role="0" >
                        <span class="left text-left">超级管理员</span>
                        <span class="right text-right">不可删除</span>
                     </a>
-                     <a href="#" class="list-group-item clearfix">
+                     <a href="#" class="list-group-item clearfix" data-role="1" >
                        <span class="left text-left">应用管理员</span>
                        <span class="right text-right">不可删除</span>
                     </a>
-                    <a href="#" class="list-group-item clearfix">
+                    <a href="#" class="list-group-item clearfix" data-role="2" >
                        <span class="left text-left">普通客服</span>
                        <span class="right text-right">不可删除</span>
                     </a>
@@ -149,296 +149,296 @@
         </div>
         <div class="layui-col-xs8 layui-col-sm9 layui-col-md10">
             <div class="panel panel-default">
-                <div class="panel-body" style="padding:0">
+                <div class="panel-body" id="qxSet" style="padding:0">
                     <h3 class="quanxian_tits">权限设置</h3>
                     <ul class="list-group" data-role="0" style="margin:0">
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="1"> 网站管理
+                                <input type="checkbox" id="inlineCheckbox1" readonly="readonly" checked value="1"> 网站管理
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="2"> 客服管理
+                                <input type="checkbox" id="inlineCheckbox2" checked readonly="readonly" value="2"> 客服管理
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="3"> 权限管理
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox3" value="3"> 权限管理
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="4"> 设置中心
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox4" value="4"> 设置中心
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions1"  id="inlineRadio1" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="5"> 客服监控 
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions1" id="inlineRadio2" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="6"> 客户管理  
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox5" value="5"> 客服监控 
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="7"> 对话记录   
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="13"> 仅能查看自己的记录
+                                <input type="radio" name="inlineRadioOptions2" id="inlineRadio6" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="8"> 留言记录    
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox6" value="6"> 客户管理  
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions3" id="inlineRadio7" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="9"> 统计分析     
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions3" id="inlineRadio8" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="10">  智能机器人     
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox7" value="7"> 对话记录   
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions4" id="inlineRadio9" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions4" id="inlineRadio10" readonly="readonly" value="12"> 所在网站
                             </label>
-                        </li>
-                    </ul>
-                    <ul class="list-group none" data-role="1" style="margin:0">
-                        <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="1"> 网站管理
+                                <input type="radio" name="inlineRadioOptions4" id="inlineRadio11" readonly="readonly" value="13"> 仅能查看自己的记录
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="2"> 客服管理
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox8" value="8"> 留言记录    
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions5" checked  id="inlineRadio12" value="14" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions5" id="inlineRadio13" readonly="readonly" value="15"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="3"> 权限管理
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox9" value="9"> 统计分析     
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions6" id="inlineRadio14" value="16" checked readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions6" id="inlineRadio15" readonly="readonly" value="17"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="4"> 设置中心
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox10" value="10">  智能机器人     
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions7" id="inlineRadio16" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="5"> 客服监控 
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="6"> 客户管理  
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="7"> 对话记录   
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="13"> 仅能查看自己的记录
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="8"> 留言记录    
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="9"> 统计分析     
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="10">  智能机器人     
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions7" id="inlineRadio17" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                     </ul>
-                    <ul class="list-group none" data-role="2" style="margin:0">
+                    <ul class="list-group none" data-role="0" style="margin:0">
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="1"> 网站管理
+                                <input type="checkbox" id="inlineCheckbox1" readonly="readonly" checked value="1"> 网站管理
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="2"> 客服管理
+                                <input type="checkbox" id="inlineCheckbox2" checked readonly="readonly" value="2"> 客服管理
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="3"> 权限管理
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox3" value="3"> 权限管理
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="4"> 设置中心
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox4" value="4"> 设置中心
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions1_1"  id="inlineRadio1" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="5"> 客服监控 
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions1_1" id="inlineRadio2" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="6"> 客户管理  
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox5" value="5"> 客服监控 
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions2_1" id="inlineRadio5_1" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="7"> 对话记录   
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="13"> 仅能查看自己的记录
+                                <input type="radio" name="inlineRadioOptions2_1" id="inlineRadio6_1" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="8"> 留言记录    
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox6" value="6"> 客户管理  
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions3_1" id="inlineRadio7" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
-                            </label>
-                        </li>
-                        <li class="list-group-item">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="9"> 统计分析     
-                            </label>
-                            <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions3_1" id="inlineRadio8" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                         <li class="list-group-item">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="10">  智能机器人     
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox7" value="7"> 对话记录   
                             </label>
                             <label class="checkbox-inline">
-                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="11"> 全部网站
+                                 <input type="radio" name="inlineRadioOptions4_1" id="inlineRadio9" value="11" checked readonly="readonly"> 全部网站
                             </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="12"> 所在网站
+                                <input type="radio" name="inlineRadioOptions4_1" id="inlineRadio10" readonly="readonly" value="12"> 所在网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions4_1" id="inlineRadio11" readonly="readonly" value="13"> 仅能查看自己的记录
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox8" value="8"> 留言记录    
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions5_1" checked  id="inlineRadio12" value="14" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions5_1" id="inlineRadio13" readonly="readonly" value="15"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox9" value="9"> 统计分析     
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions6_1" id="inlineRadio14" value="16" checked readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions6_1" id="inlineRadio15" readonly="readonly" value="17"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox10" value="10">  智能机器人     
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions7_1" id="inlineRadio16" value="11" checked readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions7_1" id="inlineRadio17" readonly="readonly" value="12"> 所在网站
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="list-group none" data-role="0" style="margin:0">
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" readonly="readonly" value="1"> 网站管理
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox2" readonly="readonly" value="2"> 客服管理
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" readonly="readonly" id="inlineCheckbox3" value="3"> 权限管理
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" readonly="readonly" id="inlineCheckbox4" value="4"> 设置中心
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions1_2"  id="inlineRadio1" value="11" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions1_2" id="inlineRadio2" readonly="readonly" value="12"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox5" value="5"> 客服监控 
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions2_2" id="inlineRadio5" value="11" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions2_2" id="inlineRadio6" readonly="readonly" checked value="12"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox6" value="6"> 客户管理  
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions3_2" id="inlineRadio7" value="11"  readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions3_2" id="inlineRadio8" readonly="readonly" checked value="12"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox7" value="7"> 对话记录   
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions4_2" id="inlineRadio9" value="11" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions4_2" id="inlineRadio10" readonly="readonly" checked value="12"> 所在网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions4" id="inlineRadio11" readonly="readonly" value="13"> 仅能查看自己的记录
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox8" value="8"> 留言记录    
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions5_2" id="inlineRadio12" value="14" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions5_2" checked id="inlineRadio13" readonly="readonly" value="15"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked readonly="readonly" id="inlineCheckbox9" value="9"> 统计分析     
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions6_2" id="inlineRadio14" value="16" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions6_2" id="inlineRadio15" readonly="readonly" checked value="17"> 所在网站
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" readonly="readonly" id="inlineCheckbox10" value="10">  智能机器人     
+                            </label>
+                            <label class="checkbox-inline">
+                                 <input type="radio" name="inlineRadioOptions7_2" id="inlineRadio16" value="11" readonly="readonly"> 全部网站
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="inlineRadioOptions7_2" id="inlineRadio17" readonly="readonly" value="12"> 所在网站
                             </label>
                         </li>
                     </ul>
@@ -446,14 +446,14 @@
             </div>
             <div class="page_max" style="padding-left:0">
                 <input id="rolesubmit" name="submit" type="submit" value="提交修改" class="button2">&nbsp;&nbsp;
-                <input id="rolecancel" onclick="location.href='index.php?c=RoleSet&amp;groupid=1990';" name="rolecancel" type="button" value="取消" class="button2">
+                <input id="rolecancel" name="rolecancel" type="button" value="取消" class="button2">
             </div>
         </div>
       </div>
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/layui.js"></script>
-    <script src="../..//summernote.js"></script>
+    <script src="../../summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
 </body>
