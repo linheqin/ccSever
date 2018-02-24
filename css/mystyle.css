@@ -615,7 +615,7 @@ input[type=checkbox], input[type=radio] {
 }
 .ser_wrap_1 .contens {
   height: calc(100% - 24px);  
-  overflow-y:auto
+  overflow-y:auto;
 }
 .ser_wrap_1 .d_title {
     height: 24px;
