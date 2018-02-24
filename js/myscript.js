@@ -1,12 +1,13 @@
 //JavaScript代码区域
-layui.use(['laydate', 'laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element'], function(){
+layui.use(['laydate', 'laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
   	var element = layui.element;
-  	var form = layui.form,
-  	layer = layui.layer,
+  	var form = layui.form;
+  	var layer = layui.layer,
   	layedit = layui.layedit,
   	laydate = layui.laydate;
   	var $ = layui.jquery, 
   	layer = layui.layer; //独立版的layer无需执行这一句
+
 });
 // 代码
 $(document).ready(function() {
@@ -43,10 +44,67 @@ $(document).ready(function() {
     	$(".layuiCon iframe").attr("src", url);
     })
     // 点击添加角色
+
+    var addRoleMaskStr =
+    '<form action="">' +
+        '<div class="layui-form-item">' +
+            '<label class="layui-form-label">角色名称</label>'+
+            '<div class="layui-input-block">'+
+                '<input type="text" name="title" required id="roleName" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">'+
+            '</div>'+
+        '</div>'+
+        '<p id="roleNamePit">最多可输入20个字符.</p>'+
+        '<div class="layui-form-item">' +
+            '<label class="layui-form-label">复制角色</label>'+
+            '<div class="layui-input-block">'+
+                '<select class="form-control" id="roleSelect">'+
+                '</select>'+
+                '<span>基于该角色进行权限修改</span>'+
+            '</div>'+
+        '</div>'+
+    '</form>';
+
+
+    var parentElem = parent;
     $(".addRole").on("click", function(){
     	layer.open({
 		  	type: 1, 
-		  	content: '传入任意的文本或html' //这里content是一个普通的String
+            area: ['370px', '210px'],
+            btn: ['确认', '取消'],
+            success: function(layero, index){
+                var optionStr = '<option>应用管理员</option><option>普通客服</option>';
+                $("#roleSelect").html(optionStr);
+            },
+            yes: function(index, layero){
+                //按钮【按钮一】的回调
+                var roleName = $("#roleName").val();
+                var roleSelect = $("#roleSelect").val();
+                var roleNamePit = $("#roleNamePit");
+                if(roleName == "") {
+                    roleNamePit.html("<span style='color:#f60'>角色名称不能为空！</span>");
+                    return false;
+                }
+                if(roleName.length > 20) {
+                   roleNamePit.html("<span style='color:#f60'>角色名称不能大于20个字！</span>");
+                    return false; 
+                }
+                roleNamePit.html("最多可输入20个字符.");
+
+                layer.close(index);
+
+            },
+            btn2: function(index, layero){
+                //按钮【按钮二】的回调
+            },
+		  	content: addRoleMaskStr //这里content是一个普通的String
 		});
+    })
+
+    // 点击切换角色改变不同的角色权限
+    $(".list-groups").on("click", ".list-group-item", function(){
+        var thisRoleId = $(this).attr("data-role");
+        var thisIndex = $(this).index();
+        $(this).addClass('sel').siblings().removeClass('sel');
+        $("#qxSet .list-group").addClass('none').eq(thisIndex).removeClass('none')
     })
 })
