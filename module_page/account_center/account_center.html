@@ -10,7 +10,7 @@
     <!--引入wangEditor.css-->
     <link href="../../summernote.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/mystyle.css">
-
+    <script src="../../js/common.js"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -609,5 +609,22 @@
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
+    <script>
+        $(function(){
+
+            // //请求个人信息
+            function getPeopleInfo() {
+                $.ajax({
+                    url: urlParam.getPeopleInfo,
+                    data: {
+                        companyId: 1,
+                        memberId: 12
+                    },
+                    success: function(msg) {}
+                })
+            }
+            getPeopleInfo();
+        })
+    </script>
 </body>
 </html>

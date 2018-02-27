@@ -1,0 +1,311 @@
+1.  Member =>  list1
+http://www.argen3630.com:88/admin.php/Member/list1?companyId=1
+
+[客服管理] 获取客服和账户列表
+
+
+2.  Member =>  get
+http://www.argen3630.com:88/admin.php/Member/get?companyId=1&memberId=12
+
+[账户中心]账户个人信息接口
+
+
+3.  Member =>  resetPassword
+http://www.argen3630.com:88/admin.php/Member/resetPassword?memberId=12&oldpass=123456&newpass=12345678&newpass1=12345678
+
+修改密码
+
+4.  Member =>  modify
+http://www.argen3630.com:88/admin.php/Member/modify?memberId=12&username=123456&qq=454545&mobile=13254098709
+
+
+5. Member => add
+http://www.argen3630.com:88/admin.php/Member/add?username=jacky.xie111&nickname=123456&qq=454545&mobile=13254098709
+
+
+6. Member =>setReply
+http://www.argen3630.com:88/admin.php/Member/setReply?mobileReply=%E9%BB%84%E9%9D%99%E7%9A%84%E7%9B%AE%E7%9A%84%E4%B8%B0%E5%AF%8C&pcReply=%E6%B4%BB%E5%8A%A8%E5%8F%91%E7%94%9F%E5%8F%8D%E5%AF%B9
+
+设置自动回复
+1）PC勾选（是否自动回复）
+2）PC内容
+3）mobile内容
+4）mobile勾选
+
+
+7. Product => get
+http://www.argen3630.com:88/admin.php/Product/get?id=1
+
+购买套餐
+
+
+8. Product => list1
+http://www.argen3630.com:88/admin.php/Product/list1
+
+购买套餐 => 列表
+
+
+9. Order => add
+http://www.argen3630.com:88/admin.php/Order/add?name=%E9%AB%98%E7%BA%A7%E5%95%86%E5%8A%A1%E7%89%88&companyId=2&no=2
+
+【订单】 =>  生成订单接口
+no => 数量
+name =>
+
+10. Order => modify
+http://www.argen3630.com:88/admin.php/Order/modify?orderId=2&money=699&status=1
+
+11. Order => get
+http://www.argen3630.com:88/admin.php/Order/get?orderId=2
+获取订单详情 ，获取单项
+
+
+12. Order => list1
+http://www.argen3630.com:88/admin.php/Order/list1?companyId=1
+获取订单列表
+
+13. Order => delete
+http://www.argen3630.com:88/admin.php/Order/delete?orderId=2
+
+14. Website => add
+http://www.argen3630.com:88/admin.php/Website/add?name=yima&site=www.argen3630.cn&language=cn
+
+[商家站点] => 增加
+name 名称
+
+
+15. Website => get
+http://www.argen3630.com:88/admin.php/Website/get?id=1
+
+[商家站点] => 获取详情
+
+
+16. Website => modify
+http://www.argen3630.com:88/admin.php/Website/modify?id=1&name=yimad2323&site=www.argen3630.com
+
+[商家站点] => 修改
+
+17. website => delete
+http://www.argen3630.com:88/admin.php/Website/delelte?id=1
+
+[商家站点] => 删除
+
+18. website => list1
+http://www.argen3630.com:88/admin.php/Website/list1
+
+[商家站点] => 列表
+
+19. Role => add
+http://www.argen3630.com:88/admin.php/Role/add?name=%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%981\
+
+[权限管理] 增加角色
+
+20. Role => list1
+http://www.argen3630.com:88/admin.php/Role/list1
+
+[权限管理] 获取角色列表
+
+21. Role => get
+http://www.argen3630.com:88/admin.php/Role/get?id=3
+
+
+22. Node => get
+http://www.argen3630.com:88/admin.php/Node/get?id=2
+
+23. Node => list1
+http://www.argen3630.com:88/admin.php/Node/list1
+http://www.argen3630.com:88/admin.php/Node/list1?level=1
+
+[权限管理] 获取模块列表
+24. Node => tree
+http://www.argen3630.com:88/admin.php/Node/tree?id=2
+
+
+
+25. Category => add
+http://www.argen3630.com:88/admin.php/Category/add?name=%E5%88%86%E7%BB%841
+
+[客服监控]客服分组
+26. Category => edit
+http://www.argen3630.com:88/admin.php/Category/edit?id=1&name=%E5%88%86%E7%BB%842
+
+27. Category => delete
+http://www.argen3630.com:88/admin.php/Category/delete?id=2
+http://www.argen3630.com:88/admin.php/Category/delete?name=分组1
+
+28. Category => list1
+http://www.argen3630.com:88/admin.php/Category/list1
+
+29. Member=>listByCategory
+http://www.argen3630.com:88/admin.php/Member/listByCategory?category=%E5%88%86%E7%BB%841
+
+
+30.Member=>setCategory
+http://www.argen3630.com:88/admin.php/Member/setCategory?memberId=2&category=%E5%88%86%E7%BB%841
+http://www.argen3630.com:88/admin.php/Member/setCategory?memberId=8&category=%E5%88%86%E7%BB%841&admitable=1
+
+31.WordCategory=>list1
+http://www.argen3630.com:88/admin.php/WordCategory/list1
+
+[设置中心] 常用语分组列表
+
+
+32.WordCategory=>add
+http://www.argen3630.com:88/admin.php/WordCategory/add?category=%E5%B8%B8%E7%94%A8%E8%AF%AD3
+
+33.WordCategory=>get
+http://www.argen3630.com:88/admin.php/WordCategory/get?id=2
+
+34.WordCategory=>delete
+http://www.argen3630.com:88/admin.php/WordCategory/delete?id=3
+
+
+35.CommonWord => add
+http://www.argen3630.com:88/admin.php/CommonWord/add?title=你好呀&content=Hello,world...It's from jacky&category=常用1
+http://www.argen3630.com:88/admin.php/CommonWord/add?title=%E4%BD%A0%E5%A5%BD%E5%91%80&content=Hello,world...It%27s%20from%20jacky&category=%E5%B8%B8%E7%94%A8%E8%AF%AD1
+
+
+[设置中心] 常用语
+
+36.CommonWord => list1
+http://www.argen3630.com:88/admin.php/CommonWord/list1
+http://www.argen3630.com:88/admin.php/CommonWord/list1?category=%E5%B8%B8%E7%94%A8%E8%AF%AD2
+
+37.CommonWord => delete
+http://www.argen3630.com:88/admin.php/CommonWord/delete?id=2
+
+38. Login => index
+http://www.argen3630.com:88/admin.php/Login/index?username=admin&password=123456
+
+39. Login => logout
+http://www.argen3630.com:88/admin.php/Login/logout
+
+
+41.FileCategory=>list1
+http://www.argen3630.com:88/admin.php/FileCategory/list1
+
+42.FileCategory=>add
+http://www.argen3630.com:88/admin.php/FileCategory/add?directory=%E5%B8%B8%E7%94%A8%E8%AF%AD3
+
+[设置中心] 新增文件夹
+
+43.FileCategory=>get
+http://www.argen3630.com:88/admin.php/FileCategory/get?id=2
+
+44.FileCategory=>delete
+http://www.argen3630.com:88/admin.php/FileCategory/delete?id=3
+
+
+45.CommonFile => add
+http://www.argen3630.com:88/admin.php/CommonFile/add?path=/upload/hello1.jpg&directory=Hello3&filelength=1299
+http://www.argen3630.com:88/admin.php/CommonFile/add?name=Hello2&path=/upload/hello1.jpg&directory=Hello3&filelength=1299
+46.CommonFile => list1
+http://www.argen3630.com:88/admin.php/CommonFile/list1
+http://www.argen3630.com:88/admin.php/CommonFile/list1?directory=Hello1
+
+[设置中心] 文件列表
+47.CommonFile => delete
+http://www.argen3630.com:88/admin.php/CommonFile/delete?id=2
+
+48.CommonFile => get
+http://www.argen3630.com:88/admin.php/CommonFile/get?id=5
+
+
+
+49.CommentSetting =>modify
+http://www.argen3630.com:88/admin.php/CommentSetting/modify?commentable=1&notifiable=1&level=2&notify_person=1,3,4&nofity_way=0,1,2
+
+50.CommentSetting=>add
+http://www.argen3630.com:88/admin.php/CommentSetting/add?commentable=1&notifiable=1&level=2&notify_person=1,3,4&nofity_way=0,1,2
+http://www.argen3630.com:88/admin.php/CommentSetting/add?commentable=1&notifiable=1&level=2
+
+51.CommentSetting=>get
+http://www.argen3630.com:88/admin.php/CommentSetting/get?id=2
+
+
+52.Comment =>list1
+http://www.argen3630.com:88/admin.php/Comment/list1
+
+53.Comment =>add
+http://www.argen3630.com:88/admin.php/Comment/add?memberId=1&visitorId=1&level=3&content=%E6%9C%8D%E5%8A%A1%E5%91%A8%E5%88%B0
+
+54.Comment => get
+http://www.argen3630.com:88/admin.php/Comment/get?id=2
+
+55.Comment =>delete
+http://www.argen3630.com:88/admin.php/Comment/delete?id=3
+
+
+56.MessageCategory=>list1
+http://www.argen3630.com:88/admin.php/MessageCategory/list1
+
+57.MessageCategory=>add
+http://www.argen3630.com:88/admin.php/MessageCategory/add?category=%E5%B8%B8%E7%94%A8%E8%AF%AD3
+
+58.MessageCategory=>get
+http://www.argen3630.com:88/admin.php/MessageCategory/get?id=2
+
+59.MessageCategory=>delete
+http://www.argen3630.com:88/admin.php/MessageCategory/delete?id=3
+
+60.Visitor=>list1
+http://www.argen3630.com:88/admin.php/Visitor/list1
+
+61.Visitor=>add
+http://www.argen3630.com:88/admin.php/Visitor/add?name=jacky.xie&website=www.argen3630.cn&companyId=1&phone=15155156915&mobile=13509876578&qq=36951936&email=36951936@qq.com&company=厦门壹码网络&address=厦门市集美区&note=寻找新产品
+
+http://www.argen3630.com:88/admin.php/Visitor/add?name=jacky.xie&website=www.argen3630.cn&phone=15155156915&mobile=13509876578&qq=36951936&companyId=1&email=36951936@qq.com&company=%E5%8E%A6%E9%97%A8%E5%A3%B9%E7%A0%81%E7%BD%91%E7%BB%9C&address=%E5%8E%A6%E9%97%A8%E5%B8%82%E9%9B%86%E7%BE%8E%E5%8C%BA&note=%E5%AF%BB%E6%89%BE%E6%96%B0%E4%BA%A7%E5%93%81
+
+62.Visitor=>get
+http://www.argen3630.com:88/admin.php/Visitor/get?id=2
+
+63.Visitor=>delete
+http://www.argen3630.com:88/admin.php/Visitor/delete?id=3
+
+
+64.Message=>list1
+http://www.argen3630.com:88/admin.php/Message/list1
+http://www.argen3630.com:88/admin.php/Message/list1?memberId=1
+
+65.Message=>add
+http://www.argen3630.com:88/admin.php/Message/add?companyId=1&visitorId=1&memberId=1&content=您好！很高兴为你服务&sendTime=14009009099&receiveTime=1455500098&status=0
+
+66.Message=>get
+http://www.argen3630.com:88/admin.php/Message/get?id=2
+
+67.Message=>delete
+http://www.argen3630.com:88/admin.php/Message/delete?id=3
+
+68.MessageLog=>list1
+http://www.argen3630.com:88/admin.php/MessageLog/list1
+http://www.argen3630.com:88/admin.php/MessageLog/list1?memberId=1
+
+69.MessageLog=>modify
+http://www.argen3630.com:88/admin.php/MessageLog/modify?id=1&memberId=1&dealType=2&status=1
+
+
+70.MessageLog=>add
+http://www.argen3630.com:88/admin.php/MessageLog/add?companyId=1&visitorId=1&memberId=1&content=您好！很高兴为你服务&sendTime=14009009099&receiveTime=1455500098&status=0
+
+71.MessageLog=>get
+http://www.argen3630.com:88/admin.php/MessageLog/get?id=2
+
+72.MessageLog=>delete
+http://www.argen3630.com:88/admin.php/MessageLog/delete?id=3
+
+
+73.VisitorConfig=>list1
+http://www.argen3630.com:88/admin.php/VisitorConfig/list1
+
+74.VisitorConfig=>add
+http://www.argen3630.com:88/admin.php/VisitorConfig/add?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ&qq_disp=1&qq_requ&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
+
+
+75.VisitorConfig=>get
+http://www.argen3630.com:88/admin.php/VisitorConfig/get?id=2
+
+76.VisitorConfig=>delete
+http://www.argen3630.com:88/admin.php/VisitorConfig/delete?id=3
+
+77.VisitorConfig=>modify
+http://www.argen3630.com:88/admin.php/VisitorConfig/modify?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ&qq_disp=1&qq_requ&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
