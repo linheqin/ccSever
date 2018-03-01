@@ -40,18 +40,26 @@
 
     <div class="layadmin-user-login-main">
         <div class="layadmin-user-login-box layadmin-user-login-header">
-            <h2>后台登录</h2>
+            <h2>后台修改密码</h2>
             <p>让你的网站更赚钱</p>
         </div>
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
             <form action="" id="loginForm">
                 <div class="layui-form-item">
-                    <label class="layadmin-user-login-icon" for="LAY-user-login-username">用户名:</label>
-                    <input type="text" name="username" id="LAY-user-login-username" lay-verify="required" placeholder="用户名" class="layui-input">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-memberId">成员ID:</label>
+                    <input type="text" name="memberId" id="LAY-user-login-memberId" lay-verify="required" placeholder="成员ID" class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <label class="layadmin-user-login-icon" for="LAY-user-login-password">密码:</label>
-                    <input type="password" name="password" id="LAY-user-login-password" lay-verify="required" placeholder="密码" class="layui-input">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-oldpass">旧密码:</label>
+                    <input type="password" name="oldpass" id="LAY-user-login-oldpass" lay-verify="required" placeholder="旧密码" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-newpass">新密码:</label>
+                    <input type="password" name="newpass" id="LAY-user-login-newpass" lay-verify="required" placeholder="新密码" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-newpass1">确认新密码:</label>
+                    <input type="password" name="newpass1" id="LAY-user-login-newpass1" lay-verify="required" placeholder="确认新密码" class="layui-input">
                 </div>
             </form>
             <div class="layui-form-item">
@@ -77,14 +85,9 @@
             $.ajax({
                 url: urlParam.login,
                 data: formData,
-                xhrFields: {
-                    withCredentials: true
-                },
-                crossDomain: true,
                 success: function(msg) {
                     if(msg.code == 0) {
-                        window.location.href = "index.html?companyId="+msg.object.companyid+"&memberId="+msg.object.id
-                        ;
+                        window.location.href = "index.html";
                     } else {
                         layer.msg(msg.message,{
                             shade: 0.2,

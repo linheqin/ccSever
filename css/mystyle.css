@@ -945,6 +945,7 @@ textarea,input,select {
   margin-right: 10px;
   color: #1A5094;
   cursor: pointer;
+  text-align: center;
 }
 .button_21,.button_22 {
   padding: 0px 12px 0;

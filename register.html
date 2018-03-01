@@ -46,43 +46,30 @@
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
             <form action="" id="registerForm">
                 <div class="layui-form-item">
-                    <label class="layadmin-user-login-icon" for="LAY-user-login-username"><span>*</span>用户名:</label>
-                    <input type="text" name="username" id="LAY-user-login-username" lay-verify="required" placeholder="用户名" class="layui-input">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-name"><span>*</span>用户名:</label>
+                    <input type="text" name="name" id="LAY-user-login-name" lay-verify="required" placeholder="用户名" class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <label class="layadmin-user-login-icon" for="LAY-user-login-nickname"><span>*</span>昵称:</label>
-                    <input type="text" name="nickname" id="LAY-user-login-nickname" lay-verify="required" placeholder="昵称" class="layui-input">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-companyName"><span>*</span>公司名称:</label>
+                    <input type="text" name="companyName" id="LAY-user-login-companyName" lay-verify="required" placeholder="公司名称" class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <label class="layadmin-user-login-icon" for="LAY-user-login-qq"><span>*</span>QQ:</label>
-                    <input type="text" name="qq" id="LAY-user-login-qq" lay-verify="required" placeholder="QQ" class="layui-input">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-password"><span>*</span>密码:</label>
+                    <input type="password" name="password" id="LAY-user-login-password" lay-verify="required" placeholder="密码" class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <label class="layadmin-user-login-icon" for="LAY-user-login-moblie"><span>*</span>手机号码:</label>
-                    <input type="text" name="mobile" id="LAY-user-login-moblie" lay-verify="required" placeholder="手机号码" class="layui-input">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-password1"><span>*</span>确认密码:</label>
+                    <input type="password" name="password1" id="LAY-user-login-password1" lay-verify="required" placeholder="确认密码" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-email"><span>*</span>邮箱:</label>
+                    <input type="text" name="email" id="LAY-user-login-email" lay-verify="required" placeholder="邮箱" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label class="layadmin-user-login-icon" for="LAY-user-login-phone"><span>*</span>手机号码:</label>
+                    <input type="text" name="phone" id="LAY-user-login-phone" lay-verify="required" placeholder="手机号码" class="layui-input">
                 </div>
             </form>
-            <!--<div class="layui-form-item">-->
-                <!--<label class="layadmin-user-login-icon layui-icon layui-icon-password" for="LAY-user-login-moblie"><span>*</span>手机:</label>-->
-                <!--<input type="password" name="password" id="LAY-user-login-moblie" lay-verify="required" placeholder="手机" class="layui-input">-->
-            <!--</div>-->
-            <!--<div class="layui-form-item">-->
-                <!--<label class="layadmin-user-login-icon layui-icon layui-icon-password" for="LAY-user-login-wz">网站:</label>-->
-                <!--<input type="password" name="password" lay-verify="required" id="LAY-user-login-wz" placeholder="网站" class="layui-input">-->
-            <!--</div>-->
-            <div class="layui-form-item">
-                <div class="layui-row">
-                    <div class="layui-col-xs7">
-                        <label class="layadmin-user-login-icon layui-icon layui-icon-vercode" for="LAY-user-login-vercode"><span>*</span>验证码:</label>
-                        <input type="text" name="vercode" id="LAY-user-login-vercode" lay-verify="required" placeholder="数字验证码" class="layui-input">
-                    </div>
-                    <div class="layui-col-xs3" style="margin-left: 36px;">
-                        <div id="vercodeNum" style="cursor:pointer;margin-left: 10px;letter-spacing:2px;height: 38px;line-height: 38px;color:#39f;text-align: center;background: #ccc;border-radius: 5px;">
-                            3421
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="layui-form-item" style="margin-bottom: 20px; padding: 0 11px;">
                 <input type="checkbox" name="remember" lay-skin="primary" title="记住密码"><div class="layui-unselect layui-form-checkbox" lay-skin="primary"><span>记住密码</span><i class="layui-icon"></i></div>
                 <a lay-href="/user/forget" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>
@@ -104,36 +91,40 @@
         // 注册
         $("#registerBtn").on("click", function(){
 
-            var username = $("#LAY-user-login-username").val();
-            var nickname = $("#LAY-user-login-nickname").val();
-            var qq = $("#LAY-user-login-qq").val();
-            var moblie = $("#LAY-user-login-moblie").val();
-            // var qyname = $("#LAY-user-login-qyname").val();
-            // var wz = $("#LAY-user-login-wz").val();
+            var name = $("#LAY-user-login-name").val();
+            var companyName = $("#LAY-user-login-companyName").val();
+            var password = $("#LAY-user-login-password").val();
+            var password1 = $("#LAY-user-login-password1").val();
+            var email = $("#LAY-user-login-email").val();
+            var phone = $("#LAY-user-login-phone").val();
             var vercode = $("#LAY-user-login-vercode").val();
             var vercodeNum = $("#vercodeNum").text();
-            if(username == "") {
+            if(name == "") {
                 layerYzMask("用户名")
                 return;
             }
-            if(nickname == "") {
-                layerYzMask("昵称")
+            if(companyName == "") {
+                layerYzMask("公司名称")
                 return;
             }
-            if(qq == "") {
-                layerYzMask("QQ")
+            if(password == "") {
+                layerYzMask("密码")
                 return;
             }
-            if(moblie == "") {
+            if(password1 == "") {
+                layerYzMask("确认密码")
+                return;
+            }
+            if(email == "") {
+                layerYzMask("邮箱")
+                return;
+            }
+            if(phone == "") {
                 layerYzMask("手机号码")
                 return;
             }
-            if(vercode == "") {
-                layerYzMask("验证码")
-                return;
-            }
-            if(vercode != vercodeNum) {
-                layerYzMask("验证码不一致",1)
+            if(password != password1) {
+                layerYzMask("密码不一致",1)
                 return;
             }
             var formData = $("#registerForm").serialize();
@@ -142,8 +133,20 @@
             $.ajax({
                 url: urlParam.register,
                 data: formData,
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
                 success: function(msg) {
                     console.log(msg);
+                    if(msg.code == 0) {
+                        window.location.href = "login.html";
+                    } else {
+                        layer.msg(msg.message,{
+                            shade: 0.2,
+                            time: 1000,
+                        });
+                    }
                 }
             })
 

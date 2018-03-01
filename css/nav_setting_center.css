@@ -147,6 +147,96 @@ label {
     height: 35px;
     padding-top: 5px;
 }
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_item {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    cursor: default;
+    position: relative;
+    color: #3171dd;
+    border-bottom: 1px solid #f5f5f5;
+    border-radius: 8px;
+}
+.iframe_height {
+    background: url(../images/bgtransfer.gif);
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_inner_content {
+    overflow: hidden;
+    background: #ffffff;
+    width: 150px;
+    padding: 0 8px;
+    _padding: 0 6px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    width: 120px;
+    height: auto;
+    background-color: rgb(249, 249, 251);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog * {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    float: none;
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_qq_, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_wb_, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_wx_, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_tel_, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_kf_, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_msn_, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_ww_ {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_msn_body, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_ww_body, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_kf_body, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_wx_body, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_wb_body, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_tel_body, .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_qq_body {
+    margin-right: 6px;
+    margin-left: 35px;
+    font-size: 12px;
+    overflow: hidden;
+    height: 28px;
+    line-height: 28px;
+    width: 73px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_item {
+    margin-top: 5px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_item_icon_box {
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    line-height: 20px;
+    text-align: right;
+    overflow: hidden;
+    margin-top: 4px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_qq_img_wrap {
+    position: relative;
+    width: 17px;
+    height: 24px;
+    overflow: hidden;
+    margin-left: 8px;
+}
+.kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_item_qq_img {
+    position: absolute;
+    right: 2px;
+    top: 0;
+}
+.kf_qycn_com_cckf_dock {
+    width: 35px;
+    height: 135px;
+    cursor: default;
+    text-align: left;
+    cursor: default;
+}
+.kf_qycn_com_cckf_icon_offline {
+    cursor: default;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
 /*字体颜色*/
 .bg_select {
     position: relative;
@@ -405,6 +495,29 @@ textarea {
 #wxstep3 {
     border: none;
 }
+#wxstep3 .switchery {
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.switchery > small {
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
 #wxstep3 .mui-switch {
     cursor: pointer;
     width: 52px;
@@ -441,6 +554,16 @@ textarea {
     border-bottom-right-radius: 20px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.mui-switch:checked {
+    border-color: #00BC0C;
+    box-shadow: #00BC0C 0 0 0 16px inset;
+    background-color: #00BC0C;
+}
+.mui-switch.mui-switch-animbg:checked {
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-color: #00BC0C;
+    transition: border-color 0.4s, background-color ease 0.4s;
 }
 .textarea2 {
     border: solid 1px #c7d9e7;
@@ -569,4 +692,19 @@ textarea {
     background-color: #58CB73;
     font-size: 15px;
     font-weight: bold;
+}
+.adv_slc_t_color,
+.slc_t_color {
+    width: 20px!important;
+    height:20px!important;
+}
+/*常用文件*/
+.kf_d270_bt {
+    background: url(../images/bt10.png) no-repeat;
+    border: 0px;
+    width: 68px;
+    height: 23px;
+    margin-right: 10px;
+    color: #1A5094;
+    cursor: pointer;
 }

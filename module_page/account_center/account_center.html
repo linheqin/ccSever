@@ -10,7 +10,7 @@
     <!--引入wangEditor.css-->
     <link href="../../summernote.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/mystyle.css">
-    <script src="../../js/common.js"></script>
+    <script src="../../js/common.js?v=2"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -31,6 +31,21 @@
             height: 18px;
             line-height: 18px;
             background-color: #fff;
+        }
+        #orderinfo_table td {
+            padding: 6px 12px;
+        }
+        #butForm tr td:nth-child(1) {
+            width: 30%;
+        }
+        #butForm tr td:nth-child(2) {
+            width: 15%;
+        }
+        #butForm tr td:nth-child(3) {
+            width: 15%;
+        }
+        #butForm tr td:nth-child(4) {
+            width: 20%;
         }
         #tabinfo_ct td.tabinfo_ct_val {
             color: #444;
@@ -91,6 +106,32 @@
         .help_info {
             display: none;
         }
+        .clkctbutton {
+            background: #4FB910;
+            color: #fff;
+            height: 28px;
+            padding: 0;
+            line-height: 28px;
+            width: 28px;
+            vertical-align: middle;
+            font-size: 19px;
+        }
+        .clkcttext {
+            color: #FF3300;
+            border-left: none;
+            border-right: none;
+            height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            padding: 0;
+            border-color: #4FB910;
+            width: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .none {
+            display: none!important;
+        }
     </style>
 </head>
 <body class="layui-layout-body">
@@ -131,7 +172,7 @@
                     编辑
                 </div>
             </div>
-            <table style="margin-top:15px;" id="tabinfo_ct" border="0" width="100%" cellspacing="0">
+            <table style="margin-top:15px;border: none;" id="tabinfo_ct" border="0" width="100%" cellspacing="0">
                 <tbody>
                     <tr>
                         <td width="140">
@@ -145,66 +186,50 @@
                             </div>
                         </td>
                         <td>
-                            <table border="0" width="100%" cellspacing="0">
-                            <tbody>
-                            <tr>
-                                <td width="58" align="right">
-                                    账 号：
-                                </td>
-                                <td class="tabinfo_ct_val">
-                                    CC2292391
-                                </td>
-                                <td width="92" align="right">
-                                    姓 名：
-                                </td>
-                                <td class="tabinfo_ct_val" id="mi_s_realname">
-                                    超级管理员
-                                </td>
-                                <td width="92" align="right">
-                                    昵 称：
-                                </td>
-                                <td class="tabinfo_ct_val" id="mi_s_nickname">
-                                    超级管理员
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="58" align="right">
-                                    手 机：
-                                </td>
-                                <td class="tabinfo_ct_val" id="mi_s_mobile">
-                                    13030885155
-                                </td>
-                                <td width="92" align="right">
-                                    邮 箱：
-                                </td>
-                                <td class="tabinfo_ct_val" id="mi_s_email">
-                                    592732096@qq.com
-                                </td>
-                                <td width="92" align="right">
-                                    Q &nbsp;Q：
-                                </td>
-                                <td class="tabinfo_ct_val" id="mi_s_qq">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="58" align="right">
-                                    角 色：
-                                </td>
-                                <td class="tabinfo_ct_val">
-                                    超级管理员
-                                </td>
-                                <td width="92" align="right">
-                                    所在企业：
-                                </td>
-                                <td class="tabinfo_ct_val">
-                                    <label id="cpnamelbl">小计</label><a href="javascript:;" id="edit_cpinfo">修改</a>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                            </tbody>
+                            <table style="border: none;" border="0" width="100%" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="58" align="right">
+                                            账 号：
+                                        </td>
+                                        <td class="tabinfo_ct_val" id="mi_s_user">
+
+                                        </td>
+                                        <td width="92" align="right" >
+                                            姓 名：
+                                        </td>
+                                        <td class="tabinfo_ct_val" id="mi_s_realname">
+
+                                        </td>
+                                        <td width="58" align="right">
+                                            角 色：
+                                        </td>
+                                        <td class="tabinfo_ct_val" id="roleName">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="58" align="right">
+                                            手 机：
+                                        </td>
+                                        <td class="tabinfo_ct_val" id="mi_s_mobile">
+
+                                        </td>
+                                        <td width="92" align="right">
+                                            邮 箱：
+                                        </td>
+                                        <td class="tabinfo_ct_val" id="mi_s_email">
+
+                                        </td>
+                                        <td width="92" align="right">
+                                            所在企业：
+                                        </td>
+                                        <td class="tabinfo_ct_val">
+                                            <span id="cpnamelbl"></span>
+                                            <!--<a href="javascript:;" id="edit_cpinfo">修改</a>-->
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </td>
                     </tr>
@@ -306,12 +331,12 @@
                     <span style="color:#f60;">温馨提醒：</span>
                              您正在使用的是“
                     <span style="color:#FF6600;">试用版</span>”套餐，<span style="color:#f30;">已于2018-01-09 11:21过期</span>，继续使用，请续费！如有疑问，请<a href="javascript:;" onclick="window.open('http://kefu.qycn.com/vclient/chat/?websiteid=7987&amp;groupid=24573&amp;originPageTitle=%E8%87%AA%E5%8A%A9%E8%B4%AD%E4%B9%B0-%E8%B4%A6%E6%88%B7%E6%98%8E%E7%BB%86-CC2292391', '_blank', 'toolbar=no,scrollbars=yes,menubar=no,status=no,resizable=yes,location=no')" style="color:#459ae9;"> 联系我们</a>！
-                    <a href="?c=AccountCenter&amp;a=userorder&amp;addBackBtn=1" style="display:block;cursor:pointer;height:22px;line-height:22px;margin-top:8px;margin-right:5px;float:right;padding:2px 6px;;background-color:#4FB910;color:white;border-radius:3px;">我的订单</a>
+                    <!--<a href="javascript:void(0);" style="display:block;cursor:pointer;height:22px;line-height:22px;margin-top:8px;margin-right:5px;float:right;padding:2px 6px;;background-color:#4FB910;color:white;border-radius:3px;">我的订单</a>-->
                 </p>
             </div>
             <div style="margin-top:20px;">
-                <table class="service_tab" width="100%" border="0" cellspacing="0">
-                    <tbody>
+                <table class="service_tab" id="tcTable" width="100%" border="0" cellspacing="0">
+                    <thead>
                         <tr class="service_tab_th">
                             <td>
                                 套餐
@@ -332,43 +357,46 @@
                                 操作
                             </td>
                         </tr>
-                        <tr>
-                            <td rowspan="2" style="border-right:1px solid #e8e8e8;font-weight:bold;color:#2f8ebc;">
-                                试用版
-                            </td>
-                            <td>
-                                客服坐席
-                            </td>
-                            <td>
-                                <span style="color:#006633;">0</span>个
-                            </td>
-                            <td>
-                                2018-01-09 11:21
-                            </td>
-                            <td>
-                                <span style="color:red;">0</span>天
-                            </td>
-                            <td width="186">
-                                <a href="?c=AccountCenter&amp;a=purchaseService&amp;act=5">在线购买</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                商家站点
-                            </td>
-                            <td>
-                                <span style="color:#006633;">2</span>个
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                <a href="?c=AccountCenter&amp;a=purchaseService&amp;act=6">增加站点</a>
-                            </td>
-                        </tr>
+
+                    </thead>
+                    <tbody>
+                         <!--<tr>-->
+                            <!--<td rowspan="2" style="border-right:1px solid #e8e8e8;font-weight:bold;color:#2f8ebc;">-->
+                                <!--试用版-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--客服坐席-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<span style="color:#006633;">0</span>个-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--2018-01-09 11:21-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<span style="color:red;">0</span>天-->
+                            <!--</td>-->
+                            <!--<td width="186">-->
+                                <!--<a href="javascript:void(0)" id="nav_item7">在线购买</a>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>-->
+                                <!--商家站点-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<span style="color:#006633;">2</span>个-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!-- - -->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!-- - -->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<a href="javascript:void(0);" id="nav_item8">增加站点</a>-->
+                            <!--</td>-->
+                        <!--</tr>-->
                     </tbody>
                 </table>
             </div>
@@ -407,9 +435,9 @@
                 </div>
             </div>
             <div style="margin-top:20px;">
-                <table id="orderinfo_table" class="service_tab" width="100%" border="0" cellspacing="0">
-                    <tbody>
-                    <tr class="service_tab_th">
+                <table id="orderinfo_table"  class="service_tab" width="100%" border="0" cellspacing="0">
+                    <thead>
+                        <tr class="service_tab_th">
                         <td>
                             订单编号
                         </td>
@@ -429,7 +457,9 @@
                             操作
                         </td>
                     </tr>
-                    <tr id="orderinfo_loading">
+                    </thead>
+                    <tbody>
+                    <tr>
                         <td>
                             32342
                         </td>
@@ -464,31 +494,23 @@
                 </p>
             </div>
             <div style="width:636px;margin:0 auto;margin-top:25px;">
-                <form id="changepwdform" name="changepwdform" action="index.php?c=AccountCenter&amp;a=changepwd" method="post">
-                    <table border="0" cellspacing="0" cellpadding="0" class="tab_21">
+                <form id="changepwdform" name="changepwdform">
+                    <input type="hidden" name="memberId" id="modifyPwdMembId">
+                    <table border="0" style="border:none;" cellspacing="0" cellpadding="0" class="tab_21">
                     <tbody>
                     <tr>
                         <th scope="row">
                             <span class="fc_red">* </span>请输入原密码：
                         </th>
                         <td>
-                            <input type="text" name="stpzdtx1" style="display:none;"><input type="password" name="stpzdtx1" style="display:none;"><input name="oldPassword" id="oldPassword" type="password" class="clktext" style=" width:200px;">&nbsp;
+                            <input name="oldpass" id="oldpass" type="password" class="clktext" style=" width:200px;">
                         </td>
-                        <td class="td_hint_str">
-                            <div id="oldPasswordTip" style="height: 32px; margin: 0px; padding: 0px; background: transparent;">
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <th scope="row">
                             <span class="fc_red">* </span>请输入新密码：
                         </th>
                         <td>
-                            <input type="text" name="stpzdtx1" style="display:none;"><input type="password" name="stpzdtx2" style="display:none;"><input name="password1" id="password1" type="password" class="clktext" style=" width:200px;">&nbsp;
-                        </td>
-                        <td class="td_hint_str">
-                            <div id="password1Tip" style="height: 32px; margin: 0px; padding: 0px; background: transparent;">
-                            </div>
+                            <input name="newpass" id="newpass" type="password" class="clktext" style=" width:200px;">
                         </td>
                     </tr>
                     <tr>
@@ -496,11 +518,7 @@
                             <span class="fc_red">* </span>请确认新密码：
                         </th>
                         <td>
-                            <input name="password2" id="password2" type="password" class="clktext" style=" width:200px;">&nbsp;
-                        </td>
-                        <td class="td_hint_str">
-                            <div id="password2Tip" style="height: 32px; margin: 0px; padding: 0px; background: transparent;">
-                            </div>
+                            <input name="newpass1" id="newpass1" type="password" class="clktext" style=" width:200px;">
                         </td>
                     </tr>
                     </tbody>
@@ -574,7 +592,7 @@
                     PC访客端自动应答
                 </div>
             </div>
-            <form id="autoReplyForm" name="autoReplyForm" action="index.php?c=PersonalSet&amp;a=autoReply" method="post">
+            <form id="autoReplyForm" name="autoReplyForm" action="">
                 <div style="padding-left:20px;padding-top:5px">
                     <input checked="" name="pcAutoReplyOn" id="pcAutoReplyOn" type="checkbox" value="1"><label style="font-size:13px;cursor:pointer;" for="pcAutoReplyOn">&nbsp;接受对话时自动回复，下面是回复内容</label>
                     <div>
@@ -601,30 +619,741 @@
                 </div>
             </form>
         </div>
+        <!--在线购买-->
+        <div class="nav_tab_item none">
+            <div class="location" style="font-size:12px;">
+                您当前的位置：CC客服 &gt; <span>账户中心</span> &gt; <span>账户明细</span>
+            </div>
+            <div style="height:28px;border-bottom:1px solid #C9D2CB;position: relative;margin-bottom:10px;">
+                <div style="height:28px;width:77px;border-bottom:2px solid #44b549;font-size:18px;color:#346699">
+                    在线购买
+                </div>
+                <div class="backBtn" style="height:18px;line-height:18px;padding:1px;position:absolute;bottom:1px;right:2px;cursor:pointer;background-color:#4FB910;color:#fff;border-radius:3px;width:38px;text-align:center;">
+                    返回
+                </div>
+            </div>
+            <div style="margin-top:10px;">
+                <form action="" method="post" id="sub_takeorder" style="padding-top: 10px;">
+                    <!--<div style="font-size:14px;color:#444;padding:8px 0px;" id="tcSelect">-->
+                        <!--<label style="vertical-align:middle;">请选择需购买的套餐：</label>　<input name="taocantype" type="radio" value="1" checked=""><label class="taocantype_lbl"> 企业版</label><input name="taocantype" type="radio" value="2" style="margin-left:10px;"><label class="taocantype_lbl"> 高级商务版</label>-->
+                    <!--</div>-->
+                    <table class="service_tab"   id="butForm"  width="100%" border="0" cellspacing="0">
+                        <thead>
+                            <tr class="service_tab_th">
+                                <td>
+                                    产品名称
+                                </td>
+                                <td>
+                                    数量
+                                </td>
+                                <td>
+                                    使用时间
+                                </td>
+                                <td>
+                                    金额(元)
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    客服坐席
+                                </td>
+                                <td>
+                                    <input type="button" class="button2 clkctbutton" style="border-top-left-radius:2px;border-bottom-left-radius:2px;" value="-">
+                                    <input name="snum" style="margin-left: -5px;margin-right: -5px;" type="text" class="text1 clkcttext" readonly="" value="1">
+                                    <input type="button" class="button2 clkctbutton" style="border-top-right-radius:2px;border-bottom-right-radius:2px;" value="+">
+                                    <span style="color:#006633;display:none;">无限坐席</span>
+                                </td>
+                                <td>
+                                    <select class="slc_clk_day" name="p_day" style="color:#FF3300;">
+                                        <option value="1">1年</option>
+                                        <option value="2">2年</option>
+                                        <option value="3">3年</option>
+                                        <option value="4">4年</option>
+                                        <option value="5">5年</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    ￥ <span class="clkseat_tprice" data-unit-price="599">599</span>
+                                </td>
+                            </tr>
+                            <!--<tr>-->
+                                <!--<td>-->
+                                    <!--商家站点-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--无限坐席-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<select class="slc_clk_day" name="p_day" style="color:#FF3300;">-->
+                                        <!--<option value="1">1年</option>-->
+                                        <!--<option value="2">2年</option>-->
+                                        <!--<option value="3">3年</option>-->
+                                        <!--<option value="4">4年</option>-->
+                                        <!--<option value="5">5年</option>-->
+                                    <!--</select>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--￥ <span class="clkseat_tprice" data-unit-price="3999">3999</span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                        </tbody>
+                    </table>
+                    <div>
+                        <div id="total_tprice_div1" style="text-align:right;height:70px;line-height:70px;font-size:20px;color:#444;padding-right:15px;">
+                            总计：<span style="color:#FF0000;">￥ </span><span id="total_tprice" style="color:#FF0000;"></span>
+                        </div>
+                        <div id="total_tprice_div2" class="none" style="text-align:right;height:70px;line-height:70px;font-size:20px;color:#444;padding-right:15px;">
+                            总计：<span style="color:#FF0000;">￥ </span><span id="total_tprice_2" style="color:#FF0000;"></span>
+                        </div>
+                        <div style="clear:both;float:right;">
+                            <input type="button" id="settlementBtn" class="button2" style="background:#4FB910;color: #fff;font-size:15px;height: 30px;padding: 0;line-height: 30px;width: 120px;border-radius: 2px;" value="立即结算">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="taocantips_1" style="margin-top:20px;color:#444;">
+                <p style="font-size:15px;font-weight:bold;color:#f60;line-height:30px;">
+                    温馨提醒
+                </p>
+                <p style="padding-left:10px;line-height:25px;font-size:13px;">
+                    1、请选择您要购买的套餐类型，并选择需要购买的坐席个数、使用时间后，点击“立即结算”按钮下单。
+                </p>
+                <p style="padding-left:10px;line-height:25px;font-size:13px;">
+                    2、
+                    <span style="color:#FF3300;">企业版</span>，是按客服人数收费的，599元/年/坐席（含全部功能）；<span style="color:#FF3300;">高级商务版</span>，是3999元/年，无限坐席的（含全部功能）
+                </p>
+                <p style="padding-left:10px;line-height:25px;font-size:13px;">
+                    3、如有疑问，请点击此处
+                    <a href="javascript:;" onclick="window.open('http://kefu.qycn.com/vclient/chat/?websiteid=7987&amp;groupid=24573&amp;originPageTitle=%E8%87%AA%E5%8A%A9%E8%B4%AD%E4%B9%B0-%E4%B8%8B%E5%8D%95%E9%A1%B5%E9%9D%A2-CC2292391', '_blank', 'toolbar=no,scrollbars=yes,menubar=no,status=no,resizable=yes,location=no')" style="color:#459ae9;"> 联系客服</a>。
+                </p>
+            </div>
+        </div>
+        <!--增加站点-->
+        <div class="nav_tab_item none">
+            <div class="location" style="font-size:12px;">
+                您当前的位置：CC客服 &gt; <span> 账户中心 </span> &gt; <span>账户明细</span>
+            </div>
+            <div style="height:28px;border-bottom:1px solid #C9D2CB;position: relative;margin-bottom:10px;">
+                <div style="height:28px;width:120px;border-bottom:2px solid #44b549;font-size:18px;color:#346699">
+                    增加商家站点
+                </div>
+                <div class="backBtn" style="height:18px;line-height:18px;padding:1px;position:absolute;bottom:1px;right:2px;cursor:pointer;background-color:#4FB910;color:#fff;border-radius:3px;width:38px;text-align:center;">
+                    返回
+                </div>
+            </div>
+            <div style="margin-top:10px;">
+                <div style="height:36px;line-height:36px;font-size:14px;color:#444;">
+                    请选择增加商家站点的个数（<span style="color:#f60;">您当前可用<span style="color:#006633;">2</span>个站点</span>）：
+                </div>
+                <form action="?c=AccountCenter&amp;a=takeOrder" method="post" id="sub_takeorder1">
+                    <table class="service_tab" width="100%" border="0" cellspacing="0">
+                        <tbody>
+                        <tr class="service_tab_th">
+                            <td>
+                                产品名称
+                            </td>
+                            <td>
+                                增加数量
+                            </td>
+                            <td>
+                                有效时间
+                            </td>
+                            <td>
+                                金额(元)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                商家站点
+                            </td>
+                            <td>
+                                <!--<select id="slc_web_nums" name="nums" style="color:#FF3300;">
+                                <option value="1">1个</option>
+                                <option value="2">2个</option>
+                                <option value="3">3个</option>
+                                <option value="4">4个</option>
+                                <option value="5">5个</option>
+                                <option value="6">6个</option>
+                                <option value="8">8个</option>
+                                <option value="9">9个</option>
+                                <option value="10">10个</option>
+                                <option value="12">12个</option>
+                                <option value="15">15个</option>
+                                <option value="20">20个</option>
+                                <option value="50">50个</option>
+                            </select>
+                            -->
+                                <input type="button" id="web_clkct_dn" class="button2 clkctbutton" style="border-top-left-radius:2px;border-bottom-left-radius:2px;" value="-">
+                                <input name="nums" type="text" class="text1 clkcttext" value="1">
+                                <input type="button" class="button2 clkctbutton" style="border-top-right-radius:2px;border-bottom-right-radius:2px;" value="+">
+                            </td>
+                            <td>
+                                永久可用
+                            </td>
+                            <td>
+                                ￥ <span id="web_tprice">50</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <div style="float:right;height:70px;line-height:70px;font-size:20px;color:#444;padding-right:15px;">
+                            总计：<span style="color:#FF0000;">￥ </span><span id="total_tprice1" style="color:#FF0000;">50</span>
+                        </div>
+                        <div style="clear:both;float:right;">
+                            <input type="hidden" name="svid" value="27">
+                            <input type="hidden" name="act" value="6">
+                            <input type="submit" class="button2" style="background:#4FB910;color: #fff;font-size:15px;height: 30px;padding: 0;line-height: 30px;width: 120px;border-radius: 2px;" value="立即结算">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="layui-footer"></div>
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/layui.js"></script>
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
+    <script src="../../js/coment.js"></script>
     <script src="../../js/myscript.js"></script>
     <script>
         $(function(){
+            var companyId = getQueryString("companyId");
+            var memberId = getQueryString("memberId");
+            var mi_s_user = $("#mi_s_user");
+            var mi_s_realname = $("#mi_s_realname");
+            var roleName = $("#roleName");
+            var mi_s_mobile = $("#mi_s_mobile");
+            var mi_s_email = $("#mi_s_email");
+            var cpnamelbl = $("#cpnamelbl");
+            $("#modifyPwdMembId").val(memberId);
 
             // //请求个人信息
             function getPeopleInfo() {
                 $.ajax({
                     url: urlParam.getPeopleInfo,
-                    data: {
-                        companyId: 1,
-                        memberId: 12
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
                     },
-                    success: function(msg) {}
+                    crossDomain: true,
+                    data: {
+                        companyId: companyId,
+                        memberId: memberId
+                    },
+                    success: function(msg) {
+                        console.log(msg);
+
+                        if(msg.code == 101) {
+                            parent.window.location.href = "../../register.html";
+                            return;
+                        } else if(msg.code == 0) {
+                            mi_s_user.html(msg.object.username || "无");
+                            mi_s_realname.html(msg.object.category || "无");
+                            roleName.html(msg.object.role || "无");
+                            mi_s_mobile.html(msg.object.mobile || "无");
+                            mi_s_email.html(msg.object.email || "无");
+                            cpnamelbl.html(msg.object.companyname || "无");
+
+                            $("#edit_myinfo").on("click", function(){
+                                modifyPeopleInfo(memberId,msg.object.username,msg.object.mobile,msg.object.email)
+                            })
+
+                        } else {
+                            msgMask(msg.message,1);
+                        }
+
+                    }
                 })
             }
-            getPeopleInfo();
+            getPeopleInfo(); // 个人信息
+
+            // 修改个人信息
+            function modifyPeopleInfo(mebId,username,mobile,email) {
+                var mebId = mebId || "";
+                var username = username || "";
+                var mobile = mobile || "";
+                var email = email || "";
+
+                var modifyPeopleInfoStr =
+                '<form action="" id="modifyInfoData">' +
+                    '<input type="hidden" name="memberId" id="mebId" value="'+mebId+'">'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">姓名</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="username" required id="modify_roleName" lay-verify="required" placeholder="请输入姓名" value="'+username+'" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">手机</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="mobile" required id="modify_mobile" lay-verify="required" placeholder="请输入手机号码" value="'+mobile+'" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">邮箱</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="email" required id="modify_email" lay-verify="required" placeholder="请输入邮箱" value="'+email+'" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                '</form>';
+                parent.layer.open({
+                    type: 1,
+                    area: ['370px', '210px'],
+                    btn: ['确认', '取消'],
+                    content: modifyPeopleInfoStr,
+                    yes: function(index, layero){
+
+                        // var body = layer.getChildFrame('body', index);
+
+
+                        var roleName = $("body",parent.document).find("#modify_roleName").val();
+                        var mobile = $("body",parent.document).find("#modify_mobile").val();
+                        var email = $("body",parent.document).find("#modify_email").val();
+                        var formData = $("body",parent.document).find("#modifyInfoData").serialize();
+                        console.log(roleName);
+                        $.ajax({
+                            url: urlParam.modifyPeoleInfo,
+                            dataType: "json",
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            crossDomain: true,
+                            data: formData,
+                            success: function (msg) {
+                                console.log(msg);
+                                if(msg.code == 0) {
+                                    parent.window.location.href="../../index.html"
+                                } else {
+                                    msgMask(msg.message,1)
+                                }
+                            }
+                        })
+                    },
+                    btn2: function(index, layero){
+
+                    }
+                })
+            }
+            // 获取套餐列表
+            function getProductList(){
+                $.ajax({
+                    url: urlParam.getProductList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    // data: formData,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            var strHTML = "";
+                            var len = msg.object.length;
+                            for(var i = 0; i < len; i ++){
+                                var name = msg.object[i].name || "-";
+                                var num = msg.object[i].no || "0";
+                                var create_time = msg.object[i].create_time;
+                                var years = msg.object[i].years;
+                                var dataId = msg.object[i].id;
+                                var type = msg.object[i].type;
+                                var typeStr = "";
+                                var classStr = "";
+                                if(type == 1) {
+                                    typeStr = "增加站点";
+                                    classStr = "nav_item7";
+                                } else{
+                                    typeStr = "在线购买"
+                                    classStr = "nav_item7";
+                                }
+
+                                if(i == 0) {
+                                    strHTML +=
+                                    '<tr>'+
+                                        '<td rowspan="'+len+'" style="border-right:1px solid #e8e8e8;font-weight:bold;color:#2f8ebc;">试用版</td>'+
+                                        '<td>'+name+'</td>'+
+                                        '<td>'+
+                                            '<span style="color:#006633;">'+num+' </span>个'+
+                                        '</td>'+
+                                        '<td>'+create_time+'</td>'+
+                                        '<td>'+
+                                            '<span style="color:red;">'+years+' </span>天'+
+                                        '</td>'+
+                                        '<td width="186">'+
+                                            '<a href="javascript:void(0)" data-type="'+type+'"  data-id="'+dataId+'"  class="'+classStr+'">'+typeStr+'</a>'+
+                                        '</td>'+
+                                    '</tr>'
+                                } else {
+                                    strHTML +=
+                                    '<tr>'+
+                                        '<td>'+name+'</td>'+
+                                        '<td>'+
+                                            '<span style="color:#006633;">'+num+' </span>个'+
+                                        '</td>'+
+                                        '<td>'+create_time+'</td>'+
+                                        '<td>'+
+                                            '<span style="color:red;">'+years+' </span>天'+
+                                        '</td>'+
+                                        '<td width="186">'+
+                                            '<a href="javascript:void(0)" data-type="'+type+'" data-id="'+dataId+'" class="'+classStr+'">'+typeStr+'</a>'+
+                                        '</td>'+
+                                  '</tr>'
+                                }
+                                $("#tcTable tbody").html(strHTML)
+                            }
+
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
+            getProductList()
+
+            // 点击在线购买切换
+            $(document).on("click", ".nav_item7", function(){
+                var dataId = $(this).attr("data-id");
+                var dataType = $(this).attr("data-type");
+                ProductiDetail(dataId,dataType)
+                $(".nav_tab_item").addClass("none").eq(6).removeClass("none");
+            })
+            // // 点击增加站点切换
+            // $(document).on("click",".nav_item8", function(){
+            //     var dataId = $(this).attr("data-id");
+            //     $(".nav_tab_item").addClass("none").eq(7).removeClass("none");
+            // })
+
+            // 获取套餐详情
+            function ProductiDetail(id,type){
+                console.log(id);
+                console.log(urlParam.getProductDetaile);
+                var type = type;
+                $.ajax({
+                    url: urlParam.getProductDetaile,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        id: id
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        var strHTML  = '';
+                        if(msg.code == 0) {
+                            var len = msg.object.length;
+                            var i = 0;
+                            for(i; i < len; i++) {
+                                var name = msg.object[i].name || "-";
+                                var num = msg.object[i].no || "0";
+                                var create_time = msg.object[i].create_time;
+                                var years = msg.object[i].years;
+                                var dataId = msg.object[i].id;
+                                var type = msg.object[i].type;
+                                var money = msg.object[i].money;
+
+                                strHTML +=
+                                '<tr>'+
+                                   '<td>'+name+'</td>'
+                                if(type == 2) {
+                                    strHTML +=
+                                        '<td><span style="color:#006633;">无限坐席</span></td>';
+                                } else {
+                                    strHTML +=
+                                    '<td>'+
+                                        '<input type="button" class="button2 clkctbutton" style="border-top-left-radius:2px;border-bottom-left-radius:2px;" value="-">'+
+                                        '<input name="snum" style="margin-left: -5px;margin-right: -5px;" type="text" class="text1 clkcttext" readonly="" value="1">'+
+                                        '<input type="button" class="button2 clkctbutton" style="border-top-right-radius:2px;border-bottom-right-radius:2px;" value="+">'+
+                                    '</td>';
+                                }
+                                strHTML +=
+                                    '<td>'+
+                                        '<select class="slc_clk_day" name="p_day" style="color:#FF3300;">'+
+                                            '<option value="1">1年</option>'+
+                                            '<option value="2">2年</option>'+
+                                            '<option value="3">3年</option>'+
+                                            '<option value="4">4年</option>'+
+                                            '<option value="5">5年</option>'+
+                                        '</select>'+
+                                    '</td>'+
+                                    '<td>￥ <span class="clkseat_tprice" data-unit-price="'+money+'">'+money+'</span></td>'+
+                                '</tr>';
+                            }
+                            $("#total_tprice").html(money);
+                            $("#butForm tbody").html(strHTML);
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
+
+
+            // 点击返回
+            $(".backBtn").on("click", function(){
+                $(".nav_tab_item").addClass("none").eq(1).removeClass("none");
+            })
+
+            // 点击+
+            $(document).on("click",".clkctbutton[value='+']", function(){
+                var num = $(this).siblings(".clkcttext").val() || 1;
+                num ++;
+                var thisNumShow = $(this).siblings(".clkcttext").val(num);
+                var allPcice = countAllPrice($(this));  // 总价格计算
+                var thisShowAllPrice = $(this).parents("tr").find(".clkseat_tprice");
+                var total_tprice = $("#total_tprice");
+
+                console.log(thisShowAllPrice);
+                thisShowAllPrice.html(allPcice);
+                total_tprice.html(allPcice);
+            })
+            // 点击-
+            $(document).on("click",".clkctbutton[value='-']", function(){
+                var num = $(this).siblings(".clkcttext").val() || 1;
+                num --;
+                if(num <1){
+                    num = 1;
+                    return;
+                }
+                var thisNumShow = $(this).siblings(".clkcttext").val(num);
+                var allPcice = countAllPrice($(this));
+                var thisShowAllPrice = $(this).parents("tr").find(".clkseat_tprice");
+                var total_tprice = $("#total_tprice");
+                console.log(thisShowAllPrice);
+                thisShowAllPrice.html(allPcice);
+                total_tprice.html(allPcice);
+                console.log(allPcice);
+            })
+            // 选择需要购买的套餐
+            $("input[name='taocantype']").on("change", function(){
+                console.log();
+                var thisVal = $(this).val();
+                console.log($(".service_tab").find("tr").eq(2));
+                if(thisVal == 1){
+                    $("#sub_takeorder .service_tab").find("tr").eq(1).removeClass("none");
+                    $("#sub_takeorder .service_tab").find("tr").eq(2).addClass("none");
+                    $("#total_tprice_div1").removeClass("none");
+                    $("#total_tprice_div2").addClass("none");
+                } else {
+                    $("#sub_takeorder .service_tab").find("tr").eq(1).addClass("none");
+                    $("#sub_takeorder .service_tab").find("tr").eq(2).removeClass("none");
+                    $("#total_tprice_div1").addClass("none");
+                    $("#total_tprice_div2").removeClass("none");
+                }
+            })
+
+            // 选择套餐里的时间
+            $(document).on("change",".slc_clk_day", function(){
+                var thisVal = $(this).val();
+                var allPcice = countAllPrice($(this));
+                console.log(allPcice);
+                var total_tprice = $("#total_tprice");
+                var thisShowAllPrice = $(this).parents("tr").find(".clkseat_tprice");
+                thisShowAllPrice.html(allPcice);
+                total_tprice.html(allPcice);
+            })
+
+            // 点击立即结算
+            $("#settlementBtn").on("click", function(){
+                var name = $("#butForm tbody tr td:nth-child(1)").text();
+                var num = $("#butForm tbody tr td:nth-child(2) input:nth-child(2)").val();
+                var time = $("#butForm tbody tr td:nth-child(3) select").val();
+                $.ajax({
+                    url: urlParam.getProductDetaile,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        name: name,
+                        companyId: companyId,
+                        no: num
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0){
+                            // 再次生成订单列表
+                            orderList(companyId);
+                            parent.layer.open({
+                                type: 1,
+                                title:"提交订单",
+                                area: ['370px', '180px'],
+                                btn: ['确认', '取消'],
+                                content:"<div style='height: 100px;line-height:100px;text-align: center'>您是否去结账？</div>",
+                                yes: function(index){
+                                    msgMask("结账了",1);
+                                },
+                                btn2: function(){
+
+                                }
+                            })
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            })
+
+            // 获取订单列表
+            orderList(companyId);
+            function orderList(companyId){
+                console.log(urlParam.orderList)
+                $.ajax({
+                    url: urlParam.orderList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        companyId: companyId
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        var dataArr = msg.data;
+                        // 测试
+                        // dataArr = [
+                        //     {
+                        //         id: "sdfaj",
+                        //         name: "打算科技大厦附近",
+                        //         create_time: "1483858837",
+                        //         money: "599.00",
+                        //         status: "0"
+                        //     },
+                        //     {
+                        //         id: "sdfaj",
+                        //         name: "打算科技大厦附近",
+                        //         create_time: "1483858837",
+                        //         money: "599.00",
+                        //         status: "0"
+                        //     }
+                        // ]
+                        if(msg.code == 0){
+                            if(dataArr.length == 0) {
+                                var strHtml = "<tr><td colspan='6'>暂无订单……</td></tr>";
+                                $("#orderinfo_table tbody").html(strHtml);
+                            } else {
+                                console.log(dataArr);
+                                var strHtml = "";
+                                for(var i = 0; i < dataArr.length; i++) {
+                                    var orderId = dataArr[i].id || "暂无订单编号";
+                                    var productName = dataArr[i].name || "暂无产品名称";
+                                    var createTime = dataArr[i].create_time || "1483858837";
+                                    var money = dataArr[i].money || "599.00";
+                                    var status = (dataArr[i].status == 0)? "未支付" : "已支付"
+                                    strHtml +=
+                                        "<tr>" +
+                                            "<td>"+orderId +"</td>" +
+                                            "<td>"+ productName +"</td>" +
+                                            "<td>"+createTime+"</td>" +
+                                            "<td>"+ money +"</td>" +
+                                            "<td>"+status+"</td>" +
+                                            "<td><button class='layui-btn layui-btn-xs'>删除</button></td>" +
+                                        "</tr>";
+                                }
+                                 $("#orderinfo_table tbody").html(strHtml);
+                            }
+                        } else {
+                            msgMask(msg.message || "数据请求错误！",1);
+                        }
+                    }
+                })
+            }
+
+            $("#submitcppwd").on('click', function(){
+                var oldpass = $("#oldpass").val();
+                var newpass = $("#newpass").val();
+                var newpass1 = $("#newpass1").val();
+                if(oldpass == ""){
+                    msgMask("旧密码不能为空!",1)
+                    return;
+                }
+                if(newpass == ""){
+                    msgMask("新密码不能为空!",1)
+                    return;
+                }
+                if(newpass1 == ""){
+                    msgMask("新确定密码不能为空!",1)
+                    return;
+                }
+                if(newpass != newpass1) {
+                    msgMask("两次密码不一致!",1)
+                    return;
+                }
+                modifyPwd()
+            })
+            $("#reset").on("click", function(){
+                $("#oldpass").val("");
+                $("#newpass").val("");
+                $("#newpass1").val("");
+            })
+
+
+            // 修改密码
+            function modifyPwd(){
+                var formData = $("#changepwdform").serialize();
+                $.ajax({
+                    url: urlParam.modifyPwd,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: formData,
+                    success: function (msg) {
+                        if(msg.code == 0) {
+                            parent.layer.open({
+                                type: 1,
+                                title:"提交订单",
+                                area: ['370px', '180px'],
+                                btn: ['确认'],
+                                content:"<div style='height: 100px;line-height:100px;text-align: center'>密码修改成功！</div>",
+                                yes: function(index){
+                                    parent.window.location.href = "./login.html";
+                                },
+                                btn2: function(){
+
+                                }
+                            })
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
         })
+
+        // 计算金额
+        function countAllPrice(thisDom,unitPrice){
+            var thisPrentTr = thisDom.parents("tr");
+            var allPrentTr = thisDom.parents("tbody").find("tr");
+            var allPrice = 0;
+            var thisAllPrice = 0;
+            console.log(allPrentTr);
+            thisPrentTr.each(function(){
+                var thisNum = $(this).find(".clkcttext").val() || 1;
+                // var thisPrice = $(this).find(".clkseat_tprice").text();
+                var thisPrice = $(this).find(".clkseat_tprice").attr("data-unit-price");
+                var  unitPrice =  unitPrice || thisPrice;
+                var thisSelectNum = $(this).find(".slc_clk_day").val() || 1;
+                console.log("thisSelectNum==="+thisSelectNum);
+                console.log("thisNum=="+thisNum);
+                console.log("thisPrice==="+thisSelectNum);
+
+                thisAllPrice += ( parseInt(thisNum)*parseInt(thisPrice)* parseInt(thisSelectNum));
+                console.log(thisNum);
+            })
+            return thisAllPrice;
+        }
+
+
+
+
     </script>
 </body>
 </html>

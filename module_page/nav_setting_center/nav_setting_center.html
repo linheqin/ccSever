@@ -13,6 +13,7 @@
     <!-- 拾色器 -->
     <link rel="stylesheet" type="text/css" href="../../plugin/bigcolorpicker/css/jquery.bigcolorpicker.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/nav_setting_center.css" />
+    <script src="../../js/common.js"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -274,7 +275,7 @@
                                                         <div class="kf_zdy_main" id="custom" style="display:none">
                                                             <div class="kf_zdy_left_img">
                                                                 <img src="../../images/nopic.gif" width="120" height="90" id="custom_img" alt="加载失败">
-                                                                <img src="../../images/nopic.gif" style="display: none;" id="custom_img_temp" onload="getImageInfo()">
+                                                                <img src="../../images/nopic.gif" style="display: none;" id="custom_img_temp">
                                                             </div>
                                                             <div class="kf_zdy_right" style="margin-left:15px;width:152px;">
                                                                 <input type="hidden" name="imgwidth" value="0">
@@ -311,9 +312,9 @@
                                                         </div>
                                                         <!-- 高级模式 -->
                                                         <div class="adv_mode_sh" id="adv_theme_color" style="display: block;">
-                                                            <div style="float:left;"><span id="adv_theme_color_show" style="border:1px solid #E0E2E5;display:block;border-radius: 3px;width:35px;height:35px;margin:5px;margin-left:0;background:#00CCCC;"></span></div>
-                                                            <div style="float:left;width:234px;height:44px;margin-left:10px;border: 1px dashed #ccc;padding-bottom: 2px;">
-                                                            <ul>
+                                                            <div style="float:left;"><span id="adv_theme_color_show" class="askdefinecolorspan" style="border:1px solid #E0E2E5;display:block;border-radius: 3px;width:35px;height:35px;margin:5px;margin-left:0;background:#00CCCC;"></span></div>
+                                                            <div style="float:left;width:234px;height:48px;margin-left:10px;border: 1px dashed #ccc;padding-bottom: 2px;">
+                                                            <ul class="askdefineColorbars">
                                                                 <li class="adv_slc_t_color" rel="#da434e" style="cursor: pointer;border-radius: 3px;float:left;margin-left:3px;margin-top:2px;width:18px;height:18px;border:1px solid #E0E2E5;background:#da434e"></li>
                                                                 <li class="adv_slc_t_color" rel="#ec6300" style="cursor: pointer;border-radius: 3px;float:left;margin-left:3px;margin-top:2px;width:18px;height:18px;border:1px solid #E0E2E5;background:#ec6300"></li>
                                                                 <li class="adv_slc_t_color" rel="#804d4d" style="cursor: pointer;border-radius: 3px;float:left;margin-left:3px;margin-top:2px;width:18px;height:18px;border:1px solid #E0E2E5;background:#804d4d"></li>
@@ -566,7 +567,63 @@
                                             </tr>
                                             <tr>
                                                 <td class="iframe_height" style="height:610px;">
-                                                    <iframe id="preview" name="preview" frameborder="0" src="blank.html" width="100%" height="100%" scrolling="no"></iframe>
+                                                    <div id="adv_consult" style="width: 187px; margin-top: 8px; float: right; margin-right: 100px;">
+                                                        <div class="kf_qycn_com_cckf_icon" style="z-index: 600000; float: right; display: block;">
+                                                            <div class="kf_qycn_com_cckf_icon_offline" style="cursor: default; border-top: 1px solid gray; border-right: 1px solid gray; border-left: 1px solid gray; border-bottom-style: none; background-image: url(&quot;../../images/headPicOnline.png&quot;); height: 147px;"><span class="kf_qycn_com_cckf_caption" style="cursor: default;"></span></div>
+                                                            <div class="kf_qycn_com_cckf_direct_talking_dialog" style="width: 150px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: none solid solid; border-right-color: gray; border-bottom-color: gray; border-left-color: gray;">
+                                                            <div class="kf_qycn_com_cckf_direct_talking_dialog_border_color kf_qycn_com_cckf_direct_talking_dialog_inner">
+                                                            <div class="kf_qycn_com_cckf_direct_talking_dialog_inner_content" style="background-color: rgb(249, 249, 251); padding-bottom: 5px; background-position: initial initial; background-repeat: initial initial;">
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_kf kf_qycn_com_cckf_direct_talking_item colorRBar" style="background-color: rgb(0, 204, 204);">
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;"><img type="201" class="kf_qycn_com_cckf_direct_talking_dialog_item_kf_img" src="../../images/man_online.png">
+                                                                    </div>
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_dialog_item_kf_" style="width: 100%;"><div class="kf_qycn_com_cckf_direct_talking_dialog_item_kf_body" style="color: rgb(255, 255, 255);">CC客服示例</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_qq kf_qycn_com_cckf_direct_talking_item colorRBar" style="background-color: rgb(0, 204, 204);">
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;">
+                                                                        <div class="kf_qycn_com_cckf_direct_talking_dialog_item_qq_img_wrap" style="margin-left: 7px;"><img type="202" class="kf_qycn_com_cckf_direct_talking_dialog_item_qq_img" src="../../images/qq.gif" style="display: block;"></div>
+                                                                        <div class="kf_qycn_com_cckf_direct_talking_dialog_item_qq_img_mask" style="background-color: rgb(0, 204, 204);"></div>
+                                                                    </div>
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_dialog_item_qq_" style="width: 100%;">
+                                                                        <div class="kf_qycn_com_cckf_direct_talking_dialog_item_qq_body" style="color: rgb(255, 255, 255);">Q Q 示例</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_msn kf_qycn_com_cckf_direct_talking_item colorRBar" style="background-color: rgb(0, 204, 204);">    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;"><img type="203" class="kf_qycn_com_cckf_direct_talking_dialog_item_msn_img" src="../../images/skype.png">
+                                                                    </div>
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_dialog_item_msn_" style="width: 100%;"><div class="kf_qycn_com_cckf_direct_talking_dialog_item_msn_body" style="color: rgb(255, 255, 255);">Skpye 示例</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_ww kf_qycn_com_cckf_direct_talking_item colorRBar" style="background-color: rgb(0, 204, 204);">
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;"><img type="208" class="kf_qycn_com_cckf_direct_talking_dialog_item_ww_img" src="../../images/ww.gif"></div>
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_dialog_item_ww_" style="width: 100%;"><div class="kf_qycn_com_cckf_direct_talking_dialog_item_ww_body" style="color: rgb(255, 255, 255);">淘宝旺旺示例</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_wb kf_qycn_com_cckf_direct_talking_item colorRBar" style="background-color: rgb(0, 204, 204);">
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;"><img type="207" class="kf_qycn_com_cckf_direct_talking_dialog_item_wb_img" src="../../images/weibo.png"></div><div class="kf_qycn_com_cckf_direct_talking_dialog_item_wb_" style="width: 100%;"><div class="kf_qycn_com_cckf_direct_talking_dialog_item_wb_body" style="color: rgb(255, 255, 255);">微博示例</div></div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_kf kf_qycn_com_cckf_direct_talking_item colorRBar" style="background-color: rgb(0, 204, 204);">
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;"><img type="201" class="kf_qycn_com_cckf_direct_talking_dialog_item_kf_img" src="../../images/group.png">
+                                                                    </div>
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_dialog_item_kf_" style="width: 100%;"><div class="kf_qycn_com_cckf_direct_talking_dialog_item_kf_body" style="color: rgb(255, 255, 255);">CC客服分组示例</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_text" style="text-align: center;"><img src="../../images/qrcode.png"></div>
+                                                                <div class="kf_qycn_com_cckf_direct_talking_dialog_item_tel kf_qycn_com_cckf_direct_talking_item" style="border: none;">
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_item_icon_box" style="width: 24px;"><img type="206" class="kf_qycn_com_cckf_direct_talking_dialog_item_tel_img" src="../../images/tel.png">
+                                                                    </div>
+                                                                    <div class="kf_qycn_com_cckf_direct_talking_dialog_item_tel_" style="width: 100%;">
+                                                                        <div class="kf_qycn_com_cckf_direct_talking_dialog_item_tel_body" style="color: rgb(101, 101, 101); font-family: arial; font-size: 14px;width:100%">020-38888813</div>
+                                                                    </div>
+                                                                </div>
+                                                                </div></div>
+                                                                </div>
+                                                                    <div class="kf_qycn_com_cckf_version" style="display: none; position: absolute; bottom: 0px; right: 0px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 10px; background-position: initial initial; background-repeat: initial initial;">2.3.0.6052</div>
+                                                                </div>
+                                                                <div class="kf_qycn_com_cckf_dock" style="z-index: 500000; background-image: url(&quot;../../images/169ada.png&quot;); margin-top: 154px; float: right; display: block;"><span class="kf_qycn_com_cckf_caption"></span>
+                                                                    <div class="kf_qycn_com_cckf_version" style="display: none; position: absolute; bottom: 0px; right: 0px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 10px; background-position: initial initial; background-repeat: initial initial;">2.3.0.6052
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -578,7 +635,106 @@
                 </form>
             </div>
             <div id="consult_set_help" style="position: absolute;left: 466px;top: 3px;height: 38px;line-height: 38px;padding-left: 26px;font-size: 13px;font-family: &quot;微软雅黑&quot;;background: url(../../images/prompt.gif) no-repeat 7px 12px;"><a target="_blank" href="http://cckf.qycn.com/html/knowledge/fenggezhuangban/2014/0818/258.html">如何设置精美的咨询图标？</a></div>
+            <!-- 弹窗内容 -->
+            <div class="kf_w22_c" id="addElePopOuter" style="padding:15px 15px 0 15px">
+                <div id="bottypexx_adv" style="padding:3px 0 10px 0"> 类型：
+                    <input name="slbottype_adv" type="radio" value="201" checked="checked"><label>CC客服</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="202"><label>Q&nbsp;Q</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="203"><label>Skype</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="204"><label>微信</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="2010"><label>阿里旺旺国际版</label><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="206"><label>电话</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="207"><label>微博</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="208"><label>淘宝旺旺</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="209"><label>阿里巴巴旺旺</label>&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="205"><label>文字</label><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="slbottype_adv" type="radio" value="2011"><label>营销QQ</label>
+                </div>
+                <table id="feiwordstab_adv" width="410" border="0" cellspacing="0" cellpadding="0" style="display:none;position: relative">
+                    <tbody><tr height="46">
+                    <td width="40"><span id="feiwordstab_adv_tn">账号</span>：</td>
+                    <td><input id="btitemvalue_adv" style="width:318px; height:26px" class="text1" type="text">
+                        <div class="gtqd_a_cls" id="QQLinShiHuiHuaTips_2" style="display:none;position: absolute;color:#f60;left:40px;top: 40px;"><a href="http://cckf.qycn.com/html/knowledge/fenggezhuangban/2013/1119/87.html" target="_blank">开启“QQ临时会话”服务，才能与陌生人会话哦！查看设置方法</a></div>
+                        <div class="gtqd_a_cls" id="yxQQLinShiHuiHuaTips_2" style="display:none;position: absolute;color:#f60;left:40px;top: 40px;"><a href="http://cckf.qycn.com/html/knowledge/fenggezhuangban/2015/0320/261.html" target="_blank">什么是营销QQ“沟通链接”？如何获取？</a></div></td>
+                    </tr>
+                    <tr height="60">
+                        <td>说明：</td>
+                        <td><input id="btitemdesc_adv" style="width:318px; height:26px" class="text1" type="text"></td>
+                    </tr>
+                </tbody></table>
+                <table id="cckftab_adv" style="margin-top: 6px; display: table; border:none" width="410" border="0" cellspacing="0" cellpadding="0">
+                    <tbody><tr height="46">
+                        <td width="40">响应<br>方式</td>
+                        <td style="line-height:4px;border-left: 2px solid #f60;padding-left: 9px;background-color: #E4F2FD;padding-top: 2px;padding-bottom: 2px;border-radius:3px;">
+                            <input name="admittype" type="radio" id="clerks" value="1" checked="checked"> <label id="lclerks">指定客服</label>
+                            <span style="padding-left:34px">
+                                <select name="select1" id="choclerk" style="width:100px">
+                                    <option value="">选择客服</option>
+                                    <option value="2155861">超级管理员</option>
+                                </select></span><br><br>
+                            <input type="radio" name="admittype" id="groups" value="2"> <label id="lgroups">指定客服分组</label>
+                            <span style="padding-left:10px">
+                                <select name="select2" id="chogroup" style="width:100px" disabled="">
+                                    <option value="">暂无数据</option>
+                                </select>
+                            </span><br><br>
+                            <input type="radio" name="admittype" id="robot" value="3"> <label id="lrobot">机器人客服</label>
+                            <input id="btitemvalue_adv_cckf" style="display:none" class="text1" type="text">
+                        </td>
+                    </tr>
+                    <tr height="60">
+                        <td>说明：</td>
+                        <td><input id="btitemdesc_adv_cckf" style="width:318px; height:26px" class="text1" type="text"></td>
+                    </tr>
+                    </tbody></table>
+                    <table id="weixintab_adv" width="410" border="0" cellspacing="0" cellpadding="0" style="display:none;margin-top: 2px;margin-bottom: 0px;">
+                        <tbody><tr height="46">
+                            <td width="40">图片：</td>
+                            <td>
+                                <div style="height:137px;width:100%;">
+                                    <div id="adv_item_weixin_upload_view" style="float:left;width:135px;height:135px;border:1px solid #ccc;margin-left:15px;background-repeat:no-repeat;background-position:center;background-image:url(templates/images/qrcode_view_wx.jpg);"></div>
+                                    <div style="float:left;">
+                                        <div style="color:#474747;margin:16px 0 0 32px;line-height:20px;"><font color="#f60">·</font> 支持gif、jpg、png等格式<br><font color="#f60">·</font> 图片最大宽度：135px</div>
+                                        <div id="adv_item_weixin_upload" class="upload_btn_cls webuploader-container" style="margin:20px 0 0 52px;"><div class="webuploader-pick">上传二维码图片</div><div id="rt_rt_1c7d5kske1ljp1eme1d5q1q8p43tg" style="position: absolute; top: 0px; left: 0px; width: 125px; height: 30px; overflow: hidden; bottom: auto; right: auto;"><input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div></div>
+                                    </div>
+                                </div>
+                                <input id="btitemvalue_adv_weixin" name="btitemvalue_adv_weixin_n" type="hidden" value="">
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <table id="weibotab_adv" width="410" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+                        <tbody><tr height="46">
+                            <td width="40">微博<br>地址：</td>
+                            <td><input id="btitemvalue_adv_weibo" style="width:318px; height:26px" class="text1" type="text">
+                                                </td>
+                        </tr>
+                        <tr height="60">
+                            <td>说明：</td>
+                            <td><input id="btitemdesc_adv_weibo" style="width:318px; height:26px" class="text1" type="text"></td>
+                        </tr>
+                    </tbody></table>
+                    <table id="dianhuatab_adv" width="410" border="0" cellspacing="0" cellpadding="0" style="display:none;margin: 0px 0px 0px;">
+                        <tbody><tr height="46">
+                                <td width="40">电话：</td>
+                                <td><textarea id="editor_container_adv_dianhua" name="adv_phone_words" style="width:371px;height:128px;visibility:hidden;"></textarea></td>
+                            </tr>
+                    </tbody></table>
+                    <table id="wordstab_adv" width="410" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+                        <tbody><tr height="130" valign="top">
+                            <td width="40">内容：</td>
+                            <td><textarea id="editor_container_adv" name="botsetwords_adv" style="width:371px;height:128px;visibility:hidden;"></textarea></td>
+                        </tr>
+                    </tbody></table>
+                    <div style="text-align:center; padding:15px">
+                        <input type="hidden" rel="0" value="add" id="btitemaction_adv">
+                        <input type="hidden" value="0" id="isnewbtitem_adv">
+                        <input id="submitdbot_adv" type="button" value="确定" class="button2">
+                        &nbsp;&nbsp;
+                        <input type="button" value="取消" class="button2 closebotset_adv">
+                    </div>
+                </div>
         </div>
+
          <!-- 邀请窗口————PC窗口设置-->
         <div class="nav_tab_item none">
             <div class="location">
@@ -896,7 +1052,7 @@
                              <td>
                                 <div style="float:left;"><span id="theme_color_show" style="border:1px solid #E0E2E5;display:block;border-radius: 5px;width:45px;height:45px;margin:5px;margin-left:0;background:#169ada;"></span></div>
                                 <div style="float:left;width:268px;height:55px;margin-left:10px;border: 1px dashed #ccc;padding-bottom: 2px;">
-                                    <ul>
+                                    <ul class="visiterdefineColorbars">
                                         <li class="slc_t_color" rel="#da434e" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#da434e"></li>
                                         <li class="slc_t_color" rel="#ec6300" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#ec6300"></li>
                                         <li class="slc_t_color" rel="#804d4d" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#804d4d"></li>
@@ -1107,9 +1263,9 @@
                                         <tr>
                                             <th scope="row" class="v_top">主题：</th>
                                             <td>
-                                                <div style="float:left;"><span id="theme_color_show" style="border:1px solid #E0E2E5;display:block;border-radius: 5px;width:45px;height:45px;margin:5px;margin-left:0;background:#169ada;"></span></div>
+                                                <div style="float:left;"><span id="theme_color_show" class="themecolorshowspan" style="border:1px solid #E0E2E5;display:block;border-radius: 5px;width:45px;height:45px;margin:5px;margin-left:0;background:#169ada;"></span></div>
                                                 <div style="float:left;width:268px;height:55px;margin-left:10px;border: 1px dashed #ccc;padding-bottom: 2px;">
-                                                    <ul>
+                                                    <ul class="directdefineColorbars">
                                                         <li class="slc_t_color" rel="#da434e" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#da434e"></li>          
                                                         <li class="slc_t_color" rel="#ec6300" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#ec6300"></li>               
                                                         <li class="slc_t_color" rel="#804d4d" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#804d4d"></li>
@@ -1516,9 +1672,9 @@
                                     <tr id="invite_type_st">
                                         <th scope="row" class="v_top">背景：</th>
                                         <td>
-                                            <div style="float:left;"><span id="theme_color_show" style="border:1px solid #E0E2E5;display:block;border-radius: 5px;width:45px;height:45px;margin:5px;margin-left:0;background:#FFFFFF;"></span></div>
+                                            <div style="float:left;"><span id="theme_color_show" class="invitedefinecolorspan" style="border:1px solid #E0E2E5;display:block;border-radius: 5px;width:45px;height:45px;margin:5px;margin-left:0;background:#FFFFFF;"></span></div>
                                             <div style="float:left;width:292px;height:55px;margin-left:5px;border: 1px dashed #ccc;padding-bottom: 2px;">
-                                                <ul>
+                                                <ul class="invitedefineColorbars">
                                                     <li class="slc_t_color" rel="#FFFFFF" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#FFFFFF"></li>
                                                     <li class="slc_t_color" rel="#DDDDDD" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#DDDDDD"></li>
                                                     <li class="slc_t_color" rel="#da434e" style="cursor: pointer;border-radius: 3px;float:left;margin-left:6px;margin-top:5px;width:18px;height:18px;border:1px solid #E0E2E5;background:#da434e"></li>
@@ -1778,7 +1934,10 @@
                             <tbody>
                                 <tr>
                                     <th scope="row" width="100">关注提醒消息：</th>
-                                    <td><div><input name="subscribeNotice" class="mui-switch mui-switch-animbg" value="1" type="checkbox"></div></td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" checked="" data-switchery="true" style="display: none;">
+                                        <span class="switchery" style="border-color: rgb(223, 223, 223); box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; transition: border 0.4s, box-shadow 0.4s;"><small style="left: 0px; transition: left 0.2s;"></small></span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row" width="100">关注欢迎语：</th>
@@ -1878,8 +2037,30 @@
             </table>
 
             <!-- 弹窗部分 -->
-            <div id="oftenfiles">
-                
+            <div id="createFilesPopOuter" style="display:none;">
+                <form action="" method="post" id="folder_form" target="if_content_t">
+                    <div class="warp_1">
+                        <div class="warp_1_m" style="margin-top:5px;">
+                            <table border="0" cellspacing="0" cellpadding="0" class="tab_info" style="height:73px;border:none;">
+                                <tbody><tr>
+                                    <td style="padding:0 14px;">
+                                        <!--<span class="info_title">输入文件夹名称</span><br>-->
+                                        <input type="text" name="notAutoSubmit" style="display:none">
+
+                                        <input name="folder_name" id="folder_name" type="text" maxlength="6" class="text1" style="width:230px;">
+                                        <p class="info_str" style="margin-top:10px;">提示：文件夹名称字符数为1~6个字符。</p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+
+                    <div class="s_bottom" style="text-align: center;padding-top:0;">
+                        <input name="web_id" type="hidden" id="web_id__" value="133299">
+                        <input name="Per_sel_bu1" type="submit" value="确定" class="button_21 kf_d270_bt">
+                        <input name="Per_sel_bu2" type="button" value="取消" class="button_21 kf_d270_bt" onclick="closefloathint()">
+                    </div>
+                </form>
             </div>
         </div>
         <!-- 产品管理 -->
@@ -1954,14 +2135,13 @@
     <script src="../../js/layui.js"></script>
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
+    <script src="../../js/myscript.js"></script>
     <!-- 拾色器 -->
     <script type="text/javascript" src="../../plugin/bigcolorpicker/js/jquery.bigcolorpicker.min.js"></script>
     <script type="text/javascript" src="../../plugin/bigcolorpicker/js/jquery.bigcolorpicker.js"></script>
-    
+    <!-- 自定义模块的颜色设置 -->
+    <script type="text/javascript" src="../../js/nav_setting_center.js"></script>
     <script>
-        layui.use('element', function(){
-          var element = layui.element;
-        });
         $(document).ready(function() {
             $('.mynavi li').click(function(){
                 $(this).siblings().css('background','none').end().css('background','url('+$(this).attr('bg')+')');
@@ -1987,18 +2167,34 @@
             })
         })
     </script>
+    <!-- 拾色器Js -->
     <script type="text/javascript">
-        //点击方框选取颜色 
+        //PC窗口设置（咨询图标）——点击方框选取颜色
         var colorShow = $("#adv_theme_color_show");
+        var colorRBar = $(".colorRBar");
         $(".showColor01").bigColorpicker(function(colorShow,color){ 
             $("#adv_theme_color_show").css("background-color",color); 
+            colorRBar.css("background-color",color);
+            $.ajax({
+                url: '/path/to/file',
+                type: 'POST',
+                dataType: 'json',
+                data: {param1: 'background-color'},
+            })
         });
-
+        // PC窗口设置（咨询图标）——字体颜色
         var checkedBgShow = $(".checked_bg_show");
-        $(".showColor02").bigColorpicker(function(colorShow,color){ 
-            $(".checked_bg_show").css("background-color",color); 
+        $(".showColor02").bigColorpicker(function(checkedBgShow,color){ 
+            $(".checked_bg_show").css("background-color",color);
+            $.ajax({
+                url: '/path/to/file',
+                type: 'POST',
+                dataType: 'json',
+                data: {param1: 'background-color'},
+            })
         });
 
     </script>
+    
 </body>
 </html>
