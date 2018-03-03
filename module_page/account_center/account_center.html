@@ -10,7 +10,7 @@
     <!--引入wangEditor.css-->
     <link href="../../summernote.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/mystyle.css">
-    <script src="../../js/common.js?v=2"></script>
+    <script src="../../js/common.js?v=3"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -614,8 +614,8 @@
                 </div>
                 <div style="width:770px;text-align:center;margin:30px 0;">
                     <input type="hidden" name="subact" value="1">
-                    <input type="submit" class="btn_form_s" value="保存">
-                    <input type="reset" class="btn_form_c" style="margin-left:30px;" value="重置">
+                    <input type="button" class="btn_form_s saveSummerBtn" value="保存">
+                    <input type="reset" class="btn_form_c repeatBtn" style="margin-left:30px;" value="重置">
                 </div>
             </form>
         </div>
@@ -1163,7 +1163,7 @@
                 var num = $("#butForm tbody tr td:nth-child(2) input:nth-child(2)").val();
                 var time = $("#butForm tbody tr td:nth-child(3) select").val();
                 $.ajax({
-                    url: urlParam.getProductDetaile,
+                    url: urlParam.addOrder,
                     dataType: "json",
                     xhrFields: {
                         withCredentials: true
@@ -1253,7 +1253,7 @@
                                             "<td>"+createTime+"</td>" +
                                             "<td>"+ money +"</td>" +
                                             "<td>"+status+"</td>" +
-                                            "<td><button class='layui-btn layui-btn-xs'>删除</button></td>" +
+                                            "<td><button orderId='"+orderId+"' class='layui-btn layui-btn-xs del_btn'>删除</button></td>" +
                                         "</tr>";
                                 }
                                  $("#orderinfo_table tbody").html(strHtml);
@@ -1265,6 +1265,31 @@
                 })
             }
 
+            //删除订单
+            $(document).on("click",".del_btn", function(){
+                var orderId= $(this).attr("orderId");
+                $.ajax({
+                    url: urlParam.deleteOrder,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        orderId: orderId
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0){
+                            orderList(companyId);
+                        }else {
+                            msgMask(msg.message)
+                        }
+                    }
+                })
+            })
+
+            // 忘记密码
             $("#submitcppwd").on('click', function(){
                 var oldpass = $("#oldpass").val();
                 var newpass = $("#newpass").val();
@@ -1292,8 +1317,6 @@
                 $("#newpass").val("");
                 $("#newpass1").val("");
             })
-
-
             // 修改密码
             function modifyPwd(){
                 var formData = $("#changepwdform").serialize();
@@ -1326,33 +1349,63 @@
                     }
                 })
             }
-        })
 
-        // 计算金额
-        function countAllPrice(thisDom,unitPrice){
-            var thisPrentTr = thisDom.parents("tr");
-            var allPrentTr = thisDom.parents("tbody").find("tr");
-            var allPrice = 0;
-            var thisAllPrice = 0;
-            console.log(allPrentTr);
-            thisPrentTr.each(function(){
-                var thisNum = $(this).find(".clkcttext").val() || 1;
-                // var thisPrice = $(this).find(".clkseat_tprice").text();
-                var thisPrice = $(this).find(".clkseat_tprice").attr("data-unit-price");
-                var  unitPrice =  unitPrice || thisPrice;
-                var thisSelectNum = $(this).find(".slc_clk_day").val() || 1;
-                console.log("thisSelectNum==="+thisSelectNum);
-                console.log("thisNum=="+thisNum);
-                console.log("thisPrice==="+thisSelectNum);
+            // 富文本
+            $('.summernote1').summernote({
+                width: 750,
+                height: 120,
+                tabsize: 2,
+                lang: 'zh-CN'
+            });
+            $('.summernote2').summernote({
+                width: 750,
+                height: 120,
+                tabsize: 2,
+                lang: 'zh-CN'
+            });
+            $('.summernote1').summernote('code',"修改过的代码1");
+            $('.summernote2').summernote('code',"修改过的代码2");
 
-                thisAllPrice += ( parseInt(thisNum)*parseInt(thisPrice)* parseInt(thisSelectNum));
-                console.log(thisNum);
+            var summerText1= $(".summernote1").summernote('code');
+            var summerText2= $(".summernote2").summernote('code');
+            var mbAutoReplyOn = $("#mbAutoReplyOn").prop("checked");
+            var pcAutoReplyOn = $("#pcAutoReplyOn").prop("checked");
+
+            // 点击保存
+            $(".saveSummerBtn").on("click", function(){
+                summerAjaxData()
             })
-            return thisAllPrice;
-        }
-
-
-
+            function summerAjaxData(){
+                var summerText1= $(".summernote1").summernote('code');
+                var summerText2= $(".summernote2").summernote('code');
+                var mbAutoReplyOn = ($("#mbAutoReplyOn").prop("checked") == true) ? 0 : 1;
+                var pcAutoReplyOn = ($("#pcAutoReplyOn").prop("checked") == true) ? 0 : 1;
+                $.ajax({
+                    url: urlParam.memberSetReply,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        mobileReply: summerText2,
+                        ismobile_reply: mbAutoReplyOn,
+                        pcReply: summerText1,
+                        ispc_reply: pcAutoReplyOn
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                    }
+                })
+            }
+            //点击重置
+            $(".repeatBtn").on("click", function(){
+                $(".summernote1").summernote('code',summerText1);
+                $(".summernote2").summernote('code',summerText2);
+                $("#mbAutoReplyOn").prop("checked",mbAutoReplyOn);
+                $("#pcAutoReplyOn").prop("checked",pcAutoReplyOn);
+            })
+        })
 
     </script>
 </body>

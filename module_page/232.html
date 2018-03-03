@@ -24,6 +24,7 @@ http://localhost:90/admin.php/Member/modify?memberId=12&username=123456&qq=45454
 username=123456 用户名
 qq=232333  QQ 号
 mobile=13254098709  手机号
+email=hello@163.com
 
 5. Member => add
 http://localhost:90/admin.php/Member/add?username=jacky.xie111&nickname=123456&qq=454545&mobile=13254098709&password=123456
@@ -36,8 +37,9 @@ mobile=13254098709  手机号
 password=123456  密码
 
 6. Member =>setReply
-http://localhost:90/admin.php/Member/setReply?mobileReply=%E9%BB%84%E9%9D%99%E7%9A%84%E7%9B%AE%E7%9A%84%E4%B8%B0%E5%AF%8C&pcReply=%E6%B4%BB%E5%8A%A8%E5%8F%91%E7%94%9F%E5%8F%8D%E5%AF%B9
 
+
+http://localhost:90/admin.php/Member/setReply?mobileReply=%E9%BB%84%E9%9D%99%E7%9A%84%E7%9B%AE%E7%9A%84%E4%B8%B0%E5%AF%8C&ismobile_reply=1&pcReply=%E6%B4%BB%E5%8A%A8%E5%8F%91%E7%94%9F%E5%8F%8D%E5%AF%B9&ispc_reply=1
 设置自动回复
 1）PC勾选（是否自动回复）
 2）PC内容
@@ -56,14 +58,24 @@ http://localhost:90/admin.php/Product/list1
 
 购买套餐 => 列表
 
+"id": 产品ID,
+"companyid": 公司ID,
+"name": "企业版",
+"create_time" 1483858837,创建时间,
+"no": 0  数量,
+"money": 599  单价
+"type": 0  产品类型 0 坐席数  1 网站数
+
 
 9. Order => add
-
 http://localhost:90/admin.php/Order/add?name=%E9%AB%98%E7%BA%A7%E5%95%86%E5%8A%A1%E7%89%88&companyId=2&no=2
+
+http://localhost:90/admin.php/Order/add?name=企业版&no=1
 
 【订单】 =>  生成订单接口
 no => 数量
-name =>
+name => 产品名称
+
 
 10. Order => modify
 http://localhost:90/admin.php/Order/modify?orderId=2&money=699&status=1
@@ -72,13 +84,107 @@ http://localhost:90/admin.php/Order/modify?orderId=2&money=699&status=1
 http://localhost:90/admin.php/Order/get?orderId=2
 获取订单详情 ，获取单项
 
+{
+"code": 0,
+"message": "success",
+"object": {
+"id": "1",
+"companyid": 1,
+"name": "试用版",
+"create_time": 1483858837,
+"order_items": "1,2,3",
+"no": 1,
+"money": 599,
+"status": 1,
+"items": {
+"data": [
+{
+"id": 1,
+"orderid": "1",
+"name": "坐席数",
+"money": 599,
+"no": 1
+},
+{
+"id": 2,
+"orderid": "1",
+"name": "站点",
+"money": 50,
+"no": 1
+}
+]
+}
+}
+}
+
 
 12. Order => list1
 http://localhost:90/admin.php/Order/list1?companyId=1
 获取订单列表
 
+{
+"code": 0,
+"msg": "Success",
+"data": [
+{
+"id": "1",
+"companyid": 1,
+"name": "试用版",
+"create_time": 1483858837,
+"order_items": "1,2,3",
+"no": 1,
+"money": 599,
+"status": 1,
+"items": {
+"data": [
+{
+"id": 1,
+"orderid": "1",
+"name": "坐席数",
+"money": 599,
+"no": 1
+},
+{
+"id": 2,
+"orderid": "1",
+"name": "站点",
+"money": 50,
+"no": 1
+}
+]
+}
+},
+{
+"id": "281CB9D6D57BADB41B73B5AF36ECF6B9",
+"companyid": 1,
+"name": "企业版",
+"create_time": 1519828689,
+"order_items": "",
+"no": 0,
+"money": 599,
+"status": 0,
+"items": {
+"data": [
+{
+"id": 200000,
+"orderid": "281CB9D6D57BADB41B73B5AF36ECF6B9",
+"name": "企业版",
+"money": 599,
+"no": 1
+}
+]
+}
+}
+]
+}
+
+
+
 13. Order => delete
 http://localhost:90/admin.php/Order/delete?orderId=2
+
+13-1.
+http://localhost:90/admin.php/Member/setReply?mobileReply=%E9%BB%84%E9%9D%99%E7%9A%84%E7%9B%AE%E7%9A%84%E4%B8%B0%E5%AF%8C&ismobile_reply=1&pcReply=%E6%B4%BB%E5%8A%A8%E5%8F%91%E7%94%9F%E5%8F%8D%E5%AF%B9&ispc_reply=1
 
 14. Website => add
 http://localhost:90/admin.php/Website/add?name=yima&site=www.argen3630.cn&language=cn
@@ -99,7 +205,7 @@ http://localhost:90/admin.php/Website/modify?id=1&name=yimad2323&site=www.argen3
 [商家站点] => 修改
 
 17. website => delete
-http://localhost:90/admin.php/Website/delelte?id=1
+http://localhost:90/admin.php/Website/delete?id=1
 
 [商家站点] => 删除
 
@@ -460,3 +566,9 @@ password1 再次输入用户名
 email  绑定账户的邮箱
 phone  绑定账户的手机
 
+
+79.
+Company => get
+http://localhost:90/admin.php/Company/get？companyId=10001
+
+获取公司信息

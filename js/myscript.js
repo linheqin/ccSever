@@ -22,18 +22,7 @@ $(".layui-nav dd").on("click",function(){
     var thisIndex = $(this).attr("data-index");
     console.log(thisIndex);
     $(".nav_tab_item").eq(thisIndex).removeClass("none").siblings("div.nav_tab_item").addClass("none");
-    $('.summernote1').summernote({
-        width: 750,
-        height: 120,
-        tabsize: 2,
-        lang: 'zh-CN'
-    });
-     $('.summernote2').summernote({
-        width: 750,
-        height: 120,
-        tabsize: 2,
-        lang: 'zh-CN'
-    });
+
     $('.summernote3').summernote({
         width: 330,
         height: 110,
