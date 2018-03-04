@@ -34,6 +34,8 @@ var urlParam = {
     modifyCommentSetting: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/modify", // 修改评价详情
     getNotifies: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/getNotifies",     // 获取通知对象姓名
     getNotifies: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/getNotifies",     // 获取通知对象姓名
+    addMember: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/addMember",         //  添加 接收对象
+    getCommentSetList: prefixParamUrl.urlPrefix + "commentSetting /list1",              //  添加 接收对象列表
 }
 // 获取地址参数
 function getQueryString(name) {

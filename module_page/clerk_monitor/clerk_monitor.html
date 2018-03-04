@@ -89,6 +89,9 @@
         .mynavi ul li.nav_5 {
             left: 600px;
         }
+        .checkbox, .radio {
+            margin: 0;
+        }
         .help_info {
             display: none;
         }
@@ -500,8 +503,8 @@
                         withCredentials: true
                     },
                     data: {
-                        commentable: $(".pjia input[name=enable]").val(),
-                        notifiable: $(".tongz input[name=isnotice]").val(),
+                        commentable: $(".pjia input[name=enable]:checked").val(),
+                        notifiable: $(".tongz input[name=isnotice]:checked").val(),
                         level: $("#noticelevel").val(),
                         notify_person: $("#noticenums").attr("dataIds"),
                         nofity_way: nofity_way
@@ -516,6 +519,7 @@
                     }
                 })
             })
+            var idss = [];
 
             // 获取个人信息
             function getUserNameStr(ids){
@@ -538,7 +542,8 @@
                                 $("#tableName .firsttd").html(strHTML);
                             } else {
                                 for(var i = 0; i < len; i++) {
-                                    strHTML += "<div><img src='../../images/sex2_3.gif'>"+ msg.object[i].name +"</div>";
+                                    idss.push(msg.object[i].id);
+                                    strHTML += "<div id='"+ msg.object[i].id + "'><img src='../../images/sex2_3.gif'>"+ msg.object[i].name +"</div>";
                                 }
                                 $("#tableName .firsttd").html(strHTML);
                             }
@@ -611,6 +616,91 @@
                     }
                 })
             }
+
+            // 增加用户
+            $("#add_user").on("click", function(){
+                $.ajax({
+                    url: urlParam.memberList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        // 点击添加角色
+                        var addRoleMaskStr = "";
+                        addRoleMaskStr += '<ul class="list-group addRoleMask">';
+                        for(var i = 0; i < msg.data.length; i ++){
+                            addRoleMaskStr += '<li class="list-group-item" id="'+ msg.data[i].id +'"><div class="checkbox"><label><input type="checkbox">'+ msg.data[i].username +'</label>';
+                        }
+                        addRoleMaskStr += '</ul>';
+                        var addRoleMask = parent.layer.open({
+                            type: 1,
+                            title:"添加通知对象",
+                            area: ['370px', '350px'],
+                            btn: ['确认', '取消'],
+                            content: addRoleMaskStr, //这里content是一个普通的String
+                            success: function(layero, index){
+                                $("body",parent.document).find(".addRoleMask li").each(function(){
+                                    var thisId = $(this).attr("id");
+                                    for(var i = 0; i < idss.length; i++) {
+                                        if(thisId == idss[i]) {
+                                            $(this).find("input").prop("checked", true);
+                                        }
+                                    }
+                                    console.log(thisId);
+                                })
+                            },
+                            yes: function(){
+                                var ids = "";
+                                // $("body",parent.document).find(".addRoleMask li").each(function(index){
+                                //
+
+                                // })
+                                $("body",parent.document).find(".addRoleMask li input").each(function(index){
+                                    var isTrue = $(this).prop("checked");
+                                    if(isTrue){
+                                        var thisId = $(this).parents(".list-group-item").attr("id");
+                                        if(index == 0) {
+                                            ids += thisId;
+                                        } else {
+                                            ids += "," + thisId;
+                                        }
+                                    }
+                                })
+                                console.log(ids);
+                                $.ajax({
+                                    url: urlParam.memberList,
+                                    dataType: "json",
+                                    xhrFields: {
+                                        withCredentials: true
+                                    },
+                                    data:{
+                                        addMember: ids
+                                    },
+                                    crossDomain: true,
+                                    success: function (msg) {
+                                        console.log(msg);
+                                        if(msg.code == 0) {
+                                            getUserNameStr(ids)
+                                            msgMask("添加成功",1);
+                                            parent.layer.close(addRoleMask);
+                                        } else {
+                                            msgMask(msg.message,1)
+                                        }
+                                    }
+                                })
+                            },
+                            btn2: function(){
+
+                            }
+                        })
+                    }
+                })
+
+
+            })
         })
 
 

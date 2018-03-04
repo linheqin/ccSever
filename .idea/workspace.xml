@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82fbc44b-7094-4e19-8650-0de7e97082de" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/mystyle.css" afterPath="$PROJECT_DIR$/css/mystyle.css" />
       <change beforePath="$PROJECT_DIR$/js/common.js" afterPath="$PROJECT_DIR$/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/js/myscript.js" afterPath="$PROJECT_DIR$/js/myscript.js" />
-      <change beforePath="$PROJECT_DIR$/js/nav_setting_center.js" afterPath="$PROJECT_DIR$/js/nav_setting_center.js" />
       <change beforePath="$PROJECT_DIR$/module_page/232.html" afterPath="$PROJECT_DIR$/module_page/232.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/account_center/account_center.html" afterPath="$PROJECT_DIR$/module_page/account_center/account_center.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" afterPath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" />
       <change beforePath="$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html" afterPath="$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" afterPath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/recode/recode.html" afterPath="$PROJECT_DIR$/module_page/recode/recode.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/role_set/role_set.html" afterPath="$PROJECT_DIR$/module_page/role_set/role_set.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/url_manage/url_manage.html" afterPath="$PROJECT_DIR$/module_page/url_manage/url_manage.html" />
-      <change beforePath="$PROJECT_DIR$/module_page/visitor_manage/visitor_manage.html" afterPath="$PROJECT_DIR$/module_page/visitor_manage/visitor_manage.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1815">
-              <caret line="88" column="45" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="45" />
+            <state relative-caret-position="3959">
+              <caret line="136" column="21" lean-forward="false" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -58,24 +48,24 @@
       <file leaf-file-name="role_set.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module_page/role_set/role_set.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="256" column="8" lean-forward="false" selection-start-line="256" selection-start-column="8" selection-end-line="258" selection-end-column="39" />
+            <state relative-caret-position="494">
+              <caret line="501" column="67" lean-forward="false" selection-start-line="501" selection-start-column="31" selection-end-line="501" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#11174#12823#0" expanded="false" />
-                <element signature="e#13221#17133#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clerk_monitor.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clerk_monitor.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="361" column="12" lean-forward="false" selection-start-line="361" selection-start-column="12" selection-end-line="411" selection-end-column="13" />
+            <state relative-caret-position="-201">
+              <caret line="505" column="72" lean-forward="false" selection-start-line="505" selection-start-column="72" selection-end-line="505" selection-end-column="72" />
               <folding>
-                <element signature="e#16102#18652#0" expanded="false" />
+                <element signature="e#16236#18698#0" expanded="false" />
+                <element signature="e#18775#19436#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -94,8 +84,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="35" column="99" lean-forward="false" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
+            <state relative-caret-position="279">
+              <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -104,18 +94,18 @@
       <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="-1500">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="232.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="232.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module_page/232.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4230">
-              <caret line="354" column="123" lean-forward="true" selection-start-line="354" selection-start-column="52" selection-end-line="354" selection-end-column="123" />
+            <state relative-caret-position="345">
+              <caret line="949" column="54" lean-forward="false" selection-start-line="949" selection-start-column="45" selection-end-line="949" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -156,13 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.layui-form-label</find>
-      <find>language</find>
-      <find>text-align:left;</find>
-      <find>邮箱</find>
-      <find>webSiteList</find>
-      <find>addServerUser</find>
-      <find>list-group</find>
       <find>roleSelect</find>
       <find>addElePopOuter</find>
       <find>未分组(1人)</find>
@@ -171,21 +154,28 @@
       <find>big_bg</find>
       <find>add_group</find>
       <find>member/list</find>
-      <find>modifyRoleSelect</find>
       <find>button2</find>
       <find>test1</find>
       <find>开始分析</find>
       <find>laydate</find>
-      <find>.table_default tr td</find>
       <find>tbody</find>
       <find>Member</find>
-      <find>enable</find>
       <find>getPeopleInfo</find>
       <find>sendsms</find>
       <find>firsttd</find>
       <find>Member/get</find>
-      <find>sxinput</find>
+      <find>visitor\</find>
       <find>CommentSetting</find>
+      <find>sxinput</find>
+      <find>Membe</find>
+      <find>memberList</find>
+      <find>idss</find>
+      <find>.table_default tr td</find>
+      <find>memberId</find>
+      <find>addMember</find>
+      <find>modifyRoleSelect</find>
+      <find>isnotice</find>
+      <find>enable</find>
     </findStrings>
     <replaceStrings>
       <replace>http://www.argen3630.com:88</replace>
@@ -212,13 +202,13 @@
         <option value="$PROJECT_DIR$/module_page/role_set/role_set.html" />
         <option value="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" />
         <option value="$PROJECT_DIR$/js/nav_setting_center.js" />
-        <option value="$PROJECT_DIR$/css/mystyle.css" />
         <option value="$PROJECT_DIR$/js/myscript.js" />
         <option value="$PROJECT_DIR$/module_page/recode/recode.html" />
-        <option value="$PROJECT_DIR$/module_page/232.html" />
-        <option value="$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html" />
         <option value="$PROJECT_DIR$/module_page/visitor_manage/visitor_manage.html" />
         <option value="$PROJECT_DIR$/js/common.js" />
+        <option value="$PROJECT_DIR$/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/module_page/232.html" />
+        <option value="$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html" />
       </list>
     </option>
   </component>
@@ -228,7 +218,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="3" />
     <option name="width" value="1532" />
@@ -406,15 +396,15 @@
       <workItem from="1230739834688" duration="15000" />
       <workItem from="1519995815923" duration="5267000" />
       <workItem from="1520085483378" duration="4591000" />
-      <workItem from="1520128596183" duration="30084000" />
+      <workItem from="1520128596183" duration="34242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97045000" />
+    <option name="totallyTimeSpent" value="101203000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11485775" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1946,14 +1936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="136" column="21" lean-forward="false" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/summernote.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
@@ -2294,18 +2276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module_page/role_set/role_set.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="256" column="8" lean-forward="false" selection-start-line="256" selection-start-column="8" selection-end-line="258" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11174#12823#0" expanded="false" />
-            <element signature="e#13221#17133#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/myscript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -2325,24 +2295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mystyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="361" column="12" lean-forward="false" selection-start-line="361" selection-start-column="12" selection-end-line="411" selection-end-column="13" />
-          <folding>
-            <element signature="e#16102#18652#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module_page/visitor_manage/visitor_manage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -2351,19 +2303,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3959">
+          <caret line="136" column="21" lean-forward="false" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="35" column="99" lean-forward="false" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
+        <state relative-caret-position="279">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module_page/232.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4230">
-          <caret line="354" column="123" lean-forward="true" selection-start-line="354" selection-start-column="52" selection-end-line="354" selection-end-column="123" />
+        <state relative-caret-position="345">
+          <caret line="949" column="54" lean-forward="false" selection-start-line="949" selection-start-column="45" selection-end-line="949" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module_page/role_set/role_set.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="501" column="67" lean-forward="false" selection-start-line="501" selection-start-column="31" selection-end-line="501" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11174#12823#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-201">
+          <caret line="505" column="72" lean-forward="false" selection-start-line="505" selection-start-column="72" selection-end-line="505" selection-end-column="72" />
+          <folding>
+            <element signature="e#16236#18698#0" expanded="false" />
+            <element signature="e#18775#19436#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -16,6 +16,12 @@ em,strong,i,b {
   height: -moz-calc(100% - 121px);
   height: -webkit-calc(100% - 121px);
 }
+.addRoleMask .checkbox,.addRoleMask .radio{
+  margin: 0;
+}
+.addRoleMask .checkbox label, .addRoleMask .radio label {
+  min-height: auto;
+}
 .nav_setting .layui-layer-btn a {
   padding: 0 10px;
 }
