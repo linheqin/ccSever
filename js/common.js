@@ -37,6 +37,7 @@ var urlParam = {
     addMember: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/addMember",         //  添加 接收对象
     getCommentSetList: prefixParamUrl.urlPrefix + "commentSetting /list1",              //  添加 接收对象列表
 }
+
 // 获取地址参数
 function getQueryString(name) {
     var pos,str,para,parastr;

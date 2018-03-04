@@ -1,12 +1,15 @@
-    //JavaScript代码区域
+//JavaScript代码区域
+
 var laydate;
-    layui.use(['laydate', 'code','laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
+var layer;
+var layedit;
+layui.use(['laydate', 'code','laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
     var element = layui.element;
     var form = layui.form;
-    var $ = layui.jquery,
-        layer = layui.layer, //独立版的layer无需执行这一
-        layedit = layui.layedit;
-        laydate = layui.laydate;
+    var $ = layui.jquery;
+    layer = layui.layer; //独立版的layer无需执行这一
+    layedit = layui.layedit;
+    laydate = layui.laydate;
     layui.code();
 
 });

@@ -7,7 +7,12 @@
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/layui.css">
 	<link rel="stylesheet" href="./css/mystyle.css">
-
+	<script src="./js/common.js?v=2"></script>
+	<style>
+		.layui-layer-btn {
+			margin-top: -20px;
+		}
+	</style>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -43,7 +48,7 @@
 		    <div class="layui-col-md4">
 		      	<div id="mtright_n">
 					<div id="mtr_funs_n">
-						<a href="index.php" class="fc_white">主页</a>
+						<a href="javascript:void(0)" id="linkHome" class="fc_white">主页</a>
 						<span>|</span>
 						<a href="http://www.qycn.com/cckf_download.php" class="fc_white" target="_blank">下载CC客服</a>
 						<span>|</span>
@@ -136,9 +141,30 @@
 <script src="./js/layui.js"></script>
 <script src="./js/myscript.js"></script>
 <script>
-	function getFormData() {
+	$(function(){
 
-	}
+        var companyId = getIframeQueryString("companyId");
+        var memberId = getIframeQueryString("memberId");
+
+        if(companyId == null || companyId == undefined) {
+            layer.open({
+                type: 1,
+                title:"登陆失效",
+                area: ['370px', '150px'],
+                btn: ['确认'],
+                content:"<div style='height: 95px;line-height:95px;text-align: center'>登陆失效或者未登陆，请到登录页！</div>",
+                yes: function(index){
+                    window.location.href = "login.html";
+                },
+                btn2: function(){
+
+                }
+            })
+		}
+        $("#linkHome").on("click", function(){
+            window.location.href = "index.html?companyId="+ companyId +"&memberId=" + memberId
+        })
+    })
 </script>
 </body>
 </html>
