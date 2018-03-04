@@ -10,7 +10,7 @@
     <!--引入wangEditor.css-->
     <link href="../../summernote.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/mystyle.css">
-
+    <script src="../../js/common.js"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -421,6 +421,62 @@
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
-
+    <script>
+        var req = getQueryString();
+        var companyId = req["companyId"];
+        var memberId = req["memberId"];
+        $(function(){
+            // 网站访客列表
+            getsiteFkList()
+            function getsiteFkList() {
+                $.ajax({
+                    url: urlParam.getMemberWorkList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    // data: {
+                    //     memberId: memberId
+                    // },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            var strHTML = "";
+                            var dataArr = msg.data;
+                            console.log(dataArr);
+                            if(dataArr.length == 0) {
+                                strHTML += "<tr><td colspan='6'>暂无记录！</td></tr>";
+                                $("#fkTable").html(strHTML);
+                            } else {
+                                for(var i = 0; i < dataArr.length; i++) {
+                                    var date = dataArr[i].update_time || "-";
+                                    var no_of_admit = dataArr[i].no_of_admit || "-";  // 正在接待访客数
+                                    var no_of_admited = dataArr[i].no_of_admited || "-";  // 已待访客数
+                                    var status = (dataArr[i].status == 0) ? "离线" : "在线";  // 0 离线 1在线
+                                    var name = dataArr[i].name || "-";      // 客服人员
+                                    var timecount = dataArr[i].timecount || "-";   // 时长
+                                    var conversation = dataArr[i].conversation || "-";  //回话情况
+                                    strHTML +=
+                                        "<tr>" +
+                                        "<td>"+ date +"</td>" +
+                                        "<td>"+ name +"</td>" +
+                                        "<td>"+ status +"</td>" +
+                                        "<td>"+ no_of_admited +"</td>" +
+                                        "<td>"+ no_of_admit +"</td>" +
+                                        "<td>"+ timecount +"</td>" +
+                                        "<td>"+ conversation +"</td>" +
+                                        "</tr>"
+                                    $("#fkTable").html(strHTML);
+                                }
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
+        })
+    </script>
 </body>
 </html>

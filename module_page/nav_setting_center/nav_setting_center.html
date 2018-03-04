@@ -168,7 +168,7 @@
                                 <tr>
                                     <td>
                                         <span>
-                                            <a href="index.php?c=ClerkSet&amp;groupid=-1" style="color:#f60">未分组(1人)</a>
+                                            <a href="javascript:void(0)" style="color:#f60">未分组(1人)</a>
                                         </span>
                                     </td>
                                     <td>&nbsp;</td>
@@ -636,7 +636,7 @@
             </div>
             <div id="consult_set_help" style="position: absolute;left: 466px;top: 3px;height: 38px;line-height: 38px;padding-left: 26px;font-size: 13px;font-family: &quot;微软雅黑&quot;;background: url(../../images/prompt.gif) no-repeat 7px 12px;"><a target="_blank" href="http://cckf.qycn.com/html/knowledge/fenggezhuangban/2014/0818/258.html">如何设置精美的咨询图标？</a></div>
             <!-- 弹窗内容 -->
-            <div class="kf_w22_c" id="addElePopOuter" style="padding:15px 15px 0 15px">
+            <div class="kf_w22_c none" id="addElePopOuter" style="padding:15px 15px 0 15px">
                 <div id="bottypexx_adv" style="padding:3px 0 10px 0"> 类型：
                     <input name="slbottype_adv" type="radio" value="201" checked="checked"><label>CC客服</label>&nbsp;&nbsp;
                     <input name="slbottype_adv" type="radio" value="202"><label>Q&nbsp;Q</label>&nbsp;&nbsp;
@@ -1978,7 +1978,7 @@
                           <div style="position:relative;top:8px;left: 100px;">
                              <input type="submit" id="subAccessSet" rel="0" class="button12 button12-save" value="提交">
                              <input type="hidden" id="appId" value="">
-                             <input onclick="location.href='?c=WechatAccessSet';" type="button" class="button12 button12-cancel" style="margin-left:15px;" value="重置">
+                             <input type="button" class="button12 button12-cancel" style="margin-left:15px;" value="重置">
                           </div>
                         </div>
                     </div>
@@ -1999,7 +1999,7 @@
                     </form>
                 </div>
                 <div style="float:right;margin-top:1px;">
-                    <input id="add_group" type="button" value="添加分组" class="button2">&nbsp;&nbsp;<input id="add_phrase" type="button" value="添加常用语" class="button6">&nbsp;&nbsp;<input id="import_phrase" type="button" value="导入常用语" class="button6">&nbsp;&nbsp;<img style="vertical-align:middle;cursor:pointer;" src="../../images/prompt.gif" class="ck_helptips" data-position="bottom left" data-variation="inverted" data-offset="-2" data-html="<font color='#ff6600'>* 为什么客户端没有看到添加或修改的常用语？</font><br/>点击右下角“刷新”后常用语才会更新哦！<br/><font color='#ff6600'>* 为什么设置了常用语分组在客户端却没有看到？</font><br/>可能是您的客户端版本过旧，请尝试升级至最新版本！">&nbsp;
+                    <input id="add_group1" type="button" value="添加分组" class="button2">&nbsp;&nbsp;<input id="add_phrase" type="button" value="添加常用语" class="button6">&nbsp;&nbsp;<input id="import_phrase" type="button" value="导入常用语" class="button6">&nbsp;&nbsp;<img style="vertical-align:middle;cursor:pointer;" src="../../images/prompt.gif" class="ck_helptips" data-position="bottom left" data-variation="inverted" data-offset="-2" data-html="<font color='#ff6600'>* 为什么客户端没有看到添加或修改的常用语？</font><br/>点击右下角“刷新”后常用语才会更新哦！<br/><font color='#ff6600'>* 为什么设置了常用语分组在客户端却没有看到？</font><br/>可能是您的客户端版本过旧，请尝试升级至最新版本！">&nbsp;
                 </div>
             </div>
             <div id="phraseList">
@@ -2058,7 +2058,7 @@
                     <div class="s_bottom" style="text-align: center;padding-top:0;">
                         <input name="web_id" type="hidden" id="web_id__" value="133299">
                         <input name="Per_sel_bu1" type="submit" value="确定" class="button_21 kf_d270_bt">
-                        <input name="Per_sel_bu2" type="button" value="取消" class="button_21 kf_d270_bt" onclick="closefloathint()">
+                        <input name="Per_sel_bu2" type="button" value="取消" class="button_21 kf_d270_bt">
                     </div>
                 </form>
             </div>
@@ -2140,14 +2140,14 @@
     <script type="text/javascript" src="../../plugin/bigcolorpicker/js/jquery.bigcolorpicker.min.js"></script>
     <script type="text/javascript" src="../../plugin/bigcolorpicker/js/jquery.bigcolorpicker.js"></script>
     <!-- 自定义模块的颜色设置 -->
-    <script type="text/javascript" src="../../js/nav_setting_center.js"></script>
+    <script type="text/javascript" src="../../js/nav_setting_center.js?v=1"></script>
     <script>
         $(document).ready(function() {
-            $('.mynavi li').click(function(){
-                $(this).siblings().css('background','none').end().css('background','url('+$(this).attr('bg')+')');
-                $('.mynavi .help_info').hide();
-                $('.mynavi #' +  $(this).attr('class')).show();
-            });
+            // $('.mynavi li').click(function(){
+            //     $(this).siblings().css('background','none').end().css('background','url('+$(this).attr('bg')+')');
+            //     $('.mynavi .help_info').hide();
+            //     $('.mynavi #' +  $(this).attr('class')).show();
+            // });
             $(".layui-nav dd").on("click",function(){
                 var thisIndex = $(this).attr("data-index");
                 console.log(thisIndex);

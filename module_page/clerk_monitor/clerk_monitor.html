@@ -10,7 +10,7 @@
     <!--引入wangEditor.css-->
     <link href="../../summernote.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/mystyle.css">
-
+    <script src="../../js/common.js"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -120,13 +120,13 @@
                         时间：
                     </div>
                     <div class="layui-inline layui-inline1">
-                        <input type="text" class="layui-input" id="test1">
+                        <input type="text" class="layui-input" id="startTime">
                     </div>
                     <div class="layui-inline">
                         至
                     </div>
                     <div class="layui-inline layui-inline1">
-                        <input type="text" class="layui-input" id="test1">
+                        <input type="text" class="layui-input" id="endTime">
                     </div>
                     <div class="layui-inline">
                         客服组
@@ -145,7 +145,7 @@
                         </select>
                     </div>
                     <div class="layui-inline layui-inline1">
-                        <input type="submit" value="查询" class="button2">
+                        <input type="button" value="查询" class="button2 seachBtn">
                     </div>
                 </div>
             </form>
@@ -161,16 +161,16 @@
                         <th>对话情况</th>
                     </tr> 
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>2018-02-24</td>
-                        <td>超级管理员</td>
-                        <td>离线</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
+                <tbody id="fkTable">
+                    <!--<tr>-->
+                        <!--<td>2018-02-24</td>-->
+                        <!--<td>超级管理员</td>-->
+                        <!--<td>离线</td>-->
+                        <!--<td>0</td>-->
+                        <!--<td>0</td>-->
+                        <!--<td>0</td>-->
+                        <!--<td>0</td>-->
+                    <!--</tr>-->
                 </tbody>
             </table> 
         </div>
@@ -183,11 +183,11 @@
                 <form action="index.php?c=ClerkCommentSet&amp;a=saveSet" method="post" id="saveform">
                     <input type="hidden" name="website" value="133299">
                     <div class="eval_set_box">
-                        <p> 客服评价： 
+                        <p class="pjia"> 客服评价：
                             <input name="enable" type="radio" value="1"> 启用&nbsp;&nbsp;&nbsp; 
                             <input checked="" name="enable" type="radio" value="0"> 禁用<br>
                         </p>
-                        <p>差评通知： 
+                        <p class="tongz">差评通知：
                             <input checked="" name="isnotice" type="radio" value="1"> 启用&nbsp;&nbsp;&nbsp; 
                             <input name="isnotice" type="radio" value="0"> 禁用
                         </p>
@@ -206,20 +206,25 @@
                                 通知对象： 
                                 <label id="noticenums">1</label>人&nbsp;&nbsp;<span id="add_user" style="cursor: pointer;"><img src="../../images/ico_add_user.gif" style="vertical-align:-3px"> 添加</span>
                             </p>
-                            <table border="0" cellspacing="0" cellpadding="0" class="eval_set_box_s2_tab" width="100%" style="table-layout:fixed">
+                            <table border="0" id="tableName" cellspacing="0" cellpadding="0" class="eval_set_box_s2_tab" width="100%" style="table-layout:fixed">
                                 <tbody>
                                     <tr rel="1">
                                         <td width="45%" class="firsttd">
-                                            <img src="../../images/sex2_3.gif"><input type="hidden" name="userid[]" value="1955861">超级管理员(CC2292391)
+                                            <div>
+                                                <img src="../../images/sex2_3.gif"><input type="hidden" name="userid[]" value="1955861">超级管理员(CC2292391)
+                                            </div>
+                                            <div>
+                                                <img src="../../images/sex2_3.gif"><input type="hidden" name="userid[]" value="1955861">超级管理员(CC2292391)
+                                            </div>
                                         </td>
                                         <td width="15%">
-                                            <input disabled="" type="checkbox" name="sendsms[1955861]" value="1"> 短信 <img src="../../images/phone_n.gif" title="没有绑定手机或者手机未验证" class="nomobile">
+                                            <input disabled="" class="sxinput" type="checkbox" name="sendsms" value="1"> 短信 <img src="../../images/phone_n.gif" title="没有绑定手机或者手机未验证" class="nomobile">
                                         </td>
                                         <td width="15%">
-                                            <input type="checkbox" name="sendemail[1955861]" value="1"> 邮件 <img src="../../images/email_s.gif">
+                                            <input type="checkbox" class="sxinput" name="sendemail" value="1"> 邮件 <img src="../../images/email_s.gif">
                                         </td>
                                         <td width="15%">
-                                            <input checked="" type="checkbox" name="sendCC[1955861]" value="1"> CC消息
+                                            <input checked="" class="sxinput" type="checkbox" name="sendCC" value="1"> CC消息
                                         </td>
                                         <td width="10%">
                                             <a onclick="return false;" href="" rel="1" id="1" class="deluser">删除</a>&nbsp;
@@ -227,7 +232,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="zztj_29" style="display:none;"></div>
                         </div>
                         <p style="padding-left:82px; color:#666; line-height:28px;display:none;">
                             <span class="fc_red">提示：企业短信模块已停用。</span>
@@ -238,8 +242,7 @@
                             <a href="" class="fc_12" target="_blank" style="border-bottom:none">购买&gt;&gt;</a>
                         </p>
                         <div style="padding:5px 82px">
-                            <input type="submit" value="保存设置" class="button2">&nbsp;&nbsp;
-                            <input type="button" value="取消" class="reset button2">
+                            <input type="button" id="saveEvaluate" value="保存设置" class="button2">&nbsp;&nbsp;
                         </div>
                         <div class="helps">
                             <p>
@@ -285,16 +288,16 @@
                         时间：
                     </div>
                     <div class="layui-inline layui-inline1">
-                        <input type="text" class="layui-input" id="test1">
+                        <input type="text" class="layui-input" id="startTime1">
                     </div>
                     <div class="layui-inline">
                         至
                     </div>
                     <div class="layui-inline layui-inline1">
-                        <input type="text" class="layui-input" id="test1">
+                        <input type="text" class="layui-input" id="endTime1">
                     </div>
                     <div class="layui-inline">
-                        <input type="submit" value="开始分析" class="button2">
+                        <input type="button" value="开始分析" class="button2 jxBtn">
                     </div>
                     <div class="layui-inline">
                         <a href="javascript:void(0);">今天</a>
@@ -330,15 +333,15 @@
                         <th>对话记录</th>
                     </tr> 
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>超级管理员</td>
-                        <td>超级管理员</td>
-                        <td>一般</td>
-                        <td>建议内容</td>
-                        <td>2017-12-12</td>
-                        <td>0</td>
-                    </tr>
+                <tbody id="evaluationRecor">
+                    <!--<tr>-->
+                        <!--<td>超级管理员</td>-->
+                        <!--<td>超级管理员</td>-->
+                        <!--<td>一般</td>-->
+                        <!--<td>建议内容</td>-->
+                        <!--<td>2017-12-12</td>-->
+                        <!--<td>0</td>-->
+                    <!--</tr>-->
                 </tbody>
             </table> 
         </div>
@@ -350,6 +353,268 @@
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
+    <script>
+        var req = getQueryString();
+        var companyId = req["companyId"];
+        var memberId = req["memberId"];
 
+        $(function(){
+            // 客服团队列表
+            getMemberList()
+            function getMemberList(roleIndex) {
+                var roleIndex = roleIndex || 0;
+                $.ajax({
+                    url: urlParam.getMemberWorkList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    // data: {
+                    //     memberId: memberId
+                    // },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            var strHTML = "";
+                            var dataArr = msg.data;
+                            console.log(dataArr);
+                            if(dataArr.length == 0) {
+                                strHTML += "<tr><td colspan='6'>暂无记录！</td></tr>";
+                                $("#fkTable").html(strHTML);
+                            } else {
+                                for(var i = 0; i < dataArr.length; i++) {
+                                    var date = dataArr[i].update_time || "-";
+                                    var no_of_admit = dataArr[i].no_of_admit || "-";  // 正在接待访客数
+                                    var no_of_admited = dataArr[i].no_of_admited || "-";  // 已待访客数
+                                    var status = (dataArr[i].status == 0) ? "离线" : "在线";  // 0 离线 1在线
+                                    var name = dataArr[i].name || "-";      // 客服人员
+                                    var timecount = dataArr[i].timecount || "-";   // 时长
+                                    var conversation = dataArr[i].conversation || "-";  //回话情况
+                                    strHTML +=
+                                    "<tr>" +
+                                        "<td>"+ date +"</td>" +
+                                        "<td>"+ name +"</td>" +
+                                        "<td>"+ status +"</td>" +
+                                        "<td>"+ no_of_admited +"</td>" +
+                                        "<td>"+ no_of_admit +"</td>" +
+                                        "<td>"+ timecount +"</td>" +
+                                        "<td>"+ conversation +"</td>" +
+                                    "</tr>"
+                                    $("#fkTable").html(strHTML);
+                                }
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
+            // 日期
+            layui.use('laydate', function(){
+                var laydate = layui.laydate;
+
+                // 日期控件
+                laydate.render({
+                    elem: '#startTime', //指定元素,
+                    value: new Date()
+                });
+                laydate.render({
+                    elem: '#endTime', //指定元素
+                    value: new Date()
+                });
+                // 日期控件
+                laydate.render({
+                    elem: '#startTime1', //指定元素
+                    value: new Date()
+                });
+                laydate.render({
+                    elem: '#endTime1', //指定元素
+                    value: new Date()
+                });
+
+            });
+
+            // 获取评价
+            getCommentSet();
+            function getCommentSet(){
+                $.ajax({
+                    url: urlParam.getCommentSetting,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    data: {
+                        memberId: memberId
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        if(msg.code == 0) {
+                            var dataArr = msg.object;
+                            var commentable = dataArr.commentable;              // 客服评价
+                            var notifiable = dataArr.notifiable;                // 是否通知
+                            var level = dataArr.level;                          // 分数
+                            var notify_person = dataArr.notify_person;          // 通知人员
+                            var notify_way = dataArr.notify_way.split(",");     // 通知方式
+                            var notify_num = notify_person.split(",");          // 通知人员人数
+
+                            $(".pjia input[value='"+ commentable +"']").prop("checked",true);
+                            $(".tongz input[value='"+ notifiable +"']").prop("checked",true);
+                            $("#noticelevel").find("option[value='"+level +"']").prop("selected",true);
+
+                            $("#noticenums").html(notify_num.length).attr("dataIds", notify_person);
+                            for(var i = 0; i < notify_way.length; i ++) {
+                                var thisArrVal = notify_way[i];
+                                $(".sxinput").eq(thisArrVal).prop("checked",true);
+                            }
+                            // 获取姓名
+                            getUserNameStr(notify_person);
+
+
+                            console.log(commentable+ "==" + notifiable+ "=="  + level+ "=="  + notify_person + "==" + notify_way+ "=="  + notify_num);
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
+
+            // 评价设置
+            $("#saveEvaluate").on("click", function(){
+                var nofity_way = "";
+                $(".sxinput").each(function(index){
+                    var thisProp = $(this).prop("checked");
+                    if(thisProp){
+                        var thisIndex = $(this).parent().index();
+                        if(index == 0) {
+                            nofity_way += thisIndex;
+                        } else {
+                            nofity_way += "," + thisIndex;
+                        }
+                    }
+                })
+                $.ajax({
+                    url: urlParam.modifyCommentSetting,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    data: {
+                        commentable: $(".pjia input[name=enable]").val(),
+                        notifiable: $(".tongz input[name=isnotice]").val(),
+                        level: $("#noticelevel").val(),
+                        notify_person: $("#noticenums").attr("dataIds"),
+                        nofity_way: nofity_way
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            getCommentSet()
+                            msgMask("修改成功",1);
+                        }
+                    }
+                })
+            })
+
+            // 获取个人信息
+            function getUserNameStr(ids){
+                $.ajax({
+                    url: urlParam.getNotifies,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    data: {
+                        members: ids
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        if(msg.code == 0) {
+                            var len = msg.object.length;
+                            var strHTML = "";
+                            if(len == 0) {
+                                strHTML += "<div>暂无通知对象</div>";
+                                $("#tableName .firsttd").html(strHTML);
+                            } else {
+                                for(var i = 0; i < len; i++) {
+                                    strHTML += "<div><img src='../../images/sex2_3.gif'>"+ msg.object[i].name +"</div>";
+                                }
+                                $("#tableName .firsttd").html(strHTML);
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+
+                    }
+                })
+            }
+
+            // 评价记录 evaluationRecord
+            evaluationRecordList()
+            function evaluationRecordList() {
+                $.ajax({
+                    url: urlParam.getCommentList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            var dataArr = msg.object;
+                            var strHTML = "";
+                            if(dataArr.length == 0) {
+                                strHTML += "<tr><td colspan='6'>暂无记录！</td></tr>"
+                            } else {
+                                for(var i = 0; i < dataArr.length; i++ ) {
+                                    var name = dataArr[i].name || "-";
+                                    var jdName = dataArr[i].userName || "-";
+                                    var level = dataArr[i].level || "1";
+                                    var content = dataArr[i].content || "-";
+                                    var conversation = dataArr[i].conversation || "-";
+                                    var update_time = dataArr[i].update_time || "-";
+                                    var levelStr = "";
+                                    switch (level){
+                                        case 1:
+                                            levelStr = "恶劣";
+                                            break;
+                                        case 2:
+                                            levelStr = "比较差";
+                                            break;
+                                        case 3:
+                                            levelStr = "一般";
+                                            break;
+                                        case 4:
+                                            levelStr = "比较满意";
+                                            break;
+                                        case 5:
+                                            levelStr = "非常满意";
+                                            break;
+                                    }
+                                    strHTML +=
+                                    "<tr>" +
+                                        "<td>"+ name +"</td>" +
+                                        "<td>"+ jdName +"</td>" +
+                                        "<td>"+ levelStr +"</td>" +
+                                        "<td>"+ content +"</td>" +
+                                        "<td>"+ update_time +"</td>" +
+                                        "<td>"+ conversation +"</td>" +
+                                    "</tr>"
+                                }
+                            }
+                            $("#evaluationRecor").html(strHTML);
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }
+        })
+
+
+
+    </script>
 </body>
 </html>

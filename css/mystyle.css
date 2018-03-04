@@ -6,14 +6,19 @@
   height: 100%;
   width: 100%;
 }
-
+em,strong,i,b {
+  font-weight: normal;
+  font-style: normal;
+}
 .layuiCon {
   height: calc(100% - 121px);
   height: -ms-calc(100% - 121px);
   height: -moz-calc(100% - 121px);
   height: -webkit-calc(100% - 121px);
 }
-
+.nav_setting .layui-layer-btn a {
+  padding: 0 10px;
+}
 .layui-side-scroll {
   width: 150px;
   height: calc(100% - 60px);
@@ -509,6 +514,9 @@ input[type=checkbox], input[type=radio] {
 .layui-form-label {
   padding: 4px 12px;
   margin: 0;
+}
+.clerk_manage_mask .layui-form-label {
+  width: 86px;
 }
 .layui-input, .layui-select, .layui-textarea {
     height: 28px;
@@ -2236,7 +2244,9 @@ li h3 img {
   color: #666;
   font-size: 13px;
 }
-
+.clerk_table tr td:nth-child(1) {
+  text-indent: 20px;
+}
 .tab_11 td a.wfp_219 {
   color: #009900;
 }
@@ -4453,4 +4463,7 @@ a#remove {
 
 .help_info {
   display: none;
+}
+.none {
+  display: none!important;
 }

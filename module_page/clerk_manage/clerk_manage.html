@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../../css/layui.css">
     <!--引入wangEditor.css-->
     <link href="../../summernote.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../css/mystyle.css">
-
+    <link rel="stylesheet" href="../../css/mystyle.css?v=4">
+    <script src="../../js/common.js?v=2"></script>
     <style>
         #tabinfo_ct td {
             font-size: 14px;
@@ -88,6 +88,12 @@
         .mynavi ul li.nav_5 {
             left: 600px;
         }
+        .clerk_table {
+            text-align: center;
+        }
+        .clerk_table thead th {
+            text-align: center;
+        }
         .help_info {
             display: none;
         }
@@ -114,63 +120,59 @@
                 </form>
             </div>
             <div style="float:right;">
-                <input id="add_webbt" type="button" class="button2 btn_addwebsite" style="width:136px;" value="添加商家/站点">
+                <input id="add_webbt" type="button" class="button2 btn_addwebsite" style="width:136px;" value="添加客服帐号">
             </div>
         </div>
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab_11 weblisttab table_default" style="margin-left:0px;">
-            <tbody>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab_11 weblisttab table_default clerk_table" style="margin-left:0px;">
+            <thead>
                 <tr>
-                    <th style="text-align:left;text-indent:20px;" scope="col" width="20%">
-                        商家/站点名称
+                    <th scope="col">
+                        CC账号
                     </th>
-                    <th style="text-align:left;" scope="col" width="19%">
-                        商铺地址/网址
+                    <th scope="col">
+                        姓名
                     </th>
-                    <th scope="col" width="11%">
-                        接待客服
+                    <th scope="col">
+                        手机
                     </th>
-                    <th scope="col" width="9%">
-                        代码管理
+                    <th scope="col">
+                        邮箱
                     </th>
-                    <th scope="col" width="9%">
-                        沟通链接
+                    <th scope="col">
+                        角色
                     </th>
-                    <th scope="col" width="9%">
-                        显示语言
-                    </th>
-                    <th scope="col" width="10%">
-                        添加日期
-                    </th>
-                    <th scope="col" width="13%">
+                    <th scope="col">
                         操作
                     </th>
                 </tr>
-                <tr>
-                    <td style="text-align:left;text-indent:20px;word-wrap: break-word;word-break:break-all;">
-                        <label>http://linheqin.com</label>
-                    </td>
-                    <td style="text-align:left;word-wrap: break-word;word-break:break-all;">
-                        http://linheqin.com
-                    </td>
-                    <td>
-                        <a class="wfp_219" onclick="parent.changeWebsiteSelectVal(133299);" href="index.php?c=ClerkSet&amp;up_slc=1&amp;webid=133299">已分配</a>
-                    </td>
-                    <td class="codestate" rel="133299">
-                        <span class="getcodeBtn" onclick="getCodeForm(133299, 'http://linheqin.com', 1)">获取代码</span>
-                    </td>
-                    <td rel="133299">
-                        <span class="getlinkBtn" onclick="getCodeForm(133299, 'http://linheqin.com', 2)">获取链接</span>
-                    </td>
-                    <td rel="zh-cn">
-                        简体中文
-                    </td>
-                    <td>
-                        2018-01-02
-                    </td>
-                    <td>
-                        <a onclick="return false;" fin="133299" href="index.php?c=Urlmanage&amp;a=edit&amp;id=133299&amp;page=1" rel="edit" enable="1">修改</a> | <a onclick="return false;" href="index.php?c=Urlmanage&amp;a=del&amp;id=133299&amp;page=1" rel="del">删除</a>
-                    </td>
-                </tr>
+            </thead>
+            <tbody>
+                <!--<tr>-->
+                    <!--<td style="text-align:left;text-indent:20px;word-wrap: break-word;word-break:break-all;">-->
+                        <!--http://linheqin.com-->
+                    <!--</td>-->
+                    <!--<td style="text-align:left;word-wrap: break-word;word-break:break-all;">-->
+                        <!--http://linheqin.com-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<a class="wfp_219" onclick="parent.changeWebsiteSelectVal(133299);" href="index.php?c=ClerkSet&amp;up_slc=1&amp;webid=133299">已分配</a>-->
+                    <!--</td>-->
+                    <!--<td class="codestate" rel="133299">-->
+                        <!--<span class="getcodeBtn" onclick="getCodeForm(133299, 'http://linheqin.com', 1)">获取代码</span>-->
+                    <!--</td>-->
+                    <!--<td rel="133299">-->
+                        <!--<span class="getlinkBtn" onclick="getCodeForm(133299, 'http://linheqin.com', 2)">获取链接</span>-->
+                    <!--</td>-->
+                    <!--<td rel="zh-cn">-->
+                        <!--简体中文-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--2018-01-02-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<a onclick="return false;" fin="133299" href="javascript:void(0)">修改</a> | <a onclick="return false;" href="index.php?c=Urlmanage&amp;a=del&amp;id=133299&amp;page=1" rel="del">删除</a>-->
+                    <!--</td>-->
+                <!--</tr>-->
             </tbody>
         </table>
         <div class="page_str_ct"></div>
@@ -179,8 +181,263 @@
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/layui.js"></script>
-    <script src="../..//summernote.js"></script>
-    <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
+    <script>
+        var req = getQueryString();
+        var companyId = req["companyId"];
+        var memberId = req["memberId"];
+
+        // 点击客服帐号
+        $("#add_webbt").on("click", function(){
+            var addServerUserStr =
+                '<form action="" id="addServerUserData" style="padding-top: 10px">' +
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>姓名:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="username" id="add_name" lay-verify="required" placeholder="请输入姓名"  class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">角色:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<select class="form-control" name="role" id="addWebSiteSelect">'+
+                                '<option value="cn">应用管理员</option>'+
+                                '<option value="cn">普通客服</option>'+
+                            '</select>'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">手机:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="mobile" id="add_mobile" lay-verify="required" placeholder="请输入手机号码" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>邮箱:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="email" id="add_email" lay-verify="required" placeholder="请输入邮箱" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>密码:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="password" id="add_pwd" lay-verify="required" placeholder="请输入密码" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>确认密码:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="password1" id="add_pwd1" lay-verify="required" placeholder="请输入确认密码" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                '</form>';
+            var addServerUser = parent.layer.open({
+                type: 1,
+                area: ['370px'],
+                btn: ['确认', '取消'],
+                skin: 'clerk_manage_mask',
+                content: addServerUserStr,
+                yes: function(index, layero){
+                    var add_name = $("body",parent.document).find("#add_name").val();
+                    var add_email = $("body",parent.document).find("#add_email").val();
+                    var add_pwd = $("body",parent.document).find("#add_pwd").val();
+                    var add_pwd1 = $("body",parent.document).find("#add_pwd1").val();
+
+                    if(add_name == ""){
+                        msgMask("姓名不能为空！",1)
+                        return;
+                    }
+                    if(add_email == ""){
+                        msgMask("邮箱不能为空！",1)
+                        return;
+                    }
+                    if(add_pwd == ""){
+                        msgMask("密码不能为空！",1)
+                        return;
+                    }
+                    if(add_pwd1 == ""){
+                        msgMask("确认密码不能为空！",1)
+                        return;
+                    }
+                    if(add_pwd != add_pwd1){
+                        msgMask("密码不一致！",1)
+                        return;
+                    }
+
+                    var formData = $("body",parent.document).find("#addServerUserData").serialize();
+                    $.ajax({
+                        url: urlParam.addSupport,
+                        dataType: "json",
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                        data: formData,
+                        success: function (msg) {
+                            console.log(msg);
+                            if(msg.code == 0) {
+                                addServerUserList();
+                                parent.layer.close(addServerUser);
+                            } else {
+                                msgMask(msg.message,1)
+                            }
+                        }
+                    })
+
+                }
+            })
+        })
+
+
+        // 客服列表
+        addServerUserList()
+        function addServerUserList(){
+            $.ajax({
+                url: urlParam.memberList,
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
+                // data: formData,
+                success: function (msg) {
+                    console.log(msg);
+                    var dataArr = msg.data;
+                    if(msg.code == 0) {
+                        if(dataArr.length == 0) {
+                            var strHTML = "<tr><td colspan='8'>暂无客服信息！</td></tr>"
+                        } else {
+                            var strHTML = "";
+                            for(var i = 0; i < dataArr.length; i++) {
+                                var ccUserName = "CC" + dataArr[i].id || "-";
+                                var name = dataArr[i].username || "-";
+                                var mobile = dataArr[i].mobile || "-";
+                                var email = dataArr[i].email || "-";
+                                var dataId = dataArr[i].id || "";
+                                var role = dataArr[i].role || "-";
+                                strHTML +=
+                                    "<tr>" +
+                                    "<td>"+ ccUserName + "</td>" +
+                                    "<td>"+ name +"</td>" +
+                                    "<td>"+ mobile +"</td>" +
+                                    "<td>"+ email +"</td>" +
+                                    "<td>"+ role +"</td>" +
+                                    "<td><a class='modify_sever_btn' href='javascript:void(0);' data-id='"+dataId+"'>修改</a></td>" +
+                                    "</tr>";
+                            }
+                            $(".weblisttab tbody").html(strHTML);
+                        }
+                    } else {
+                        msgMask(msg.message,1)
+                    }
+                }
+            })
+        }
+
+        // 修改客服列表
+        $(document).on("click", ".modify_sever_btn", function(){
+            var modify_name = $(this).parents("tr").find("td:nth-child(1)").text();
+            var modify_email = $(this).parents("tr").find("td:nth-child(4)").text();
+            var modify_mobile = $(this).parents("tr").find("td:nth-child(3)").text();
+
+            var addServerUserStr =
+                '<form action="" id="modifyServerUserData" style="padding-top: 10px">' +
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>帐号:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="username" readonly value="'+ modify_name +'" id="modify_name"  placeholder="请输入姓名"  class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">角色:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<select class="form-control" name="role" id="modifyWebSiteSelect">'+
+                                '<option value="0">应用管理员</option>'+
+                                '<option value="1">普通客服</option>'+
+                            '</select>'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label">手机:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="mobile" value="'+ modify_mobile +'" id="modify_mobile" placeholder="请输入手机号码" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>邮箱:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="email" value="'+ modify_email +'" id="modify_email" placeholder="请输入邮箱" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>密码:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="password" id="modify_pwd" lay-verify="required" placeholder="请输入密码" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">' +
+                        '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>确认密码:</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="password1" id="modify_pwd1" placeholder="请输入确认密码" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                '</form>';
+            var addServerUser = parent.layer.open({
+                type: 1,
+                area: ['370px'],
+                btn: ['确认', '取消'],
+                skin: 'clerk_manage_mask',
+                content: addServerUserStr,
+                yes: function(index, layero){
+                    var modify_name = $("body",parent.document).find("#modify_name").val();
+                    var modify_email = $("body",parent.document).find("#modify_email").val();
+                    var modify_pwd = $("body",parent.document).find("#modify_pwd").val();
+                    var modify_pwd1 = $("body",parent.document).find("#modify_pwd1").val();
+
+                    if(modify_name == ""){
+                        msgMask("姓名不能为空！",1)
+                        return;
+                    }
+                    if(modify_email == ""){
+                        msgMask("邮箱不能为空！",1)
+                        return;
+                    }
+                    if(modify_pwd == ""){
+                        msgMask("密码不能为空！",1)
+                        return;
+                    }
+                    if(modify_pwd1 == ""){
+                        msgMask("确认密码不能为空！",1)
+                        return;
+                    }
+                    if(modify_pwd != modify_pwd1){
+                        msgMask("密码不一致！",1)
+                        return;
+                    }
+
+                    var formData = $("body",parent.document).find("#modifyServerUserData").serialize();
+                    $.ajax({
+                        url: urlParam.modifyPeoleInfo,
+                        dataType: "json",
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                        data: formData,
+                        success: function (msg) {
+                            console.log(msg);
+                            if(msg.code == 0) {
+                                addServerUserList();
+                                parent.layer.close(addServerUser);
+                            } else {
+                                msgMask(msg.message,1)
+                            }
+                        }
+                    })
+
+                }
+            })
+        })
+    </script>
 </body>
 </html>

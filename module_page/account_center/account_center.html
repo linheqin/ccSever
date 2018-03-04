@@ -821,8 +821,12 @@
     <script src="../../js/myscript.js"></script>
     <script>
         $(function(){
-            var companyId = getQueryString("companyId");
-            var memberId = getQueryString("memberId");
+            console.log(window.parent.location);
+            var req = getQueryString();
+            var companyId = req["companyId"];
+            var memberId = req["memberId"];
+
+
             var mi_s_user = $("#mi_s_user");
             var mi_s_realname = $("#mi_s_realname");
             var roleName = $("#roleName");
@@ -906,10 +910,6 @@
                     btn: ['确认', '取消'],
                     content: modifyPeopleInfoStr,
                     yes: function(index, layero){
-
-                        // var body = layer.getChildFrame('body', index);
-
-
                         var roleName = $("body",parent.document).find("#modify_roleName").val();
                         var mobile = $("body",parent.document).find("#modify_mobile").val();
                         var email = $("body",parent.document).find("#modify_email").val();

@@ -260,21 +260,21 @@ http://localhost:90/admin.php/Category/delete?name=分组1
 28. Category => list1
 http://localhost:90/admin.php/Category/list1
 
-[客服监控]
+[设置中心]
 列表显示客服分组
 name=%E5%88%86%E7%BB%841  分组名称
 
 29. Member=>listByCategory
 http://localhost:90/admin.php/Member/listByCategory?category=%E5%88%86%E7%BB%841
 
-[客服监控]
+[设置中心]
 列表显示客服分组的人员
 
 30.Member=>setCategory
 http://localhost:90/admin.php/Member/setCategory?memberId=2&category=%E5%88%86%E7%BB%841
 http://localhost:90/admin.php/Member/setCategory?memberId=8&category=%E5%88%86%E7%BB%841&admitable=1
 
-[客服监控]
+[设置中心]
 客服分组
 memberId=8 客服人员ID
 category=%E5%88%86%E7%BB%841  分组名称
@@ -370,6 +370,122 @@ level=2  评价通知的分数，小于 level 发送通知
 notify_person=1,3,4  通知人 MemberId
 nofity_way = 0,1,2  通知方式  0 邮件，1 => 发送短信 2 => CC 消息
 
+80.
+MemberWork => get
+http://localhost:90/admin.php/memberWork/get?memberId=1
+
+入参数  memberId 对应成员 ID
+
+{
+    "code": 0,
+    "message": "Success",
+    "object": {
+        [
+            "id": 70000,
+            "memberid": "1",  // 成员 ID
+            "companyid": 1,   // 公司ID
+            "nickname": null,
+            "status": 0,   // 状态 0 离线  1 在线
+            "update_time": 1520152149,  // 修改时间
+            "no_of_admited": 30,  //已接待访客数
+            "no_of_admit": 33,  //正在接待访客数
+            "timecount": 0,   //访客时间累计
+            "conversation": null, //会话情况
+            "zone": ""// 分流区域
+        ]
+    }
+}
+
+
+81
+MemberWork => list1
+http://localhost:90/admin.php/memberWork/list1
+
+返回：
+
+{
+"code": 0,
+"msg": "success",
+"data": [
+{
+"id": 70000,
+"memberid": "1",
+"companyid": 1,
+"nickname": null,
+"status": 0,
+"update_time": 1520152149,
+"no_of_admited": 30,
+"no_of_admit": 33,
+"timecount": 0,
+"conversation": null,
+"zone": "",
+"password": "*********"
+},
+{
+"id": 70002,
+"memberid": "3",
+"companyid": 1,
+"nickname": null,
+"status": 1,
+"update_time": 0,
+"no_of_admited": 0,
+"no_of_admit": 0,
+"timecount": 0,
+"conversation": null,
+"zone": "",
+"password": "*********"
+}
+]
+}
+
+
+82.
+MemberWork => get
+http://localhost:90/admin.php/memberWork/get?memberId=1
+
+入参数  memberId 对应成员 ID
+
+{
+"code": 0,
+"message": "Success",
+"object": {
+"id": 70000,
+"memberid": "1",  // 成员 ID
+"companyid": 1,   // 公司ID
+"nickname": null,
+"status": 0,   // 状态 0 离线  1 在线
+"update_time": 1520152149,  // 修改时间
+"no_of_admited": 30,  //已接待访客数
+"no_of_admit": 33,  //正在接待访客数
+"timecount": 0,   //访客时间累计
+"conversation": null, //会话情况
+"zone": ""// 分流区域
+}
+}
+
+
+83
+MemberWork => list1
+http://localhost:90/admin.php/memberWork/modify?memberId=1&status=1&noOfAdmited=32&noOfAdmit=34&timeCount=40&
+conversation=adxxdfdfdfsf&zone=pudfdsfs
+
+
+memberId=1  客服ID
+status=1  状态 0 离线  1 在线
+noOfAdmited=32  已接待访客数
+noOfAdmit=34   正在接待访客数
+timeCount=40   沟通总时长 , 访客时间累计 ，按分钟计算
+conversation=adxxdfdfdfsf  会话内容
+zone=pudfds   分流区域
+
+
+返回：
+
+{
+"code": 0,
+"msg": "success",
+"data": null
+}
 
 52.Comment =>list1
 http://localhost:90/admin.php/Comment/list1

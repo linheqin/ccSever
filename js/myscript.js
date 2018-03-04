@@ -1,13 +1,12 @@
     //JavaScript代码区域
-
-layui.use(['laydate', 'code','laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
+var laydate;
+    layui.use(['laydate', 'code','laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
     var element = layui.element;
     var form = layui.form;
-    var layer = layui.layer,
-    layedit = layui.layedit,
-    laydate = layui.laydate;
     var $ = layui.jquery,
-    layer = layui.layer; //独立版的layer无需执行这一句
+        layer = layui.layer, //独立版的layer无需执行这一
+        layedit = layui.layedit;
+        laydate = layui.laydate;
     layui.code();
 
 });
@@ -35,97 +34,12 @@ $(".nav_top_btn").on("click", function(){
     var thisUrl = $(this).attr("rel");
     $(this).addClass('nav_nindex').siblings().removeClass('nav_nindex');
     var url = "module_page/"+thisUrl + "/"+thisUrl+".html?l="+thisUrl;
-    console.log(url);
+    var url = "module_page/"+thisUrl + "/"+thisUrl+".html?l="+thisUrl;
+    // console.log(url);
     $(".layuiCon iframe").attr("src", url);
-})
-// 点击添加角色
-
-var addRoleMaskStr =
-'<form action="">' +
-    '<div class="layui-form-item">' +
-        '<label class="layui-form-label">角色名称</label>'+
-        '<div class="layui-input-block">'+
-            '<input type="text" name="title" required id="roleName" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">'+
-        '</div>'+
-    '</div>'+
-    '<p id="roleNamePit">最多可输入20个字符.</p>'+
-    '<div class="layui-form-item">' +
-        '<label class="layui-form-label">复制角色</label>'+
-        '<div class="layui-input-block">'+
-            '<select class="form-control" id="roleSelect">'+
-            '</select>'+
-            '<span>基于该角色进行权限修改</span>'+
-        '</div>'+
-    '</div>'+
-'</form>';
-
-// 控制点击不可编辑
-$("#qxSet .list-group-item input").on("click", function(){
-    return false;
-})
-
-
-var parentElem = parent;
-$(".addRole").on("click", function(){
-    layer.open({
-        type: 1,
-        area: ['370px', '210px'],
-        btn: ['确认', '取消'],
-        success: function(layero, index){
-            var roleNameArr = [];
-            $(".list-groups>a").each(function(index, el) {
-                var roleName = $(this).find('.left').text();
-                var roleId = $(this).attr("data-role");
-                var obj = {
-                    roleName: roleName,
-                    roleId: roleId
-                }
-                roleNameArr.push(obj);
-            });
-            console.log(roleNameArr);
-
-            var optionStr = '';
-            for (var i = 0; i < roleNameArr.length; i++) {
-                optionStr += "<option>"+roleNameArr[i].roleName+"</option>"
-            }
-            $("#roleSelect").html(optionStr);
-        },
-        yes: function(index, layero){
-            //按钮【按钮一】的回调
-            var roleName = $("#roleName").val();
-            var roleSelect = $("#roleSelect").val();
-            var roleNamePit = $("#roleNamePit");
-            if(roleName == "") {
-                roleNamePit.html("<span style='color:#f60'>角色名称不能为空！</span>");
-                return false;
-            }
-            if(roleName.length > 20) {
-               roleNamePit.html("<span style='color:#f60'>角色名称不能大于20个字！</span>");
-                return false;
-            }
-
-            roleNamePit.html("最多可输入20个字符.");
-
-            layer.close(index);
-
-        },
-        btn2: function(index, layero){
-            //按钮【按钮二】的回调
-        },
-        content: addRoleMaskStr //这里content是一个普通的String
-    });
-})
-
-// 点击切换角色改变不同的角色权限
-$(".list-groups").on("click", ".list-group-item", function(){
-    var thisRoleId = $(this).attr("data-role");
-    var thisIndex = $(this).index();
-    $(this).addClass('sel').siblings().removeClass('sel');
-    $("#qxSet .list-group").addClass('none').eq(thisIndex).removeClass('none')
 })
 
 // 点击添加对话分类
-
 var addTallTypeStr =
     '<form action="">' +
         '<div class="layui-form-item" style="padding: 0 15px;">' +

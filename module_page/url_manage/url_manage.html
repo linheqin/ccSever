@@ -188,8 +188,9 @@
     <script src="../../js/myscript.js"></script>
     <script>
         $(function(){
-            var companyId = getQueryString("companyId");
-            var memberId = getQueryString("memberId");
+            var req = getQueryString();
+            var companyId = req["companyId"];
+            var memberId = req["memberId"];
 
             // 点击增加站点
             $("#add_webbt").on("click", function(){
@@ -278,14 +279,15 @@
                         var dataArr = msg.data;
                         if(msg.code == 0) {
                             if(dataArr.length == 0) {
-                                var strHTML = "<tr><td colspan='8'>暂无网站信息！</td></tr>"
+                                var strHTML = "<tr><td colspan='8' style='text-align: center'>暂无网站信息！</td></tr>";
+                                $(".weblisttab tbody").html(strHTML);
                             } else {
                                 // var strHTML = "<tr><td colspan='8'>暂无网站信息！</td></tr>"
                                 var strHTML = "";
                                 for(var i = 0; i < dataArr.length; i++) {
                                     var name = dataArr[i].name || "-";
                                     var site = dataArr[i].site || "-";
-                                    var lange = (dataArr[i].site == "cn") ? "简体中文" : "其它语言";
+                                    var lange = (dataArr[i].language == "cn") ? "简体中文" : "其它语言";
                                     var time = dataArr[i].create_time || "0";
                                     var dataId = dataArr[i].id;
                                     strHTML +=
@@ -299,8 +301,8 @@
                                         "<td>"+time+"</td>" +
                                         "<td><a class='modify_web_site_btn' href='javascript:void(0);' data-id='"+dataId+"'>修改</a> | <a class='del_web_site_btn' href='javascript:void(0);' data-id='"+dataId+"'>删除</a></td>" +
                                     "</tr>";
+                                    $(".weblisttab tbody").html(strHTML);
                                 }
-                                $(".weblisttab tbody").html(strHTML);
                             }
                         } else {
                             msgMask(msg.message,1)
@@ -370,7 +372,7 @@
             // 删除站点
             $(document).on("click",".del_web_site_btn", function(){
                 var dataId = $(this).attr("data-id");
-                parent.layer.open({
+                var deleteWebSiteMask = parent.layer.open({
                     type: 1,
                     title:"删除商家站点",
                     area: ['370px', '180px'],
@@ -390,7 +392,8 @@
                             success: function (msg) {
                                 console.log(msg);
                                 if(msg.code == 0) {
-                                    webSiteList()
+                                    webSiteList();
+                                    parent.layer.close(deleteWebSiteMask);
                                 } else {
                                     msgMask(msg.message,1)
                                 }
