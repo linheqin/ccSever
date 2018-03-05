@@ -8,11 +8,6 @@
 	<link rel="stylesheet" href="./css/layui.css">
 	<link rel="stylesheet" href="./css/mystyle.css">
 	<script src="./js/common.js?v=2"></script>
-	<style>
-		.layui-layer-btn {
-			margin-top: -20px;
-		}
-	</style>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -138,7 +133,7 @@
 </div>
 <script src="./js/jq.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/layui.js"></script>
+<script src="./js/layui.all.js"></script>
 <script src="./js/myscript.js"></script>
 <script>
 	$(function(){
@@ -147,19 +142,24 @@
         var memberId = getIframeQueryString("memberId");
 
         if(companyId == null || companyId == undefined) {
-            layer.open({
-                type: 1,
-                title:"登陆失效",
-                area: ['370px', '150px'],
-                btn: ['确认'],
-                content:"<div style='height: 95px;line-height:95px;text-align: center'>登陆失效或者未登陆，请到登录页！</div>",
-                yes: function(index){
-                    window.location.href = "login.html";
-                },
-                btn2: function(){
+        	layui.use('layer', function(){
+			  	var layer = layui.layer;
+			  
+			  	layer.open({
+	                type: 1,
+	                title:"登陆失效",
+	                area: ['370px', '150px'],
+	                btn: ['确认'],
+	                content:"<div style='height: 95px;line-height:95px;text-align: center'>登陆失效或者未登陆，请到登录页！</div>",
+	                yes: function(index){
+	                    window.location.href = "login.html";
+	                },
+	                btn2: function(){
 
-                }
-            })
+	                }
+	            })
+			}); 
+            
 		}
         $("#linkHome").on("click", function(){
             window.location.href = "index.html?companyId="+ companyId +"&memberId=" + memberId

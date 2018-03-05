@@ -129,6 +129,7 @@
             text-align: center;
             font-size: 14px;
         }
+        
         .none {
             display: none!important;
         }
@@ -814,8 +815,8 @@
     </div>
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/layui.js"></script>
-    <script src="../..//summernote.js"></script>
+    <script src="../../js/layui.all.js"></script>
+    <script src="../../summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/coment.js"></script>
     <script src="../../js/myscript.js"></script>
@@ -1128,6 +1129,28 @@
                 total_tprice.html(allPcice);
                 console.log(allPcice);
             })
+            // 计算金额
+            function countAllPrice(thisDom,unitPrice){
+                var thisPrentTr = thisDom.parents("tr");
+                var allPrentTr = thisDom.parents("tbody").find("tr");
+                var allPrice = 0;
+                var thisAllPrice = 0;
+                console.log(allPrentTr);
+                thisPrentTr.each(function(){
+                    var thisNum = $(this).find(".clkcttext").val() || 1;
+                    // var thisPrice = $(this).find(".clkseat_tprice").text();
+                    var thisPrice = $(this).find(".clkseat_tprice").attr("data-unit-price");
+                    var  unitPrice =  unitPrice || thisPrice;
+                    var thisSelectNum = $(this).find(".slc_clk_day").val() || 1;
+                    console.log("thisSelectNum==="+thisSelectNum);
+                    console.log("thisNum=="+thisNum);
+                    console.log("thisPrice==="+thisSelectNum);
+                    thisAllPrice += ( parseInt(thisNum)*parseInt(thisPrice)* parseInt(thisSelectNum));
+                    console.log(thisNum);
+                })
+                return thisAllPrice;
+            }
+
             // 选择需要购买的套餐
             $("input[name='taocantype']").on("change", function(){
                 console.log();

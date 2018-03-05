@@ -163,8 +163,8 @@
                         <th>名片</th>
                     </tr> 
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody id="tkTable">
+                    <!-- <tr>
                         <td>2323</td>
                         <td>ss</td>
                         <td>一般</td>
@@ -176,7 +176,7 @@
                         <td>32</td>
                         <td>3232</td>
                         <td>sds </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -205,17 +205,14 @@
             <table class="layui-table" lay-skin="line" lay-size="sm" style="text-align:center">
                 <thead style="text-align:center">
                     <tr>
-                        <th>渠道 类型</th>
-                        <th>状态</th>
-                        <th>访客名称</th>
-                        <th>来源(来源词)</th>
-                        <th>访问时间 </th>
-                        <th>IP地址</th>
-                        <th>地域</th>
-                        <th>访问总计</th>
-                        <th>对话记录</th>
-                        <th>访问轨迹 </th>
-                        <th>名片</th>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>公司</th>
+                        <th>联系方式</th>
+                        <th>关注产品数</th>
+                        <th>建立时间</th>
+                        <th>维护时间</th>
+                        <th>操作</th>
                     </tr> 
                 </thead>
                 <tbody>
@@ -228,9 +225,6 @@
                         <td>125.125.122</td>
                         <td>厦门</td>
                         <td>12</td>
-                        <td>32</td>
-                        <td>3232</td>
-                        <td>sds </td>
                     </tr>
                 </tbody>
             </table>
@@ -250,9 +244,9 @@
                                         是否启用:
                                     </th>
                                     <td>
-                                        <input type="radio" name="sex" value="nan" title="男" checked>男
+                                        <input type="radio" name="sex" value="nan" title="男" checked>是
                                         <span style="padding-right: 10px;s"></span>
-                                        <input type="radio" name="sex" value="nv" title="女" >女
+                                        <input type="radio" name="sex" value="nv" title="女" >否
                                         <img style=" vertical-align:middle;" src="../../images/prompt.gif" class="ck_helptips" data-position="bottom right" data-variation="inverted" data-offset="1" data-html="启用后在访客和客服对话前要先填写<br/>客户信息才允许对话">
                                     </td>
                                 </tr>
@@ -268,8 +262,8 @@
                                         客户信息:
                                     </th>
                                     <td>
-                                        <div style="width:302px;margin-bottom: 3px;border:1px solid #D5D5D5;border-radius:2px;padding-left:30px;padding-top:6px;padding-bottom:6px;">
-                                            <table id="reg_items_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <div style="width:302px;margin-bottom: 3px;border:1px solid #D5D5D5;border-radius:2px;padding-left:30px;padding-top:6px;padding-bottom:6px; font-size: 12px;">
+                                            <table id="reg_items_list" width="100%" style="border: none;" cellspacing="0" cellpadding="0">
                                             <tbody>
                                             <tr>
                                                 <td width="100">
@@ -399,21 +393,21 @@
                                         &nbsp;
                                     </th>
                                     <td>
-                                        <input name="submit" type="submit" value="保存设置" class="button2" style="margin-right:25px;margin-left:77px;">
-                                        <input name="cancle" type="button" value="取消" class="reset button2">
+                                        <input name="submit" type="button" value="保存设置" class="button2" id="fkSaveBtn" style="margin-right:25px;margin-left:77px;">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
-                    你的内容 3/12
+                <div class="layui-col-xs6 layui-col-sm6 layui-col-md6" >
+                    <div id="demo"></div>
                 </div>
             </div>
             
         </div>
     </div>
+
     <div class="layui-footer"></div>
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
@@ -421,23 +415,23 @@
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
+    <script src="../../js/pluginCommon.js"></script>
     <script>
         var req = getQueryString();
         var companyId = req["companyId"];
         var memberId = req["memberId"];
+        
+
         $(function(){
             // 网站访客列表
             getsiteFkList()
             function getsiteFkList() {
                 $.ajax({
-                    url: urlParam.getMemberWorkList,
+                    url: urlParam.getVisitorList,
                     dataType: "json",
                     xhrFields: {
                         withCredentials: true
                     },
-                    // data: {
-                    //     memberId: memberId
-                    // },
                     crossDomain: true,
                     success: function (msg) {
                         console.log(msg);
@@ -447,27 +441,36 @@
                             console.log(dataArr);
                             if(dataArr.length == 0) {
                                 strHTML += "<tr><td colspan='6'>暂无记录！</td></tr>";
-                                $("#fkTable").html(strHTML);
+                                $("#tkTable").html(strHTML);
                             } else {
                                 for(var i = 0; i < dataArr.length; i++) {
-                                    var date = dataArr[i].update_time || "-";
-                                    var no_of_admit = dataArr[i].no_of_admit || "-";  // 正在接待访客数
-                                    var no_of_admited = dataArr[i].no_of_admited || "-";  // 已待访客数
-                                    var status = (dataArr[i].status == 0) ? "离线" : "在线";  // 0 离线 1在线
-                                    var name = dataArr[i].name || "-";      // 客服人员
-                                    var timecount = dataArr[i].timecount || "-";   // 时长
-                                    var conversation = dataArr[i].conversation || "-";  //回话情况
+                                    var qd = dataArr[i].qd || "-";       // 渠道类型
+                                    var status = (dataArr[i].address == 0) ? "离线" : "在线";  // 0 离线 1在线
+                                    var no_of_admit = dataArr[i].address || "-";  // 正在接待访客数
+                                    var no_of_admited = dataArr[i].address || "-";  // 已待访客数
+                                    var name = dataArr[i].address || "-";      // 客服人员
+                                    var timecount = dataArr[i].address || "-";   // 时长
+                                    var conversation = dataArr[i].address || "-";  //回话情况
+                                    var no_of_admited1 = dataArr[i].address || "-";  // 已待访客数
+                                    var name1 = dataArr[i].address || "-";      // 客服人员
+                                    var timecount1 = dataArr[i].address || "-";   // 时长
+                                    var conversation1 = dataArr[i].address || "-";  //回话情况
+
                                     strHTML +=
-                                        "<tr>" +
-                                        "<td>"+ date +"</td>" +
-                                        "<td>"+ name +"</td>" +
+                                    "<tr>" +
+                                        "<td>"+ qd +"</td>" +
                                         "<td>"+ status +"</td>" +
-                                        "<td>"+ no_of_admited +"</td>" +
                                         "<td>"+ no_of_admit +"</td>" +
+                                        "<td>"+ no_of_admited +"</td>" +
+                                        "<td>"+ name +"</td>" +
                                         "<td>"+ timecount +"</td>" +
                                         "<td>"+ conversation +"</td>" +
-                                        "</tr>"
-                                    $("#fkTable").html(strHTML);
+                                        "<td>"+ no_of_admited1 +"</td>" +
+                                        "<td>"+ name1 +"</td>" +
+                                        "<td>"+ timecount1 +"</td>" +
+                                        "<td>"+ conversation1 +"</td>" +
+                                    "</tr>"
+                                    $("#tkTable").html(strHTML);
                                 }
                             }
                         } else {
@@ -476,6 +479,81 @@
                     }
                 })
             }
+
+            // 访客资料列表
+            <!-- visitorInforList() -->
+            function visitorInforList() {
+                $.ajax({
+                    url: urlParam.getVisitorList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            var strHTML = "";
+                            var dataArr = msg.data;
+                            console.log(dataArr);
+                            if(dataArr.length == 0) {
+                                strHTML += "<tr><td colspan='6'>暂无记录！</td></tr>";
+                                $("#tkTable").html(strHTML);
+                            } else {
+                                for(var i = 0; i < dataArr.length; i++) {
+                                    var qd = dataArr[i].qd || "-";       // 渠道类型
+                                    var status = (dataArr[i].address == 0) ? "离线" : "在线";  // 0 离线 1在线
+                                    var no_of_admit = dataArr[i].address || "-";  // 正在接待访客数
+                                    var no_of_admited = dataArr[i].address || "-";  // 已待访客数
+                                    var name = dataArr[i].address || "-";      // 客服人员
+                                    var timecount = dataArr[i].address || "-";   // 时长
+                                    var conversation = dataArr[i].address || "-";  //回话情况
+                                    var no_of_admited1 = dataArr[i].address || "-";  // 已待访客数
+                                    var name1 = dataArr[i].address || "-";      // 客服人员
+                                    var timecount1 = dataArr[i].address || "-";   // 时长
+                                    var conversation1 = dataArr[i].address || "-";  //回话情况
+
+                                    strHTML +=
+                                    "<tr>" +
+                                        "<td>"+ qd +"</td>" +
+                                        "<td>"+ status +"</td>" +
+                                        "<td>"+ no_of_admit +"</td>" +
+                                        "<td>"+ no_of_admited +"</td>" +
+                                        "<td>"+ name +"</td>" +
+                                        "<td>"+ timecount +"</td>" +
+                                        "<td>"+ conversation +"</td>" +
+                                        "<td>"+ no_of_admited1 +"</td>" +
+                                        "<td>"+ name1 +"</td>" +
+                                        "<td>"+ timecount1 +"</td>" +
+                                        "<td>"+ conversation1 +"</td>" +
+                                    "</tr>"
+                                    $("#tkTable").html(strHTML);
+                                }
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            }   
+
+            
+            // 访客注册设置
+            var createDomFn = new createDom({
+                elem: "#demo"
+            }); 
+     
+
+            // 访客注册设置
+            $("#fkSaveBtn").on("click", function(){
+
+            })
+            $('.summernote3').summernote({
+                width: 330,
+                height: 110,
+                tabsize: 2,
+                lang: 'zh-CN'
+            });
         })
     </script>
 </body>

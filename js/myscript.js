@@ -1,18 +1,18 @@
 //JavaScript代码区域
 
-var laydate;
-var layer;
-var layedit;
-layui.use(['laydate', 'code','laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
-    var element = layui.element;
-    var form = layui.form;
-    var $ = layui.jquery;
-    layer = layui.layer; //独立版的layer无需执行这一
-    layedit = layui.layedit;
-    laydate = layui.laydate;
-    layui.code();
+// var laydate;
+// var layer;
+// var layedit;
+// layui.use(['laydate', 'code','laypage', 'layer','layedit', 'table', 'carousel', 'upload', 'element','form'], function(){
+//     var element = layui.element;
+//     var form = layui.form;
+//     var $ = layui.jquery;
+//     layer = layui.layer; //独立版的layer无需执行这一
+//     layedit = layui.layedit;
+//     laydate = layui.laydate;
+//     layui.code();
 
-});
+// });
 // 点击替换背景
 $('.mynavi li').click(function(){
     $(this).siblings().css('background','none').end().css('background','url('+$(this).attr('bg')+')');
@@ -25,12 +25,7 @@ $(".layui-nav dd").on("click",function(){
     console.log(thisIndex);
     $(".nav_tab_item").eq(thisIndex).removeClass("none").siblings("div.nav_tab_item").addClass("none");
 
-    $('.summernote3').summernote({
-        width: 330,
-        height: 110,
-        tabsize: 2,
-        lang: 'zh-CN'
-    });
+    
 })
 // 点击顶部导航
 $(".nav_top_btn").on("click", function(){

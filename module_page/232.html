@@ -1,982 +1,982 @@
 1.  Member =>  list1
-http://localhost:90/admin.php/Member/list1?companyId=1
+    http://localhost:90/admin.php/Member/list1?companyId=1
 
-[客服管理] 获取客服和账户列表
+    [客服管理] 获取客服和账户列表
 
 
 2.  Member =>  get
-http://localhost:90/admin.php/Member/get?companyId=1&memberId=12
+    http://localhost:90/admin.php/Member/get?companyId=1&memberId=12
 
-[账户中心]账户个人信息接口
+    [账户中心]账户个人信息接口
 
 
 3.  Member =>  resetPassword
-http://localhost:90/admin.php/Member/resetPassword?memberId=12&oldpass=123456&newpass=12345678&newpass1=12345678
+    http://localhost:90/admin.php/Member/resetPassword?memberId=12&oldpass=123456&newpass=12345678&newpass1=12345678
 
-修改密码
+    修改密码
 
 
 4.  Member =>  modify
-http://localhost:90/admin.php/Member/modify?memberId=12&username=123456&qq=454545&mobile=13254098709
+    http://localhost:90/admin.php/Member/modify?memberId=12&username=123456&qq=454545&mobile=13254098709
 
-修改除用户密码的其他信息
+    修改除用户密码的其他信息
 
-username=123456 用户名
-qq=232333  QQ 号
-mobile=13254098709  手机号
-email=hello@163.com
+    username=123456 用户名
+    qq=232333  QQ 号
+    mobile=13254098709  手机号
+    email=hello@163.com
 
 5. Member => add
-http://localhost:90/admin.php/Member/add?username=jacky.xie111&nickname=123456&qq=454545&mobile=13254098709&password=123456&email=hello@163.com
+    http://localhost:90/admin.php/Member/add?username=jacky.xie111&nickname=123456&qq=454545&mobile=13254098709&password=123456&email=hello@163.com
 
-增加客服
-username=jacky.xie111  用户名
-nickname=123456  昵称
-qq=454545  QQ
-mobile=13254098709  手机号
-password=123456  密码
-email=hello@163.com   email
-role=应用管理员
+    增加客服
+     username=jacky.xie111  用户名
+     nickname=123456  昵称
+     qq=454545  QQ
+     mobile=13254098709  手机号
+     password=123456  密码
+     email=hello@163.com   email
+     role=应用管理员
 
 
 6. Member =>setReply
 
 
-http://localhost:90/admin.php/Member/setReply?mobileReply=%E9%BB%84%E9%9D%99%E7%9A%84%E7%9B%AE%E7%9A%84%E4%B8%B0%E5%AF%8C&ismobile_reply=1&pcReply=%E6%B4%BB%E5%8A%A8%E5%8F%91%E7%94%9F%E5%8F%8D%E5%AF%B9&ispc_reply=1
-设置自动回复
-1）PC勾选（是否自动回复）
-2）PC内容
-3）mobile内容
-4）mobile勾选
+    http://localhost:90/admin.php/Member/setReply?mobileReply=%E9%BB%84%E9%9D%99%E7%9A%84%E7%9B%AE%E7%9A%84%E4%B8%B0%E5%AF%8C&ismobile_reply=1&pcReply=%E6%B4%BB%E5%8A%A8%E5%8F%91%E7%94%9F%E5%8F%8D%E5%AF%B9&ispc_reply=1
+    设置自动回复
+    1）PC勾选（是否自动回复）
+    2）PC内容
+    3）mobile内容
+    4）mobile勾选
 
 
 7. Product => get
-http://localhost:90/admin.php/Product/get?id=1
+    http://localhost:90/admin.php/Product/get?id=1
 
-购买套餐
+  购买套餐
 
 
 8. Product => list1
-http://localhost:90/admin.php/Product/list1
+    http://localhost:90/admin.php/Product/list1
 
-购买套餐 => 列表
+   购买套餐 => 列表
 
-"id": 产品ID,
-"companyid": 公司ID,
-"name": "企业版",
-"create_time" 1483858837,创建时间,
-"no": 0  数量,
-"money": 599  单价
-"type": 0  产品类型 0 坐席数  1 网站数
+       "id": 产品ID,
+        "companyid": 公司ID,
+        "name": "企业版",
+        "create_time" 1483858837,创建时间,
+        "no": 0  数量,
+        "money": 599  单价
+        "type": 0  产品类型 0 坐席数  1 网站数
 
 
 9. Order => add
-http://localhost:90/admin.php/Order/add?name=%E9%AB%98%E7%BA%A7%E5%95%86%E5%8A%A1%E7%89%88&companyId=2&no=2
+    http://localhost:90/admin.php/Order/add?name=%E9%AB%98%E7%BA%A7%E5%95%86%E5%8A%A1%E7%89%88&companyId=2&no=2
 
-http://localhost:90/admin.php/Order/add?name=企业版&no=1
+    http://localhost:90/admin.php/Order/add?name=企业版&no=1
 
-【订单】 =>  生成订单接口
-no => 数量
-name => 产品名称
+    【订单】 =>  生成订单接口
+     no => 数量
+     name => 产品名称
 
 
 10. Order => modify
-http://localhost:90/admin.php/Order/modify?orderId=2&money=699&status=1
+    http://localhost:90/admin.php/Order/modify?orderId=2&money=699&status=1
 
 11. Order => get
-http://localhost:90/admin.php/Order/get?orderId=2
-获取订单详情 ，获取单项
+    http://localhost:90/admin.php/Order/get?orderId=2
+    获取订单详情 ，获取单项
 
-{
-"code": 0,
-"message": "success",
-"object": {
-"id": "1",
-"companyid": 1,
-"name": "试用版",
-"create_time": 1483858837,
-"order_items": "1,2,3",
-"no": 1,
-"money": 599,
-"status": 1,
-"items": {
-"data": [
-{
-"id": 1,
-"orderid": "1",
-"name": "坐席数",
-"money": 599,
-"no": 1
-},
-{
-"id": 2,
-"orderid": "1",
-"name": "站点",
-"money": 50,
-"no": 1
-}
-]
-}
-}
-}
+    {
+        "code": 0,
+        "message": "success",
+        "object": {
+            "id": "1",
+            "companyid": 1,
+            "name": "试用版",
+            "create_time": 1483858837,
+            "order_items": "1,2,3",
+            "no": 1,
+            "money": 599,
+            "status": 1,
+            "items": {
+                "data": [
+                    {
+                        "id": 1,
+                        "orderid": "1",
+                        "name": "坐席数",
+                        "money": 599,
+                        "no": 1
+                    },
+                    {
+                        "id": 2,
+                        "orderid": "1",
+                        "name": "站点",
+                        "money": 50,
+                        "no": 1
+                    }
+                ]
+            }
+        }
+    }
 
 
 12. Order => list1
-http://localhost:90/admin.php/Order/list1?companyId=1
-获取订单列表
+    http://localhost:90/admin.php/Order/list1?companyId=1
+    获取订单列表
 
-{
-"code": 0,
-"msg": "Success",
-"data": [
-{
-"id": "1",
-"companyid": 1,
-"name": "试用版",
-"create_time": 1483858837,
-"order_items": "1,2,3",
-"no": 1,
-"money": 599,
-"status": 1,
-"items": {
-"data": [
-{
-"id": 1,
-"orderid": "1",
-"name": "坐席数",
-"money": 599,
-"no": 1
-},
-{
-"id": 2,
-"orderid": "1",
-"name": "站点",
-"money": 50,
-"no": 1
-}
-]
-}
-},
-{
-"id": "281CB9D6D57BADB41B73B5AF36ECF6B9",
-"companyid": 1,
-"name": "企业版",
-"create_time": 1519828689,
-"order_items": "",
-"no": 0,
-"money": 599,
-"status": 0,
-"items": {
-"data": [
-{
-"id": 200000,
-"orderid": "281CB9D6D57BADB41B73B5AF36ECF6B9",
-"name": "企业版",
-"money": 599,
-"no": 1
-}
-]
-}
-}
-]
-}
+    {
+        "code": 0,
+        "msg": "Success",
+        "data": [
+            {
+                "id": "1",
+                "companyid": 1,
+                "name": "试用版",
+                "create_time": 1483858837,
+                "order_items": "1,2,3",
+                "no": 1,
+                "money": 599,
+                "status": 1,
+                "items": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "orderid": "1",
+                            "name": "坐席数",
+                            "money": 599,
+                            "no": 1
+                        },
+                        {
+                            "id": 2,
+                            "orderid": "1",
+                            "name": "站点",
+                            "money": 50,
+                            "no": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "281CB9D6D57BADB41B73B5AF36ECF6B9",
+                "companyid": 1,
+                "name": "企业版",
+                "create_time": 1519828689,
+                "order_items": "",
+                "no": 0,
+                "money": 599,
+                "status": 0,
+                "items": {
+                    "data": [
+                        {
+                            "id": 200000,
+                            "orderid": "281CB9D6D57BADB41B73B5AF36ECF6B9",
+                            "name": "企业版",
+                            "money": 599,
+                            "no": 1
+                        }
+                    ]
+                }
+            }
+        ]
+    }
 
 
 
 13. Order => delete
-http://localhost:90/admin.php/Order/delete?orderId=2
+    http://localhost:90/admin.php/Order/delete?orderId=2
 
 14. Website => add
-http://localhost:90/admin.php/Website/add?name=yima&site=www.argen3630.cn&language=cn&code=34343434&link=www.argen3630.cn
+    http://localhost:90/admin.php/Website/add?name=yima&site=www.argen3630.cn&language=cn&code=34343434&link=www.argen3630.cn
 
-[商家站点] => 增加
-name 名称
-code  需要用urlencode 编码 代码
-link  需要用urlencode 编码 链接
+    [商家站点] => 增加
+    name 名称
+    code  需要用urlencode 编码 代码
+    link  需要用urlencode 编码 链接
 
 15. Website => get
-http://localhost:90/admin.php/Website/get?id=1
+        http://localhost:90/admin.php/Website/get?id=1
 
-[商家站点] => 获取详情
+    [商家站点] => 获取详情
 
 
 16. Website => modify
-http://localhost:90/admin.php/Website/modify?id=1&name=yimad2323&site=www.argen3630.com&link=www.argen3630.cn&code=3434344
+    http://localhost:90/admin.php/Website/modify?id=1&name=yimad2323&site=www.argen3630.com&link=www.argen3630.cn&code=3434344
 
-http://localhost:90/admin.php/website/modify?id=100000&code=var+code+%3d+111%3b%3bvar+helodfdf+%3d+111%3balert(helodfdf)%3b&link=www.argen3630.cn%2fhello
-[商家站点] => 修改
+     http://localhost:90/admin.php/website/modify?id=100000&code=var+code+%3d+111%3b%3bvar+helodfdf+%3d+111%3balert(helodfdf)%3b&link=www.argen3630.cn%2fhello
+    [商家站点] => 修改
 
 
-code  需要用urlencode 编码 代码
-link  需要用urlencode 编码 链接
+    code  需要用urlencode 编码 代码
+    link  需要用urlencode 编码 链接
 
 
 17. website => delete
-http://localhost:90/admin.php/Website/delete?id=1
+    http://localhost:90/admin.php/Website/delete?id=1
 
-[商家站点] => 删除
+    [商家站点] => 删除
 
 18. website => list1
-http://localhost:90/admin.php/Website/list1
+       http://localhost:90/admin.php/Website/list1
 
-[商家站点] => 列表
+     [商家站点] => 列表
 
-{
-"code": 0,
-"msg": "Success",
-"data": [
-{
-"id": 100000,
-"companyid": 1,
-"name": "yima",
-"site": "www.argen3630.cn",
-"member": "",
-"code": "",
-"link": "",
-"language": "cn",
-"create_time": 1519910161
-}
-]
-}
+     {
+         "code": 0,
+         "msg": "Success",
+         "data": [
+             {
+                 "id": 100000,
+                 "companyid": 1,
+                 "name": "yima",
+                 "site": "www.argen3630.cn",
+                 "member": "",
+                 "code": "",
+                 "link": "",
+                 "language": "cn",
+                 "create_time": 1519910161
+             }
+         ]
+     }
 
 19. Role => add
-http://localhost:90/admin.php/Role/add?name=%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%981\
+    http://localhost:90/admin.php/Role/add?name=%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%981\
 
-[权限管理] 增加角色
+    [权限管理] 增加角色
 
-name  角色名称
-copyname 角色拷贝名称
+    name  角色名称
+    copyname 角色拷贝名称
 
 
 20. Role => list1
-http://localhost:90/admin.php/Role/list1
+    http://localhost:90/admin.php/Role/list1
 
-[权限管理] 获取角色列表
+    [权限管理] 获取角色列表
 
 21. Role => get
-http://localhost:90/admin.php/Role/get?id=3
+    http://localhost:90/admin.php/Role/get?id=3
 
 
-{
-"code": 0,
-"message": "success",
-"object": {
-"id": 80001,
-"companyid": 1,
-"name": "应用管理员2",
-"create_time": 0,
-"update_time": 0,
-"status": 0,
-"deletable": 0,
-"editable": 0,
-"nodes": "",
-"roles": {
-"2": {
-"id": 310000,
-"roleid": 80001,
-"nodeid": 2,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"3": {
-"id": 310001,
-"roleid": 80001,
-"nodeid": 3,
-"nodename": "",
-"exist": 0,
-"param1": 0,
-"param2": 0,
-"param3": 0
-},
-"4": {
-"id": 310002,
-"roleid": 80001,
-"nodeid": 4,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"5": {
-"id": 310003,
-"roleid": 80001,
-"nodeid": 5,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"6": {
-"id": 310004,
-"roleid": 80001,
-"nodeid": 6,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"7": {
-"id": 310005,
-"roleid": 80001,
-"nodeid": 7,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"8": {
-"id": 310006,
-"roleid": 80001,
-"nodeid": 8,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"9": {
-"id": 310007,
-"roleid": 80001,
-"nodeid": 9,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-"10": {
-"id": 310008,
-"roleid": 80001,
-"nodeid": 10,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-}
-}
-}
-}
+    {
+        "code": 0,
+        "message": "success",
+        "object": {
+            "id": 80001,
+            "companyid": 1,
+            "name": "应用管理员2",
+            "create_time": 0,
+            "update_time": 0,
+            "status": 0,
+            "deletable": 0,
+            "editable": 0,
+            "nodes": "",
+            "roles": {
+                "2": {
+                    "id": 310000,
+                    "roleid": 80001,
+                    "nodeid": 2,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "3": {
+                    "id": 310001,
+                    "roleid": 80001,
+                    "nodeid": 3,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 0,
+                    "param2": 0,
+                    "param3": 0
+                },
+                "4": {
+                    "id": 310002,
+                    "roleid": 80001,
+                    "nodeid": 4,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "5": {
+                    "id": 310003,
+                    "roleid": 80001,
+                    "nodeid": 5,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "6": {
+                    "id": 310004,
+                    "roleid": 80001,
+                    "nodeid": 6,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "7": {
+                    "id": 310005,
+                    "roleid": 80001,
+                    "nodeid": 7,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "8": {
+                    "id": 310006,
+                    "roleid": 80001,
+                    "nodeid": 8,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "9": {
+                    "id": 310007,
+                    "roleid": 80001,
+                    "nodeid": 9,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                },
+                "10": {
+                    "id": 310008,
+                    "roleid": 80001,
+                    "nodeid": 10,
+                    "nodename": "",
+                    "exist": 0,
+                    "param1": 1,
+                    "param2": 1,
+                    "param3": 1
+                }
+            }
+        }
+    }
 
 22. Role => modify
-http://localhost:90/admin.php/Role/modify?id=80003&name=应用管理员1&editable=1&deletable=1
+    http://localhost:90/admin.php/Role/modify?id=80003&name=应用管理员1&editable=1&deletable=1
 
-name = 应用管理员
-editable = 1  不可编辑
-deletable = 1  不可删除
+    name = 应用管理员
+    editable = 1  不可编辑
+    deletable = 1  不可删除
 
 
 23. Role => modifyNodes
 
-http://localhost:90/admin.php/Role/modifyNodes?name=应用管理员1&nodes=json数据
+    http://localhost:90/admin.php/Role/modifyNodes?name=应用管理员1&nodes=json数据
 
 
-name = 应用管理员
+    name = 应用管理员
 
-nodes = [{
-"id": 310000,
-"roleid": 80001,
-"nodeid": 2,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-{
-"id": 310001,
-"roleid": 80001,
-"nodeid": 3,
-"nodename": "",
-"exist": 0,
-"param1": 0,
-"param2": 0,
-"param3": 0
-},
-{
-"id": 310002,
-"roleid": 80001,
-"nodeid": 4,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
+    nodes = [{
+                "id": 310000,
+                "roleid": 80001,
+                "nodeid": 2,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
+            },
+             {
+                "id": 310001,
+                "roleid": 80001,
+                "nodeid": 3,
+                "nodename": "",
+                "exist": 0,
+                "param1": 0,
+                "param2": 0,
+                "param3": 0
+            },
+             {
+                "id": 310002,
+                "roleid": 80001,
+                "nodeid": 4,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
 
-},
-{
-"id": 310003,
-"roleid": 80001,
-"nodeid": 5,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
+            },
+             {
+                "id": 310003,
+                "roleid": 80001,
+                "nodeid": 5,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
 
-},
-{
-"id": 310004,
-"roleid": 80001,
-"nodeid": 6,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
+            },
+             {
+                "id": 310004,
+                "roleid": 80001,
+                "nodeid": 6,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
 
-},
-{
-"id": 310005,
-"roleid": 80001,
-"nodeid": 7,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
+            },
+             {
+                "id": 310005,
+                "roleid": 80001,
+                "nodeid": 7,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
 
-},
-{
-"id": 310006,
-"roleid": 80001,
-"nodeid": 8,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
+            },
+             {
+                "id": 310006,
+                "roleid": 80001,
+                "nodeid": 8,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
 
-},
-{
-"id": 310007,
-"roleid": 80001,
-"nodeid": 9,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-},
-{
-"id": 310008,
-"roleid": 80001,
-"nodeid": 10,
-"nodename": "",
-"exist": 0,
-"param1": 1,
-"param2": 1,
-"param3": 1
-}
-]
+            },
+             {
+                "id": 310007,
+                "roleid": 80001,
+                "nodeid": 9,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
+            },
+             {
+                "id": 310008,
+                "roleid": 80001,
+                "nodeid": 10,
+                "nodename": "",
+                "exist": 0,
+                "param1": 1,
+                "param2": 1,
+                "param3": 1
+            }
+    ]
 
 22. Node => get
-http://localhost:90/admin.php/Node/get?id=2
+    http://localhost:90/admin.php/Node/get?id=2
 
 23. Node => list1
-http://localhost:90/admin.php/Node/list1
-http://localhost:90/admin.php/Node/list1?level=1
+    http://localhost:90/admin.php/Node/list1
+    http://localhost:90/admin.php/Node/list1?level=1
 
-[权限管理] 获取模块列表
+    [权限管理] 获取模块列表
 24. Node => tree
-http://localhost:90/admin.php/Node/tree?id=2
+    http://localhost:90/admin.php/Node/tree?id=2
 
 
 
 25. Category => add
-http://localhost:90/admin.php/Category/add?name=%E5%88%86%E7%BB%841
+    http://localhost:90/admin.php/Category/add?name=%E5%88%86%E7%BB%841
 
 
-[客服监控]
-客服分组
-name=%E5%88%86%E7%BB%841  分组名称
+    [客服监控]
+         客服分组
+         name=%E5%88%86%E7%BB%841  分组名称
 
 
 26. Category => edit
-http://localhost:90/admin.php/Category/edit?id=1&name=%E5%88%86%E7%BB%842
+    http://localhost:90/admin.php/Category/edit?id=1&name=%E5%88%86%E7%BB%842
 
 27. Category => delete
-http://localhost:90/admin.php/Category/delete?id=2
-http://localhost:90/admin.php/Category/delete?name=分组1
+    http://localhost:90/admin.php/Category/delete?id=2
+    http://localhost:90/admin.php/Category/delete?name=分组1
 
 28. Category => list1
-http://localhost:90/admin.php/Category/list1
+    http://localhost:90/admin.php/Category/list1
 
-[客服监控]
-列表显示客服分组
-name=%E5%88%86%E7%BB%841  分组名称
+     [客服监控]
+             列表显示客服分组
+             name=%E5%88%86%E7%BB%841  分组名称
 
 29. Member=>listByCategory
-http://localhost:90/admin.php/Member/listByCategory?category=%E5%88%86%E7%BB%841
+    http://localhost:90/admin.php/Member/listByCategory?category=%E5%88%86%E7%BB%841
 
-[客服监控]
-列表显示客服分组的人员
+    [客服监控]
+         列表显示客服分组的人员
 
 30.Member=>setCategory
-http://localhost:90/admin.php/Member/setCategory?memberId=2&category=%E5%88%86%E7%BB%841
-http://localhost:90/admin.php/Member/setCategory?memberId=8&category=%E5%88%86%E7%BB%841&admitable=1
+    http://localhost:90/admin.php/Member/setCategory?memberId=2&category=%E5%88%86%E7%BB%841
+    http://localhost:90/admin.php/Member/setCategory?memberId=8&category=%E5%88%86%E7%BB%841&admitable=1
 
-[客服监控]
-客服分组
-memberId=8 客服人员ID
-category=%E5%88%86%E7%BB%841  分组名称
-admitable=1  是否可接待 1=> 可接待
+    [客服监控]
+     客服分组
+     memberId=8 客服人员ID
+     category=%E5%88%86%E7%BB%841  分组名称
+     admitable=1  是否可接待 1=> 可接待
 
 31.WordCategory=>list1
-http://localhost:90/admin.php/WordCategory/list1
+    http://localhost:90/admin.php/WordCategory/list1
 
-[设置中心] 常用语分组列表
-category 分类名称
+    [设置中心] 常用语分组列表
+    category 分类名称
 
 32.WordCategory=>add
-http://localhost:90/admin.php/WordCategory/add?category=%E5%B8%B8%E7%94%A8%E8%AF%AD3
+       http://localhost:90/admin.php/WordCategory/add?category=%E5%B8%B8%E7%94%A8%E8%AF%AD3
 
 33.WordCategory=>get
-http://localhost:90/admin.php/WordCategory/get?id=2
+       http://localhost:90/admin.php/WordCategory/get?id=2
 
 34.WordCategory=>delete
-http://localhost:90/admin.php/WordCategory/delete?id=3
+       http://localhost:90/admin.php/WordCategory/delete?id=3
 
 
 35.CommonWord => add
-http://localhost:90/admin.php/CommonWord/add?title=你好呀&content=Hello,world...It's from jacky&category=常用1
-http://localhost:90/admin.php/CommonWord/add?title=%E4%BD%A0%E5%A5%BD%E5%91%80&content=Hello,world...It%27s%20from%20jacky&category=%E5%B8%B8%E7%94%A8%E8%AF%AD1
+    http://localhost:90/admin.php/CommonWord/add?title=你好呀&content=Hello,world...It's from jacky&category=常用1
+    http://localhost:90/admin.php/CommonWord/add?title=%E4%BD%A0%E5%A5%BD%E5%91%80&content=Hello,world...It%27s%20from%20jacky&category=%E5%B8%B8%E7%94%A8%E8%AF%AD1
 
 
-[设置中心] 常用语
+     [设置中心] 常用语
 
 36.CommonWord => list1
-http://localhost:90/admin.php/CommonWord/list1
-http://localhost:90/admin.php/CommonWord/list1?category=%E5%B8%B8%E7%94%A8%E8%AF%AD2
+    http://localhost:90/admin.php/CommonWord/list1
+    http://localhost:90/admin.php/CommonWord/list1?category=%E5%B8%B8%E7%94%A8%E8%AF%AD2
 
 37.CommonWord => delete
-http://localhost:90/admin.php/CommonWord/delete?id=2
+    http://localhost:90/admin.php/CommonWord/delete?id=2
 
 38. Login => index
-http://localhost:90/admin.php/Login/index?username=admin&password=123456
+    http://localhost:90/admin.php/Login/index?username=admin&password=123456
 
-登录
+    登录
 
 39. Login => logout
-http://localhost:90/admin.php/Login/logout
+    http://localhost:90/admin.php/Login/logout
 
-登出
+    登出
 
 41.FileCategory=>list1
-http://localhost:90/admin.php/FileCategory/list1
+    http://localhost:90/admin.php/FileCategory/list1
 
 42.FileCategory=>add
-http://localhost:90/admin.php/FileCategory/add?directory=%E5%B8%B8%E7%94%A8%E8%AF%AD3
+       http://localhost:90/admin.php/FileCategory/add?directory=%E5%B8%B8%E7%94%A8%E8%AF%AD3
 
-[设置中心] 新增文件夹
+     [设置中心] 新增文件夹
 
 43.FileCategory=>get
-http://localhost:90/admin.php/FileCategory/get?id=2
+       http://localhost:90/admin.php/FileCategory/get?id=2
 
 44.FileCategory=>delete
-http://localhost:90/admin.php/FileCategory/delete?id=3
+       http://localhost:90/admin.php/FileCategory/delete?id=3
 
 
 45.CommonFile => add
-http://localhost:90/admin.php/CommonFile/add?path=/upload/hello1.jpg&directory=Hello3&filelength=1299
-http://localhost:90/admin.php/CommonFile/add?name=Hello2&path=/upload/hello1.jpg&directory=Hello3&filelength=1299
+   http://localhost:90/admin.php/CommonFile/add?path=/upload/hello1.jpg&directory=Hello3&filelength=1299
+    http://localhost:90/admin.php/CommonFile/add?name=Hello2&path=/upload/hello1.jpg&directory=Hello3&filelength=1299
 46.CommonFile => list1
-http://localhost:90/admin.php/CommonFile/list1
-http://localhost:90/admin.php/CommonFile/list1?directory=Hello1
+    http://localhost:90/admin.php/CommonFile/list1
+    http://localhost:90/admin.php/CommonFile/list1?directory=Hello1
 
-[设置中心] 文件列表
+    [设置中心] 文件列表
 
 47.CommonFile => delete
-http://localhost:90/admin.php/CommonFile/delete?id=2
+    http://localhost:90/admin.php/CommonFile/delete?id=2
 
 48.CommonFile => get
-http://localhost:90/admin.php/CommonFile/get?id=5
+    http://localhost:90/admin.php/CommonFile/get?id=5
 
 
 
 49.CommentSetting =>modify
-http://localhost:90/admin.php/CommentSetting/modify?commentable=1&notifiable=1&level=2&notify_person=1,3,4&nofity_way=0,1,2
+    http://localhost:90/admin.php/CommentSetting/modify?commentable=1&notifiable=1&level=2&notify_person=1,3,4&nofity_way=0,1,2
 
 50.CommentSetting=>add
-http://localhost:90/admin.php/CommentSetting/add?commentable=1&notifiable=1&level=2&notify_person=1,3,4&nofity_way=0,1,2
-http://localhost:90/admin.php/CommentSetting/add?commentable=1&notifiable=1&level=2
+       http://localhost:90/admin.php/CommentSetting/add?commentable=1&notifiable=1&level=2&notify_person=1,3,4&nofity_way=0,1,2
+        http://localhost:90/admin.php/CommentSetting/add?commentable=1&notifiable=1&level=2
 
 51.CommentSetting=>get
-http://localhost:90/admin.php/CommentSetting/get
+       http://localhost:90/admin.php/CommentSetting/get
 
 
-id memberID
+    id memberID
 
-[客服监控] => 获取评价设置
-commentable=1  可评价
-notifiable=1  是否通知  1 => 通知
+    [客服监控] => 获取评价设置
+        commentable=1  可评价
+        notifiable=1  是否通知  1 => 通知
 
-level=2  评价通知的分数，小于 level 发送通知
+        level=2  评价通知的分数，小于 level 发送通知
 
-notify_person=1,3,4  通知人 MemberId
-nofity_way = 0,1,2  通知方式  0 邮件，1 => 发送短信 2 => CC 消息
+        notify_person=1,3,4  通知人 MemberId
+        nofity_way = 0,1,2  通知方式  0 邮件，1 => 发送短信 2 => CC 消息
 
 
 52.Comment =>list1
-http://localhost:90/admin.php/Comment/list1?memberId=1&level=3
+    http://localhost:90/admin.php/Comment/list1?memberId=1&level=3
 
 
-[客服监控] => 列表显示评价
-memberId 被评价的客服ID
-visitorId=1  访客ID
-level=3   评价等级 1 - 5  1 最差  5 最好
-content=%E6%9C%8D%E5%8A%A1%E5%91%A8%E5%88%B0  评价内容
+    [客服监控] => 列表显示评价
+    memberId 被评价的客服ID
+    visitorId=1  访客ID
+    level=3   评价等级 1 - 5  1 最差  5 最好
+    content=%E6%9C%8D%E5%8A%A1%E5%91%A8%E5%88%B0  评价内容
 
 
 53.Comment =>add
-http://localhost:90/admin.php/Comment/add?memberId=1&visitorId=1&level=3&content=%E6%9C%8D%E5%8A%A1%E5%91%A8%E5%88%B0
+       http://localhost:90/admin.php/Comment/add?memberId=1&visitorId=1&level=3&content=%E6%9C%8D%E5%8A%A1%E5%91%A8%E5%88%B0
 
 54.Comment => get
-http://localhost:90/admin.php/Comment/get?id=2
+       http://localhost:90/admin.php/Comment/get?id=2
 
 55.Comment =>delete
-http://localhost:90/admin.php/Comment/delete?id=3
+       http://localhost:90/admin.php/Comment/delete?id=3
 
 
 
 56.MessageCategory=>list1
-http://localhost:90/admin.php/MessageCategory/list1
+    http://localhost:90/admin.php/MessageCategory/list1
 
-[记录中心] 消息记录 => 获取分类列表
+    [记录中心] 消息记录 => 获取分类列表
 
 
 57.MessageCategory=>add
-http://localhost:90/admin.php/MessageCategory/add?category=%E5%B8%B8%E7%94%A8%E8%AF%AD3
+       http://localhost:90/admin.php/MessageCategory/add?category=%E5%B8%B8%E7%94%A8%E8%AF%AD3
 
 58.MessageCategory=>get
-http://localhost:90/admin.php/MessageCategory/get?id=2
+       http://localhost:90/admin.php/MessageCategory/get?id=2
 
 59.MessageCategory=>delete
-http://localhost:90/admin.php/MessageCategory/delete?id=3
+       http://localhost:90/admin.php/MessageCategory/delete?id=3
 
 
 60.Visitor=>list1
-http://localhost:90/admin.php/Visitor/list1
+    http://localhost:90/admin.php/Visitor/list1
 
 61.Visitor=>add
-http://localhost:90/admin.php/Visitor/add?name=jacky.xie&website=www.argen3630.cn&companyId=1&phone=15155156915&mobile=13509876578&qq=36951936&email=36951936@qq.com&company=厦门壹码网络&address=厦门市集美区&note=寻找新产品
+       http://localhost:90/admin.php/Visitor/add?name=jacky.xie&website=www.argen3630.cn&companyId=1&phone=15155156915&mobile=13509876578&qq=36951936&email=36951936@qq.com&company=厦门壹码网络&address=厦门市集美区&note=寻找新产品
 
-http://localhost:90/admin.php/Visitor/add?name=jacky.xie&website=www.argen3630.cn&phone=15155156915&mobile=13509876578&qq=36951936&companyId=1&email=36951936@qq.com&company=%E5%8E%A6%E9%97%A8%E5%A3%B9%E7%A0%81%E7%BD%91%E7%BB%9C&address=%E5%8E%A6%E9%97%A8%E5%B8%82%E9%9B%86%E7%BE%8E%E5%8C%BA&note=%E5%AF%BB%E6%89%BE%E6%96%B0%E4%BA%A7%E5%93%81
+       http://localhost:90/admin.php/Visitor/add?name=jacky.xie&website=www.argen3630.cn&phone=15155156915&mobile=13509876578&qq=36951936&companyId=1&email=36951936@qq.com&company=%E5%8E%A6%E9%97%A8%E5%A3%B9%E7%A0%81%E7%BD%91%E7%BB%9C&address=%E5%8E%A6%E9%97%A8%E5%B8%82%E9%9B%86%E7%BE%8E%E5%8C%BA&note=%E5%AF%BB%E6%89%BE%E6%96%B0%E4%BA%A7%E5%93%81
 
-[客户管理] 新增访客
-name=jacky.xie  访客名称 必填
-website=www.argen3630.cn  访客网站
-companyId=1   访客访问公司ID
-phone=15155156915  访客电话
-mobile=13509876578  访客手机
-qq=36951936         访客QQ
-email=36951936@qq.com  访客email
-company=厦门壹码网络     访客公司
-address=厦门市集美区     访客地址
-note=寻找新产品          访客备注
+    [客户管理] 新增访客
+    name=jacky.xie  访客名称 必填
+    website=www.argen3630.cn  访客	
+    companyId=1   访客访问公司ID
+    phone=15155156915  访客电话
+    mobile=13509876578  访客手机
+    qq=36951936         访客QQ
+    email=36951936@qq.com  访客email
+    company=厦门壹码网络     访客公司
+    address=厦门市集美区     访客地址
+    note=寻找新产品          访客备注
 
 62.Visitor=>get
-http://localhost:90/admin.php/Visitor/get?id=2
+       http://localhost:90/admin.php/Visitor/get?id=2
 
 63.Visitor=>delete
-http://localhost:90/admin.php/Visitor/delete?id=3
+       http://localhost:90/admin.php/Visitor/delete?id=3
 
 
 64.Message=>list1
-http://localhost:90/admin.php/Message/list1
-http://localhost:90/admin.php/Message/list1?memberId=1
+    http://localhost:90/admin.php/Message/list1
+    http://localhost:90/admin.php/Message/list1?memberId=1
 
-[记录中心] 获取对话列表
-可以通过 MemberID 过滤
+    [记录中心] 获取对话列表
+        可以通过 MemberID 过滤
 
-visitorId=1  访客ID
-memberId=1   客服人员ID
-content=您好！很高兴为你服务   发送内容
-sendTime=14009009099  发送时间
-receiveTime=1455500098  接送时间
-status=0  是否访客发送 0 => 访客发送  1 => 访客接收
+        visitorId=1  访客ID
+        memberId=1   客服人员ID
+        content=您好！很高兴为你服务   发送内容
+        sendTime=14009009099  发送时间
+        receiveTime=1455500098  接送时间
+        status=0  是否访客发送 0 => 访客发送  1 => 访客接收
 
 
 65.Message=>add
-http://localhost:90/admin.php/Message/add?companyId=1&visitorId=1&memberId=1&content=您好！很高兴为你服务&sendTime=14009009099&receiveTime=1455500098&status=0
+       http://localhost:90/admin.php/Message/add?companyId=1&visitorId=1&memberId=1&content=您好！很高兴为你服务&sendTime=14009009099&receiveTime=1455500098&status=0
 
-visitorId=1  访客ID
-memberId=1   客服人员ID
-content=您好！很高兴为你服务   发送内容
-sendTime=14009009099  发送时间
-receiveTime=1455500098  接送时间
-status=0  是否访客发送 0 => 访客发送  1 => 访客接收
+    visitorId=1  访客ID
+    memberId=1   客服人员ID
+    content=您好！很高兴为你服务   发送内容
+    sendTime=14009009099  发送时间
+    receiveTime=1455500098  接送时间
+    status=0  是否访客发送 0 => 访客发送  1 => 访客接收
 
 66.Message=>get
-http://localhost:90/admin.php/Message/get?id=2
+       http://localhost:90/admin.php/Message/get?id=2
 
 67.Message=>delete
-http://localhost:90/admin.php/Message/delete?id=3
+       http://localhost:90/admin.php/Message/delete?id=3
 
 68.MessageLog=>list1
-http://localhost:90/admin.php/MessageLog/list1
-http://localhost:90/admin.php/MessageLog/list1?memberId=1
+    http://localhost:90/admin.php/MessageLog/list1
+    http://localhost:90/admin.php/MessageLog/list1?memberId=1
 
-[记录中心] 获取留言列表
+    [记录中心] 获取留言列表
 
 69.MessageLog=>modify
-http://localhost:90/admin.php/MessageLog/modify?id=1&memberId=1&dealType=2&status=1
+    http://localhost:90/admin.php/MessageLog/modify?id=1&memberId=1&dealType=2&status=1
 
-[记录中心] 修改留言信息
-处理留言，可通过修改留言的状态
-status 留言状态 0 => 未处理  1=> 已处理
-dealType 处理方式  0 未处理 ,1 => 发送email ,2 => 短信  3 => 消息
-memberId 处理人员(Member)的 ID
+    [记录中心] 修改留言信息
+    处理留言，可通过修改留言的状态
+    status 留言状态 0 => 未处理  1=> 已处理
+    dealType 处理方式  0 未处理 ,1 => 发送email ,2 => 短信  3 => 消息
+    memberId 处理人员(Member)的 ID
 
 70.MessageLog=>add
-http://localhost:90/admin.php/MessageLog/add?companyId=1&visitorId=1&memberId=1&content=您好！很高兴为你服务&sendTime=14009009099&receiveTime=1455500098&status=0
+       http://localhost:90/admin.php/MessageLog/add?companyId=1&visitorId=1&memberId=1&content=您好！很高兴为你服务&sendTime=14009009099&receiveTime=1455500098&status=0
 
 71.MessageLog=>get
-http://localhost:90/admin.php/MessageLog/get?id=2
+       http://localhost:90/admin.php/MessageLog/get?id=2
 
 72.MessageLog=>delete
-http://localhost:90/admin.php/MessageLog/delete?id=3
+       http://localhost:90/admin.php/MessageLog/delete?id=3
 
 
 73.VisitorConfig=>list1
-http://localhost:90/admin.php/VisitorConfig/list1
+    http://localhost:90/admin.php/VisitorConfig/list1
 
-[客户管理] 访客注册设置 列表显示
+    [客户管理] 访客注册设置 列表显示
 74.VisitorConfig=>add
-http://localhost:90/admin.php/VisitorConfig/add?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ&qq_disp=1&qq_requ&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
+       http://localhost:90/admin.php/VisitorConfig/add?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ&qq_disp=1&qq_requ&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
 
-[客户管理] 新增访客注册设置
-0 不显示 1 显示  0 不是必填  1必填
-name_disp=1 显示名称
-name_requ=0 名称必填
-phone_disp=1 显示电话
-phone_requ=0 电话必填
-mobile_disp=0 显示手机
-mobile_requ=0 手机必填
-fax_disp=0  显示传真
-fax_requ=0  传真必填
-qq_disp=1   显示QQ
-qq_requ=0   QQ必填
-email_disp=0 显示 email
-email_requ=0 email 必填
-wangwang_disp=0 显示旺旺
-wangwang_requ=0 旺旺必填
-address_disp=1  显示地址
-address_requ=0  地址必填
-company_disp=1  显示公司
-company_requ=0  公司必填
-note_disp=0     显示备注
-note_requ=0    备注必填
+    [客户管理] 新增访客注册设置
+    0 不显示 1 显示  0 不是必填  1必填
+    name_disp=1 显示名称
+    name_requ=0 名称必填
+    phone_disp=1 显示电话
+    phone_requ=0 电话必填
+    mobile_disp=0 显示手机
+    mobile_requ=0 手机必填
+    fax_disp=0  显示传真
+    fax_requ=0  传真必填
+    qq_disp=1   显示QQ
+    qq_requ=0   QQ必填
+    email_disp=0 显示 email
+    email_requ=0 email 必填
+    wangwang_disp=0 显示旺旺
+    wangwang_requ=0 旺旺必填
+    address_disp=1  显示地址
+    address_requ=0  地址必填
+    company_disp=1  显示公司
+    company_requ=0  公司必填
+    note_disp=0     显示备注
+    note_requ=0    备注必填
 
 75.VisitorConfig=>get
-http://localhost:90/admin.php/VisitorConfig/get
-[客户管理] 获取访客注册设置
+       http://localhost:90/admin.php/VisitorConfig/get
+    [客户管理] 获取访客注册设置
 
 
 76.VisitorConfig=>delete
-http://localhost:90/admin.php/VisitorConfig/delete?id=3
+       http://localhost:90/admin.php/VisitorConfig/delete?id=3
 
 77.VisitorConfig=>modify
-http://localhost:90/admin.php/VisitorConfig/modify?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ=0&qq_disp=1&qq_requ=0&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
+       http://localhost:90/admin.php/VisitorConfig/modify?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ=0&qq_disp=1&qq_requ=0&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
 
-[客户管理] 新增访客注册设置
-0 不显示 1 显示  0 不是必填  1必填
-name_disp=1 显示名称
-name_requ=0 名称必填
-phone_disp=1 显示电话
-phone_requ=0 电话必填
-mobile_disp=0 显示手机
-mobile_requ=0 手机必填
-fax_disp=0  显示传真
-fax_requ=0  传真必填
-qq_disp=1   显示QQ
-qq_requ=0   QQ必填
-email_disp=0 显示 email
-email_requ=0 email 必填
-wangwang_disp=0 显示旺旺
-wangwang_requ=0 旺旺必填
-address_disp=1  显示地址
-address_requ=0  地址必填
-company_disp=1  显示公司
-company_requ=0  公司必填
-note_disp=0     显示备注
-note_requ=0    备注必填
+       [客户管理] 新增访客注册设置
+           0 不显示 1 显示  0 不是必填  1必填
+           name_disp=1 显示名称
+           name_requ=0 名称必填
+           phone_disp=1 显示电话
+           phone_requ=0 电话必填
+           mobile_disp=0 显示手机
+           mobile_requ=0 手机必填
+           fax_disp=0  显示传真
+           fax_requ=0  传真必填
+           qq_disp=1   显示QQ
+           qq_requ=0   QQ必填
+           email_disp=0 显示 email
+           email_requ=0 email 必填
+           wangwang_disp=0 显示旺旺
+           wangwang_requ=0 旺旺必填
+           address_disp=1  显示地址
+           address_requ=0  地址必填
+           company_disp=1  显示公司
+           company_requ=0  公司必填
+           note_disp=0     显示备注
+           note_requ=0    备注必填
 
-78.
-Company=>register
-http://localhost:90/admin.php/Company/register?name=admin&companyName=厦门银联科技&password=12345678&password1=12345678&email=hello@qq.com&phone=135609876854
+ 78.
+    Company=>register
+    http://localhost:90/admin.php/Company/register?name=admin&companyName=厦门银联科技&password=12345678&password1=12345678&email=hello@qq.com&phone=135609876854
 
-name 用户名 ，公司绑定的超级管理员
-companyName 公司名称
-password 用户名密码
-password1 再次输入用户名
-email  绑定账户的邮箱
-phone  绑定账户的手机
-
-
-79.
-Company => get
-http://localhost:90/admin.php/Company/get？companyId=10001
-
-获取公司信息
+    name 用户名 ，公司绑定的超级管理员
+    companyName 公司名称
+    password 用户名密码
+    password1 再次输入用户名
+    email  绑定账户的邮箱
+    phone  绑定账户的手机
 
 
+ 79.
+    Company => get
+     http://localhost:90/admin.php/Company/get？companyId=10001
+
+     获取公司信息
 
 
-80.
-MemberWork => get
-http://localhost:90/admin.php/memberWork/get?memberId=1
-
-入参数  memberId 对应成员 ID
-
-{
-"code": 0,
-"message": "Success",
-"object": {
-"id": 70000,
-"memberid": "1",  // 成员 ID
-"companyid": 1,   // 公司ID
-"nickname": null,
-"status": 0,   // 状态 0 离线  1 在线
-"update_time": 1520152149,  // 修改时间
-"no_of_admited": 30,  //已接待访客数
-"no_of_admit": 33,  //正在接待访客数
-"timecount": 0,   //访客时间累计
-"conversation": null, //会话情况
-"zone": ""// 分流区域
-}
-}
 
 
-81
-MemberWork => list1
-http://localhost:90/admin.php/memberWork/list1
+ 80.
+    MemberWork => get
+    http://localhost:90/admin.php/memberWork/get?memberId=1
 
-返回：
+    入参数  memberId 对应成员 ID
 
-{
-"code": 0,
-"msg": "success",
-"data": [
-{
-"id": 70000,
-"memberid": "1",
-"companyid": 1,
-"nickname": null,
-"status": 0,
-"update_time": 1520152149,
-"no_of_admited": 30,
-"no_of_admit": 33,
-"timecount": 0,
-"conversation": null,
-"zone": "",
-"password": "*********"
-},
-{
-"id": 70002,
-"memberid": "3",
-"companyid": 1,
-"nickname": null,
-"status": 1,
-"update_time": 0,
-"no_of_admited": 0,
-"no_of_admit": 0,
-"timecount": 0,
-"conversation": null,
-"zone": "",
-"password": "*********"
-}
-]
-}
+    {
+        "code": 0,
+        "message": "Success",
+        "object": {
+            "id": 70000,
+            "memberid": "1",  // 成员 ID
+            "companyid": 1,   // 公司ID
+            "nickname": null,
+            "status": 0,   // 状态 0 离线  1 在线
+            "update_time": 1520152149,  // 修改时间
+            "no_of_admited": 30,  //已接待访客数
+            "no_of_admit": 33,  //正在接待访客数
+            "timecount": 0,   //访客时间累计
+            "conversation": null, //会话情况
+            "zone": ""// 分流区域
+        }
+    }
 
 
-82.
-MemberWork => get
-http://localhost:90/admin.php/memberWork/get?memberId=1
+  81
+      MemberWork => list1
+      http://localhost:90/admin.php/memberWork/list1
 
-入参数  memberId 对应成员 ID
+      返回：
 
-{
-"code": 0,
-"message": "Success",
-"object": {
-"id": 70000,
-"memberid": "1",  // 成员 ID
-"companyid": 1,   // 公司ID
-"nickname": null,
-"status": 0,   // 状态 0 离线  1 在线
-"update_time": 1520152149,  // 修改时间
-"no_of_admited": 30,  //已接待访客数
-"no_of_admit": 33,  //正在接待访客数
-"timecount": 0,   //访客时间累计
-"conversation": null, //会话情况
-"zone": ""// 分流区域
-}
-}
-
-
-83
-MemberWork => list1
-http://localhost:90/admin.php/memberWork/modify?memberId=1&status=1&noOfAdmited=32&noOfAdmit=34&timeCount=40&
-conversation=adxxdfdfdfsf&zone=pudfdsfs
-
-
-memberId=1  客服ID
-status=1  状态 0 离线  1 在线
-noOfAdmited=32  已接待访客数
-noOfAdmit=34   正在接待访客数
-timeCount=40   沟通总时长 , 访客时间累计 ，按分钟计算
-conversation=adxxdfdfdfsf  会话内容
-zone=pudfds   分流区域
-
-
-返回：
-
-{
-"code": 0,
-"msg": "success",
-"data": null
-}
-
-84.
-CommentSetting => addMember
-http://localhost:90/admin.php/CommentSetting/addMember?memberId=1
-
-$memberId 添加 接收对象 ID
+      {
+          "code": 0,
+          "msg": "success",
+          "data": [
+              {
+                  "id": 70000,
+                  "memberid": "1",
+                  "companyid": 1,
+                  "nickname": null,
+                  "status": 0,
+                  "update_time": 1520152149,
+                  "no_of_admited": 30,
+                  "no_of_admit": 33,
+                  "timecount": 0,
+                  "conversation": null,
+                  "zone": "",
+                  "password": "*********"
+              },
+              {
+                  "id": 70002,
+                  "memberid": "3",
+                  "companyid": 1,
+                  "nickname": null,
+                  "status": 1,
+                  "update_time": 0,
+                  "no_of_admited": 0,
+                  "no_of_admit": 0,
+                  "timecount": 0,
+                  "conversation": null,
+                  "zone": "",
+                  "password": "*********"
+              }
+          ]
+      }
 
 
-85. CommentSetting => delMember
-http://localhost:90/admin.php/CommentSetting/delMember?memberId=1
+      82.
+          MemberWork => get
+          http://localhost:90/admin.php/memberWork/get?memberId=1
 
-$memberId 删除 接收对象 ID
+          入参数  memberId 对应成员 ID
 
-86. CommentSetting => getNotifies
-http://localhost:90/admin.php/CommentSetting/getNotifies?members=1,2,3,,7
-"code": 0,
-"message": "Success",
-"object": [
-{
-"id": 1,
-"name": "admin"
-},
-{
-"id": 2,
-"name": "mcback"
-},
-{
-"id": 3,
-"name": "demo"
-},
-{
-"id": 7,
-"name": "wuyanming"
-}
-]
-}
+          {
+              "code": 0,
+              "message": "Success",
+              "object": {
+                  "id": 70000,
+                  "memberid": "1",  // 成员 ID
+                  "companyid": 1,   // 公司ID
+                  "nickname": null,
+                  "status": 0,   // 状态 0 离线  1 在线
+                  "update_time": 1520152149,  // 修改时间
+                  "no_of_admited": 30,  //已接待访客数
+                  "no_of_admit": 33,  //正在接待访客数
+                  "timecount": 0,   //访客时间累计
+                  "conversation": null, //会话情况
+                  "zone": ""// 分流区域
+              }
+          }
+
+
+        83
+            MemberWork => list1
+            http://localhost:90/admin.php/memberWork/modify?memberId=1&status=1&noOfAdmited=32&noOfAdmit=34&timeCount=40&
+            conversation=adxxdfdfdfsf&zone=pudfdsfs
+
+
+            memberId=1  客服ID
+            status=1  状态 0 离线  1 在线
+            noOfAdmited=32  已接待访客数
+            noOfAdmit=34   正在接待访客数
+            timeCount=40   沟通总时长 , 访客时间累计 ，按分钟计算
+            conversation=adxxdfdfdfsf  会话内容
+            zone=pudfds   分流区域
+
+
+            返回：
+
+            {
+                "code": 0,
+                "msg": "success",
+                "data": null
+            }
+
+        84.
+            CommentSetting => addMember
+            http://localhost:90/admin.php/CommentSetting/addMember?memberId=1
+
+            $memberId 添加 接收对象 ID
+
+
+        85. CommentSetting => delMember
+            http://localhost:90/admin.php/CommentSetting/delMember?memberId=1
+
+            $memberId 删除 接收对象 ID
+
+        86. CommentSetting => getNotifies
+            http://localhost:90/admin.php/CommentSetting/getNotifies?members=1,2,3,,7
+            "code": 0,
+            "message": "Success",
+            "object": [
+                {
+                    "id": 1,
+                    "name": "admin"
+                },
+                {
+                    "id": 2,
+                    "name": "mcback"
+                },
+                {
+                    "id": 3,
+                    "name": "demo"
+                },
+                {
+                    "id": 7,
+                    "name": "wuyanming"
+                }
+            ]
+        }

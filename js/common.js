@@ -35,7 +35,10 @@ var urlParam = {
     getNotifies: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/getNotifies",     // 获取通知对象姓名
     getNotifies: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/getNotifies",     // 获取通知对象姓名
     addMember: prefixParamUrl.urlPrefix + "admin.php/CommentSetting/addMember",         //  添加 接收对象
-    getCommentSetList: prefixParamUrl.urlPrefix + "commentSetting /list1",              //  添加 接收对象列表
+    getCommentSetList: prefixParamUrl.urlPrefix + "admin.php/commentSetting /list1",    //  接收对象列表
+    getVisitorList: prefixParamUrl.urlPrefix + "admin.php/Visitor/list1",               //  访客列表
+    getVisitorConfigList: prefixParamUrl.urlPrefix + "admin.php/VisitorConfig/list1",   //  访客配置列表
+    getVisitorConfig: prefixParamUrl.urlPrefix + "admin.php/VisitorConfig/get",         //  访客配置详情
 }
 
 // 获取地址参数
