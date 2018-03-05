@@ -2015,8 +2015,11 @@ li h3 img {
   background: url(../images/bg-only10.gif) no-repeat left center;
   color: #1A5B8D;
   text-indent: 15px;
+  font-size: 12px;
 }
-
+.layui-form {
+  font-size: 14px;
+}
 .sub_title {
   margin-top: 5px;
   padding-right: 10px;

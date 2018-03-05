@@ -980,3 +980,71 @@
                 }
             ]
         }
+
+73.VisitorConfig=>list1
+http://localhost:90/admin.php/VisitorConfig/list1
+
+[客户管理] 访客注册设置 列表显示
+74.VisitorConfig=>add
+http://localhost:90/admin.php/VisitorConfig/add?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ&qq_disp=1&qq_requ&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
+
+[客户管理] 新增访客注册设置
+0 不显示 1 显示  0 不是必填  1必填
+name_disp=1 显示名称
+name_requ=0 名称必填
+phone_disp=1 显示电话
+phone_requ=0 电话必填
+mobile_disp=0 显示手机
+mobile_requ=0 手机必填
+fax_disp=0  显示传真
+fax_requ=0  传真必填
+qq_disp=1   显示QQ
+qq_requ=0   QQ必填
+email_disp=0 显示 email
+email_requ=0 email 必填
+wangwang_disp=0 显示旺旺
+wangwang_requ=0 旺旺必填
+address_disp=1  显示地址
+address_requ=0  地址必填
+company_disp=1  显示公司
+company_requ=0  公司必填
+note_disp=0     显示备注
+note_requ=0    备注必填
+config_type = 0   0 访客资料设置  1 留言设置
+
+75.VisitorConfig=>get
+http://localhost:90/admin.php/VisitorConfig/get?type=0
+[客户管理] 获取访客注册设置或留言设置
+
+type = 0 或 1  0 访客资料设置  1 留言设置
+
+
+76.VisitorConfig=>delete
+http://localhost:90/admin.php/VisitorConfig/delete?id=3
+
+77.VisitorConfig=>modify
+http://localhost:90/admin.php/VisitorConfig/modify?name_disp=1&name_requ=0&phone_disp=1&phone_requ=0&mobile_disp=0&mobile_requ=0&fax_disp=0&fax_requ=0&qq_disp=1&qq_requ=0&email_disp=0&email_requ=0&wangwang_disp=0&wangwang_requ=0&address_disp=1&address_requ=0&company_disp=1&company_requ=0&note_disp=0&note_requ=0
+
+[客户管理] 新增访客注册设置
+0 不显示 1 显示  0 不是必填  1必填
+name_disp=1 显示名称
+name_requ=0 名称必填
+phone_disp=1 显示电话
+phone_requ=0 电话必填
+mobile_disp=0 显示手机
+mobile_requ=0 手机必填
+fax_disp=0  显示传真
+fax_requ=0  传真必填
+qq_disp=1   显示QQ
+qq_requ=0   QQ必填
+email_disp=0 显示 email
+email_requ=0 email 必填
+wangwang_disp=0 显示旺旺
+wangwang_requ=0 旺旺必填
+address_disp=1  显示地址
+address_requ=0  地址必填
+company_disp=1  显示公司
+company_requ=0  公司必填
+note_disp=0     显示备注
+note_requ=0    备注必填
+config_type = 0 0 访客资料设置  1 留言设置

@@ -102,9 +102,9 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">客户管理 </a>
                     <dl class="layui-nav-child">
-                        <dd data-index="0" class="layui-this"><a href="javascript:;">网站访客</a></dd>
-                        <dd data-index="1"><a href="javascript:;">访客资料</a></dd>
-                        <dd data-index="2"><a href="javascript:;">访客注册设置</a></dd>
+                        <dd data-index="0" class="layui-this"><a href="javascript:void(0);">网站访客</a></dd>
+                        <dd data-index="1"><a href="javascript:void(0);">访客资料</a></dd>
+                        <dd data-index="2"><a href="javascript:void(0);">访客注册设置</a></dd>
                     </dl>
                 </li>
             </ul>
@@ -263,120 +263,122 @@
                                     </th>
                                     <td>
                                         <div style="width:302px;margin-bottom: 3px;border:1px solid #D5D5D5;border-radius:2px;padding-left:30px;padding-top:6px;padding-bottom:6px; font-size: 12px;">
-                                            <table id="reg_items_list" width="100%" style="border: none;" cellspacing="0" cellpadding="0">
-                                            <tbody>
-                                            <tr>
-                                                <td width="100">
-                                                    姓名
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[1]" value="1" checked=""><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[1]" value="1" checked=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    电话
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[2]" value="1" checked=""><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[2]" value="1"><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    手机
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[3]" value="1"><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[3]" value="1" disabled=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    传真
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[4]" value="1"><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[4]" value="1" disabled=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    Q Q
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[5]" value="1" checked=""><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[5]" value="1"><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    邮箱
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[6]" value="1" checked=""><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[6]" value="1"><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    旺旺
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[7]" value="1"><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[7]" value="1" disabled=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    地址
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[8]" value="1"><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[8]" value="1" disabled=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    公司
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[9]" value="1"><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[9]" value="1" disabled=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="100">
-                                                    备注
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_show" type="checkbox" name="is_show[10]" value="1"><label class="is_items_show_label">&nbsp;显示</label>
-                                                </td>
-                                                <td>
-                                                    <input class="is_items_required" type="checkbox" name="is_required[10]" value="1" disabled=""><label class="is_items_required_label">&nbsp;必填</label>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                            </table>
+                                            <form action="" id="reg_items_list_form">
+                                                <table id="reg_items_list" width="100%" style="border: none;" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="100">
+                                                                姓名
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="name_disp" value="0" ><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="name_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                电话
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="phone_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="phone_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                手机
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="mobile_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="mobile_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                传真
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="fax_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="fax_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                Q Q
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="qq_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="qq_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                邮箱
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="email_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="email_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                旺旺
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="wangwang_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="wangwang_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                地址
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="address_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="address_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                公司
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="company_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="company_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100">
+                                                                备注
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_show" type="checkbox" name="note_disp" value="0"><label class="is_items_show_label">&nbsp;显示</label>
+                                                            </td>
+                                                            <td>
+                                                                <input class="is_items_required" type="checkbox" name="note_requ" value="0"><label class="is_items_required_label">&nbsp;必填</label>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
@@ -407,11 +409,9 @@
             
         </div>
     </div>
-
-    <div class="layui-footer"></div>
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/layui.js"></script>
+    <script src="../../js/layui.all.js"></script>
     <script src="../..//summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
@@ -444,31 +444,32 @@
                                 $("#tkTable").html(strHTML);
                             } else {
                                 for(var i = 0; i < dataArr.length; i++) {
+
                                     var qd = dataArr[i].qd || "-";       // 渠道类型
                                     var status = (dataArr[i].address == 0) ? "离线" : "在线";  // 0 离线 1在线
                                     var no_of_admit = dataArr[i].address || "-";  // 正在接待访客数
-                                    var no_of_admited = dataArr[i].address || "-";  // 已待访客数
+                                    var create_time = dataArr[i].create_time || "0";  // 时间
                                     var name = dataArr[i].address || "-";      // 客服人员
-                                    var timecount = dataArr[i].address || "-";   // 时长
-                                    var conversation = dataArr[i].address || "-";  //回话情况
+                                    var ips = dataArr[i].ip || "-";   // 时长
+                                    var address = dataArr[i].address || "-";  //回话情况
                                     var no_of_admited1 = dataArr[i].address || "-";  // 已待访客数
-                                    var name1 = dataArr[i].address || "-";      // 客服人员
-                                    var timecount1 = dataArr[i].address || "-";   // 时长
-                                    var conversation1 = dataArr[i].address || "-";  //回话情况
+                                    var note = dataArr[i].note || "-";      // 客服人员
+                                    var website = dataArr[i].website || "-";   // 时长
+                                    var company = dataArr[i].company || "-";  // 名片
 
                                     strHTML +=
                                     "<tr>" +
                                         "<td>"+ qd +"</td>" +
                                         "<td>"+ status +"</td>" +
                                         "<td>"+ no_of_admit +"</td>" +
-                                        "<td>"+ no_of_admited +"</td>" +
-                                        "<td>"+ name +"</td>" +
-                                        "<td>"+ timecount +"</td>" +
-                                        "<td>"+ conversation +"</td>" +
+                                        "<td>"+ create_time +"</td>" +
+                                        "<td>"+ create_time +"</td>" +
+                                        "<td>"+ ips +"</td>" +
+                                        "<td>"+ address +"</td>" +
                                         "<td>"+ no_of_admited1 +"</td>" +
-                                        "<td>"+ name1 +"</td>" +
-                                        "<td>"+ timecount1 +"</td>" +
-                                        "<td>"+ conversation1 +"</td>" +
+                                        "<td>"+ note +"</td>" +
+                                        "<td>"+ website +"</td>" +
+                                        "<td>"+ company +"</td>" +
                                     "</tr>"
                                     $("#tkTable").html(strHTML);
                                 }
@@ -537,12 +538,12 @@
                 })
             }   
 
-            
             // 访客注册设置
             var createDomFn = new createDom({
-                elem: "#demo"
-            }); 
-     
+                elem: "#demo",
+                dataJsonEvent: true   // 是否需要设置列表权限
+            });
+            createDomFn.allEvent();
 
             // 访客注册设置
             $("#fkSaveBtn").on("click", function(){

@@ -23,6 +23,7 @@ $('.mynavi li').click(function(){
 $(".layui-nav dd").on("click",function(){
     var thisIndex = $(this).attr("data-index");
     console.log(thisIndex);
+    $(this).addClass("layui-this").siblings().removeClass("layui-this");
     $(".nav_tab_item").eq(thisIndex).removeClass("none").siblings("div.nav_tab_item").addClass("none");
 
     
