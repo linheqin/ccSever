@@ -45,7 +45,6 @@ $(function(){
           area: '430px',
           title:'添加元素',
           content: $('#addElePopOuter'),
-
         });
     })
     // 常用文件
@@ -93,7 +92,12 @@ $(function(){
         }
     })
 
-    
+    $(".icon_open_color_slc").on("click", function(){
+        var thisSrc = $(this).find("img").attr("src");
+        console.log($(".kf_qycn_com_cckf_dock"));
+        $(".kf_qycn_com_cckf_dock").css("background-image", "url("+thisSrc+")")
+    })
+
 
 
     // 添加分组啊

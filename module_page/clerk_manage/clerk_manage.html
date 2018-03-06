@@ -337,11 +337,14 @@
         // 修改客服列表
         $(document).on("click", ".modify_sever_btn", function(){
             var modify_name = $(this).parents("tr").find("td:nth-child(1)").text();
+            modify_name = modify_name.slice(2);
             var modify_email = $(this).parents("tr").find("td:nth-child(4)").text();
             var modify_mobile = $(this).parents("tr").find("td:nth-child(3)").text();
+            var dataId = $(this).attr("data-id");
 
             var addServerUserStr =
                 '<form action="" id="modifyServerUserData" style="padding-top: 10px">' +
+                    '<input type="hidden" name="memberId" value="'+ memberId +'">' +
                     '<div class="layui-form-item">' +
                         '<label class="layui-form-label"><span style="color: #f20;padding-right: 2px;">*</span>帐号:</label>'+
                         '<div class="layui-input-block">'+
