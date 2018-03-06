@@ -132,16 +132,14 @@ label {
     line-height: 18px;
 }
 .tab_ser_invite th {
-    width: 68px;
+    width: 103px;
 }
 .tab_ser_invite th {
     text-align: right;
     height: 40px;
-    width: 90px;
+    width: 100px;
 }
-.tab_ser_invite th {
-    width: 68px;
-}
+
 .tab_ser_invite th.v_top {
     vertical-align: top;
     height: 35px;

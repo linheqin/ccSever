@@ -1,17 +1,13 @@
 
 $(function(){
+
+
     //PC窗口设置(咨询图标）——自定义颜色块个数 
     var askLiColorBars = $(".askdefineColorbars").children('li');
     askLiColorBars.click(function(){
         var bgColor = $(this).css("backgroundColor");
         $(".askdefinecolorspan").css("backgroundColor",bgColor);
         $(".colorRBar").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
 
     //PC窗口设置(访客对话窗口）——自定义颜色块个数 
@@ -20,12 +16,6 @@ $(function(){
         var bgColor = $(this).css("backgroundColor");
         $("#theme_color_show").css("backgroundColor",bgColor);
         $("#chatwin_view_bg").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
     //PC窗口设置(直接对话窗口）——自定义颜色块个数 
     var directLiColorBars = $(".directdefineColorbars").children('li');
@@ -34,12 +24,6 @@ $(function(){
         $(".themecolorshowspan").css("backgroundColor",bgColor);
         $("#mini_chatwin_view_bg").css("backgroundColor",bgColor);
         $("#mini_chatwin_view_bg_lite").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
     //手机窗口设置(邀请窗口）——自定义颜色块个数 
     var inviteLiColorBars = $(".invitedefineColorbars").children('li');
@@ -47,12 +31,6 @@ $(function(){
         var bgColor = $(this).css("backgroundColor");
         $(".invitedefinecolorspan").css("backgroundColor",bgColor);
         $(".qy_kf_welcomeBox_words").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
 
 
@@ -114,6 +92,8 @@ $(function(){
             indexBoolen = 1;
         }
     })
+
+    
 
 
     // 添加分组啊
