@@ -91,6 +91,15 @@
         .help_info {
             display: none;
         }
+        .layui-elem-quote {
+            font-size: 12px;
+            padding: 5px;
+            margin-bottom: 1px;
+        }
+        .contens blockquote:nth-child(odd) {
+            border-left: 5px solid #FF5722
+        }
+
         .chat_record {
             padding: 0 7px;
         }
@@ -299,7 +308,7 @@
                     </div>
                 </div>
             </form>
-            <ul class="list-group">
+            <ul class="list-group" id="lyList">
                 <li class="list-group-item">留言1 时间2017-12-1</li>
                 <li class="list-group-item">留言2 时间2017-12-2</li>
                 <li class="list-group-item">留言3 时间2017-12-3</li>
@@ -317,19 +326,19 @@
                         <th style="text-align: right">操作</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: left">sdfasdf</td>
-                        <td style="text-align: right">
-                            <a href="">上移</a>
-                            <span>|</span>
-                            <a href="">下移</a>
-                            <span>|</span>
-                            <a href="">编辑</a>
-                            <span>|</span>
-                            <a href="">删除</a>
-                        </td>
-                    </tr>
+                <tbody id="dhflTable">
+                    <!--<tr>-->
+                        <!--<td style="text-align: left">sdfasdf</td>-->
+                        <!--<td style="text-align: right">-->
+                            <!--<a href="">上移</a>-->
+                            <!--<span>|</span>-->
+                            <!--<a href="">下移</a>-->
+                            <!--<span>|</span>-->
+                            <!--<a href="">编辑</a>-->
+                            <!--<span>|</span>-->
+                            <!--<a href="">删除</a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
                 </tbody>
             </table>
         </div>
@@ -342,6 +351,157 @@
     <script src="../../summernote.js"></script>
     <script src="../../lang/summernote-zh-CN.js"></script>
     <script src="../../js/myscript.js"></script>
+    <script>
+        $(function(){
+            var req = getQueryString();
+            var companyId = req["companyId"];
+            var memberId = req["memberId"];
+
+            // 对话列表
+            getMessageList();
+            function getMessageList(){
+                $.ajax({
+                    url: urlParam.getMessageList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if (msg.code == 0) {
+                            if(msg.data.length == 0) {
+                                $(".contens").html('<blockquote class="layui-elem-quote">暂无对话记录！</blockquote>');
+                            } else {
+                                var str = "";
+                                for(var i = 0; i < msg.data.length; i++) {
+                                    str += '<blockquote class="layui-elem-quote">对话内容'+ (i+1) +': '+ msg.data[i].content +'</blockquote>';
+                                }
+                                $(".contens").html(str);
+                            }
+                        } else {
+                            msgMask(msg.message)
+                        }
+                    }
+                })
+            }
+
+            // 留言列表
+            getMessageLogList();
+            function getMessageLogList(){
+                $.ajax({
+                    url: urlParam.getMessageLogList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log();
+                        if (msg.code == 0) {
+                            var len =  msg.data.length;
+                            if(len == 0) {
+                                $("#lyList").html('<li class="list-group-item">暂无留言记录 ！</li>');
+                            } else {
+                                var str = '';
+                                for(var i = 0; i < len; i ++){
+                                    str += '<li class="list-group-item">留言内容'+ (i+1) +': '+ msg.data[i].content +'</li>';
+                                }
+
+                                $("#lyList").html(str);
+                            }
+
+                        } else {
+                            msgMask(msg.message)
+                        }
+                    }
+                })
+            }
+            // 对话分类
+            getMessageCategoryList();
+            function getMessageCategoryList(){
+                $.ajax({
+                    url: urlParam.getMessageCategoryList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        if (msg.code == 0) {
+                            var len =  msg.data.length;
+                            if(len == 0) {
+                                $("#dhflTable").html('<tr><td colspan="2">暂无留言记录 ！</td></tr>');
+                            } else {
+                                var str = '';
+                                for(var i = 0; i < len; i ++){
+                                    str +=
+                                        '<tr>'+
+                                            '<td style="text-align: left">'+ msg.data[i].category +'</td>'+
+                                            '<td style="text-align: right">'+
+//                                                '<a href="">上移</a>'+
+//                                                '<span style="padding:0 3px">|</span>'+
+//                                                '<a href="">下移</a>'+
+//                                                '<span style="padding:0 3px">|</span>'+
+                                                '<a href="">编辑</a>'+
+                                                '<span style="padding:0 3px">|</span>'+
+                                                '<a href="">删除</a>'+
+                                            '</td>'+
+                                       ' </tr>';
+                                }
+
+                                $("#dhflTable").html(str);
+                            }
+                        } else {
+                            msgMask(msg.message)
+                        }
+                    }
+                })
+            }
+
+            // 点击添加对话分类
+            var addTallTypeStr =
+                '<form action="">' +
+                '<div class="layui-form-item" style="padding: 0 15px;">' +
+                '<input type="text" name="category" required id="category" lay-verify="required" placeholder="请输入对话名称" autocomplete="off" class="layui-input">'+
+                '</div>'+
+                '<p style="padding: 10px 15px 5px;">提示：最多可输入100个字符</p>'+
+                '</form>';
+            $("#addTallType").on("click", function(){
+                var addTallTypeMask = parent.layer.open({
+                    type: 1,
+                    area: ['300px', '160px'],
+                    btn: ['确认', '取消'],
+                    content: addTallTypeStr,
+                    yes: function(index){
+                        var category = $("body",parent.document).find("#category").val();
+                        $.ajax({
+                            url: urlParam.addMessageCategory,
+                            dataType: "json",
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            crossDomain: true,
+                            data: {
+                                category: category
+                            },
+                            success: function (msg) {
+                                if(msg.code == 0) {
+                                    msgMask("添加成功!",1);
+                                    parent.layer.close(addTallTypeMask);
+                                    getMessageCategoryLists();
+                                } else {
+                                    msgMask(msg.message,1)
+                                }
+
+                            }
+                        })
+                    }
+                })
+            })
+        })
+    </script>
 
 </body>
 </html>

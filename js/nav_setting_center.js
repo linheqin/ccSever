@@ -123,9 +123,9 @@ $(function(){
         var addRoleMaskStr =
             '<form action="">' +
                 '<div class="layui-form-item">' +
-                    '<label class="layui-form-label">角色名称</label>'+
+                    '<label class="layui-form-label">客服分组</label>'+
                     '<div class="layui-input-block">'+
-                        '<input type="text" name="title"  id="roleName" placeholder="请输入标题" autocomplete="off" class="layui-input">'+
+                        '<input type="text" name="title"  id="addCategory" placeholder="请输入标题" autocomplete="off" class="layui-input">'+
                     '</div>'+
                 '</div>'+
                 '<p id="roleNamePit">注：最多可输入100个字符</p>'+
@@ -136,59 +136,30 @@ $(function(){
             btn: ['添加分组', '取消'],
             skin: 'nav_setting',
             content: addRoleMaskStr, //这里content是一个普通的String
-            success: function(layero, index){
-                var roleNameArr = [];
-                $(".list-groups>a").each(function(index, el) {
-                    var roleName = $(this).find('.left').text();
-                    var roleId = $(this).attr("data-role");
-                    var obj = {
-                        roleName: roleName
-                    }
-                    roleNameArr.push(obj);
-                });
-                console.log(roleNameArr);
-
-                var optionStr = '';
-                for (var i = 0; i < roleNameArr.length; i++) {
-                    if( i == 1) {
-                        optionStr += "<option selected='selected'>"+roleNameArr[i].roleName+"</option>"
-                    } else {
-                        optionStr += "<option>"+roleNameArr[i].roleName+"</option>"
-                    }
-
-                }
-                $("body",parent.document).find("#roleSelect").html(optionStr);
-
-            },
             yes: function(index, layero){
                 //按钮【按钮一】的回调
-                var roleName =  $("body",parent.document).find("#roleName").val();
-                var roleSelect =  $("body",parent.document).find("#roleSelect").val();
+                var addCategory =  $("body",parent.document).find("#addCategory").val();
                 var roleNamePit =  $("body",parent.document).find("#roleNamePit");
 
-                if(roleName == "") {
-                    roleNamePit.html("<span style='color:#f60'>角色名称不能为空！</span>");
-                    return false;
-                }
-                if(roleName.length > 20) {
+                if(addCategory.length > 20) {
                     roleNamePit.html("<span style='color:#f60'>角色名称不能大于20个字！</span>");
                     return false;
                 }
-                roleNamePit.html("最多可输入20个字符.");
+                roleNamePit.html("注：最多可输入100个字符");
 
                 $.ajax({
-                    url: urlParam.addRole,
+                    url: urlParam.addCategory,
                     dataType: "json",
                     xhrFields: {
                         withCredentials: true
                     },
                     crossDomain: true,
                     data:{
-                        name: roleName
+                        name: addCategory
                     },
                     success: function (msg) {
                         if(msg.code == 0) {
-                            getRoleList();
+                            getCategoryList()
                             parent.layer.close(addRoleMask);
                         } else {
                             msgMask(msg.message,1)
@@ -206,6 +177,72 @@ $(function(){
 
         });
     })
+
+    // 分组列表
+    getCategoryList();
+    function getCategoryList(){
+        $.ajax({
+            url: urlParam.getCategoryList,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (msg) {
+                console.log(msg);
+                if (msg.code == 0) {
+                    if(msg.data.length == 0){
+
+                        $('#fzTables').html('<tr><td><span><a href="javascript:void(0)" style="color:#f60">暂无分组数据！</a></span></td></tr>');
+                    } else {
+                        var str = ''
+                        for(var i = 0; i < msg.data.length; i++) {
+                            var classActive = (i ==0) ? "sel" : ""
+                            str +=
+                            '<tr>'+
+                                '<td class="'+ classActive +' fzItem" dataId="'+ msg.data[i].id +'">'+
+                                    '<span>'+
+                                        '<a href="javascript:void(0)">'+ msg.data[i].category +'</a>'+
+                                    '</span>'+
+                                '</td>'+
+                            '</tr>';
+                        }
+                        $('#fzTables').html(str);
+                    }
+
+                } else {
+                    msgMask(msg.message)
+                }
+            }
+        })
+    }
+    // 点击分组列表
+    $(document).on("click", ".fzItem", function(){
+        var thisDataId = $(this).attr("dataId");
+        $(".fzItem").removeClass("sel");
+        $(this).addClass("sel");
+    })
+
+
+    // 分组人员列表
+    getListByCategory();
+    function getListByCategory(){
+        $.ajax({
+            url: urlParam.getListByCategory,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (msg) {
+                console.log(msg);
+                if (msg.code == 0) {
+                } else {
+                    msgMask(msg.message)
+                }
+            }
+        })
+    }
 
     
 })

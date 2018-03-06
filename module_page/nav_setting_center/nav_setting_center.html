@@ -16,9 +16,12 @@
     <script src="../../js/common.js"></script>
     <style>
         #tabinfo_ct td {
-            font-size: 14px;
+            font-size: 12px;
             color: #666;
             height: 28px;
+        }
+        #tabinfo_ct .textCenter{
+            text-align: center;
         }
         #clk_hdpic_ct_hd {
             box-shadow: 0px 0px 14px rgba(255, 102, 0, 0.3);
@@ -91,6 +94,9 @@
         .mynavi ul li.nav_5 {
             left: 600px;
         }
+        .fzItem.sel a {
+            color: #f20;
+        }
         .help_info {
             display: none;
         }
@@ -161,26 +167,26 @@
                         <td width="180" valign="top">
                             <input name="" type="button" value="添加客服分组" class="button6" id="add_group">
                             <table border="0" cellspacing="0" cellpadding="0" class="tab_11_sz" width="170" id="tab_left_sz" style="margin-top:10px; float:left; ">
-                                <tbody>
-                                <tr>
-                                    <th scope="col" colspan="2" style="height:14px; padding:4px; padding-left:10px">客服分组</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span>
-                                            <a href="javascript:void(0)" style="color:#f60">未分组(1人)</a>
-                                        </span>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-                            </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2" style="height:14px; padding:4px; padding-left:10px">客服分组</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="fzTables">
+                                    <!--<tr>-->
+                                        <!--<td>-->
+                                            <!--<span>-->
+                                                <!--<a href="javascript:void(0)" style="color:#f60">未分组(1人)</a>-->
+                                            <!--</span>-->
+                                        <!--</td>-->
+                                    <!--</tr>-->
+                                </tbody>
                             </table>
                         </td>
                         <td valign="top">
                             <input id="add_clerk" type="button" value="分配站点客服" class="button6">
                             <input type="hidden" name="au_account" id="au_account" value="">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab_11_kfsz_01" style="margin-top:10px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab_11_kfsz_01" style="margin-top:10px;font-size: 12px;">
                                 <tbody>
                                     <tr>
                                         <th width="4%" scope="col"><input title="选中/取消选中" name="checkall" type="checkbox" value=""></th>
@@ -188,8 +194,8 @@
                                         <th width="12%" scope="col">客服姓名</th>
                                         <th width="16%" scope="col">客服昵称</th>
                                         <th scope="col">接待权限</th>
-                                        <th scope="col" width="22%">分流区域</th>
-                                        <th width="28%" scope="col" style="text-align:center">操作</th>
+                                        <th width="20%" scope="col"  class="textCenter">分流区域</th>
+                                        <th width="28%" scope="col"  class="textCenter">操作</th>
                                     </tr>
                                     <tr>
                                         <td><input name="grpclks[]" type="checkbox" value="2155861"></td>
@@ -197,8 +203,8 @@
                                         <td class="tdbr"><span title="超级管理员">超级管理员</span></td>
                                         <td class="tdbr"><span title="超级管理员">超级管理员</span></td>
                                         <td><img class="ico_state" src="../../images/ico_right_2.png"></td>
-                                        <td>-</td>
-                                        <td>
+                                        <td class="textCenter">-</td>
+                                        <td class="textCenter">
                                             <img class="updefcursor" src="../../images/kfsz_sup.gif">&nbsp;
                                             <img class="downdefcursor" src="../../images/kfsz_sdown.gif">&nbsp;
                                                 <a href="index.php?c=ClerkSet&amp;a=getAllotSet&amp;wid=133299&amp;uid=1955861&amp;gid=-1&amp;cid=2155861&amp;page=1"><img src="../../images/kfsz_img_01.jpg" title="设置客服分配原则"></a>&nbsp;
