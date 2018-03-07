@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82fbc44b-7094-4e19-8650-0de7e97082de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mystyle.css" afterPath="$PROJECT_DIR$/css/mystyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/nav_setting_center.css" afterPath="$PROJECT_DIR$/css/nav_setting_center.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/nav_setting_center.js" afterPath="$PROJECT_DIR$/js/nav_setting_center.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pluginCommon.js" afterPath="$PROJECT_DIR$/js/pluginCommon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module_page/account_center/account_center.html" afterPath="$PROJECT_DIR$/module_page/account_center/account_center.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" afterPath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html" afterPath="$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" afterPath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -58,8 +51,8 @@
       <file leaf-file-name="nav_setting_center.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="1480" column="44" lean-forward="false" selection-start-line="1480" selection-start-column="44" selection-end-line="1480" selection-end-column="44" />
+            <state relative-caret-position="512">
+              <caret line="1483" column="0" lean-forward="false" selection-start-line="1483" selection-start-column="0" selection-end-line="1483" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#a#0;n#dd#0;n#dl#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -808,7 +801,7 @@
         <entry file="file://$PROJECT_DIR$/css/qq.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="639">
-              <caret line="99" column="33" lean-forward="true" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
+              <caret line="99" column="33" lean-forward="false" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -838,7 +831,7 @@
         <entry file="file://$PROJECT_DIR$/js/nav_setting_center.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="621">
-              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+              <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <marker date="1520408008985" expanded="true" signature="7938:7948" ph="..." />
                 <marker date="1520408008985" expanded="true" signature="9447:9457" ph="..." />
@@ -910,7 +903,6 @@
       <find>ser_invite_view_leftser_invite_view_left</find>
       <find>ser_invite_r</find>
       <find>conversation_form</find>
-      <find>qqBox</find>
       <find>link</find>
       <find>&lt;link</find>
       <find>qq_B</find>
@@ -931,6 +923,7 @@
       <find>text1</find>
       <find>小计</find>
       <find>theme_color_show</find>
+      <find>qqBox</find>
     </findStrings>
     <replaceStrings>
       <replace>http://www.argen3630.com:88</replace>
@@ -1588,7 +1581,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143217000" />
+    <option name="totallyTimeSpent" value="143846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="-5" width="1930" height="1050" extended-state="0" />
@@ -2059,7 +2052,7 @@
     <entry file="file://$PROJECT_DIR$/js/nav_setting_center.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
-          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding>
             <marker date="1520408008985" expanded="true" signature="7938:7948" ph="..." />
             <marker date="1520408008985" expanded="true" signature="9447:9457" ph="..." />
@@ -2070,15 +2063,15 @@
     <entry file="file://$PROJECT_DIR$/css/qq.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
-          <caret line="99" column="33" lean-forward="true" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
+          <caret line="99" column="33" lean-forward="false" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="1480" column="44" lean-forward="false" selection-start-line="1480" selection-start-column="44" selection-end-line="1480" selection-end-column="44" />
+        <state relative-caret-position="512">
+          <caret line="1483" column="0" lean-forward="false" selection-start-line="1483" selection-start-column="0" selection-end-line="1483" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#dd#0;n#dl#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
