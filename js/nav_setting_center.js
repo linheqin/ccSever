@@ -1,17 +1,13 @@
 
 $(function(){
+
+
     //PC窗口设置(咨询图标）——自定义颜色块个数 
     var askLiColorBars = $(".askdefineColorbars").children('li');
     askLiColorBars.click(function(){
         var bgColor = $(this).css("backgroundColor");
         $(".askdefinecolorspan").css("backgroundColor",bgColor);
         $(".colorRBar").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
 
     //PC窗口设置(访客对话窗口）——自定义颜色块个数 
@@ -19,14 +15,16 @@ $(function(){
     visiterLiColorBars.click(function(){
         var bgColor = $(this).css("backgroundColor");
         $("#theme_color_show").css("backgroundColor",bgColor);
-        $("#chatwin_view_bg").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
+        $(".BoxHead").css("backgroundColor",bgColor)
     })
+    // 访客对话窗口修改窗口标题
+
+    $("#windowTitle1").on('input porpertychange',function(){
+        var thisTxt = $("#windowTitle1").val();
+        $(".internetName").html(thisTxt);
+    })
+
+
     //PC窗口设置(直接对话窗口）——自定义颜色块个数 
     var directLiColorBars = $(".directdefineColorbars").children('li');
     directLiColorBars.click(function(){
@@ -34,12 +32,6 @@ $(function(){
         $(".themecolorshowspan").css("backgroundColor",bgColor);
         $("#mini_chatwin_view_bg").css("backgroundColor",bgColor);
         $("#mini_chatwin_view_bg_lite").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
     //手机窗口设置(邀请窗口）——自定义颜色块个数 
     var inviteLiColorBars = $(".invitedefineColorbars").children('li');
@@ -47,13 +39,119 @@ $(function(){
         var bgColor = $(this).css("backgroundColor");
         $(".invitedefinecolorspan").css("backgroundColor",bgColor);
         $(".qy_kf_welcomeBox_words").css("backgroundColor",bgColor);
-        $.ajax({
-            url: '/path/to/file',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'bgColor'},
-        })
     })
+
+    // 点击对齐模式
+    $("#ico_position li").on("click", function(){
+        var cssPose= $(this).attr("posi");
+        $(this).addClass("index").siblings().removeClass("index");
+        var boxWidth = $("#adv_consult").width() / 2;
+        var boxHeight = $("#adv_consult").height() / 2;
+        console.log(cssPose);
+        if(cssPose == "lt") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "left": 0,
+                "top": 0,
+                "margin": 0
+            }
+        }
+        if(cssPose == "ct") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "left": "50%",
+                "top": 0,
+                "margin-left": -boxWidth
+            }
+        }
+        if(cssPose == "rt") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "right": 0,
+                "top": 0,
+                "margin": 0
+            }
+        }
+        if(cssPose == "lc") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "left": 0,
+                "top": "50%",
+                "margin-top": -boxHeight
+            }
+        }
+        if(cssPose == "cc") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "left": "50%",
+                "top": "50%",
+                "margin-top": -boxHeight,
+                "margin-left": -boxWidth
+            }
+        }
+        if(cssPose == "rc") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "right": 0,
+                "margin-top": -boxHeight,
+                "top": "50%"
+            }
+        }
+        if(cssPose == "lb") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "left": 0,
+                "bottom": 0,
+                "margin": 0
+            }
+        }
+        if(cssPose == "cb") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "left": "50%",
+                "bottom": 0,
+                "margin-left": -boxWidth
+            }
+        }
+        if(cssPose == "rb") {
+            var cssJson = {
+                "position": "absolute",
+                "z-index": "100000",
+                "width": "187px",
+                "right": 0,
+                "bottom": 0,
+                "margin": 0
+            }
+        }
+        $("#adv_consult").removeAttr("style");
+        $("#adv_consult").css(cssJson)
+    })
+
+    //表情包的展现与隐藏
+    $('.ExP').on('click',function(){
+        if($('.emjon').css('display')=='none'){
+            $('.emjon').show();
+        }else{
+            $('.emjon').hide();
+        }
+    })
+
 
 
 
@@ -67,7 +165,6 @@ $(function(){
           area: '430px',
           title:'添加元素',
           content: $('#addElePopOuter'),
-
         });
     })
     // 常用文件
@@ -114,6 +211,13 @@ $(function(){
             indexBoolen = 1;
         }
     })
+
+    $(".icon_open_color_slc").on("click", function(){
+        var thisSrc = $(this).find("img").attr("src");
+        console.log($(".kf_qycn_com_cckf_dock"));
+        $(".kf_qycn_com_cckf_dock").css("background-image", "url("+thisSrc+")")
+    })
+
 
 
     // 添加分组啊
@@ -222,6 +326,8 @@ $(function(){
         $(".fzItem").removeClass("sel");
         $(this).addClass("sel");
     })
+
+    //
 
 
     // 分组人员列表
