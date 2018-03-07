@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="82fbc44b-7094-4e19-8650-0de7e97082de" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" afterPath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" />
+=======
+      <change beforePath="$PROJECT_DIR$/js/nav_setting_center.js" afterPath="$PROJECT_DIR$/js/nav_setting_center.js" />
+      <change beforePath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" afterPath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" />
+      <change beforePath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" afterPath="$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
       <change beforePath="$PROJECT_DIR$/js/nav_setting_center.js" afterPath="$PROJECT_DIR$/js/nav_setting_center.js" />
       <change beforePath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" afterPath="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" />
@@ -55,6 +61,9 @@
         <entry file="file://$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18600">
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
               <caret line="687" column="76" lean-forward="false" selection-start-line="687" selection-start-column="44" selection-end-line="687" selection-end-column="76" />
               <folding>
@@ -68,6 +77,7 @@
       <file leaf-file-name="recode.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module_page/recode/recode.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="10179">
               <caret line="377" column="96" lean-forward="false" selection-start-line="377" selection-start-column="96" selection-end-line="377" selection-end-column="96" />
@@ -83,11 +93,19 @@
             <state relative-caret-position="-660">
               <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
               <folding>
+=======
+            <state relative-caret-position="-660">
+              <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+              <folding>
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <marker date="1520337810452" expanded="true" signature="19409:19425" ph="..." />
                 <marker date="1520337810452" expanded="true" signature="19517:19534" ph="..." />
                 <marker date="1520337810452" expanded="true" signature="19992:20005" ph="..." />
                 <marker date="1520337810452" expanded="true" signature="20624:20640" ph="..." />
                 <marker date="1520337810452" expanded="true" signature="20860:20883" ph="..." />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
               </folding>
             </state>
@@ -97,6 +115,7 @@
       <file leaf-file-name="nav_setting_center.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="512">
               <caret line="1483" column="0" lean-forward="false" selection-start-line="1483" selection-start-column="0" selection-end-line="1483" selection-end-column="0" />
@@ -283,6 +302,11 @@
             <state relative-caret-position="772">
               <caret line="1906" column="19" lean-forward="false" selection-start-line="1906" selection-start-column="19" selection-end-line="1906" selection-end-column="19" />
               <folding>
+=======
+            <state relative-caret-position="772">
+              <caret line="1906" column="19" lean-forward="false" selection-start-line="1906" selection-start-column="19" selection-end-line="1906" selection-end-column="19" />
+              <folding>
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -322,6 +346,9 @@
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -351,6 +378,7 @@
                 <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#0;n#tbody#0;n#table#4;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#5;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#0;n#tbody#0;n#table#5;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -425,11 +453,16 @@
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -437,6 +470,10 @@
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <element signature="e#94756#94762#0" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
                 <element signature="e#94756#94762#0" expanded="true" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
@@ -453,6 +490,11 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <element signature="e#97929#97935#0" expanded="true" />
+                <element signature="e#97935#97941#0" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
                 <element signature="e#97929#97935#0" expanded="true" />
                 <element signature="e#97935#97941#0" expanded="true" />
@@ -481,8 +523,11 @@
                 <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -490,11 +535,17 @@
                 <element signature="n#style#0;n#label#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#label#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="e#106825#106831#0" expanded="true" />
                 <element signature="e#106831#106837#0" expanded="true" />
                 <element signature="e#106837#106843#0" expanded="true" />
                 <element signature="e#106843#106849#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#input#1;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#1;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -523,6 +574,10 @@
                 <element signature="n#style#0;n#li#18;n#ul#0;n#div#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#19;n#ul#0;n#div#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <element signature="n#style#0;n#div#2;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
                 <element signature="n#style#0;n#div#2;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
@@ -554,6 +609,11 @@
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#11;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#12;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <element signature="e#126138#126144#0" expanded="true" />
+                <element signature="e#126144#126150#0" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
                 <element signature="e#126138#126144#0" expanded="true" />
                 <element signature="e#126144#126150#0" expanded="true" />
@@ -583,6 +643,7 @@
                 <element signature="n#style#0;n#input#1;n#td#0;n#tr#21;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#2;n#td#0;n#tr#21;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <element signature="n#style#0;n#input#3;n#td#0;n#tr#22;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -592,6 +653,8 @@
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="e#136177#136183#0" expanded="true" />
                 <element signature="n#style#0;n#input#3;n#td#0;n#tr#22;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -599,6 +662,9 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -629,6 +695,7 @@
                 <element signature="n#style#0;n#div#2;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <element signature="n#style#0;n#input#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -667,6 +734,8 @@
                 <element signature="n#style#0;n#td#1;n#tr#13;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#td#0;n#tr#14;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="e#146790#146796#0" expanded="true" />
                 <element signature="e#146796#146802#0" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -736,6 +805,9 @@
                 <element signature="e#160703#160709#0" expanded="true" />
                 <element signature="e#160960#160966#0" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#td#0;n#tr#15;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -759,11 +831,14 @@
                 <element signature="n#style#0;n#div#1;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <element signature="n#style#0;n#table#1;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="e#171035#171041#0" expanded="true" />
                 <element signature="e#171318#171324#0" expanded="true" />
                 <element signature="e#171996#172002#0" expanded="true" />
@@ -781,12 +856,16 @@
                 <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#176831#176837#0" expanded="true" />
                 <element signature="e#177088#177094#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#style#0;n#input#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1023,6 +1102,8 @@
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#13;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#2;n#div#13;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1035,6 +1116,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="qq.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/qq.css">
@@ -1062,11 +1144,16 @@
             <state relative-caret-position="458">
               <caret line="164" column="18" lean-forward="false" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <file leaf-file-name="nav_setting_center.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/nav_setting_center.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="139" column="14" lean-forward="false" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
               <folding />
             </state>
@@ -1077,17 +1164,23 @@
         <entry file="file://$PROJECT_DIR$/js/nav_setting_center.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="621">
               <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <marker date="1520408008985" expanded="true" signature="7938:7948" ph="..." />
                 <marker date="1520408008985" expanded="true" signature="9447:9457" ph="..." />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <state relative-caret-position="277">
               <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="37" />
               <folding>
                 <element signature="e#3449#5539#0" expanded="false" />
                 <element signature="e#5607#6964#0" expanded="false" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
               </folding>
             </state>
@@ -1097,6 +1190,7 @@
       <file leaf-file-name="pluginCommon.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pluginCommon.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="426">
               <caret line="340" column="35" lean-forward="false" selection-start-line="340" selection-start-column="35" selection-end-line="340" selection-end-column="35" />
@@ -1117,6 +1211,12 @@
               <caret line="350" column="1" lean-forward="true" selection-start-line="350" selection-start-column="1" selection-end-line="350" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+=======
+            <state relative-caret-position="803">
+              <caret line="350" column="1" lean-forward="true" selection-start-line="350" selection-start-column="1" selection-end-line="350" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
                 <marker date="1520337810438" expanded="true" signature="6314:6416" ph="..." />
                 <marker date="1520337810438" expanded="true" signature="6483:6498" ph="..." />
                 <marker date="1520337810438" expanded="true" signature="6841:6856" ph="..." />
@@ -1127,6 +1227,9 @@
                 <marker date="1520337810438" expanded="true" signature="10910:10922" ph="..." />
                 <marker date="1520337810438" expanded="true" signature="10947:10959" ph="..." />
                 <marker date="1520337810438" expanded="true" signature="10988:11103" ph="..." />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
               </folding>
             </state>
@@ -1137,8 +1240,13 @@
         <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="818">
               <caret line="47" column="63" lean-forward="false" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="63" />
+=======
+            <state relative-caret-position="1650">
+              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
             <state relative-caret-position="1650">
               <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
@@ -1171,6 +1279,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <find>enable</find>
       <find>ico_position</find>
       <find>adv_consult</find>
@@ -1202,6 +1311,8 @@
       <find>theme_color_show</find>
       <find>qqBox</find>
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <find>addTallType</find>
       <find>客服分组</find>
       <find>getMessageCategoryList</find>
@@ -1232,6 +1343,9 @@
       <find>取消</find>
       <find>addElePopOuter</find>
       <find>btitemaction_adv</find>
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
     </findStrings>
     <replaceStrings>
@@ -1271,12 +1385,18 @@
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/module_page/recode/recode.html" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/module_page/account_center/account_center.html" />
         <option value="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" />
         <option value="$PROJECT_DIR$/css/nav_setting_center.css" />
         <option value="$USER_HOME$/Desktop/jqueryTimTalk/index.html" />
         <option value="$PROJECT_DIR$/css/mystyle.css" />
         <option value="$PROJECT_DIR$/css/qq.css" />
+=======
+        <option value="$PROJECT_DIR$/css/nav_setting_center.css" />
+        <option value="$PROJECT_DIR$/module_page/account_center/account_center.html" />
+        <option value="$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
         <option value="$PROJECT_DIR$/css/nav_setting_center.css" />
         <option value="$PROJECT_DIR$/module_page/account_center/account_center.html" />
@@ -1313,6 +1433,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -1444,6 +1565,10 @@
 =======
       <pane id="ProjectPane">
         <subPane>
+=======
+      <pane id="ProjectPane">
+        <subPane>
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
           <expand>
             <path>
               <item name="ccSever" type="b2602c69:ProjectViewProjectNode" />
@@ -1479,13 +1604,20 @@
             </path>
           </expand>
           <select />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+      <pane id="PackagesPane" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
       <pane id="PackagesPane" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
@@ -1521,6 +1653,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ccSever/index.html">
@@ -1815,11 +1948,16 @@
       <method />
     </configuration>
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
   <component name="RunManager" selected="JavaScript Debug.clerk_manage.html">
     <configuration name="2微.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ccSever/2微.html" />
     <configuration name="account_center.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ccSever/module_page/account_center/account_center.html" />
     <configuration name="clerk_manage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ccSever/module_page/clerk_manage/clerk_manage.html" />
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ccSever/index.html" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -1949,6 +2087,7 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="143846000" />
   </component>
   <component name="ToolWindowManager">
@@ -1994,6 +2133,23 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
+    <option name="totallyTimeSpent" value="131337000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-5" y="0" width="1895" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1448573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2002,7 +2158,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2010,6 +2169,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2019,15 +2179,21 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2035,6 +2201,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1448573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2410,7 +2578,10 @@
         <state relative-caret-position="809">
           <caret line="3194" column="4" lean-forward="false" selection-start-line="3194" selection-start-column="4" selection-end-line="3194" selection-end-column="4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         </state>
       </provider>
     </entry>
@@ -2418,6 +2589,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="2020" column="18" lean-forward="false" selection-start-line="2020" selection-start-column="18" selection-end-line="2020" selection-end-column="18" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         </state>
       </provider>
@@ -2439,9 +2613,12 @@
     <entry file="file://$PROJECT_DIR$/js/myscript.js">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="54">
           <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         <state relative-caret-position="1200">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
@@ -2451,6 +2628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module_page/visitor_manage/visitor_manage.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="5157">
           <caret line="432" column="41" lean-forward="false" selection-start-line="432" selection-start-column="23" selection-end-line="432" selection-end-column="41" />
@@ -2464,16 +2642,25 @@
           <caret line="423" column="0" lean-forward="false" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
           <folding />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
+        <state relative-caret-position="12690">
+          <caret line="423" column="0" lean-forward="false" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
+          <folding />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module_page/clerk_monitor/clerk_monitor.html">
+<<<<<<< HEAD
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16740">
           <caret line="687" column="76" lean-forward="false" selection-start-line="687" selection-start-column="44" selection-end-line="687" selection-end-column="76" />
 =======
       <provider selected="true" editor-type-id="text-editor">
+=======
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         <state relative-caret-position="18600">
           <caret line="687" column="76" lean-forward="false" selection-start-line="687" selection-start-column="44" selection-end-line="687" selection-end-column="76" />
           <folding>
@@ -2511,6 +2698,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="2101" column="2" lean-forward="false" selection-start-line="2101" selection-start-column="2" selection-end-line="2101" selection-end-column="2" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
           <folding>
             <marker date="1519971971644" expanded="true" signature="52680:52687" ph="×" />
@@ -2521,6 +2711,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/summernote.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -2554,6 +2745,13 @@
         <state relative-caret-position="457">
           <caret line="1376" column="16" lean-forward="false" selection-start-line="1376" selection-start-column="16" selection-end-line="1376" selection-end-column="16" />
           <folding>
+=======
+    <entry file="file://$PROJECT_DIR$/module_page/account_center/account_center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="1376" column="16" lean-forward="false" selection-start-line="1376" selection-start-column="16" selection-end-line="1376" selection-end-column="16" />
+          <folding>
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <marker date="1520339746033" expanded="true" signature="56860:56922" ph="..." />
             <marker date="1520339746033" expanded="true" signature="57102:57116" ph="..." />
             <marker date="1520339746033" expanded="true" signature="57360:57370" ph="..." />
@@ -2566,6 +2764,7 @@
             <marker date="1520339746033" expanded="true" signature="62155:62169" ph="..." />
             <marker date="1520339746033" expanded="true" signature="68504:68554" ph="..." />
             <marker date="1520339746033" expanded="true" signature="74790:74840" ph="..." />
+<<<<<<< HEAD
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
           </folding>
         </state>
@@ -2587,11 +2786,14 @@
             <marker date="1520337810452" expanded="true" signature="19992:20005" ph="..." />
             <marker date="1520337810452" expanded="true" signature="20624:20640" ph="..." />
             <marker date="1520337810452" expanded="true" signature="20860:20883" ph="..." />
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
           </folding>
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-203">
@@ -2663,10 +2865,23 @@
             <marker date="1520289434000" expanded="true" signature="10910:10922" ph="..." />
             <marker date="1520289434000" expanded="true" signature="10947:10959" ph="..." />
             <marker date="1520289434000" expanded="true" signature="10988:11103" ph="..." />
+=======
+    <entry file="file://$PROJECT_DIR$/module_page/recode/recode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <marker date="1520337810452" expanded="true" signature="19409:19425" ph="..." />
+            <marker date="1520337810452" expanded="true" signature="19517:19534" ph="..." />
+            <marker date="1520337810452" expanded="true" signature="19992:20005" ph="..." />
+            <marker date="1520337810452" expanded="true" signature="20624:20640" ph="..." />
+            <marker date="1520337810452" expanded="true" signature="20860:20883" ph="..." />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/css/nav_setting_center.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -2680,11 +2895,50 @@
         <state relative-caret-position="1508">
           <caret line="1919" column="16" lean-forward="false" selection-start-line="1919" selection-start-column="16" selection-end-line="1919" selection-end-column="16" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/module_page/clerk_manage/clerk_manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="339" column="45" lean-forward="false" selection-start-line="339" selection-start-column="45" selection-end-line="339" selection-end-column="45" />
+          <folding>
+            <marker date="1520345998192" expanded="true" signature="7603:7620" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="7750:7781" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="9110:9141" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="9553:9584" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="9997:10028" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="15158:15175" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="15390:15421" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="16777:16808" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="17228:17259" ph="..." />
+            <marker date="1520345998192" expanded="true" signature="17675:17706" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pluginCommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="803">
+          <caret line="350" column="1" lean-forward="true" selection-start-line="350" selection-start-column="1" selection-end-line="350" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1520337810438" expanded="true" signature="6314:6416" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="6483:6498" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="6841:6856" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="9905:9961" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="10279:10377" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="10501:10568" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="10873:10892" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="10910:10922" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="10947:10959" ph="..." />
+            <marker date="1520337810438" expanded="true" signature="10988:11103" ph="..." />
+          </folding>
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/nav_setting_center.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="621">
           <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
@@ -2692,11 +2946,16 @@
             <marker date="1520408008985" expanded="true" signature="7938:7948" ph="..." />
             <marker date="1520408008985" expanded="true" signature="9447:9457" ph="..." />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
         <state relative-caret-position="277">
           <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="37" />
           <folding>
             <element signature="e#3449#5539#0" expanded="false" />
             <element signature="e#5607#6964#0" expanded="false" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
           </folding>
         </state>
@@ -2712,6 +2971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module_page/nav_setting_center/nav_setting_center.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="512">
           <caret line="1483" column="0" lean-forward="false" selection-start-line="1483" selection-start-column="0" selection-end-line="1483" selection-end-column="0" />
@@ -2898,6 +3158,11 @@
         <state relative-caret-position="772">
           <caret line="1906" column="19" lean-forward="false" selection-start-line="1906" selection-start-column="19" selection-end-line="1906" selection-end-column="19" />
           <folding>
+=======
+        <state relative-caret-position="772">
+          <caret line="1906" column="19" lean-forward="false" selection-start-line="1906" selection-start-column="19" selection-end-line="1906" selection-end-column="19" />
+          <folding>
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2937,6 +3202,9 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2966,6 +3234,7 @@
             <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#0;n#tbody#0;n#table#4;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#5;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#0;n#tbody#0;n#table#5;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
             <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3040,11 +3309,16 @@
             <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3052,6 +3326,10 @@
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <element signature="e#94756#94762#0" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
             <element signature="e#94756#94762#0" expanded="true" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
@@ -3068,6 +3346,11 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <element signature="e#97929#97935#0" expanded="true" />
+            <element signature="e#97935#97941#0" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
             <element signature="e#97929#97935#0" expanded="true" />
             <element signature="e#97935#97941#0" expanded="true" />
@@ -3096,8 +3379,11 @@
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3105,11 +3391,17 @@
             <element signature="n#style#0;n#label#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#label#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="e#106825#106831#0" expanded="true" />
             <element signature="e#106831#106837#0" expanded="true" />
             <element signature="e#106837#106843#0" expanded="true" />
             <element signature="e#106843#106849#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#input#1;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#1;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3138,6 +3430,10 @@
             <element signature="n#style#0;n#li#18;n#ul#0;n#div#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#19;n#ul#0;n#div#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <element signature="n#style#0;n#div#2;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
             <element signature="n#style#0;n#div#2;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
@@ -3169,6 +3465,11 @@
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#11;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#12;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <element signature="e#126138#126144#0" expanded="true" />
+            <element signature="e#126144#126150#0" expanded="true" />
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
 =======
             <element signature="e#126138#126144#0" expanded="true" />
             <element signature="e#126144#126150#0" expanded="true" />
@@ -3198,6 +3499,7 @@
             <element signature="n#style#0;n#input#1;n#td#0;n#tr#21;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#2;n#td#0;n#tr#21;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="n#style#0;n#input#3;n#td#0;n#tr#22;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -3207,6 +3509,8 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="e#136177#136183#0" expanded="true" />
             <element signature="n#style#0;n#input#3;n#td#0;n#tr#22;n#tbody#0;n#table#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3214,6 +3518,9 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3244,6 +3551,7 @@
             <element signature="n#style#0;n#div#2;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
             <element signature="n#style#0;n#input#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3282,6 +3590,8 @@
             <element signature="n#style#0;n#td#1;n#tr#13;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#td#0;n#tr#14;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="e#146790#146796#0" expanded="true" />
             <element signature="e#146796#146802#0" expanded="true" />
             <element signature="n#style#0;n#input#1;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3351,6 +3661,9 @@
             <element signature="e#160703#160709#0" expanded="true" />
             <element signature="e#160960#160966#0" expanded="true" />
             <element signature="n#style#0;n#input#1;n#td#0;n#tr#15;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3374,11 +3687,14 @@
             <element signature="n#style#0;n#div#1;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="n#style#0;n#table#1;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="e#171035#171041#0" expanded="true" />
             <element signature="e#171318#171324#0" expanded="true" />
             <element signature="e#171996#172002#0" expanded="true" />
@@ -3396,12 +3712,16 @@
             <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#176831#176837#0" expanded="true" />
             <element signature="e#177088#177094#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
+=======
 >>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
             <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -3638,6 +3958,8 @@
             <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#13;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#2;n#div#13;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
 =======
+=======
+>>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
             <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
