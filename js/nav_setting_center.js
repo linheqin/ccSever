@@ -55,25 +55,49 @@ $(function(){
         } else {
             temesTit.addClass("none");
         }
+        $(this).addClass("sel").siblings().removeClass("sel")
         $("#sys_up_invite_pre").css({
             "background" : "url("+ thisImgSrc +") no-repeat"
         })
     })
+    // 点击确定位置
 
-    //
-
-    // 点击对齐模式
+    // 点击 - 咨询图标 - 对齐模式
     $("#ico_position li").on("click", function(){
         var cssPose= $(this).attr("posi");
         $(this).addClass("index").siblings().removeClass("index");
-        var boxWidth = $("#adv_consult").width() / 2;
-        var boxHeight = $("#adv_consult").height() / 2;
-        console.log(cssPose);
+        var boxWidth = $("#adv_consult").width();
+
+        var boxHeight = $("#adv_consult").height();
+        var cssJson = setPosition(cssPose,boxWidth,boxHeight);
+
+        $("#adv_consult").removeAttr("style");
+        $("#adv_consult").css(cssJson)
+    })
+    // 点击 - 邀请图标 - 对齐模式
+    $("#ico_position1 li").on("click", function(){
+        var cssPose= $(this).attr("posi");
+        $(this).addClass("index").siblings().removeClass("index");
+        var boxWidth = $("#sys_up_invite_pre").width();
+
+        var boxHeight = $("#sys_up_invite_pre").height();
+        var imgSrc = $("#themesdiv li.sel").attr("dataSrc");
+        var cssJson = setPosition(cssPose,boxWidth,boxHeight, imgSrc);
+
+        $("#sys_up_invite_pre").removeAttr("style");
+        $("#sys_up_invite_pre").css(cssJson)
+    })
+    function setPosition(cssPose,boxWidth,boxHeight,thisImgSrc){
+        var cssPose = cssPose;
+        var boxWidth = boxWidth;
+        var boxHeight = boxHeight;
+        var thisImgSrc = thisImgSrc || "";
         if(cssPose == "lt") {
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "left": 0,
                 "top": 0,
                 "margin": 0
@@ -83,17 +107,19 @@ $(function(){
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "left": "50%",
                 "top": 0,
-                "margin-left": -boxWidth
+                "margin-left": -(boxWidth/2)
             }
         }
         if(cssPose == "rt") {
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "right": 0,
                 "top": 0,
                 "margin": 0
@@ -103,30 +129,33 @@ $(function(){
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "left": 0,
                 "top": "50%",
-                "margin-top": -boxHeight
+                "margin-top": -(boxHeight/2)
             }
         }
         if(cssPose == "cc") {
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "left": "50%",
                 "top": "50%",
-                "margin-top": -boxHeight,
-                "margin-left": -boxWidth
+                "margin-top": -(boxHeight/2),
+                "margin-left": -(boxWidth/2)
             }
         }
         if(cssPose == "rc") {
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "right": 0,
-                "margin-top": -boxHeight,
+                "margin-top": -(boxHeight/2),
                 "top": "50%"
             }
         }
@@ -134,7 +163,8 @@ $(function(){
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "left": 0,
                 "bottom": 0,
                 "margin": 0
@@ -144,25 +174,29 @@ $(function(){
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "left": "50%",
                 "bottom": 0,
-                "margin-left": -boxWidth
+                "margin-left": -(boxWidth/2)
             }
         }
         if(cssPose == "rb") {
             var cssJson = {
                 "position": "absolute",
                 "z-index": "100000",
-                "width": "187px",
+                "width": boxWidth,
+                "height": boxHeight,
                 "right": 0,
                 "bottom": 0,
                 "margin": 0
             }
         }
-        $("#adv_consult").removeAttr("style");
-        $("#adv_consult").css(cssJson)
-    })
+        if(thisImgSrc != "" || thisImgSrc != undefined) {
+            cssJson.background = "url("+ thisImgSrc +") no-repeat"
+        }
+        return cssJson;
+    }
 
     //表情包的展现与隐藏
     $('.ExP').on('click',function(){

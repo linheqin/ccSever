@@ -257,7 +257,7 @@
                                             <div class="kf_zdy_main" id="kf_zdy_main" style="display:none">
                                                 <div class="box_kfcp_003">
                                                     <ul>
-                                                        <li class="this"><img them="beauty_01" src="../../images/beauty_01_lite.png" rel="beauty_01" class="select_img"></li>
+                                                        <li class="sel"><img them="beauty_01" src="../../images/beauty_01_lite.png" rel="beauty_01" class="select_img"></li>
                                                         <li><img them="flower_01" src="../../images/flower_01_lite.png" rel="flower_01" class="select_img"></li>
                                                         <li><img them="flower_02" src="../../images/flower_02_lite.png" rel="flower_02" class="select_img"></li>
                                                         <li><img them="flower_03" src="../../images/flower_03_lite.png" rel="flower_03" class="select_img"></li>
@@ -861,7 +861,7 @@
                                 <td>
                                     <div id="themesdiv" style="width:342px;height:130px;padding:5px 0 0px 10px;border: 1px solid #E0E2E5;" class="box_kfcp_003">
                                         <ul>
-                                            <li dataIsTit=false class="this" dataSrc="http://www.argen3630.com:8082/images/bg.png"><img src="http://www.argen3630.com:8082/images/new_themes_01.png" rel="new_themes_01" class="select_img"></li>
+                                            <li dataIsTit=false class="sel" dataSrc="http://www.argen3630.com:8082/images/bg.png"><img src="http://www.argen3630.com:8082/images/new_themes_01.png" rel="new_themes_01" class="select_img"></li>
                                             <li dataIsTit=false dataSrc="http://www.argen3630.com:8082/images/bg1.png"><img src="http://www.argen3630.com:8082/images/beauty_01.png" rel="beauty_01" class="select_img"></li>
                                             <li dataIsTit=true dataSrc="http://www.argen3630.com:8082/images/bg2.gif"><img src="http://www.argen3630.com:8082/images/flower_01.png" rel="flower_01" class="select_img"></li>
                                         </ul>
@@ -917,16 +917,16 @@
                                 <th scope="row" class="v_top">显示位置：</th>
                                 <td>
                                     <div class="left">
-                                        <ul class="dq_li cls">
-                                            <li dataRight="100%" dataBottom="100%"></li>
-                                            <li dataRight="50%" dataBottom="100%"></li>
-                                            <li dataRight="0" dataBottom="100%" style="margin-right:0"></li>
-                                            <li dataRight="100%" dataBottom="50%"></li>
-                                            <li dataRight="50%" dataBottom="50%"></li>
-                                            <li dataRight="0" dataBottom="50%" style="margin-right:0"></li>
-                                            <li dataRight="100%" dataBottom="0" style="margin-bottom:0"></li>
-                                            <li dataRight="50%" dataBottom="0"></li>
-                                            <li dataRight="0" dataBottom="0" class="index" style="margin:0"></li>
+                                        <ul class="dq_li cls" id="ico_position1">
+                                            <li posi="lt"></li>
+                                            <li posi="ct"></li>
+                                            <li posi="rt" style="margin-right:0"></li>
+                                            <li posi="lc"></li>
+                                            <li posi="cc"></li>
+                                            <li posi="rc" style="margin-right:0"></li>
+                                            <li posi="lb" style="margin-bottom:0"></li>
+                                            <li posi="cb"></li>
+                                            <li posi="rb" class="index" style="margin:0"></li>
                                         </ul>
                                     </div>
                                     <div class="left" style="margin-top:48px;margin-left:20px;">
@@ -998,122 +998,21 @@
             </div>
         </form>
         <div class="ser_invite_view_right" style="position:fixed;top:19px;left:620px;width:100%;height:918px;">
-            <div style="width:100%;height:918px;margin-top:15px;">
-                <div style="width:100%;height:18px;background:url('../../images/top-rule.gif') no-repeat">
-                    <div id="full_scr_var" style="cursor:pointer;margin-top:2px;margin-left:2px;background:url('../../images/full_scr_1.jpg') no-repeat;float:left;width:15px;height:15px;">
+            <div id="systheme_preview" style="position: relative;width: 850px;height: 900px;overflow: hidden;padding: 0px 0 0 60px;background:url(../../images/bgtransfer.gif)">
+                <div id="sys_up_invite_pre" rel="sys_win" style="border-radius:3px;position:relative;float:none;-moz-user-select:none;height:176px;width:400px;overflow: hidden;display: block;background:url(../../images/bg.png) no-repeat;margin:0;padding:0">
+                    <div class="sys_wintitle" style="height: 30px;line-height: 30px;"></div>
+                    <div id="sys_wincontent" rel="sys_word" style="word-wrap: break-word;word-break: break-all;position:absolute;top:45px;left:129px;float:none;display:block; height:83px;width:248px;padding:0; margin:0; color:#FFFFFF; line-height: normal; text-align:left; font-size:17px;background:none">
+                        <div style="position:relative;height:100%;width:100%;overflow:hidden">
+                            <div id="sys_preview_invite_word">
+                                您好！欢迎访问本网站，请问有什么可以帮到您?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sys_winbtn" style="position: absolute;right: 0;bottom:0;width: 100%;height: 47px;">
+                        <span class="xzzx" style="float: right;height: 100%;width: 102px;"></span>
+                        <span class="shzx" style="float: right;height: 100%;width: 102px;"></span>
                     </div>
                 </div>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody>
-                    <tr id="systheme_v_t" style="">
-                        <td width="18px">
-                            <div style="height:900px;width:18px;background:url('../../images/left-rule.gif') no-repeat">
-                            </div>
-                        </td>
-                        <td>
-                            <div id="systheme_preview" style="width: 1400px;height: 900px;overflow: hidden;padding: 0px 0 0 60px;background:url(../../images/bgtransfer.gif)">
-                                <div style="width:500px;height:50px;line-height:50px;margin:7px 0 17px">
-                                    &nbsp;
-                                </div>
-                                <div id="sys_up_invite_pre" rel="sys_win" style="border-radius:3px;position:relative;float:none;-moz-user-select:none;height:176px;width:400px;overflow: hidden;display: block;background:url(../../images/bg.png) no-repeat;margin:0;padding:0">
-                                    <div id="sys_QYKFYQKT" rel="sys_title" style="position:absolute;top:0px;left:0px;float:none; height:0px;width:0px; padding:0 ;margin:0; line-height:0px; overflow:hidden; text-align:left; font-weight:bold; color:#FFFFFF; font-size:12px;background:none;">
-                                        <div style="text-indent:10px;position:relative;height:100%;width:100%;">
-                                            <div id="sys_preview_invite_title">
-                                                CC客服
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="sys_wincontent" rel="sys_word" style="word-wrap: break-word;word-break: break-all;position:absolute;top:45px;left:129px;float:none;display:block; height:83px;width:248px;padding:0; margin:0; color:#FFFFFF; line-height: normal; text-align:left; font-size:17px;background:none">
-                                        <div style="position:relative;height:100%;width:100%;overflow:hidden">
-                                            <div id="sys_preview_invite_word">
-                                                您好！欢迎访问本网站，请问有什么可以帮到您?
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="sys_up_refuse_pre" rel="sys_refuse" style="position:absolute;top:131px;left:203px;width:88px; height:34px;margin:0;padding:0;">
-                                    </div>
-                                    <div id="sys_up_accept_pre" rel="sys_accept" style="position:absolute;top:131px;left:301px;width:88px; height:34px;margin:0;padding:0;">
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr id="zdytheme_v_t" style="display:none;">
-                        <td width="18px">
-                            <div style="height:900px;width:18px;background:url('templates/images/kf_cp/left-rule.gif') no-repeat">
-                            </div>
-                        </td>
-                        <td>
-                            <div id="preview" style="width:1400px;height:900px;overflow: hidden;padding:0px 0 0 60px;background:url(../../images/bg.gif)">
-                                <div style="margin-left:-30px;width:500px;;margin-bottom:7px;margin-top:7px;padding:5px;font-size:13px;border: 1px solid transparent;border-radius: 4px;color: #31708f;background-color: #d9edf7;border-color: #bce8f1;">
-                                    <strong>自定义设置提示：</strong>鼠标指针变成<img style="vertical-align:middle" src="../../images/dratip1.gif">形状时，按住鼠标左键可拖动改变该元素位置&nbsp;&nbsp;点击元素后，右下角出现<img style="vertical-align:middle" src="../../images/inv_bg_drag_size.jpg">时，把鼠标移动上面，当鼠标指针变成<img style="vertical-align:middle" src="../../images/dratip2.gif">形状时，按住鼠标左键拖动可改变该元素大小
-                                </div>
-                                <!--<div style="width:500px;height:23px;line-height:23px;margin:7px 0 17px">&nbsp;
-                            </div>
-                            -->
-                                <div id="up_invite_pre" rel="win" style="position:relative;float:none;-moz-user-select:none;height:266px;width:480px;overflow: hidden;display: block;background:url(templates/images/invite_view_bg_d.jpg?1) no-repeat;margin:0;padding:0" onselectstart="javascript:return false;">
-                                    <div id="QYKFYQKT" rel="title" style="z-index:10;cursor: move;position:absolute;top:2px;left:6px;float:none;display:none; height:34px;width:275px; padding:0 ;margin:0; line-height:34px; overflow:hidden; text-align:left; font-weight:bold; color:#4169E1; font-size:16px;background:none;">
-                                        <div style="text-indent:10px;position:relative;height:100%;width:100%;">
-                                            <div id="preview_invite_title">
-                                                CC客服
-                                            </div>
-                                            <div class="resizebg title_resize">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="wincontent" rel="word" style="z-index:10;cursor: move;position:absolute;top:60px;left:130px;float:none;display:none; height:131px;width:331px;padding:0; margin:0; color:#333333; line-height:normal; text-align:left; font-size:14px;background:none">
-                                        <div style="position:relative;height:100%;width:100%;overflow:hidden">
-                                            <div id="preview_invite_word">
-                                                您好！欢迎访问本网站，请问有什么可以帮到您?
-                                            </div>
-                                            <div class="resizebg word_resize">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="up_refuse_pre" rel="refuse" style="z-index:10;cursor: move;position:absolute;top:195px;left:326px;width:140px; height:41px;margin:0;padding:0;">
-                                        <div style="position:relative;height:100%;width:100%;">
-                                            <div id="up_refuse_pre_tps" style="display:none;position:absolute;color:#F58B7E;background-color:#FFF;border-radius:1px;width:55px;height:20px;line-height:20px;text-align:center;opacity:0.9;filter:alpha(opacity=90);margin:auto;top:0;left:0;bottom:0;right:0;">
-                                                拒绝区域
-                                            </div>
-                                            <div class="resizebg refuse_resize">
-                                            </div>
-                                            <div class="refuse_vline" style="position: absolute;background: #FFF url(templates/images/vline_red.gif) top left repeat;font-size: 0;height: 2px!important;width: 100%;">
-                                            </div>
-                                            <div class="refuse_vline" style="position: absolute;background: #FFF url(templates/images/vline_red.gif) top left repeat;bottom: 0;font-size: 0;height: 2px!important;width: 100%;">
-                                            </div>
-                                            <div class="refuse_vline" style="position: absolute;background: #FFF url(templates/images/vline_red.gif) top left repeat;right: 0;font-size: 0;height: 100%;width: 2px!important;">
-                                            </div>
-                                            <div class="refuse_vline" style="position: absolute;background: #FFF url(templates/images/vline_red.gif) top left repeat;font-size: 0;height: 100%;width: 2px!important;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="up_accept_pre" rel="accept" style="z-index:10;cursor: move;position:absolute;top:195px;left:170px;width:140px; height:41px;margin:0;padding:0;">
-                                        <div style="position:relative;height:100%;width:100%;">
-                                            <div id="up_accept_pre_tps" style="display:none;position:absolute;color:#67EC67;background-color:#FFF;border-radius:1px;width:55px;height:20px;line-height:20px;text-align:center;opacity:0.9;filter:alpha(opacity=90);margin:auto;top:0;left:0;bottom:0;right:0;">
-                                                同意区域
-                                            </div>
-                                            <div class="resizebg accept_resize">
-                                            </div>
-                                            <div class="accept_vline" style="position: absolute;background: #FFF url(templates/images/vline_green.gif) top left repeat;font-size: 0;height: 2px!important;width: 100%;">
-                                            </div>
-                                            <div class="accept_vline" style="position: absolute;background: #FFF url(templates/images/vline_green.gif) top left repeat;bottom: 0;font-size: 0;height: 2px!important;width: 100%;">
-                                            </div>
-                                            <div class="accept_vline" style="position: absolute;background: #FFF url(templates/images/vline_green.gif) top left repeat;right: 0;font-size: 0;height: 100%;width: 2px!important;">
-                                            </div>
-                                            <div class="accept_vline" style="position: absolute;background: #FFF url(templates/images/vline_green.gif) top left repeat;font-size: 0;height: 100%;width: 2px!important;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="z-index:10;" class="resizebg inv_resize">
-                                    </div>
-                                    <div style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: black; opacity: 0.5;filter:alpha(opacity=50);">
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
@@ -1456,7 +1355,8 @@
                                 <div class="RightCont">
                                     <div class="ChatRecord">查看更多消息</div>
                                     <ul class="newsList">
-
+                                        <li><div class="news"><img class="jiao" src="http://www.argen3630.com:8082/img/talk.jpg">您好！欢迎您访问本网站！</div></li>
+                                        <li><div class="answers"><img class="jiao" src="http://www.argen3630.com:8082/img/TIM图片20170926103645_03_02.jpg">我想问问？</div></li>
                                     </ul>
                                 </div>
                                 <div class="RightFoot">
@@ -2701,8 +2601,20 @@
             width: 340,
             height: 120,
             tabsize: 2,
-            lang: 'zh-CN'
+            lang: 'zh-CN',
+            callbacks: {
+                onInit: function(contents){
+                    console.log(contents);
+                    $('#areaText2').summernote('code',"您好！欢迎访问本网站，请问有什么可以帮到您?");
+                },
+                onChange: function(contents, $editable) {
+                    var con = contents.replace(/<.*?>/ig,"");
+                    console.log(con);
+                    $("#sys_preview_invite_word").html(con);
+                }
+            }
         });
+
         // wenzims
         $('#wenzims').summernote({
             width: 340,

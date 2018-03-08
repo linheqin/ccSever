@@ -363,6 +363,9 @@ ul.dq_li li.index {
     opacity: 0.5;
     margin-right: 10px;
 }
+.box_kfcp_003 li.sel {
+    border: 1px solid #f30;
+}
 /*直接对话窗口*/
 .text2, .text3, .text4 {
     border: solid 1px #c7d9e7;
