@@ -44,6 +44,24 @@ $(function(){
         var thisTxt = $(this).val();
         $(".advertisement a").attr("href",thisTxt);
     })
+
+    // 点击要去窗口咨询
+    $("#themesdiv li").on("click",function(){
+        var thisImgSrc = $(this).attr("dataSrc");
+        var dataIsTit = $(this).attr("dataIsTit");
+        var temesTit = $(".temesTit");
+        if(dataIsTit == "true") {
+            temesTit.removeClass("none");
+        } else {
+            temesTit.addClass("none");
+        }
+        $("#sys_up_invite_pre").css({
+            "background" : "url("+ thisImgSrc +") no-repeat"
+        })
+    })
+
+    //
+
     // 点击对齐模式
     $("#ico_position li").on("click", function(){
         var cssPose= $(this).attr("posi");
