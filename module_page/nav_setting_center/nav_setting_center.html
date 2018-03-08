@@ -1774,21 +1774,7 @@
                                             提示语:
                                         </th>
                                         <td>
-                                            <div style="width:335px;height:115px;margin-top: 10px;">
-                                                <div class="ke-container ke-container-default" style="width: 332px;">
-                                                    <div style="display:block;" class="ke-toolbar" unselectable="on">
-                                                        <span class="ke-outline" data-name="fontname" title="字体" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontname" unselectable="on"></span></span><span class="ke-outline" data-name="fontsize" title="字号" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontsize" unselectable="on"></span></span><span class="ke-outline" data-name="forecolor" title="文字颜色" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-forecolor" unselectable="on"></span></span><span class="ke-outline" data-name="hilitecolor" title="文字背景" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-hilitecolor" unselectable="on"></span></span><span class="ke-outline" data-name="bold" title="粗体(Ctrl+B)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-bold" unselectable="on"></span></span><span class="ke-outline" data-name="italic" title="斜体(Ctrl+I)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-italic" unselectable="on"></span></span><span class="ke-outline" data-name="underline" title="下划线(Ctrl+U)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-underline" unselectable="on"></span></span><span class="ke-outline" data-name="link" title="添加超级链接" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-link" unselectable="on"></span></span><span class="ke-outline" data-name="unlink" title="取消超级链接" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-unlink" unselectable="on"></span></span><span class="ke-outline" data-name="removeformat" title="删除格式" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-removeformat" unselectable="on"></span></span><span class="ke-outline" data-name="fullscreen" title="全屏显示(Esc)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fullscreen" unselectable="on"></span></span>
-                                                    </div>
-                                                    <div style="display: block; height: 82px;" class="ke-edit">
-                                                        <iframe class="ke-edit-iframe" hidefocus="true" frameborder="0" style="width: 100%; height: 82px;">
-                                                        </iframe>
-                                                        <textarea class="ke-edit-textarea" hidefocus="true" style="width: 100%; height: 82px; display: none;"></textarea>
-                                                    </div>
-                                                    <div class="ke-statusbar">
-                                                        <span class="ke-inline-block ke-statusbar-center-icon" style="visibility: hidden;"></span><span class="ke-inline-block ke-statusbar-right-icon" style="visibility: hidden;"></span>
-                                                    </div>
-                                                </div>
-                                                <textarea name="welcome_word" style="visibility: hidden; display: none;"></textarea>
+                                            <div style="width:335px;height:115px;margin-top: 10px;" id="fklyTextarea">
                                             </div>
                                             <div style="margin-bottom:10px;color:#99989d;margin-top:5px;">
                                                 如果不需要显示提示语，请将提示语置空。
@@ -1896,7 +1882,17 @@
                                     效果示例
                                 </div>
                                 <div style="margin-left:15px;">
-                                    <img style="width:100%;height:auto;border:1px solid #ddd;box-shadow: 0 0 8px rgba(0,0,0,0.2);" src="../../images/cuslvmsg_preview.jpg">
+                                    <div id="leaveAMessage" style="width: 600px;height:400px;">
+                                        <div id="leaveAMessageTit" style="height:40px;line-height: 40px;">
+                                            标题
+                                        </div>
+                                        <div id="leaveAMessageCon" style="height:40px;line-height: 40px;">
+                                            <div><span></span> <input type="text"> </div>
+                                        </div>
+                                        <div id="leaveAMessageBtn" style="height:40px;line-height: 40px;">
+                                            <button></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </td>
@@ -2637,6 +2633,14 @@
         });
         //hyYu
         $('#hyYu').summernote({
+            width: 340,
+            height: 120,
+            tabsize: 2,
+            lang: 'zh-CN'
+        });
+
+        // fklyTextarea
+        $('#fklyTextarea').summernote({
             width: 340,
             height: 120,
             tabsize: 2,
