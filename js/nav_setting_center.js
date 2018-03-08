@@ -18,13 +18,6 @@ $(function(){
         $(".BoxHead").css("backgroundColor",bgColor)
         $("#chatwin_view_bg").css("backgroundColor",bgColor);
     })
-    // 访客对话窗口修改窗口标题
-
-    $("#windowTitle1").on('input porpertychange',function(){
-        var thisTxt = $("#windowTitle1").val();
-        $(".internetName").html(thisTxt);
-    })
-
 
     //PC窗口设置(直接对话窗口）——自定义颜色块个数 
     var directLiColorBars = $(".directdefineColorbars").children('li');
@@ -41,7 +34,16 @@ $(function(){
         $(".invitedefinecolorspan").css("backgroundColor",bgColor);
         $(".qy_kf_welcomeBox_words").css("backgroundColor",bgColor);
     })
-
+    // 访客对话窗口修改窗口标题
+    $("#windowTitle1").on('input porpertychange',function(){
+        var thisTxt = $("#windowTitle1").val();
+        $(".internetName").html(thisTxt);
+    })
+    // 访客对话窗口修改窗口标题
+    $("input[name=cardurl]").on('input porpertychange',function(){
+        var thisTxt = $(this).val();
+        $(".advertisement a").attr("href",thisTxt);
+    })
     // 点击对齐模式
     $("#ico_position li").on("click", function(){
         var cssPose= $(this).attr("posi");
