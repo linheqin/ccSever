@@ -173,13 +173,6 @@
                         </tr>
                         </thead>
                         <tbody id="fzTables">
-                        <!--<tr>-->
-                        <!--<td>-->
-                        <!--<span>-->
-                        <!--<a href="javascript:void(0)" style="color:#f60">未分组(1人)</a>-->
-                        <!--</span>-->
-                        <!--</td>-->
-                        <!--</tr>-->
                         </tbody>
                     </table>
                 </td>
@@ -371,12 +364,12 @@
                                     <tr class="adv_mode_sh" style="">
                                         <th scope="row">字体颜色：</th>
                                         <td>
-                                                        <span class="bg_select cls" style="width:50px;border:solid 1px #b4b4b4;border-radius: 2px;">
-                                                            <div class="show_color cls showColor02">
-                                                                <div class="checked_bg" style="border:none;border-right: 1px solid #b4b4b4;height:17px;"><div class="checked_bg_show" style="border:none;height:17px;background:#FFFFFF;width:35px;"></div></div>
-                                                                <div class="open_list" style="border:none;height:17px;width:9px;background:url(../../images/select2.png) no-repeat -5px -4px;"></div>
-                                                            </div>
-                                                        </span>
+                                            <span class="bg_select cls" style="width:50px;border:solid 1px #b4b4b4;border-radius: 2px;">
+                                                <div class="show_color cls showColor02">
+                                                    <div class="checked_bg" style="border:none;border-right: 1px solid #b4b4b4;height:17px;"><div class="checked_bg_show" style="border:none;height:17px;background:#FFFFFF;width:35px;"></div></div>
+                                                    <div class="open_list" style="border:none;height:17px;width:9px;background:url(../../images/select2.png) no-repeat -5px -4px;"></div>
+                                                </div>
+                                            </span>
                                             <input type="hidden" name="adv_font_color" value="#FFFFFF">
                                         </td>
                                     </tr>
@@ -421,8 +414,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <input type="hidden" name="iconToggleOnUrl" value="">
-                                                <input type="hidden" name="iconToggleOffUrl" value="">
                                                 <input type="hidden" name="icon_open_color_xt" value="#169ada"><!--根据该去#颜色值以及页面左右位置自动确定图片-->
                                             </div>
                                             <input checked="" name="isIconOpenShow" type="checkbox" class="radio" value="1"><label id="isIconOpenShow_label">咨询图标展开显示</label>
@@ -457,7 +448,8 @@
                                     <tr class="adv_mode_sh" style="">
                                         <td width="425" colspan="2" style="padding:0 2px 6px 6px;">
                                             <table style="table-layout:fixed;" id="adv_botlisttable" width="100%" border="0" cellspacing="0" cellpadding="0" class="tab_130109">
-                                                <tbody><tr><td style="text-align:center;" colspan="5">暂无数据，<label id="adv_addbotlabel" style="color:#0066ff;cursor:pointer">立即添加元素</label></td></tr>
+                                                <tbody>
+                                                    <tr><td style="text-align:center;" colspan="5">暂无数据，<label id="adv_addbotlabel" style="color:#0066ff;cursor:pointer">立即添加元素</label></td></tr>
                                                 </tbody>
                                             </table>
                                         </td>
@@ -1149,8 +1141,7 @@
         <div id="ser_invite_r1" class="cls" style="display: flex">
             <form id="conversation_form1" style="float: left;">
                 <div class="ser_invite_view_left">
-                    <input type="hidden" name="website" id="website" value="133299">
-                    <div style="width:450px; background-color: #F9FBFF; border:1px solid #c5e0ed;">
+                    <div style="width:450px;overflow-x: hidden; overflow-y: auto; background-color: #F9FBFF; border:1px solid #c5e0ed;" id="scrollDiv">
                         <table width="100%" border="0" cellspacing="5" cellpadding="0" class="tab_ser_invite">
                             <tbody>
                             <tr>
@@ -1317,11 +1308,6 @@
                                     <input name="nickname" type="checkbox" value="1" class="radio" checked="">昵称
                                     <input name="tel" type="checkbox" value="1" class="radio" checked="">电话
                                     <input name="email" type="checkbox" value="1" class="radio" checked="">邮箱
-                                    <br>
-                                    <input type="checkbox" name="showotherim" value="1" class="radio" checked="">显示其他通讯软件图标
-                                    <div style="float:right;width: 14px;height:14px;margin-top:-7px;margin-right:12px;">
-                                        <img src="../../images/prompt.gif" class="ck_helptips" data-html="勾选项将作为客服资料显示在访客对话窗口内（如果该项存在的情况下）。" data-variation="inverted" data-offset="3">
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1396,20 +1382,7 @@
                                     欢迎语：
                                 </th>
                                 <td>
-                                    <div class="ke-container ke-container-default" style="width: 350px;">
-                                        <div style="display:block;" class="ke-toolbar" unselectable="on">
-                                            <span class="ke-outline" data-name="fontname" title="字体" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontname" unselectable="on"></span></span><span class="ke-outline" data-name="fontsize" title="字号" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontsize" unselectable="on"></span></span><span class="ke-outline" data-name="forecolor" title="文字颜色" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-forecolor" unselectable="on"></span></span><span class="ke-outline" data-name="hilitecolor" title="文字背景" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-hilitecolor" unselectable="on"></span></span><span class="ke-outline" data-name="bold" title="粗体(Ctrl+B)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-bold" unselectable="on"></span></span><span class="ke-outline" data-name="italic" title="斜体(Ctrl+I)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-italic" unselectable="on"></span></span><span class="ke-outline" data-name="underline" title="下划线(Ctrl+U)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-underline" unselectable="on"></span></span><span class="ke-outline" data-name="link" title="添加超级链接" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-link" unselectable="on"></span></span><span class="ke-outline" data-name="unlink" title="取消超级链接" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-unlink" unselectable="on"></span></span><span class="ke-outline" data-name="image" title="图片" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-image" unselectable="on"></span></span><span class="ke-outline" data-name="removeformat" title="删除格式" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-removeformat" unselectable="on"></span></span><span class="ke-outline" data-name="fullscreen" title="全屏显示(Esc)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fullscreen" unselectable="on"></span></span>
-                                        </div>
-                                        <div style="display: block; height: 82px;" class="ke-edit">
-                                            <iframe class="ke-edit-iframe" hidefocus="true" frameborder="0" style="width: 100%; height: 82px;">
-                                            </iframe>
-                                            <textarea class="ke-edit-textarea" hidefocus="true" style="width: 100%; height: 82px; display: none;"></textarea>
-                                        </div>
-                                        <div class="ke-statusbar">
-                                            <span class="ke-inline-block ke-statusbar-center-icon" style="visibility: hidden;"></span><span class="ke-inline-block ke-statusbar-right-icon" style="visibility: hidden;"></span>
-                                        </div>
-                                    </div>
-                                    <textarea name="welcome_words" style="visibility: hidden; display: none;">您好，请问有什么可以帮到您？</textarea>
+                                    <div id="hyYu"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -1465,10 +1438,33 @@
                         <div class="context">
                             <div class="conLeft">
                                 <div class="windowLogo">
-                                    <img src="">
+                                    <a href=""><img class="tx"  src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2599496968,2261399187&fm=27&gp=0.jpg"></a>
                                 </div>
                                 <div class="serviceInfo">
-
+                                    <div class="zxInfo">
+                                        <span style="margin-right: 5px;">工号:</span>
+                                        <span>1234</span>
+                                    </div>
+                                    <div class="zxInfo">
+                                        <span style="margin-right: 5px;">姓名:</span>
+                                        <span>超级客服</span>
+                                    </div>
+                                    <div class="zxInfo">
+                                        <span style="margin-right: 5px;">昵称:</span>
+                                        <span>超级客服</span>
+                                    </div>
+                                    <div class="zxInfo">
+                                        <span style="margin-right: 5px;">电话:</span>
+                                        <span>超级客服</span>
+                                    </div>
+                                    <div class="zxInfo">
+                                        <span style="margin-right: 5px;">邮箱:</span>
+                                        <span>超级客服</span>
+                                    </div>
+                                    <div class="zxInfo">
+                                        <span style="margin-right: 5px;">姓名:</span>
+                                        <span>超级客服</span>
+                                    </div>
                                 </div>
 
                             </div>
@@ -1606,7 +1602,19 @@
                                 </div>
                             </div>
                             <div class="cons">
-
+                                <div class="layui-tab">
+                                    <ul class="layui-tab-title">
+                                        <li class="layui-this">公司名片</li>
+                                        <li>文件</li>
+                                    </ul>
+                                    <div class="advertisement">
+                                        <a href=""><img src="http://b.hiphotos.baidu.com/image/h%3D300/sign=a9b52dd8933df8dcb93d8991fd1072bf/aec379310a55b31932bea15a4fa98226cffc175d.jpg"></a>
+                                    </div>
+                                    <div class="layui-tab-content">
+                                        <div class="layui-tab-item layui-show">内容1</div>
+                                        <div class="layui-tab-item">内容2</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2707,6 +2715,8 @@
         $(".checked_bg_show").css("background-color",color);
         colorRar.css("color",color);
     });
+    var height = $(".layui-side-scroll").height() + 10;
+    $("#scrollDiv").css("height",height)
 
 </script>
 <script>
@@ -2719,6 +2729,14 @@
             lang: 'zh-CN'
         });
         $('#areaText2').summernote({
+            width: 340,
+            height: 120,
+            tabsize: 2,
+            lang: 'zh-CN'
+        });
+
+        //hyYu
+        $('#hyYu').summernote({
             width: 340,
             height: 120,
             tabsize: 2,

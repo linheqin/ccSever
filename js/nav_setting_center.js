@@ -15,14 +15,8 @@ $(function(){
     visiterLiColorBars.click(function(){
         var bgColor = $(this).css("backgroundColor");
         $("#theme_color_show").css("backgroundColor",bgColor);
-<<<<<<< HEAD
         $(".BoxHead").css("backgroundColor",bgColor)
-=======
         $("#chatwin_view_bg").css("backgroundColor",bgColor);
-<<<<<<< HEAD
->>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
-=======
->>>>>>> a6695b6dd0dd71a6f69d332ed75fc71f1faa7ad7
     })
     // 访客对话窗口修改窗口标题
 
