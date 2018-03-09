@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>客服后台</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/layui.css">
+    <script src="../../js/common.js?v=2"></script>
+    <link rel="stylesheet" href="../../css/qq.css">
+    <style>
+        html,body,.mytable {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .mytable table.layui-table tbody  td {
+            border-top: 1px solid #ccc;
+        }
+        #tallPanle {
+            display: flex;
+            display: -webkit-sflex;
+            display: -moz-flex;
+            display: -ms-flex;
+        }
+        #tallPanle {
+            position: absolute;
+            left: 0;
+            top: 260px;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+        }
+        .flex {
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+        }
+        .flex_item {
+            -webkit-flex: 1;
+            -moz-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        #tallPanleCenter {
+            -webkit-flex: 1;
+            -moz-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        #tallPanleLeft {
+            width: 200px;
+            border-right: 1px solid #ccc;
+            /*overflow: auto;*/
+        }
+        #tallPanleRight {
+            width: 300px;
+            border-left: 1px solid #ccc;
+            overflow: auto;
+        }
+        .nav_tit {
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .nav_tit span {
+            background: url("../../images/nav_bg1.jpg") repeat;
+        }
+        .nav_tit span.sel {
+            background: url("../../images/nav_bg2.jpg") repeat;
+        }
+        .tab_items {
+            height: calc(100% - 36px);
+            height: -ms-calc(100% - 36px);
+            height: -moz-calc(100% - 36px);
+            height: -webkit-calc(100% - 36px);
+        }
+        .tab_item {
+            height: 100%;
+            overflow: auto;
+            padding: 10px 5px;
+            box-sizing:border-box;
+            -moz-box-sizing:border-box; /* Firefox */
+            -webkit-box-sizing:border-box; /* Safari */
+        }
+        .none {
+            display: none!important;
+        }
+    </style>
+</head>
+<body class="layui-layout-body">
+    <div class=" mytable layui-layout layui-layout-admin" style="min-width: 980px;">
+        <div style="height: 260px;overflow: auto;border:1px solid #c2c2c2;">
+            <table class="layui-table" lay-even lay-skin="nob" lay-size="sm" style="margin: 0">
+                <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>渠道</th>
+                    <th>访客姓名</th>
+                    <th>访客次数</th>
+                    <th>地域</th>
+                    <th>停留时间</th>
+                    <th>最后活动</th>
+                    <th>来源</th>
+                    <th>正在预览页面</th>
+                    <th>上次接待</th>
+                    <th>当前接待</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>这是类型</td>
+                    <td>这是渠道</td>
+                    <td>魔术师</td>
+                    <td>12</td>
+                    <td>北京</td>
+                    <td>2016-11-29 12:12</td>
+                    <td>活动</td>
+                    <td>来源这</td>
+                    <td>http://cnodejs.org/topic/59bf71d3e7d9a031127eacaa</td>
+                    <td>小客服</td>
+                    <td>打客服</td>
+                    <td><button class="layui-btn layui-btn-xs">删除</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tallPanle">
+            <div id="tallPanleLeft">
+                <div id="panleLeftTit" class="nav_tit flex">
+                    <span class="flex_item sel">标题1</span>
+                    <span class="flex_item">标题2</span>
+                </div>
+                <div id="panleLeftCon" class="tab_items">
+                    <div class="tab_item">内容1</div>
+                    <div class="tab_item none">内容2</div>
+                </div>
+            </div>
+            <div id="tallPanleCenter">
+                <div class="conRight" style="height: 100%;">
+                    <div class="RightCont">
+                        <div class="ChatRecord">查看更多消息</div>
+                        <ul class="newsList">
+                            <li><div class="news"><img class="jiao" src="http://www.argen3630.com:8082/img/talk.jpg">您好！欢迎您访问本网站！</div></li>
+                            <li><div class="answers"><img class="jiao" src="http://www.argen3630.com:8082/img/TIM图片20170926103645_03_02.jpg">我想问问？</div></li>
+                        </ul>
+                    </div>
+                    <div class="RightFoot">
+                        <div class="emjon">
+                            <ul>
+                                <li><img src="http://www.argen3630.com:8082/img/1.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/2.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/3.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/4.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/5.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/6.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/7.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/8.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/9.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/10.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/11.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/12.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/13.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/14.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/15.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/16.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/17.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/18.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/19.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/20.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/21.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/22.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/23.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/24.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/25.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/26.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/27.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/28.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/29.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/30.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/31.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/32.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/33.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/34.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/35.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/36.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/37.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/38.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/39.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/40.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/41.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/42.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/43.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/44.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/45.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/46.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/47.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/48.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/49.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/50.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/51.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/52.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/53.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/54.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/55.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/56.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/57.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/58.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/59.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/60.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/50.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/51.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/52.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/53.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/54.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/55.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/56.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/57.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/58.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/59.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/60.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/61.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/62.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/63.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/64.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/65.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/66.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/67.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/68.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/69.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/70.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/71.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/72.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/73.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/74.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/75.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/76.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/77.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/78.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/79.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/80.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/81.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/82.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/83.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/84.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/85.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/86.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/87.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/88.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/89.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/90.gif"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/91.gif"></li>
+                            </ul>
+                        </div>
+                        <div class="footTop">
+                            <ul>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_31.jpg"></li>
+                                <li class="ExP"><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_33.jpg"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_35.jpg"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_37.jpg"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_39.jpg"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_41.jpg" alt=""></li>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_43.jpg"></li>
+                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_45.jpg"></li>
+                            </ul>
+                        </div>
+                        <div class="inputBox">
+                            <textarea id="dope" style="padding: 5px 10px;width: 99%;height: 70px; border: none;outline: none;" name="" rows="" cols=""></textarea>
+                        </div>
+                        <div style="text-align: right;padding-right:5px;"><button class="sendBtn">发送(s)</button></div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="tallPanleRight">
+                <div id="panleLeftTit" class="nav_tit flex">
+                    <span class="flex_item sel">常用语</span>
+                    <span class="flex_item">常用文件</span>
+                    <span class="flex_item">访客轨迹</span>
+                </div>
+                <div id="panleLeftCon" class="tab_items">
+                    <div class="tab_item">内容1</div>
+                    <div class="tab_item none">内容2</div>
+                    <div class="tab_item none">内容3</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../../js/jq.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/layui.all.js"></script>
+    <script>
+        $(".nav_tit span").on("click", function(){
+            var thisIndex = $(this).index();
+            console.log(thisIndex);
+            $(this).addClass("sel").siblings().removeClass("sel");
+            console.log( $(this).parent().siblings().children());
+            $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
+        })
+
+    </script>
+</body>
+</html>

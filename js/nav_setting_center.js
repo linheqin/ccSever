@@ -17,6 +17,7 @@ $(function(){
         $("#theme_color_show").css("backgroundColor",bgColor);
         $(".BoxHead").css("backgroundColor",bgColor)
         $("#chatwin_view_bg").css("backgroundColor",bgColor);
+
     })
 
     //PC窗口设置(直接对话窗口）——自定义颜色块个数 
@@ -26,7 +27,32 @@ $(function(){
         $(".themecolorshowspan").css("backgroundColor",bgColor);
         $("#mini_chatwin_view_bg").css("backgroundColor",bgColor);
         $("#mini_chatwin_view_bg_lite").css("backgroundColor",bgColor);
+        console.log($("#zjdhMaskTit"));
+        $("#zjdhMaskTit").css("background",bgColor);
     })
+    // 输入框 name = winsizewid   winsizehei
+    $("input[name = winsizewid]").on("change", function(){
+        var thisVal = $(this).val();
+
+        if(thisVal < 300) {
+            $(this).val(300);
+            msgMask("宽度不能小于300",1);
+            return false;
+        }
+        $("#zjdhMask").css("width",thisVal);
+    })
+    $("input[name = winsizehei]").on("change", function(){
+        var thisVal = $(this).val();
+        if(thisVal < 300) {
+            $(this).val(300);
+            msgMask("高度不能小于300",1);
+            return false;   s
+        }
+        $("#zjdhMask").css("height",thisVal)
+    })
+
+
+
     //手机窗口设置(邀请窗口）——自定义颜色块个数 
     var inviteLiColorBars = $(".invitedefineColorbars").children('li');
     inviteLiColorBars.click(function(){
@@ -60,20 +86,23 @@ $(function(){
             "background" : "url("+ thisImgSrc +") no-repeat"
         })
     })
-    // 点击确定位置
 
-    // 点击 - 咨询图标 - 对齐模式
-    $("#ico_position li").on("click", function(){
+    // 点击 - 直接对话图标 - 对齐模式
+    $("#ico_position2 li").on("click", function(){
         var cssPose= $(this).attr("posi");
         $(this).addClass("index").siblings().removeClass("index");
-        var boxWidth = $("#adv_consult").width();
+        var boxWidth = $("#zjdhMask").width();
 
-        var boxHeight = $("#adv_consult").height();
+        var boxHeight = $("#zjdhMask").height();
         var cssJson = setPosition(cssPose,boxWidth,boxHeight);
 
-        $("#adv_consult").removeAttr("style");
-        $("#adv_consult").css(cssJson)
+        $("#zjdhMask").removeAttr("style");
+        $("#zjdhMask").css(cssJson);
+        $("#zjdhMask").css({
+
+        })
     })
+
     // 点击 - 邀请图标 - 对齐模式
     $("#ico_position1 li").on("click", function(){
         var cssPose= $(this).attr("posi");
@@ -192,7 +221,7 @@ $(function(){
                 "margin": 0
             }
         }
-        if(thisImgSrc != "" || thisImgSrc != undefined) {
+        if(thisImgSrc != "") {
             cssJson.background = "url("+ thisImgSrc +") no-repeat"
         }
         return cssJson;

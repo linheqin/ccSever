@@ -70,21 +70,8 @@
   	</div>
   	<div id="nav_n">
 		<ul class="navul_n">
-			<li class="index01 frist_li" style="">
-			<span>
-			<a href="http://uc.qycn.com/synlogin.php?tokenkey=iRnJDKl9F4PeGodSJ3T3WOLXOtIqV0VIdsYye%2F3DNsBIXEjaPS415OnJsB5%2FJBU31iDbxPpf%2BBX%2B10XCwwu5sjLc1QxFPOlgElL2M%2F4d1lCQO88SDGb2zQFr0DOIYtRtz94fe%2Fc3fV%2BxXciBc%2BzEmL4brzFoEocZ5aIfIS%2FUZspk766qpYoMWrDc1PYMTtthPpPRCMPOR%2FLVJsDYD9YKTOw7xA3TK7AO%2BDxb1fqE0p6FkVbCL52G30RbGaePdwWnRLccFTJ0D3GGy0ks" class="fc_white my_c_bg">我的企业</a>
-			</span>
-			</li>
-			<li class="" style=""><span><a class="fc_white" href="synlogin.php?outer=https%3A%2F%2Fqycc.qycn.com%2Fsynlogin.php%3Fcfgid%3D6">群英CC</a></span></li>
-			<li class="index" style=""><span><a class="fc_white" href="index.php">CC客服</a></span></li>
-			<li class="last_but_hidden" style="display: none;">
-			<img src="./images/button_more.gif">
-			<div id="nav_menu" style="display:none">
-				<ul>
-
-				</ul>
-			</div>
-			</li>
+			<li style=""><span><a class="fc_white" href="javascript:void(0);">工作台</a></span></li>
+			<li class="index" style=""><span><a class="fc_white" href="javascript:void(0);">后台管理</a></span></li>
 		</ul>
 	</div>
 
@@ -133,7 +120,8 @@
 		</div>
 	</div>
   	<div class="layuiCon">
-  		<iframe src="module_page/account_center/account_center.html" frameborder="0"></iframe>
+		<iframe src="" class="none" frameborder="0"></iframe>
+		<iframe src="module_page/account_center/account_center.html" frameborder="0"></iframe>
   	</div>
 </div>
 <script src="./js/jq.js"></script>
@@ -170,6 +158,54 @@
         $("#linkHome").on("click", function(){
             window.location.href = "index.html?companyId="+ companyId +"&memberId=" + memberId
         })
+		$(".navul_n li").on("click", function(){
+		    var thisIndex = $(this).index();
+		    $(this).addClass("index").siblings().removeClass("index");
+		    var iframeDom = $(".layuiCon iframe").eq(thisIndex);
+		    var iframeDomSrc = iframeDom.attr("src");
+		    console.log(iframeDomSrc == "");
+		    if(iframeDomSrc == "" || iframeDomSrc == undefined) {
+				if(thisIndex == 0) {
+                    $("#nav_n_2").addClass("none");
+                    $(".layuiCon").css({
+                        'height': 'calc(100% - 85px)',
+                        'height': '-ms-calc(100% - 85px)',
+                        'height': '-moz-calc(100% - 85px)',
+                        'height': '-webkit-calc(100% - 85px)'
+                    })
+                    iframeDom.attr("src", "module_page/workbench/workbench.html");
+				} else {
+                    $("#nav_n_2").removeClass("none");
+                    $(".layuiCon").css({
+                        'height': 'calc(100% - 121px)',
+                        'height': '-ms-calc(100% - 121px)',
+                        'height': '-moz-calc(100% - 121px)',
+                        'height': '-webkit-calc(100% - 121px)'
+                    })
+                    iframeDom.attr("src", "module_page/account_center/account_center.html");
+				}
+			} else {
+                if(thisIndex == 1) {
+					$("#nav_n_2").removeClass("none");
+					$(".layuiCon").css({
+						'height': 'calc(100% - 121px)',
+						'height': '-ms-calc(100% - 121px)',
+						'height': '-moz-calc(100% - 121px)',
+						'height': '-webkit-calc(100% - 121px)'
+					})
+				} else {
+                    $("#nav_n_2").addClass("none");
+                    $(".layuiCon").css({
+                        'height': 'calc(100% - 85px)',
+                        'height': '-ms-calc(100% - 85px)',
+                        'height': '-moz-calc(100% - 85px)',
+                        'height': '-webkit-calc(100% - 85px)'
+                    })
+				}
+			}
+            iframeDom.removeClass("none").siblings().addClass("none")
+		})
+
     })
 </script>
 </body>
