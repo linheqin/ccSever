@@ -1,4 +1,5 @@
 // 前缀参数
+// 前缀参数
 var prefixParamUrl =  {
     urlPrefix : "http://www.argen3630.com:88/"
 };
@@ -47,6 +48,11 @@ var urlParam = {
     getCategoryList: prefixParamUrl.urlPrefix + "admin.php/Category/list1",                 // 客服分组名称列表
     addCategory: prefixParamUrl.urlPrefix + "admin.php/Category/add",                       // 添加客服分组名称
     getListByCategory: prefixParamUrl.urlPrefix + "admin.php/Member/listByCategory",        // 客服分组的人员
+    getWordCategoryList: prefixParamUrl.urlPrefix + "admin.php/WordCategory/list1",         // 客服常用组语列表
+    addWordCategory: prefixParamUrl.urlPrefix + "admin.php/WordCategory/add",               // 添加常用语组,
+    deleteWordCategory: prefixParamUrl.urlPrefix + "admin.php/WordCategory/delete",         // 删除常用语组,
+    getCommonWordList: prefixParamUrl.urlPrefix + "admin.php/CommonWord/list1",             // 客服常用语列表
+    saveHtmlWinodw: prefixParamUrl.urlPrefix + "admin.php/Code/add",                         // 保存聊天弹窗HTML
 }
 
 // 获取地址参数

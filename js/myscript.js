@@ -19,6 +19,7 @@ $('.mynavi li').click(function(){
     $('.mynavi .help_info').hide();
     $('.mynavi #' +  $(this).attr('class')).show();
 });
+
 // 点击左边侧边导航 切换内容
 $(".layui-nav dd").on("click",function(){
     var thisIndex = $(this).attr("data-index");
@@ -35,6 +36,6 @@ $(".nav_top_btn").on("click", function(){
     var url = "module_page/"+thisUrl + "/"+thisUrl+".html?l="+thisUrl;
     var url = "module_page/"+thisUrl + "/"+thisUrl+".html?l="+thisUrl;
     // console.log(url);
-    $(".layuiCon iframe").attr("src", url);
+    $("#adminIframe").attr("src", url);
 })
 

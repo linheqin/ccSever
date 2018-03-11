@@ -167,7 +167,7 @@ label {
 .kf_qycn_com_cckf_direct_talking_dialog .kf_qycn_com_cckf_direct_talking_dialog_inner_content {
     overflow: hidden;
     background: #ffffff;
-    width: 150px;
+    /*width: 150px;*/
     padding: 0 8px;
     _padding: 0 6px;
 }

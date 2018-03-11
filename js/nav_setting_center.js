@@ -90,6 +90,7 @@ $(function(){
     // 点击 - 直接对话图标 - 对齐模式
     $("#ico_position2 li").on("click", function(){
         var cssPose= $(this).attr("posi");
+
         $(this).addClass("index").siblings().removeClass("index");
         var boxWidth = $("#zjdhMask").width();
 
@@ -98,9 +99,20 @@ $(function(){
 
         $("#zjdhMask").removeAttr("style");
         $("#zjdhMask").css(cssJson);
-        $("#zjdhMask").css({
+    })
 
-        })
+    // 点击 - 咨询窗口
+    $("#ico_position li").on("click", function(){
+        var cssPose= $(this).attr("posi");
+
+        $(this).addClass("index").siblings().removeClass("index");
+        var boxWidth = $("#adv_consult").width();
+
+        var boxHeight = $("#adv_consult").height();
+        var cssJson = setPosition(cssPose,boxWidth,boxHeight);
+
+        $("#adv_consult").removeAttr("style");
+        $("#adv_consult").css(cssJson);
     })
 
     // 点击 - 邀请图标 - 对齐模式
@@ -236,6 +248,119 @@ $(function(){
         }
     })
 
+    // 分类常用语组列表
+    getWordCategoryList()
+    function getWordCategoryList(){
+        $.ajax({
+            url: urlParam.getWordCategoryList,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (msg) {
+                console.log(msg);
+                var data = msg.data;
+                if(msg.code == 0){
+                    var strHTML = "";
+                    if(data.length == 0){
+                        strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
+                        $("#phraseList tbody").html(strHTML);
+                    } else {
+                        for(var i = 0; i < data.length; i++) {
+                            var content = data[i].content || "-";
+                            strHTML +=
+                                '<tr>' +
+                                    '<td style="text-align: left;padding-left: 10px;">'+ data[i].category +'</td>' +
+                                    '<td>'+ content +'</td>' +
+                                    '<td><button class="layui-btn layui-btn-xs" dataId="'+ data[i].id +'">删除</button></td>' +
+                                '</tr>' +
+                                '<tr colspan="3"  class="itemChild" dataId="'+ data[i].id +'">' +
+                                    '<td style="text-align: left;padding-left: 20px;">33</td>' +
+                                    '<td>33</td>' +
+                                    '<td>3</td>' +
+                                '</tr>'
+                        }
+
+                        $("#phraseList tbody").html(strHTML);
+
+                    }
+                } else {
+                    msgMask(msg.message,1)
+                }
+            }
+
+        })
+    }
+
+    // 分类常用语列表
+    // getCommonWordList()
+    function getCommonWordList(){
+        $.ajax({
+            url: urlParam.getCommonWordList,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (msg) {
+                console.log(msg);
+                var data = msg.object;
+                if(msg.code == 0){
+                    var strHTML = "";
+                    if(data.length == 0){
+                        strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
+                    } else {
+                        for(var i = 0; i < data.length; i++) {
+                            strHTML +=
+                                '<tr>' +
+                                '<td>'+ data[i].title +'</td>' +
+                                '<td>'+ data[i].content +'</td>' +
+                                '<td><button class="layui-btn layui-btn-xs" dataId="'+ data[i].id +'">修改</button> | <button class="layui-btn layui-btn-xs" dataId="'+ data[i].id +'">删除</button></td>' +
+                                '</tr>' +
+                                '<tr colspan="3"></tr>'
+                        }
+                    }
+                } else {
+                    msgMask(msg.message,1)
+                }
+            }
+
+        })
+    }
+
+    // 添加常用语组  必须添加才能添加常用语
+
+
+    // 点击保存按钮，保存弹窗HTML
+
+    $("#testhei").on("click", function(){
+        var html = $(".pageHtml").html();
+        saveHtmlWin(1, html)
+    })
+
+
+
+    // 保存HTML方法
+    function saveHtmlWin(type,code){
+        console.log(code);
+        $.ajax({
+            url: urlParam.saveHtmlWinodw,
+            dataType: "json",
+            dataType: "POST",
+            xhrFields: {
+                withCredentials: true
+            },
+            data: {
+                type: type,
+                code: encodeURI(code)
+            },
+            crossDomain: true,
+            success: function (msg) {
+                // console.log(msg)
+            }
+        })
+    }
 
 
 
