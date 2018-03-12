@@ -1917,7 +1917,7 @@ li h3 img {
   vertical-align: middle;
   _vertical-align: 1px;
 }
-.visitorDialogue {
+.visitorDialogue,.visitorDialogues{
   position: relative;
   width: 100%;
   height: 600px;

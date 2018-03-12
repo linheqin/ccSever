@@ -1892,7 +1892,7 @@
                                     效果示例
                                 </div>
                                 <div style="margin-left:15px;" id="leaveAMessageWrap">
-                                    <div class="visitorDialogue">
+                                    <div class="visitorDialogues">
                                         <div class="qqBox">
                                             <link rel="stylesheet" type="text/css" href="../../css/qq.css?v=3">
                                             <div class="BoxHead">
@@ -1901,8 +1901,10 @@
                                                 </div>
                                                 <div class="internetName">名称</div>
                                             </div>
+
                                             <div class="context">
                                                 <div class="conRight" style="padding: 10px 10%;">
+                                                    <p id="lyTs" style="padding: 10px 0 20px 27px;color: #00BC0c">您好，欢迎留言，留下您的联系方式，我们将在第一时间回复您！</p>
                                                     <div class="conRightItem form-item">
                                                         <label class="form-label">留言</label>
                                                         <div  class="input-block">
@@ -1926,6 +1928,9 @@
                                                         <div  class="input-block">
                                                             <input type="text" class="form-input">
                                                         </div>
+                                                    </div>
+                                                    <div class="conRightItem form-item">
+                                                        <div class="liu_yan_btn">提交留言</div>
                                                     </div>
 
                                                 </div>
@@ -2729,7 +2734,19 @@
             width: 340,
             height: 120,
             tabsize: 2,
-            lang: 'zh-CN'
+            lang: 'zh-CN',
+            callbacks: {
+                onInit: function(contents){
+                    console.log(contents);
+                    $('#fklyTextarea').summernote('code',"您好，欢迎留言，留下您的联系方式，我们将在第一时间回复您！");
+
+                },
+                onChange: function(contents, $editable) {
+                    var con = contents.replace(/<.*?>/ig,"");
+                    console.log(con);
+                    $('#lyTs').text(con);
+                }
+            }
         });
     })
 </script>
