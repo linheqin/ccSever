@@ -616,7 +616,7 @@ $(function(){
         $.ajax({
             url: urlParam.saveHtmlWinodw,
             dataType: "json",
-            dataType: "POST",
+            type: "POST",
             xhrFields: {
                 withCredentials: true
             },
