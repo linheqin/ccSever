@@ -253,11 +253,69 @@
 	-webkit-box-flex: 1;
 	overflow-y: scroll;
 }
-
+.flex {
+	display: flex;
+	display:-ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+}
+.flex_item {
+	flex: 1;
+	-ms-flex: 1;
+	-moz-flex: 1;
+	-webkit-flex: 1;
+}
+.form-item {
+	margin-bottom: 10px;
+	clear: both;
+}
+.form-label {
+	float: left;
+	display: block;
+	padding: 9px 10px;
+	width: 80px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: right;
+}
+.form-input, .form-textarea {
+	outline: 0;
+	-webkit-appearance: none;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	box-sizing: border-box;
+	border-color: #e6e6e6;
+	height: 38px;
+	line-height: 1.3;
+	line-height: 38px\9;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #fff;
+	border-radius: 2px;
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+}
+.form-textarea {
+	min-height: 70px;
+	padding: 5px;
+}
+.input-block {
+	margin-left: 90px;
+	min-height: 36px;
+}
+.conRightItem {
+	margin-bottom: 10px;
+}
+.flex_item_80 {
+	flex: 0 0 80px;
+	-ms-flex: 0 0 80px;
+	-moz-flex: 0 0 80px;
+	-webkit-flex: 0 0 80px;
+}
 .RightCont::-webkit-scrollbar{
 	width: 15px;
 }
-
 .RightCont ul{
 	list-style: none;
 	margin: 0;
