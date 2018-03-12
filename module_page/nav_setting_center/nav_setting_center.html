@@ -996,7 +996,7 @@
                                     <input type="hidden" name="bgcolor" value="#000000">
                                     <input type="hidden" name="inv_position" value="mc">
                                     <input type="hidden" name="backsysth" value="">
-                                    <input type="submit" value="保存设置" class="button2" style="margin-right:25px;">
+                                    <input type="button" id="testhei1" value="保存设置" class="button2" style="margin-right:25px;">
                                     <input type="reset" value="取消" class="button2" id="cancel">
 
                                     <!--<input name="input" type="button" value="预览" class="previewb button2" />-->
@@ -1309,8 +1309,7 @@
                                     <input type="hidden" name="myfile" value="app/upload/nopic.jpg" id="myfile">
                                     <input type="hidden" name="bgurl" value="beauty_01">
                                     <input type="hidden" name="bgcolor" value="beauty_01">
-                                    <input type="submit" value="保存设置" class="button2" style="margin-right:25px;">
-                                    <input type="reset" value="取消" class="button2">
+                                    <input type="button" id="testhei2" value="保存设置" class="button2" style="margin-right:25px;">
                                     <!--<input rel="previ" type="button" value="预览" class="button2" />-->
                                 </td>
                             </tr>
@@ -1522,7 +1521,7 @@
         <div class="location" style="font-size:12px;">
             您当前的位置：CC客服 &gt; <span>高级功能</span> &gt; <span>直接对话窗口</span>
         </div>
-        <form action="index.php?c=MiniWin&amp;a=saveset" method="post" id="miniset_form">
+        <form id="miniset_form">
             <div class="cls">
                 <div id="add_url">
                 </div>
@@ -1722,7 +1721,7 @@
                                         </th>
                                         <td>
                                             <input name="win_position" value="rb" type="hidden">
-                                            <input name="input" type="submit" value="保存设置" class="button2" style="margin-right:25px;">
+                                            <input name="input" type="button" id="testhei3" value="保存设置" class="button2" style="margin-right:25px;">
                                             <input name="input" type="button" value="取消" class="reset button2">
                                         </td>
                                     </tr>
@@ -1731,7 +1730,7 @@
                             </div>
                         </td>
                         <td valign="top">
-                            <div style="position: relative; border:1px solid #999; padding-left:20px;width: 700px; height: 650px;">
+                            <div id="zjdhMaskWrap" style="position: relative; border:1px solid #999; padding-left:20px;width: 700px; height: 650px;">
                                 <div id="zjdhMask" style="position: absolute; width: 360px; border:1px solid #eee;height: 360px; -webkit-box-orient:vertical;-webkit-box-direction:normal;-moz-box-orient:vertical;-moz-box-direction:normal;flex-direction:column;display:-webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;">
                                     <style>#zjdhMask{border:1px solid #eee;-webkit-box-orient: vertical;-webkit-box-direction: normal;-moz-box-orient: vertical;-moz-box-direction: normal;flex-direction: column;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}#zjdhMask .answers {width: auto;height: auto;background: #eee;padding: 6px 12px; margin: 4px;line-height: 20px;font-size: 12px; border-radius: 10px;margin-left: 8px;position: relative;float: left; color: white; max-width: 200px;color: #333;}#zjdhMask .news {width: auto;height: auto;background: #2683f5;padding: 6px 12px;margin: 4px;line-height: 20px;font-size: 12px;border-radius: 10px;margin-right: 8px;position: relative;float: right;color: white; max-width: 200px;}</style>
                                     <div id="zjdhMaskTit"  style="height:34px;line-height:34px;background: #169ada;color:#fff;padding: 0 6px;">
@@ -1880,8 +1879,7 @@
                                             &nbsp;
                                         </th>
                                         <td>
-                                            <input name="submit" type="submit" value="保存设置" class="button2" style="margin-right:25px;margin-left:77px;">
-                                            <input name="cancle" type="button" value="取消" class="reset button2">
+                                            <input name="button" id="testhei4" type="button" value="保存设置" class="button2" style="margin-right:25px;margin-left:77px;">
                                         </td>
                                     </tr>
                                     </tbody>
@@ -1893,7 +1891,7 @@
                                 <div style="width:100px;height:22px;line-height:22px;color:#1A5B8D;font-family:&quot;\5FAE\8F6F\96C5\9ED1&quot;,&quot;Microsoft Yahei&quot;,&quot;Hiragino Sans GB&quot;,tahoma,arial,&quot;\5B8B\4F53&quot;;font-weight:bold;font-size:15px;">
                                     效果示例
                                 </div>
-                                <div style="margin-left:15px;">
+                                <div style="margin-left:15px;" id="leaveAMessageWrap">
                                     <div id="leaveAMessage" style="width: 600px;height:400px;">
                                         <div id="leaveAMessageTit" style="height:40px;line-height: 40px;">
                                             标题
@@ -2045,7 +2043,7 @@
                                     <tr>
                                         <th scope="row">&nbsp;</th>
                                         <td>
-                                            <input name="dosetsub" type="submit" value="保存设置" class="button2" style="margin-left:62px;">
+                                            <input name="dosetsub" type="button" value="保存设置" class="button2" style="margin-left:62px;">
                                             <input name="input" type="button" value="取消" class="reset button2" style="margin-left:20px;"></td>
                                     </tr>
                                     </tbody></table>
@@ -2191,7 +2189,7 @@
                                     <tr>
                                         <th scope="row">&nbsp;</th>
                                         <td>
-                                            <input name="dosetsub" type="submit" value="保存设置" class="button2" style="margin-left:62px;">
+                                            <input name="dosetsub" type="button" value="保存设置" class="button2" style="margin-left:62px;">
                                             <input name="input" type="button" value="取消" class="reset button2" style="margin-left:20px;"></td>
                                     </tr>
                                     </tbody></table>
@@ -2292,7 +2290,7 @@
                                     <tr>
                                         <th scope="row">&nbsp;</th>
                                         <td>
-                                            <input name="dosetsub" type="submit" value="保存设置" class="button2" style="margin-left:62px;">
+                                            <input name="dosetsub" type="button" value="保存设置" class="button2" style="margin-left:62px;">
                                             <input name="input" type="button" value="取消" class="reset button2" style="margin-left:20px;"></td>
                                     </tr>
                                     </tbody>

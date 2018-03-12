@@ -533,13 +533,81 @@ $(function(){
             }
         })
     })
-    // 点击保存按钮，保存弹窗HTML
 
+    // 常用文件 - 点击新建文件夹
+    $("#add_folder").on("click", function(){
+        var addFolderStr =
+            '<form action="" id="addfolderData">' +
+                '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">文件名称</label>'+
+                    '<div class="layui-input-block">'+
+                        '<input type="text" name="file" id="fileInp" placeholder="请输入文件名称" class="layui-input">'+
+                    '</div>'+
+                '</div>'+
+            '</form>';
+        var addFolderMask = parent.layer.open({
+            type: 1,
+            area: ['370px'],
+            btn: ['确认', '取消'],
+            content: addFolderStr,
+            yes: function(index, layero){
+                var fileInp = $("body",parent.document).find("#fileInp").val();
+                if(titleInp == "") {
+                    msgMask("标题不能为空！",1)
+                    return;
+                }
+                var formData = $("body",parent.document).find("#addfolderData").serialize();
+
+                $.ajax({
+                    url: urlParam.addCommonWord,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: formData,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            parent.layer.close(addFolderMask);
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            },
+            btn2: function(index, layero){
+
+            }
+        })
+    })
+
+    // 点击保存按钮，保存弹窗HTML
+    // 咨询图标
     $("#testhei").on("click", function(){
         var html = $(".pageHtml").html();
         saveHtmlWin(1, html)
     })
-
+    // 邀请窗口
+    $("#testhei1").on("click", function(){
+        var html = $("#systheme_preview").html();
+        saveHtmlWin(2, html)
+    })
+    // 访客对话窗口
+    $("#testhei2").on("click", function(){
+        var html = $(".visitorDialogue").html();
+        saveHtmlWin(3, html)
+    })
+    // 直接对话窗口
+    $("#testhei3").on("click", function(){
+        var html = $("#zjdhMaskWrap").html();
+        saveHtmlWin(4, html)
+    })
+    // 访客留言窗口
+    $("#testhei4").on("click", function(){
+        var html = $("#leaveAMessageWrap").html();
+        saveHtmlWin(5, html)
+    })
 
 
     // 保存HTML方法
@@ -577,19 +645,6 @@ $(function(){
           content: $('#addElePopOuter'),
         });
     })
-    // 常用文件
-    $("#add_folder").click(function(){
-        layer.open({
-          type: 1,
-          shade:0,
-          skin: 'createFilesPop', 
-          area: ['280px','150px'],
-          title:'新建文件夹',
-          content: $('#createFilesPopOuter'),
-
-        });
-    })
-
     // 微信互通，切换按钮
     var indexBoolen = 1;
     $(".switchery").click(function(){
