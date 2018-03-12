@@ -248,6 +248,8 @@ $(function(){
         }
     })
 
+
+    var itemListJsonData = [];  // 分组列表数据
     // 分类常用语组列表
     getWordCategoryList()
     function getWordCategoryList(){
@@ -263,24 +265,34 @@ $(function(){
                 var data = msg.data;
                 if(msg.code == 0){
                     var strHTML = "";
+                    itemListJsonData = [];
                     if(data.length == 0){
                         strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
                         $("#phraseList tbody").html(strHTML);
                     } else {
+
                         for(var i = 0; i < data.length; i++) {
                             var content = data[i].content || "-";
+                            itemListJsonData.push(data[i].category);
+                            var commonWordListStr = getCommonWordList(data[i].category);
                             strHTML +=
                                 '<tr>' +
-                                    '<td style="text-align: left;padding-left: 10px;">'+ data[i].category +'</td>' +
-                                    '<td>'+ content +'</td>' +
-                                    '<td><button class="layui-btn layui-btn-xs" dataId="'+ data[i].id +'">删除</button></td>' +
+                                    '<td style="text-align: left;width:200px"><span class="glyphicon glyphicon-plus-sign font_size_icon"></span>'+ data[i].category +'</td>' +
+                                    '<td style="text-align: left">'+ content +'</td>' +
+                                    '<td style="text-align: left;width:200px"><button class="layui-btn layui-btn-xs fzDelBtn" dataId="'+ data[i].id +'">删除</button></td>' +
                                 '</tr>' +
-                                '<tr colspan="3"  class="itemChild" dataId="'+ data[i].id +'">' +
-                                    '<td style="text-align: left;padding-left: 20px;">33</td>' +
-                                    '<td>33</td>' +
-                                    '<td>3</td>' +
+                                '<tr class="itemChild" dataId="'+ data[i].id +'">' +
+                                    '<td  colspan="3" class="none" style="text-align: left;padding:0;padding-left: 27px;">' +
+                                        '<table style="width: 100%;border: none;">' +
+                                            '<tbody>';
+                                            strHTML += commonWordListStr;
+                                            strHTML +=
+                                            '</tbody>' +
+                                        '</table>' +
+                                    '</td>' +
                                 '</tr>'
                         }
+                        console.log();
 
                         $("#phraseList tbody").html(strHTML);
 
@@ -293,32 +305,49 @@ $(function(){
         })
     }
 
+
+    // 点击 +号，显示隐藏底下的常用语列表
+    $(document).on("click", ".font_size_icon", function(){
+        var showDom = $(this).parents("tr").next(".itemChild").children("td");
+        if($(this).hasClass("glyphicon-plus-sign")) {
+            $(this).removeClass("glyphicon-plus-sign").addClass("glyphicon-minus-sign");
+            showDom.removeClass("none");
+        } else {
+            $(this).removeClass("glyphicon-minus-sign").addClass("glyphicon-plus-sign");
+            showDom.addClass("none");
+        }
+    })
+
+
     // 分类常用语列表
     // getCommonWordList()
-    function getCommonWordList(){
+    function getCommonWordList(category){
+        var strHTML = "";
         $.ajax({
             url: urlParam.getCommonWordList,
             dataType: "json",
             xhrFields: {
                 withCredentials: true
             },
+            async: false,
+            data: {
+                category: category
+            },
             crossDomain: true,
             success: function (msg) {
                 console.log(msg);
                 var data = msg.object;
                 if(msg.code == 0){
-                    var strHTML = "";
                     if(data.length == 0){
                         strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
                     } else {
                         for(var i = 0; i < data.length; i++) {
                             strHTML +=
-                                '<tr>' +
-                                '<td>'+ data[i].title +'</td>' +
-                                '<td>'+ data[i].content +'</td>' +
-                                '<td><button class="layui-btn layui-btn-xs" dataId="'+ data[i].id +'">修改</button> | <button class="layui-btn layui-btn-xs" dataId="'+ data[i].id +'">删除</button></td>' +
-                                '</tr>' +
-                                '<tr colspan="3"></tr>'
+                            '<tr class="item_list_boder">' +
+                                '<td style="text-align: left;width:173px">'+ data[i].title +'</td>' +
+                                '<td style="text-align: left">'+ data[i].content +'</td>' +
+                                '<td style="width:200px;text-align: left"> <button class="layui-btn layui-btn-xs cyyDelBtn" dataId="'+ data[i].id +'">删除</button></td>' +
+                            '</tr>';
                         }
                     }
                 } else {
@@ -327,11 +356,183 @@ $(function(){
             }
 
         })
+        // console.log(strHTML);
+        return strHTML;
     }
 
     // 添加常用语组  必须添加才能添加常用语
+    $("#add_group1").on("click", function(){
+        var addCommonWordMask =
+            '<form action="" id="addCommonWordMask">' +
+                '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">常用语分组名</label>'+
+                    '<div class="layui-input-block">'+
+                        '<input type="text" id="addCommonWordName" placeholder="请输入常用语分组名" class="layui-input">'+
+                    '</div>'+
+                '</div>'
+            '</form>';
+        var addCommonWordOpen = parent.layer.open({
+            type: 1,
+            area: ['370px', '210px'],
+            btn: ['确认', '取消'],
+            content: addCommonWordMask,
+            yes: function(index, layero){
+                var commonWordName = $("body",parent.document).find("#addCommonWordName").val();
+                console.log(commonWordName );
+                $.ajax({
+                    url: urlParam.addWordCategory,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        category: commonWordName
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            getWordCategoryList();
+                            parent.layer.close(addCommonWordOpen);
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            },
+            btn2: function(index, layero){
 
+            }
+        })
+    })
 
+    // 添加常用语
+    $("#add_phrase").on("click", function(){
+        var addphraseStr = "";
+        addphraseStr +=
+            '<form action="" id="addphraseData">' +
+                '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">标题</label>'+
+                    '<div class="layui-input-block">'+
+                        '<input type="text" name="title" id="titleInp" placeholder="请输入标题" class="layui-input">'+
+                    '</div>'+
+                '</div>' +
+                '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">内容</label>'+
+                    '<div class="layui-input-block">'+
+                        '<input type="text" name="content" id="contentInp" placeholder="请输入内容" class="layui-input">'+
+                    '</div>'+
+                '</div>' +
+                '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">所属分组</label>'+
+                    '<div class="layui-input-block">'+
+                        '<select class="form-control" name="category" id="selectInp">'+
+                            '<option value="">所属分组</option>';
+                             for(var i = 0; i <  itemListJsonData.length; i ++) {
+                                 addphraseStr += '<option value="'+ itemListJsonData[i] +'">' + itemListJsonData[i] + '</option>';
+                             }
+        addphraseStr +=
+                        '</select>'+
+                    '</div>'+
+                '</div>'+
+            '</form>';
+        var addphraseMask = parent.layer.open({
+            type: 1,
+            area: ['370px', '210px'],
+            btn: ['确认', '取消'],
+            content: addphraseStr,
+            yes: function(index, layero){
+                var titleInp = $("body",parent.document).find("#titleInp").val();
+                var contentInp = $("body",parent.document).find("#contentInp").val();
+                var selectInp = $("body",parent.document).find("#selectInp").val();
+                if(titleInp == "") {
+                    msgMask("标题不能为空！",1)
+                    return;
+                }
+                if(contentInp == "") {
+                    msgMask("内容不能为空！",1)
+                    return;
+                }
+                if(selectInp == "") {
+                    msgMask("选择分组不能为空！",1)
+                    return;
+                }
+
+                var formData = $("body",parent.document).find("#addphraseData").serialize();
+
+                $.ajax({
+                    url: urlParam.addCommonWord,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: formData,
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg.code == 0) {
+                            getWordCategoryList();
+                            parent.layer.close(addphraseMask);
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+            },
+            btn2: function(index, layero){
+
+            }
+        })
+    })
+
+    // 删除常用分组
+    $(document).on("click",".fzDelBtn" , function(){
+        var thisId = $(this).attr("dataId");
+        $.ajax({
+            url: urlParam.deleteWordCategory,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            data: {
+                id: thisId
+            },
+            success: function (msg) {
+                console.log(msg);
+                if(msg.code == 0) {
+                    msgMask("删除成功",1)
+                    getWordCategoryList();
+                } else {
+                    msgMask(msg.message,1)
+                }
+            }
+        })
+    })
+    // 删除常用语
+    $(document).on("click",".cyyDelBtn" , function(){
+        var thisId = $(this).attr("dataId");
+        $.ajax({
+            url: urlParam.deleteCommonWord,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            data: {
+                id: thisId
+            },
+            success: function (msg) {
+                console.log(msg);
+                if(msg.code == 0) {
+                    msgMask("删除成功",1)
+                    getWordCategoryList();
+                } else {
+                    msgMask(msg.message,1)
+                }
+            }
+        })
+    })
     // 点击保存按钮，保存弹窗HTML
 
     $("#testhei").on("click", function(){

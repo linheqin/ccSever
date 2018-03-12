@@ -52,6 +52,8 @@ var urlParam = {
     addWordCategory: prefixParamUrl.urlPrefix + "admin.php/WordCategory/add",               // 添加常用语组,
     deleteWordCategory: prefixParamUrl.urlPrefix + "admin.php/WordCategory/delete",         // 删除常用语组,
     getCommonWordList: prefixParamUrl.urlPrefix + "admin.php/CommonWord/list1",             // 客服常用语列表
+    addCommonWord: prefixParamUrl.urlPrefix + "admin.php/CommonWord/add",                    // 增加常用语
+    deleteCommonWord: prefixParamUrl.urlPrefix + "admin.php/CommonWord/delete",              // 删除常用语
     saveHtmlWinodw: prefixParamUrl.urlPrefix + "admin.php/Code/add",                         // 保存聊天弹窗HTML
 }
 
