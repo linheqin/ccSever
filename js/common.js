@@ -55,8 +55,12 @@ var urlParam = {
     addCommonWord: prefixParamUrl.urlPrefix + "admin.php/CommonWord/add",                   // 增加常用语
     deleteCommonWord: prefixParamUrl.urlPrefix + "admin.php/CommonWord/delete",             // 删除常用语
     saveHtmlWinodw: prefixParamUrl.urlPrefix + "admin.php/Code/add",                        // 保存聊天弹窗HTML
-    addFileCategoryList: prefixParamUrl.urlPrefix + "admin.php/FileCategory/list1",         // 文件列表
-    saveHtmlWinodw: prefixParamUrl.urlPrefix + "admin.php/Code/add",                        // 保存聊天弹窗HTML
+    addFileCategory: prefixParamUrl.urlPrefix + "admin.php/FileCategory/add",               // 添加常用文件
+    deleteFileCategory: prefixParamUrl.urlPrefix + "admin.php/FileCategory/delete",         // 删除常用文件
+    getFileCategoryList: prefixParamUrl.urlPrefix + "admin.php/FileCategory/list1",         // 文件常用列表
+    addCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",               // 添加常用分类文件
+    deleteCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/delete",         // 删除常用分类文件
+    getCommonFileList: prefixParamUrl.urlPrefix + "admin.php/CommonFile/list1",         // 文件常用分类列表
 }
 
 // 获取地址参数

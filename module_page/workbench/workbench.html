@@ -17,6 +17,22 @@
         .mytable table.layui-table tbody  td {
             border-top: 1px solid #ccc;
         }
+        .overflow:hover{
+            background: #9cdffb;
+        }
+        .overflow {
+            padding: 0 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .layui-colla-title {
+            height: 32px;
+            line-height: 32px;
+            color: #2fa9dc;
+        }
+        .overflow.sel {
+            background: #ffd778;
+        }
         #tallPanle {
             display: flex;
             display: -webkit-sflex;
@@ -53,7 +69,7 @@
             flex: 1;
         }
         #tallPanleLeft {
-            width: 200px;
+            width: 300px;
             border-right: 1px solid #ccc;
             /*overflow: auto;*/
         }
@@ -80,10 +96,61 @@
             height: -moz-calc(100% - 36px);
             height: -webkit-calc(100% - 36px);
         }
+        .overflow>div {
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .mycolla {
+            padding: 0;
+        }
+        .mycolla p {
+            padding: 3px 10px 3px 17px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .mycolla p:hover {
+            background: #9cdffb;
+            color: #fff;
+        }
+        .font-size {
+            position: absolute;
+            left: 16px;
+            top: 0;
+            font-size: 14px;
+            line-height: 35px;
+            cursor: pointer;
+        }
+        .font-size {
+            transition: all 0.4s ease-in;
+            -webkit-transition: all 0.4s ease-in;
+            -moz-transition: all 0.4s ease-in;
+            -o-transition: all 0.4s ease-in;
+            transform: rotate(0);
+            -webkit-transform:  rotate(0);
+            -moz-transform:  rotate(0);
+            -o-transform:  rotate(0);
+            -ms-transform:  rotate(0);
+        }
+        .rotetas {
+            line-height: 30px;
+            transition: all 0.4s ease-in;
+            -webkit-transition: all 0.4s ease-in;
+            -moz-transition: all 0.4s ease-in;
+            -o-transition: all 0.4s ease-in;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+        }
         .tab_item {
             height: 100%;
             overflow: auto;
-            padding: 10px 5px;
+            /*padding: 10px 5px;*/
             box-sizing:border-box;
             -moz-box-sizing:border-box; /* Firefox */
             -webkit-box-sizing:border-box; /* Safari */
@@ -134,11 +201,28 @@
         <div id="tallPanle">
             <div id="tallPanleLeft">
                 <div id="panleLeftTit" class="nav_tit flex">
-                    <span class="flex_item sel">标题1</span>
-                    <span class="flex_item">标题2</span>
+                    <span class="flex_item sel">对话列表</span>
+                    <span class="flex_item">客服</span>
                 </div>
                 <div id="panleLeftCon" class="tab_items">
-                    <div class="tab_item">内容1</div>
+                    <div class="tab_item">
+                        <div class="list-group">
+                            <div class="list-group-item" style="border:none;margin:0;padding:0;">
+                                <div class="layui-row overflow sel" style="height: 30px;line-height: 30px;">
+                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>
+                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>
+                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>
+                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>
+                                </div>
+                                <div class="layui-row overflow" style="height: 30px;line-height: 30px;">
+                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">新</span></div>
+                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>
+                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>
+                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab_item none">内容2</div>
                 </div>
             </div>
@@ -285,8 +369,26 @@
                     <span class="flex_item">访客轨迹</span>
                 </div>
                 <div id="panleLeftCon" class="tab_items">
-                    <div class="tab_item">内容1</div>
-                    <div class="tab_item none">内容2</div>
+                    <div class="tab_item">
+                        <div class="layui-collapse" id="myCollapse" style="border: none;">
+                            <!--<div class="layui-colla-item">-->
+                                <!--<h2 class="layui-colla-title">杜甫</h2>-->
+                                <!--<div class="layui-colla-content mycolla" style="padding: 0;">-->
+                                    <!--<p>我ID撒娇和</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="tab_item none">
+                        <div class="layui-collapse" id="myFileCollapse" style="border: none;">
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title" style="background: none;">杜甫</h2>
+                                <div class="layui-colla-content mycolla" style="padding: 0;border:none;">
+                                  <p>我ID撒娇和</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab_item none">内容3</div>
                 </div>
             </div>
@@ -297,13 +399,114 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/layui.all.js"></script>
     <script>
-        $(".nav_tit span").on("click", function(){
-            var thisIndex = $(this).index();
-            console.log(thisIndex);
-            $(this).addClass("sel").siblings().removeClass("sel");
-            console.log( $(this).parent().siblings().children());
-            $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
+        $(function(){
+            $(".nav_tit span").on("click", function(){
+                var thisIndex = $(this).index();
+                console.log(thisIndex);
+                $(this).addClass("sel").siblings().removeClass("sel");
+                console.log( $(this).parent().siblings().children());
+                $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
+            })
+            var element = layui.element;
+
+            var itemListJsonData = [];  // 分组列表数据
+            // 分类常用语组列表
+            getWordCategoryList()
+            function getWordCategoryList(){
+                $.ajax({
+                    url: urlParam.getWordCategoryList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        var data = msg.data;
+                        if(msg.code == 0){
+                            var strHTML = "";
+                            itemListJsonData = [];
+
+                            if(data.length == 0){
+                                strHTML += '<div class="layui-colla-item" style="border:none;">暂无数据</div>';
+                                $("#myCollapse").html(strHTML);
+                            } else {
+
+                                for(var i = 0; i < data.length; i++) {
+                                    var content = data[i].content || "-";
+                                    var commonWordListStr = getCommonWordList(data[i].category);
+                                    itemListJsonData.push(data[i].category);
+//                                var commonWordListStr = getCommonWordList(data[i].category);
+                                    strHTML +=
+                                        '<div class="layui-colla-item" style="border:none;">'+
+                                        '<h2 class="layui-colla-title" style="background: none;"><span class="font-size rotetas"><i class="layui-icon">&#xe61a;</i></span> '+ data[i].category +'</h2>'+
+                                        '<div class="layui-colla-content mycolla layui-show" style="padding: 0;border:none;">';
+                                    strHTML += commonWordListStr;
+                                    strHTML +=
+                                        '</div>'+
+                                        '</div>'
+                                }
+
+                                $("#myCollapse").html(strHTML);
+
+
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+
+                })
+            }
+            // 点击rowws
+            $(document).on("click", "#myCollapse .layui-colla-title", function(){
+                var thisDom = $(this).find(".font-size");
+                var siblinsDom = $(this).siblings("div");
+                if(thisDom.hasClass("rotetas")) {
+                    thisDom.removeClass("rotetas");
+                    siblinsDom.removeClass("layui-show");
+                } else {
+                    thisDom.addClass("rotetas");
+                    siblinsDom.addClass("layui-show");
+                }
+            })
+            // 分类常用语列表
+            // getCommonWordList()
+            function getCommonWordList(category){
+                var strHTML = "";
+                $.ajax({
+                    url: urlParam.getCommonWordList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    async: false,
+                    data: {
+                        category: category
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        var data = msg.object;
+                        if(msg.code == 0){
+                            if(data.length == 0){
+                                strHTML += '<p>暂无数据</p>';
+                            } else {
+                                for(var i = 0; i < data.length; i++) {
+                                    strHTML += '<p> '+ data[i].content +'</p>';
+                                }
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+
+                })
+                // console.log(strHTML);
+                return strHTML;
+            }
         })
+
 
     </script>
 </body>

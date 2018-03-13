@@ -249,6 +249,18 @@ $(function(){
     })
 
 
+
+    // 点击 +号，显示隐藏底下的常用语列表
+    $(document).on("click", ".font_size_icon", function(){
+        var showDom = $(this).parents("tr").next(".itemChild").children("td");
+        if($(this).hasClass("glyphicon-plus-sign")) {
+            $(this).removeClass("glyphicon-plus-sign").addClass("glyphicon-minus-sign");
+            showDom.removeClass("none");
+        } else {
+            $(this).removeClass("glyphicon-minus-sign").addClass("glyphicon-plus-sign");
+            showDom.addClass("none");
+        }
+    })
     var itemListJsonData = [];  // 分组列表数据
     // 分类常用语组列表
     getWordCategoryList()
@@ -304,21 +316,6 @@ $(function(){
 
         })
     }
-
-
-    // 点击 +号，显示隐藏底下的常用语列表
-    $(document).on("click", ".font_size_icon", function(){
-        var showDom = $(this).parents("tr").next(".itemChild").children("td");
-        if($(this).hasClass("glyphicon-plus-sign")) {
-            $(this).removeClass("glyphicon-plus-sign").addClass("glyphicon-minus-sign");
-            showDom.removeClass("none");
-        } else {
-            $(this).removeClass("glyphicon-minus-sign").addClass("glyphicon-plus-sign");
-            showDom.addClass("none");
-        }
-    })
-
-
     // 分类常用语列表
     // getCommonWordList()
     function getCommonWordList(category){
@@ -552,23 +549,25 @@ $(function(){
             content: addFolderStr,
             yes: function(index, layero){
                 var fileInp = $("body",parent.document).find("#fileInp").val();
-                if(titleInp == "") {
+                if(fileInp == "") {
                     msgMask("标题不能为空！",1)
                     return;
                 }
-                var formData = $("body",parent.document).find("#addfolderData").serialize();
 
                 $.ajax({
-                    url: urlParam.addCommonWord,
+                    url: urlParam.addFileCategory,
                     dataType: "json",
                     xhrFields: {
                         withCredentials: true
                     },
                     crossDomain: true,
-                    data: formData,
+                    data: {
+                        directory: fileInp
+                    },
                     success: function (msg) {
                         console.log(msg);
                         if(msg.code == 0) {
+                            getFileCategoryList();
                             parent.layer.close(addFolderMask);
                         } else {
                             msgMask(msg.message,1)
@@ -581,6 +580,81 @@ $(function(){
             }
         })
     })
+
+    // 点击删除文件
+    $(document).on("click", ".deletCyFileBtn", function(){
+        var thisId = $(this).attr("dataId");
+        $.ajax({
+            url: urlParam.deleteFileCategory,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            data: {
+                id: thisId
+            },
+            success: function (msg) {
+                getFileCategoryList()
+            }
+        })
+    })
+
+    // 常用文件列表
+    getFileCategoryList()
+    function getFileCategoryList(){
+        var strHTML = "";
+        $.ajax({
+            url: urlParam.getFileCategoryList,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (msg) {
+                console.log(msg);
+                var data = msg.data;
+                if(msg.code == 0){
+                    if(data.length == 0){
+                        strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
+                    } else {
+                        for(var i = 0; i < data.length; i++) {
+                            strHTML +=
+                                '<tr>'+
+                                    '<td style="text-align: left;padding-left: 10px;" width="30%">'+ data[i].directory +'</td>'+
+                                    '<td style="text-align: left;position: relative" width="20%"><div style="text-align:center;font-size: 13px;background: #00b7ee;border-radius: 3px;width: 100px;color: #fff;display: inline-block;cursor: pointer;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);height: 26px;line-height: 26px;padding: 0;">上传文件</div><input style="position: absolute;top:0;left:0; z-index: 1;opacity: 0; height: 100%;width: 100px;" type="file" id="fileInpt"></td>'+
+                                    '<td style="text-align: left;" width="35%">分组文件</td>'+
+                                    '<td style="text-align: left;" width="15%"><button class="layui-btn layui-btn-danger layui-btn-xs deletCyFileBtn" dataId="'+ data[i].id +'">删除</button></td>'+
+                                '</tr>'+
+                                '<tr>常用分类</tr>'
+
+                        }
+                    }
+                    $(".tab_11_4 tbody").html(strHTML);
+                } else {
+                    msgMask(msg.message,1)
+                }
+            }
+
+        })
+    }
+
+    // 常用分类文件列表
+    getCommonFileList()
+    function getCommonFileList(){
+        $.ajax({
+            url: urlParam.getCommonFileList,
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            async: false,
+            crossDomain: true,
+            success: function (msg) {
+
+            }
+        })
+    }
 
     // 点击保存按钮，保存弹窗HTML
     // 咨询图标
