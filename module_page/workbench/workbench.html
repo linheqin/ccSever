@@ -207,19 +207,19 @@
                 <div id="panleLeftCon" class="tab_items">
                     <div class="tab_item">
                         <div class="list-group">
-                            <div class="list-group-item" style="border:none;margin:0;padding:0;">
-                                <div class="layui-row overflow sel" style="height: 30px;line-height: 30px;">
-                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>
-                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>
-                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>
-                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>
-                                </div>
-                                <div class="layui-row overflow" style="height: 30px;line-height: 30px;">
-                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">新</span></div>
-                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>
-                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>
-                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>
-                                </div>
+                            <div class="list-group-item" id="tallList" style="border:none;margin:0;padding:0;">
+                                <!--<div class="layui-row overflow" style="height: 30px;line-height: 30px;">-->
+                                    <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>-->
+                                    <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>-->
+                                    <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>-->
+                                    <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>-->
+                                <!--</div>-->
+                                <!--<div class="layui-row overflow" style="height: 30px;line-height: 30px;">-->
+                                    <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">新</span></div>-->
+                                    <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>-->
+                                    <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>-->
+                                    <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>-->
+                                <!--</div>-->
                             </div>
                         </div>
                     </div>
@@ -504,6 +504,44 @@
                 })
                 // console.log(strHTML);
                 return strHTML;
+            }
+
+            // 获取对话列表
+            getMessageList()
+            function getMessageList(){
+                var strHTML = "";
+                $.ajax({
+                    url: urlParam.getMessageList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    async: false,
+                    crossDomain: true,
+                    success: function (msg) {
+                        var data = msg.data;
+                        if(msg.code == 0){
+                            if(data.length == 0){
+                                strHTML += '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">暂无数据</div>';
+                                $("#tallList").html(strHTML)
+                            } else {
+                                for(var i = 0; i < data.length; i++) {
+                                    strHTML +=
+                                        '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">'+
+                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>'+
+                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>'+
+                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>'+
+                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>'+
+                                        '</div>';
+                                }
+                                $("#tallList").html(strHTML)
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+
+                    }
+                })
             }
         })
 
