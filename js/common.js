@@ -58,9 +58,12 @@ var urlParam = {
     addFileCategory: prefixParamUrl.urlPrefix + "admin.php/FileCategory/add",               // 添加常用文件
     deleteFileCategory: prefixParamUrl.urlPrefix + "admin.php/FileCategory/delete",         // 删除常用文件
     getFileCategoryList: prefixParamUrl.urlPrefix + "admin.php/FileCategory/list1",         // 文件常用列表
-    addCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",               // 添加常用分类文件
-    deleteCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/delete",         // 删除常用分类文件
-    getCommonFileList: prefixParamUrl.urlPrefix + "admin.php/CommonFile/list1",         // 文件常用分类列表
+    addCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",                   // 添加常用分类文件
+    deleteCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/delete",             // 删除常用分类文件
+    getCommonFileList: prefixParamUrl.urlPrefix + "admin.php/CommonFile/list1",             // 文件常用分类列表
+    getWaitQueueList: prefixParamUrl.urlPrefix + "admin.php/WaitQueue/list1",               // 对话等待列表
+    uploadFile: prefixParamUrl.urlPrefix + "admin.php/upload/upload",                       // 上传文件
+    uploadCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",                // 保存上传文件地址
 }
 
 // 获取地址参数

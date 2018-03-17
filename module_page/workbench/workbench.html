@@ -6,7 +6,7 @@
     <title>客服后台</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/layui.css">
-    <script src="../../js/common.js?v=2"></script>
+    <script src="../../js/common.js?v=3"></script>
     <link rel="stylesheet" href="../../css/qq.css">
     <style>
         html,body,.mytable {
@@ -223,7 +223,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab_item none">内容2</div>
+                    <div class="tab_item none">
+                        <div class="list-group">
+                            <div class="list-group-item" id="serverList" style="border:none;margin:0;padding:0;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="tallPanleCenter">
@@ -404,7 +409,7 @@
                 var thisIndex = $(this).index();
                 console.log(thisIndex);
                 $(this).addClass("sel").siblings().removeClass("sel");
-                console.log( $(this).parent().siblings().children());
+                // console.log( $(this).parent().siblings().children());
                 $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
             })
             var element = layui.element;
@@ -446,10 +451,7 @@
                                         '</div>'+
                                         '</div>'
                                 }
-
                                 $("#myCollapse").html(strHTML);
-
-
                             }
                         } else {
                             msgMask(msg.message,1)
@@ -507,30 +509,35 @@
             }
 
             // 获取对话列表
-            getMessageList()
-            function getMessageList(){
+            getWaitQueueList()
+            function getWaitQueueList(){
                 var strHTML = "";
+                console.log(urlParam.getWaitQueueList);
                 $.ajax({
-                    url: urlParam.getMessageList,
+                    url: urlParam.getWaitQueueList,
                     dataType: "json",
                     xhrFields: {
                         withCredentials: true
                     },
-                    async: false,
                     crossDomain: true,
                     success: function (msg) {
-                        var data = msg.data;
+                        console.log("对话列表");
+                        console.log(msg);
+                        var data = msg.object;
                         if(msg.code == 0){
                             if(data.length == 0){
                                 strHTML += '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">暂无数据</div>';
                                 $("#tallList").html(strHTML)
                             } else {
                                 for(var i = 0; i < data.length; i++) {
+                                    var status = data[i].status || "-";
+                                    var visitor = data[i].visitor || "-";
+                                    var ip = data[i].ip || "-";
                                     strHTML +=
                                         '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">'+
-                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>'+
-                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>'+
-                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>'+
+                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">'+ status +'</span></div>'+
+                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ visitor +'</div>'+
+                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ ip +'</div>'+
                                             '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>'+
                                         '</div>';
                                 }
@@ -541,6 +548,92 @@
                         }
 
                     }
+                })
+            }
+
+            // 客服列表
+            getMemberList()
+            function getMemberList(){
+                var strHTML = "";
+                $.ajax({
+                    url: urlParam.memberList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        var data = msg.data;
+                        if(msg.code == 0){
+                            if(data.length == 0){
+                                strHTML += '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">暂无数据</div>';
+                                $("#serverList").html(strHTML)
+                            } else {
+                                for(var i = 0; i < data.length; i++) {
+                                    var status = (data[i].status == 1) ? "在" : '离';
+                                    var role = data[i].role || "-";
+                                    var username = data[i].username || "-";
+                                    strHTML +=
+                                        '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">'+
+                                        '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">'+ status +'</span></div>'+
+                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ role +'</div>'+
+                                            '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ username +'</div>'+
+                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>'+
+                                        '</div>';
+                                }
+                                $("#serverList").html(strHTML)
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+
+                    }
+                })
+            }
+
+            // 常用文件列表
+            getFileCategoryList()
+            function getFileCategoryList(){
+                var strHTML = "";
+                $.ajax({
+                    url: urlParam.getFileCategoryList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg);
+                        var data = msg.data;
+                        if(msg.code == 0){
+                            if(data.length == 0){
+                                strHTML += '<div class="layui-colla-item" style="border:none;">暂无数据</div>';
+                                $("#myFileCollapse").html(strHTML);
+                            } else {
+
+                                for(var i = 0; i < data.length; i++) {
+                                    var content = data[i].content || "-";
+                                    var commonWordListStr = getCommonWordList(data[i].directory);
+                                    itemListJsonData.push(data[i].directory);
+//                                var commonWordListStr = getCommonWordList(data[i].category);
+                                    strHTML +=
+                                        '<div class="layui-colla-item" style="border:none;">'+
+                                        '<h2 class="layui-colla-title" style="background: none;"><span class="font-size rotetas"><i class="layui-icon">&#xe61a;</i></span> '+ data[i].directory +'</h2>'+
+                                        '<div class="layui-colla-content mycolla layui-show" style="padding: 0;border:none;">';
+                                    strHTML += commonWordListStr;
+                                    strHTML +=
+                                        '</div>'+
+                                        '</div>'
+                                }
+                                $("#myFileCollapse").html(strHTML);
+                            }
+
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+
                 })
             }
         })

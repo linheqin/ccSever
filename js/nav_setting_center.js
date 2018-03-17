@@ -620,14 +620,18 @@ $(function(){
                     } else {
                         for(var i = 0; i < data.length; i++) {
                             strHTML +=
-                                '<tr>'+
-                                    '<td style="text-align: left;padding-left: 10px;" width="30%">'+ data[i].directory +'</td>'+
-                                    '<td style="text-align: left;position: relative" width="20%"><div style="text-align:center;font-size: 13px;background: #00b7ee;border-radius: 3px;width: 100px;color: #fff;display: inline-block;cursor: pointer;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);height: 26px;line-height: 26px;padding: 0;">上传文件</div><input style="position: absolute;top:0;left:0; z-index: 1;opacity: 0; height: 100%;width: 100px;" type="file" id="fileInpt"></td>'+
-                                    '<td style="text-align: left;" width="35%">分组文件</td>'+
-                                    '<td style="text-align: left;" width="15%"><button class="layui-btn layui-btn-danger layui-btn-xs deletCyFileBtn" dataId="'+ data[i].id +'">删除</button></td>'+
-                                '</tr>'+
-                                '<tr>常用分类</tr>'
-
+                            '<tr>'+
+                                '<td style="text-align: left;padding-left: 10px;" width="30%">'+ data[i].directory +'</td>'+
+                                '<td style="text-align: left;position: relative" width="20%">' +
+                                    '<form action="http://www.argen3630.com:88/admin.php/upload/upload"  method="post" enctype="multipart/form-data" class="notFormFile">' +
+                                        '<div style="text-align:center;font-size: 13px;background: #00b7ee;border-radius: 3px;width: 100px;color: #fff;display: inline-block;cursor: pointer;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);height: 26px;line-height: 26px;padding: 0;">上传文件</div>' +
+                                        '<input directory="'+ data[i].directory +'" style="position: absolute;top:0;left:0; z-index: 1;opacity: 0; height: 100%;width: 100px;" name="image" type="file">' +
+                                    '</form>' +
+                                '</td>'+
+                                '<td style="text-align: left;" width="35%">分组文件</td>'+
+                                '<td style="text-align: left;" width="15%"><button class="layui-btn layui-btn-danger layui-btn-xs deletCyFileBtn" dataId="'+ data[i].id +'">删除</button></td>'+
+                            '</tr>'+
+                            '<tr>常用分类</tr>'
                         }
                     }
                     $(".tab_11_4 tbody").html(strHTML);
@@ -639,6 +643,74 @@ $(function(){
         })
     }
 
+    $(".tab_11_4").on("change", 'input[type=file]', function(){
+        // var path = $(this).val();
+        var files = $(this).prop('files');
+        var data_directory = $(this).attr("directory");
+        var fileLen = files[0].size;
+        var thisDom = $(this);
+        var parentsTr = thisDom.parents("tr").next();
+        if(files.length == 0){
+            return;
+        }
+        console.log(files);
+        var formData = new FormData();
+
+        formData.append('image', files[0]);
+        $.ajax({
+            url: urlParam.uploadFile,
+            type: 'POST',
+            cache: false,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            data: formData,
+            enctype: "multipart/form-data",
+            processData: false,
+            contentType: false
+        }).done(function(res) {
+            console.log(res);
+            if(res.code == 0) {
+                ajaxFileData(prefixParamUrl.urlPrefix + res.object,data_directory,fileLen)
+            } else {
+                msgMask(res.message,1)
+            }
+        }).fail(function(res) {
+            msgMask(res.message,1)
+        });
+    })
+
+    // 提交上传代码
+    function ajaxFileData(path,directory,filelength,dom){
+        var path = path || "";;
+        var directory = directory || "";
+        var filelength = filelength || "0";
+        $.ajax({
+            url: urlParam.uploadCommonFile,
+            type: 'POST',
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            data: {
+                path: path,
+                directory:directory,
+                filelength: filelength
+            }
+        }).done(function(res) {
+            console.log(res);
+            if(res.code == 0) {
+                msgMask("提交成功!",1)
+                getCommonFileList()
+            } else {
+                msgMask(res.message,1)
+            }
+        }).fail(function(res) {
+            msgMask(res.message,1)
+        });
+    }
+
     // 常用分类文件列表
     getCommonFileList()
     function getCommonFileList(){
@@ -648,10 +720,9 @@ $(function(){
             xhrFields: {
                 withCredentials: true
             },
-            async: false,
             crossDomain: true,
             success: function (msg) {
-
+                console.log(msg);
             }
         })
     }
