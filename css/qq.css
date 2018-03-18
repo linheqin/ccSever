@@ -29,6 +29,9 @@
 .windowLogo {
 	padding-top: 13px;
 }
+.qqBox .layui-tab-title {
+	padding-left: 0;
+}
 .windowLogo a {
 	display: block;
 }
@@ -43,6 +46,7 @@
 	padding-left: 10px;
 	height: 25px;
 	line-height: 25px;
+	font-size: 12px;
 }
 .serviceInfo {
 	padding-top: 10px;
@@ -69,6 +73,7 @@
 	text-align: center;
 	cursor: pointer;
 	font-size: 12px;
+	background: #fff;
 }
 
 .layui-tab-title {
@@ -108,6 +113,7 @@
 .layui-show {
 	display: block!important;
 }
+
 .headImg{
 	width: 20px;
 	height: 20px;
@@ -410,7 +416,7 @@
 }
 .RightFoot{
 	width: 100%;
-	height: 135px;
+	height: 150px;
 	border-top: 1px solid #ccc;
 	position: relative;
 }
