@@ -186,21 +186,22 @@
                     <th>操作</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>这是类型</td>
-                    <td>这是渠道</td>
-                    <td>魔术师</td>
-                    <td>12</td>
-                    <td>北京</td>
-                    <td>2016-11-29 12:12</td>
-                    <td>活动</td>
-                    <td>来源这</td>
-                    <td>http://cnodejs.org/topic/59bf71d3e7d9a031127eacaa</td>
-                    <td>小客服</td>
-                    <td>打客服</td>
-                    <td><button class="layui-btn layui-btn-xs">删除</button></td>
-                </tr>
+                <tbody id="visitorTable">
+                    <tr><td colspan="12" style="text-align: center;">数据加载中……</td></tr>
+                    <!--<tr>-->
+                        <!--<td>这是类型</td>-->
+                        <!--<td>这是渠道</td>-->
+                        <!--<td>魔术师</td>-->
+                        <!--<td>12</td>-->
+                        <!--<td>北京</td>-->
+                        <!--<td>2016-11-29 12:12</td>-->
+                        <!--<td>活动</td>-->
+                        <!--<td>来源这</td>-->
+                        <!--<td>http://cnodejs.org/topic/59bf71d3e7d9a031127eacaa</td>-->
+                        <!--<td>小客服</td>-->
+                        <!--<td>打客服</td>-->
+                        <!--<td><button class="layui-btn layui-btn-xs">删除</button></td>-->
+                    <!--</tr>-->
                 </tbody>
             </table>
         </div>
@@ -606,16 +607,30 @@
                         var data = msg.data;
                         if(msg.code == 0){
                             if(data.length == 0){
-                                strHTML += '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">暂无数据</div>';
-                                $("#serverList").html(strHTML)
+                                strHTML += '<tr><td colspan="12" style="text-align: center">暂无数据</td></tr>';
+                                $("#visitorTable").html(strHTML)
                             } else {
                                 for(var i = 0; i < data.length; i++) {
                                     var status = (data[i].status == 1) ? "在" : '离';
                                     var role = data[i].role || "-";
                                     var username = data[i].username || "-";
-                                    strHTML += "";
+                                    strHTML +=
+                                        "<tr>" +
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                            "<td></td>"+
+                                        "</tr>";
                                 }
-                                $("#myTrajectory").html(strHTML)
+                                $("#visitorTable").html(strHTML)
                             }
                         } else {
                             msgMask(msg.message,1)
