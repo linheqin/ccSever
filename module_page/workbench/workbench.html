@@ -62,6 +62,12 @@
             -ms-flex: 1;
             flex: 1;
         }
+        #ylPage p, #yjPage p {
+            height: 18px;
+            line-height: 18px;
+            margin-top: 5px;
+            color: #48a1de;
+        }
         #tallPanleCenter {
             -webkit-flex: 1;
             -moz-flex: 1;
@@ -350,13 +356,13 @@
                         <div class="footTop">
                             <ul>
                                 <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_31.jpg"></li>
-                                <li class="ExP"><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_33.jpg"></li>
-                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_35.jpg"></li>
-                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_37.jpg"></li>
-                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_39.jpg"></li>
-                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_41.jpg" alt=""></li>
-                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_43.jpg"></li>
-                                <li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_45.jpg"></li>
+                                <li class="ExP"><img class="expimg" src="http://www.argen3630.com:8082/img/TIM图片20170926103645_33.jpg"></li>
+                                <!--<li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_35.jpg"></li>-->
+                                <!--<li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_37.jpg"></li>-->
+                                <!--<li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_39.jpg"></li>-->
+                                <!--<li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_41.jpg" alt=""></li>-->
+                                <!--<li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_43.jpg"></li>-->
+                                <!--<li><img src="http://www.argen3630.com:8082/img/TIM图片20170926103645_45.jpg"></li>-->
                             </ul>
                         </div>
                         <div class="inputBox">
@@ -394,7 +400,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab_item none">内容3</div>
+                    <div class="tab_item none">
+                        <div class="layui-collapse" id="myTrajectory" style="border: none;"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,6 +421,34 @@
                 $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
             })
             var element = layui.element;
+
+            $(".ExP").on("click", function(){
+                $(".emjon").css("display", "block");
+            })
+
+            $(document).on("click", function(e){
+                console.log();
+                var thisDom = $(e.target);
+                var isTrue = thisDom.hasClass("expimg");
+                if(isTrue) {
+                    return;
+                }
+                console.log();
+                $(".emjon").css("display", "none");
+            })
+
+            $(".emjon img").on("click", function(){
+                var thisUrl = $(this).attr("src");
+                console.log(thisUrl);
+
+                var dopeVal = $("#dope").val();
+                var isSelectVisitor = $("#tallList .sel").length;
+                if(isSelectVisitor == 0) {
+                    msgMask("请选择对话人",1);
+                    return;
+                }
+                $(".newsList").append('<li><div class="news"><img class="jiao" src="http://www.argen3630.com:8082/img/talk.jpg"><img src="'+ thisUrl +'"></div></li>')
+            })
 
             var itemListJsonData = [];  // 分组列表数据
             // 分类常用语组列表
@@ -461,7 +497,7 @@
                 })
             }
             // 点击rowws
-            $(document).on("click", "#myCollapse .layui-colla-title", function(){
+            $(document).on("click", ".layui-colla-title", function(){
                 var thisDom = $(this).find(".font-size");
                 var siblinsDom = $(this).siblings("div");
                 if(thisDom.hasClass("rotetas")) {
@@ -512,7 +548,6 @@
             getWaitQueueList()
             function getWaitQueueList(){
                 var strHTML = "";
-                console.log(urlParam.getWaitQueueList);
                 $.ajax({
                     url: urlParam.getWaitQueueList,
                     dataType: "json",
@@ -521,8 +556,6 @@
                     },
                     crossDomain: true,
                     success: function (msg) {
-                        console.log("对话列表");
-                        console.log(msg);
                         var data = msg.object;
                         if(msg.code == 0){
                             if(data.length == 0){
@@ -532,17 +565,109 @@
                                 for(var i = 0; i < data.length; i++) {
                                     var status = data[i].status || "-";
                                     var visitor = data[i].visitor || "-";
+                                    var visitorId = data[i].visitorid || "-";
                                     var ip = data[i].ip || "-";
                                     strHTML +=
-                                        '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">'+
+                                        '<div class="layui-row overflow" visitorId="'+ visitorId +'" style="height: 40px;line-height: 40px;">'+
                                             '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">'+ status +'</span></div>'+
                                             '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ visitor +'</div>'+
                                             '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ ip +'</div>'+
-                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>'+
+                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 40px;"><i class="glyphicon glyphicon-remove"></i></div>'+
                                         '</div>';
                                 }
-                                $("#tallList").html(strHTML)
+                                $("#tallList").html(strHTML);
+                                getTrajectoryList(data[0].visitorid);
+                                getVisitor(data[0].visitorid);
                             }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+
+                    }
+                })
+            }
+
+            // 轨迹列表
+            function getTrajectoryList(visitorId){
+                var visitorId = visitorId || "";
+                var strHTML = "";
+                $.ajax({
+                    url: urlParam.getVisitorLogList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        visitorid: visitorId
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        var data = msg.data;
+                        if(msg.code == 0){
+                            if(data.length == 0){
+                                strHTML += '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">暂无数据</div>';
+                                $("#serverList").html(strHTML)
+                            } else {
+                                for(var i = 0; i < data.length; i++) {
+                                    var status = (data[i].status == 1) ? "在" : '离';
+                                    var role = data[i].role || "-";
+                                    var username = data[i].username || "-";
+                                    strHTML += "";
+                                }
+                                $("#myTrajectory").html(strHTML)
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+
+                    }
+                })
+            }
+            // 访客轨迹
+            function getVisitor(visitorId){
+                var visitorId = visitorId || "";
+                $.ajax({
+                    url: urlParam.getVisitor,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: {
+                        visitorid: visitorId
+                    },
+                    success: function (msg) {
+                        var strHTML = "";
+                        if(msg.code == 0) {
+                            // if(msg.object == null || msg.object.length == 0){
+                            //     strHTML += "<div style='text-align:center;padding: 10px;' class='layui-row overflow'>暂无数据</div>";
+                            // } else {
+                                strHTML +=
+                                    '<div class="layui-row" style="padding-top:8px;text-indent: 10px;">' +
+                                        '<div class="layui-col-xs4 layui-col-sm4 layui-col-md4 layui-col-lg4">历史接待客服</div>'+
+                                        '<div class="layui-col-xs8 layui-col-sm8 layui-col-md8 layui-col-lg8">122</div>'+
+                                    '</div>'+
+                                    '<div class="layui-row" style="padding-top:8px;text-indent: 10px;">' +
+                                        '<div class="layui-col-xs4 layui-col-sm4 layui-col-md4 layui-col-lg4">进入时刻</div>'+
+                                        '<div class="layui-col-xs8 layui-col-sm8 layui-col-md8 layui-col-lg8">122</div>'+
+                                    '</div>'+
+                                    '<div style="padding-top:8px;font-size:12px;text-indent: 10px;">' +
+                                        '<div>正在浏览页面</div>'+
+                                        '<div id="ylPage">' +
+                                            '<p>1222</p>' +
+                                            '<p>1222</p>' +
+                                        '</div>'+
+                                    '</div>' +
+                                    '<div style="padding-top:8px;font-size:12px;text-indent: 10px;">' +
+                                        '<div>已浏览页面</div>'+
+                                        '<div id="yjPage">' +
+                                            '<p>1222</p>' +
+                                            '<p>1222</p>' +
+                                        '</div>'+
+                                    '</div>'
+                            // }
+                            $("#myTrajectory").html(strHTML);
                         } else {
                             msgMask(msg.message,1)
                         }
@@ -575,11 +700,11 @@
                                     var role = data[i].role || "-";
                                     var username = data[i].username || "-";
                                     strHTML +=
-                                        '<div class="layui-row overflow" style="height: 30px;line-height: 30px;">'+
+                                        '<div class="layui-row overflow" style="height: 40px;line-height: 40px;">'+
                                         '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">'+ status +'</span></div>'+
                                             '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ role +'</div>'+
                                             '<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">'+ username +'</div>'+
-                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>'+
+                                            '<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 40px;"><i class="glyphicon glyphicon-remove"></i></div>'+
                                         '</div>';
                                 }
                                 $("#serverList").html(strHTML)
@@ -614,7 +739,7 @@
 
                                 for(var i = 0; i < data.length; i++) {
                                     var content = data[i].content || "-";
-                                    var commonWordListStr = getCommonWordList(data[i].directory);
+                                    var commonWordListStr = getCommonFileList(data[i].directory);
                                     itemListJsonData.push(data[i].directory);
 //                                var commonWordListStr = getCommonWordList(data[i].category);
                                     strHTML +=
@@ -636,6 +761,85 @@
 
                 })
             }
+
+            // 获取常用分类列表文件
+            function getCommonFileList(directory){
+                var strHTML = "";
+                $.ajax({
+                    url: urlParam.getCommonFileList,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    async: false,
+                    data:{
+                        directory: directory
+                    },
+                    success: function (msg) {
+                        var data = msg.object;
+                        if(msg.code == 0){
+                            if(data.length == 0){
+                                strHTML += '<p>暂无数据</p>';
+                            } else {
+                                for(var i = 0; i < data.length; i++) {
+                                    strHTML += '<p><a href="'+ data[i].path +'" download="'+ data[i].name +'">'+ data[i].name +'</a></p>';
+                                }
+                            }
+                        } else {
+                            msgMask(msg.message,1)
+                        }
+                    }
+                })
+                return strHTML;
+            }
+
+            // 点击对话列表
+            $("#tallList").on("click",".overflow", function(){
+                var thisVisitorId = $(this).attr("visitorId");
+                $(this).addClass('sel').siblings().removeClass("sel");
+                getVisitorRecordList(thisVisitorId);
+            })
+            // 对话记录列表
+            function getVisitorRecordList(visitorId){
+                $.ajax({
+                    url: urlParam.getWaitQueueList,
+                    dataType: "json",
+                    type: "get",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    data: {
+                        visitorId: visitorId
+                    },
+                    crossDomain: true,
+                    success: function (msg) {
+                        console.log(msg)
+                        if(msg.code == 0) {
+
+                        } else {
+                            msgMask(res.message,1)
+                        }
+                    }
+                })
+            }
+
+            // 点击常用语
+            $("#myCollapse").on("click", ".layui-colla-content p", function(){
+                var thisVal = $(this).text();
+                var dopeVal = $("#dope").val();
+                var isSelectVisitor = $("#tallList .sel").length;
+                if(isSelectVisitor == 0) {
+                    msgMask("请选择对话人",1);
+                    return;
+                }
+                if(thisVal == "暂无数据") {
+                    return;
+                }
+                $("#dope").val(dopeVal+ "\n" +thisVal);
+            })
+
+
         })
 
 

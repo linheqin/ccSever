@@ -619,6 +619,7 @@ $(function(){
                         strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
                     } else {
                         for(var i = 0; i < data.length; i++) {
+                            var commonWordListStr = getCommonFileList(data[i].directory);
                             strHTML +=
                             '<tr>'+
                                 '<td style="text-align: left;padding-left: 10px;" width="30%">'+ data[i].directory +'</td>'+
@@ -631,7 +632,23 @@ $(function(){
                                 '<td style="text-align: left;" width="35%">分组文件</td>'+
                                 '<td style="text-align: left;" width="15%"><button class="layui-btn layui-btn-danger layui-btn-xs deletCyFileBtn" dataId="'+ data[i].id +'">删除</button></td>'+
                             '</tr>'+
-                            '<tr>常用分类</tr>'
+                            '<tr>' +
+                                '<td  colspan="4" style="text-align: left;border:none;padding:0;">' +
+                                '<table style="width: 100%;border: none;">' +
+                                '<thead>' +
+                                    '<th style="text-align: left;width: 50%;padding-left: 27px;">附件</th>'+
+                                    '<th style="text-align: left;width: 10%;">文件类型</th>'+
+                                    '<th style="text-align: left;width: 10%;">文件大小</th>'+
+                                    '<th style="text-align: left;width: 10%;">日期</th>'+
+                                    '<th style="width:20%;text-align: left">操作</th>'+
+                                '</thead>'+
+                                '<tbody>';
+                                    strHTML += commonWordListStr;
+                                    strHTML +=
+                                '</tbody>' +
+                                '</table>' +
+                                '</td>' +
+                            '</tr>'
                         }
                     }
                     $(".tab_11_4 tbody").html(strHTML);
@@ -702,7 +719,7 @@ $(function(){
             console.log(res);
             if(res.code == 0) {
                 msgMask("提交成功!",1)
-                getCommonFileList()
+                getFileCategoryList()
             } else {
                 msgMask(res.message,1)
             }
@@ -712,8 +729,9 @@ $(function(){
     }
 
     // 常用分类文件列表
-    getCommonFileList()
-    function getCommonFileList(){
+
+    function getCommonFileList(directory){
+        var strHTML = "";
         $.ajax({
             url: urlParam.getCommonFileList,
             dataType: "json",
@@ -721,10 +739,35 @@ $(function(){
                 withCredentials: true
             },
             crossDomain: true,
+            async: false,
+            data:{
+                directory: directory
+            },
             success: function (msg) {
                 console.log(msg);
+                var data = msg.object;
+                if(msg.code == 0) {
+                    if(data.length == 0){
+                        strHTML += ' <tr><td colspan="3">暂无数据</td></tr>';
+                    } else {
+                        for(var i = 0; i < data.length; i++) {
+                            strHTML +=
+                                '<tr class="item_list_boder">' +
+                                '<td style="text-align: left;width: 50%;padding-left: 27px;"><div style="padding: 0 10px;max-width: 360px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;"><a href="'+ data[i].path +'" download="'+ data[i].name +'">'+ data[i].name +'</a></div></td>' +
+                                '<td style="text-align: left;width: 10%;"><div style="padding: 0 10px;max-width: 360px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">.'+ data[i].path.split(".")[data[i].path.split(".").length -1] +'</div></td>' +
+                                '<td style="text-align: left;width: 10%;">'+ (data[i].filelength/1024).toFixed(2) +'M</td>' +
+                                '<td style="text-align: left;width: 10%;">'+ data[i].update_time +'</td>' +
+                                '<td style="width:20%;text-align: left"> <button class="layui-btn layui-btn-xs cyyDelBtn" dataId="'+ data[i].id +'">删除</button></td>' +
+                                '</tr>';
+                        }
+                    }
+                } else {
+                    msgMask(res.message,1)
+                }
             }
         })
+
+        return strHTML;
     }
 
     // 点击保存按钮，保存弹窗HTML
@@ -772,6 +815,11 @@ $(function(){
             crossDomain: true,
             success: function (msg) {
                 // console.log(msg)
+                if(msg.code == 0) {
+                    msgMask("保存成功!",1);
+                } else {
+                    msgMask(res.message,1)
+                }
             }
         })
     }

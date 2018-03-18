@@ -63,9 +63,10 @@ var urlParam = {
     getCommonFileList: prefixParamUrl.urlPrefix + "admin.php/CommonFile/list1",             // 文件常用分类列表
     getWaitQueueList: prefixParamUrl.urlPrefix + "admin.php/WaitQueue/list1",               // 对话等待列表
     uploadFile: prefixParamUrl.urlPrefix + "admin.php/upload/upload",                       // 上传文件
-    uploadCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",                // 保存上传文件地址
+    uploadCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",                // 保存上传文件地址\
+    getVisitorLogList: prefixParamUrl.urlPrefix + "admin.php/visitorLog/list1",             // 轨迹列表
+    getVisitor: prefixParamUrl.urlPrefix + "admin.php/visitor/get",                         // 访客轨迹
 }
-
 // 获取地址参数
 function getQueryString(name) {
     var pos,str,para,parastr;

@@ -180,10 +180,22 @@
             </tbody>
         </table>
         <div class="page_str_ct"></div>
+        <div class="codeDiv none">
+            <pre class="layui-code">
+                //你的网站不能有 window.onload = function(){};
+                window.onload= function(){
+                    var head = document.getElementsByTagName("head")[0];
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "http://www.argen3630.com:88/js/service_mask_common.js";
+                    head.appendChild(script);
+                }
+            </pre>
+        </div>
     </div>
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/layui.js"></script>
+    <script src="../../js/layui.all.js"></script>
     <script src="../../js/coment.js"></script>
     <script src="../../js/myscript.js"></script>
     <script>
@@ -295,8 +307,8 @@
                                         "<td>"+name+"</td>" +
                                         "<td>"+site+"</td>" +
                                         "<td>未分配</td>" +
-                                        "<td><button class='layui-btn layui-btn-primary layui-btn-xs'>获取代码</button></td>" +
-                                        "<td><button class='layui-btn layui-btn-primary layui-btn-xs'>获取链接</button></td>" +
+                                        "<td><button class='layui-btn layui-btn-primary layui-btn-xs get_code_btn'>获取代码</button></td>" +
+                                        "<td><button class='layui-btn layui-btn-primary layui-btn-xs get_link_btn'>获取链接</button></td>" +
                                         "<td>"+lange+"</td>" +
                                         "<td>"+time+"</td>" +
                                         "<td><a class='modify_web_site_btn' href='javascript:void(0);' data-id='"+dataId+"'>修改</a> | <a class='del_web_site_btn' href='javascript:void(0);' data-id='"+dataId+"'>删除</a></td>" +
@@ -405,6 +417,18 @@
                     }
                 })
 
+            })
+
+            // 点击获取代码
+            $(document).on("click", ".get_code_btn", function(){
+                var getCodeStr = $(".codeDiv").html();
+                var getCodeMask = parent.layer.open({
+                    type: 1,
+                    area: ['720px', '320px'],
+                    btn: ['确定'],
+                    skin: 'nav_setting',
+                    content: getCodeStr
+                })
             })
         })
     </script>
