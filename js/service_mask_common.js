@@ -1,61 +1,148 @@
 function serviceMaskCommon(json){
-    var me = this;
-    me.json = json || {};
-    me.init = function(){
-        me.socket();
+    var json = json || {}
+    json.companyId = json.companyId || 1;
+    // websoket连接
+    var socket;
+    var lockReconnect = false;
+    var wsUrl = 'ws://120.27.211.112:8282';
+
+    function loadScript(url, callback) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        if(typeof(callback) != "undefined"){
+            if (script.readyState) {
+                script.onreadystatechange = function () {
+                    if (script.readyState == "loaded" || script.readyState == "complete") {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {
+                script.onload = function () {
+                    callback();
+                };
+            }
+        }
+        script.src = url;
+        document.body.appendChild(script);
     }
-    me.socket = function(){
-        var websocket = null;
-        if ('WebSocket' in window) {
-            websocket = new WebSocket("ws://120.27.211.112:8282");
-        } else {
-            alert('不支持websocket');
-            return;
+    loadScript("http://code.jquery.com/jquery-1.10.2.min.js", function () {
+        // 咨询注册
+        $(document).on("click", "#zxBtn", function(){
+            var name = $("input[name=name_disp]").val();
+            var phone = $("input[name=phone_disp]").val()|| "";
+            var mobile = $("input[name=mobile_disp]").val()|| "";
+            var qq = $("input[name=qq_disp]").val()|| "";
+            var email = $("input[name=email_disp]").val()|| "";
+            var address = $("input[name=address_disp]").val()|| "";
+            var company = $("input[name=company_disp]").val()|| "";
+            var fax = $("input[name=fax_disp]").val()|| "";
+
+            $.ajax({
+                url: "http://www.argen3630.com:88/admin.php/Visitor/add",
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
+                data: {
+                    companyId: json.companyId,
+                    name: name,
+                    phone: phone,
+                    mobile: mobile,
+                    qq: qq,
+                    email: email,
+                    address: address,
+                    company: company,
+                    fax: fax
+                },
+                success: function(msg){
+                    console.log(msg);
+                }
+            })
+        })
+
+
+
+        createWebSocket(wsUrl);
+        //连接成功时触发
+        function onOpen() {
+            // 登录
+            var login_data = '{"type":"init","id":"' + uid + '", "username":"' + uname + '", "avatar":"' + avatar + '", "sign":"' + sign + '"}';
+            socket.send(login_data);
+            console.log("websocket握手成功!");
         }
 
-        //连接成功建立的回调方法
-        websocket.onopen = function () {
-            websocket.send("发送消息");
-            setMessageInnerHTML("WebSocket连接成功");
-        }
+        //监听收到的消息
+        function onMessage(res) {
+            console.log(res.data);
+            var data = eval("(" + res.data + ")");
+            switch (data['message_type']) {
 
-        //接收到消息的回调方法
-        websocket.onmessage = function (event) {
-            setMessageInnerHTML(event.data);
-        }
-
-        //连接发生错误的回调方法
-        websocket.onerror = function () {
-            setMessageInnerHTML("WebSocket连接发生错误");
+            }
         };
 
-        //连接关闭的回调方法
-        websocket.onclose = function () {
-            setMessageInnerHTML("WebSocket连接关闭");
+        function initWebSocket() {
+
+            socket = new WebSocket(wsUrl);
+
+            socket.onmessage = onMessage;
+
+            socket.onopen = onOpen;
+
+            socket.onerror = onError;
+
+            socket.onclose = onClose;
         }
 
-        //监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
-        window.onbeforeunload = function () {
-            closeWebSocket();
+
+        function createWebSocket(url) {
+            try {
+                initWebSocket();
+            } catch (e) {
+                reconnect(url);
+            }
         }
 
-        //将消息显示在网页上
-        function setMessageInnerHTML(val) {
-            console.log(val);
+        function reconnect(url) {
+            if (lockReconnect) return;
+            lockReconnect = true;
+            //没连接上会一直重连，设置延迟避免请求过多
+            setTimeout(function () {
+                createWebSocket(url);
+                lockReconnect = false;
+            }, 2000);
         }
 
-        //关闭WebSocket连接
-        function closeWebSocket() {
-            websocket.close();
+        function onError() {
+            reconnect(wsUrl);
         }
 
-        //发送消息
-        function send(sendStr) {
-            var message = sendStr || "发送消息";
-            websocket.send(message);
+        function onClose() {
+            reconnect(wsUrl);
         }
+        function sendMessage(data1) {
+            var data = function (data1) {
+                //socket.send("{'send':1,'take':2,'message':" + Math.random() + "}");
+                socket.send(data1);
+                console.log('sendMessage ok' + data1);
+            };
 
-    }
-    me.init();
+            console.log('sendMessage ' + data1);
+
+            if (socket.readyState !== 1) {
+                socket.close();
+                initWebSocket();
+                setTimeout(function () {
+                    data(data1);
+                }, 250);
+            } else {
+                data(data1);
+            }
+
+        }
+    });
+
+
 }
 var comon = new serviceMaskCommon();

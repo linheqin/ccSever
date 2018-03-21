@@ -369,7 +369,7 @@
                         <div class="inputBox">
                             <textarea id="dope" style="padding: 5px 10px;width: 99%;height: 70px; border: none;outline: none;" name="" rows="" cols=""></textarea>
                         </div>
-                        <div style="text-align: right;padding-right:5px;"><button class="sendBtn">发送(s)</button></div>
+                        <div style="text-align: right;padding-right:5px;"><button id="sendBtn" class="sendBtn">发送(s)</button></div>
 
                     </div>
                 </div>
@@ -854,6 +854,89 @@
                 }
                 $("#dope").val(dopeVal+ "\n" +thisVal);
             })
+
+            
+            // websoket连接
+            var socket;
+            var lockReconnect = false;
+            var wsUrl = 'ws://120.27.211.112:8282';
+            createWebSocket(wsUrl);
+            //连接成功时触发
+            function onOpen() {
+                // 登录
+                var login_data = '{"type":"init","id":"' + uid + '", "username":"' + uname + '", "avatar":"' + avatar + '", "sign":"' + sign + '"}';
+                socket.send(login_data);
+                console.log("websocket握手成功!");
+            }
+
+            //监听收到的消息
+            function onMessage(res) {
+                console.log(res.data);
+                var data = eval("(" + res.data + ")");
+                switch (data['message_type']) {
+
+                }
+            };
+
+            function initWebSocket() {
+
+                socket = new WebSocket(wsUrl);
+
+                socket.onmessage = onMessage;
+
+                socket.onopen = onOpen;
+
+                socket.onerror = onError;
+
+                socket.onclose = onClose;
+            }
+
+
+            function createWebSocket(url) {
+                try {
+                    initWebSocket();
+                } catch (e) {
+                    reconnect(url);
+                }
+            }
+
+            function reconnect(url) {
+                if (lockReconnect) return;
+                lockReconnect = true;
+                //没连接上会一直重连，设置延迟避免请求过多
+                setTimeout(function () {
+                    createWebSocket(url);
+                    lockReconnect = false;
+                }, 2000);
+            }
+
+            function onError() {
+                reconnect(wsUrl);
+            }
+
+            function onClose() {
+                reconnect(wsUrl);
+            }
+            function sendMessage(data1) {
+                var data = function (data1) {
+                    //socket.send("{'send':1,'take':2,'message':" + Math.random() + "}");
+                    socket.send(data1);
+                    console.log('sendMessage ok' + data1);
+                };
+
+                console.log('sendMessage ' + data1);
+
+                if (socket.readyState !== 1) {
+                    socket.close();
+                    initWebSocket();
+                    setTimeout(function () {
+                        data(data1);
+                    }, 250);
+                } else {
+                    data(data1);
+                }
+
+            }
 
 
         })
