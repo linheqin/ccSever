@@ -422,7 +422,10 @@
                 // console.log( $(this).parent().siblings().children());
                 $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
             })
-            var element = layui.element;
+            var req = getQueryString();
+            var companyId = req["companyId"];
+            var memberId = req["memberId"];
+            var userId = req["userId"];
 
             $(".ExP").on("click", function(){
                 $(".emjon").css("display", "block");
@@ -864,7 +867,7 @@
             //连接成功时触发
             function onOpen() {
                 // 登录
-                var login_data = '{"type":"init","id":"' + uid + '", "username":"' + uname + '", "avatar":"' + avatar + '", "sign":"' + sign + '"}';
+                var login_data = '{"type":"init","id":"' + userId + '", "username":"", "avatar":"", "sign":""}';
                 socket.send(login_data);
                 console.log("websocket握手成功!");
             }

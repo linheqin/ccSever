@@ -62,6 +62,8 @@ var urlParam = {
     deleteCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/delete",             // 删除常用分类文件
     getCommonFileList: prefixParamUrl.urlPrefix + "admin.php/CommonFile/list1",             // 文件常用分类列表
     getWaitQueueList: prefixParamUrl.urlPrefix + "admin.php/WaitQueue/list1",               // 对话等待列表
+    addWaitQueue: prefixParamUrl.urlPrefix + "admin.php/WaitQueue/add",                     // 增加对话等待
+    deleteWaitQueue: prefixParamUrl.urlPrefix + "admin.php/WaitQueue/delete",               // 删除等待列表
     uploadFile: prefixParamUrl.urlPrefix + "admin.php/upload/upload",                       // 上传文件
     uploadCommonFile: prefixParamUrl.urlPrefix + "admin.php/CommonFile/add",                // 保存上传文件地址\
     getVisitorLogList: prefixParamUrl.urlPrefix + "admin.php/visitorLog/list1",             // 轨迹列表

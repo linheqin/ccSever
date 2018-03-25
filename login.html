@@ -83,7 +83,7 @@
                 crossDomain: true,
                 success: function(msg) {
                     if(msg.code == 0) {
-                        window.location.href = "index.html?companyId="+msg.object.companyid+"&memberId="+msg.object.id
+                        window.location.href = "index.html?companyId="+msg.object.companyid+"&memberId="+msg.object.id+"&userId="+msg.object.userid;
                         ;
                     } else {
                         layer.msg(msg.message,{

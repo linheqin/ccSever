@@ -319,6 +319,17 @@
 	margin-left: 70px;
 	min-height: 36px;
 }
+.visitorDialogues .input-block {
+	margin-left: 85px;
+}
+.visitorDialogues .form-label {
+	font-size: 12px;
+}
+#lyTs {
+	padding: 10px 0 20px 27px;
+	font-size:12px;
+	color: #00BC0c
+}
 .conRightItem {
 	margin-bottom: 10px;
 }
