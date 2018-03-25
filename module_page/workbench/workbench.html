@@ -215,12 +215,12 @@
                     <div class="tab_item">
                         <div class="list-group">
                             <div class="list-group-item" id="tallList" style="border:none;margin:0;padding:0;">
-                                <!--<div class="layui-row overflow" style="height: 30px;line-height: 30px;">-->
-                                    <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>-->
-                                    <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>-->
-                                    <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>-->
-                                    <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>-->
-                                <!--</div>-->
+                                <div class="layui-row overflow" visitorId="1" style="height: 30px;line-height: 30px;">
+                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">意</span></div>
+                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>
+                                    <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">福建广东省第三方</div>
+                                    <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1" style="text-align: right;line-height: 32px;"><i class="glyphicon glyphicon-remove"></i></div>
+                                </div>
                                 <!--<div class="layui-row overflow" style="height: 30px;line-height: 30px;">-->
                                     <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1"><span style="display: inline-block;color:#fff;width: 20px;height: 20px;line-height:20px;text-align:center;background: #fca44c;border-radius: 50%;">新</span></div>-->
                                     <!--<div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5">1454545454</div>-->
@@ -422,15 +422,23 @@
                 // console.log( $(this).parent().siblings().children());
                 $(this).parent().siblings().children(".tab_item").addClass("none").eq(thisIndex).removeClass("none");
             })
+            // 获取地址参数
             var req = getQueryString();
             var companyId = req["companyId"];
             var memberId = req["memberId"];
             var userId = req["userId"];
 
+            // websoket连接
+            var socket;
+            var lockReconnect = false;
+            var wsUrl = 'ws://120.27.211.112:8282';
+            createWebSocket(wsUrl);
+
             $(".ExP").on("click", function(){
                 $(".emjon").css("display", "block");
             })
 
+            // 表情界面消失
             $(document).on("click", function(e){
                 console.log();
                 var thisDom = $(e.target);
@@ -442,6 +450,7 @@
                 $(".emjon").css("display", "none");
             })
 
+            // 聊天表情
             $(".emjon img").on("click", function(){
                 var thisUrl = $(this).attr("src");
                 console.log(thisUrl);
@@ -643,6 +652,7 @@
                     }
                 })
             }
+
             // 访客轨迹
             function getVisitor(visitorId){
                 var visitorId = visitorId || "";
@@ -815,10 +825,36 @@
 
             // 点击对话列表
             $("#tallList").on("click",".overflow", function(){
+
                 var thisVisitorId = $(this).attr("visitorId");
                 $(this).addClass('sel').siblings().removeClass("sel");
-                getVisitorRecordList(thisVisitorId);
+
+
+
+                // 根据visitorId 获取 【聊天记录， 访客轨迹， 访客数据】
+                // getVisitorRecordList(thisVisitorId);
             })
+
+            // 点击对话列表所得userId
+            function getUserId(visitorId){
+                $.ajax({
+                    url: urlParam.getVisitor,
+                    dataType: "json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    async: false,
+                    data:{
+                        visitorId: visitorId
+                    },
+                    success: function (msg) {
+                        console.log();
+                    }
+                })
+
+            }
+
             // 对话记录列表
             function getVisitorRecordList(visitorId){
                 $.ajax({
@@ -859,11 +895,7 @@
             })
 
             
-            // websoket连接
-            var socket;
-            var lockReconnect = false;
-            var wsUrl = 'ws://120.27.211.112:8282';
-            createWebSocket(wsUrl);
+
             //连接成功时触发
             function onOpen() {
                 // 登录
