@@ -587,6 +587,7 @@
             }
 
             // 获取对话列表
+
             getWaitQueueList()
             function getWaitQueueList(){
                 var strHTML = "";
@@ -620,6 +621,9 @@
                                 $("#tallList").html(strHTML);
                                 getTrajectoryList(data[0].visitorid);
                                 getVisitor(data[0].visitorid);
+//                                setTimeout(function(){
+//                                    getWaitQueueList()
+//                                }, 1000)
                             }
                         } else {
                             msgMask(msg.message,1)

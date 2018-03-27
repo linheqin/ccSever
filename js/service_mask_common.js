@@ -5,6 +5,8 @@ function serviceMaskCommon(json){
     var socket;
     var lockReconnect = false;
     var wsUrl = 'ws://120.27.211.112:8282';
+    var demoJson = '{"create_time":1522153943,"visit_time":1522153943,"name":"林河钦","website":"","phone":"21323","mobile":"多少级啊看风景","fax":"","email":"48484848","qq":"7844","companyid":"1","wangwang":"","company":"4","address":"8484848","note":"","ip":"120.41.196.221","userid":"160012"}';
+    localStorage.setItem("userJson", demoJson)
     var userJson = JSON.parse(localStorage.getItem("userJson"));
     console.log(userJson);
     function loadScript(url, callback) {
@@ -96,17 +98,22 @@ function serviceMaskCommon(json){
 
     //监听收到的消息
     function onMessage(res) {
-        var resData = res.data;
+        var resData = JSON.parse(res.data);
         console.log(resData);
-        // 进入对话状态 type : reqTalk
 
-        if(userJson.userid == resData.toId ){
-            $(".visitorDialogues").addClass("none");
-            $(".visitorDialogue ").removeClass("none");
-        } else {
-            $(".visitorDialogue").addClass("none");
-            $(".visitorDialogues ").removeClass("none");
+        // 进入对话状态 type : reqTalk
+        if(resData.type == "reqTalk") {
+            console.log(userJson.userid);
+            console.log(resData.data.toId);
+            if(userJson.userid == resData.data.toId ){
+                $(".visitorDialogues").addClass("none");
+                $(".visitorDialogue ").removeClass("none");
+            } else {
+                $(".visitorDialogue").addClass("none");
+                $(".visitorDialogues ").removeClass("none");
+            }
         }
+
 
     };
 
