@@ -5,7 +5,6 @@ function serviceMaskCommon(json){
     var socket;
     var lockReconnect = false;
     var wsUrl = 'ws://120.27.211.112:8282';
-
     var userJson = JSON.parse(localStorage.getItem("userJson"));
     console.log(userJson);
     function loadScript(url, callback) {
@@ -70,8 +69,6 @@ function serviceMaskCommon(json){
                         $("#demo").addClass("none");
                         $(".visitorDialogues").removeClass("none");
                         createWebSocket(wsUrl);
-
-                        addWaitQueue()
                     } else {
                         alert(msg.message);
                     }
@@ -84,8 +81,6 @@ function serviceMaskCommon(json){
             $("#demo").addClass("none");
             $(".visitorDialogues").removeClass("none");
             createWebSocket(wsUrl);
-
-            addWaitQueue()
         } else {
             $("#demo").removeClass("none");
             $(".visitorDialogues").addClass("none");
@@ -101,11 +96,18 @@ function serviceMaskCommon(json){
 
     //监听收到的消息
     function onMessage(res) {
-        console.log(res.data);
-        var data = eval("(" + res.data + ")");
-        switch (data['message_type']) {
+        var resData = res.data;
+        console.log(resData);
+        // 进入对话状态 type : reqTalk
 
+        if(userJson.userid == resData.toId ){
+            $(".visitorDialogues").addClass("none");
+            $(".visitorDialogue ").removeClass("none");
+        } else {
+            $(".visitorDialogue").addClass("none");
+            $(".visitorDialogues ").removeClass("none");
         }
+
     };
 
     function initWebSocket() {

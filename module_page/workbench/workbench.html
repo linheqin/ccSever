@@ -412,7 +412,6 @@
     <script src="../../js/jq.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/layui.all.js"></script>
-    <script src="../../js/service_mask_common.js"></script>
     <script>
         $(function(){
             $(".nav_tit span").on("click", function(){
@@ -426,7 +425,8 @@
             var req = getQueryString();
             var companyId = req["companyId"];
             var memberId = req["memberId"];
-            var userId = req["userId"];
+            var severUserId = req["userId"];
+
 
             // websoket连接
             var socket;
@@ -463,6 +463,34 @@
                 }
                 $(".newsList").append('<li><div class="news"><img class="jiao" src="http://www.argen3630.com:8082/img/talk.jpg"><img src="'+ thisUrl +'"></div></li>')
             })
+
+            // 发送消息
+            $("#sendBtn").on("click", function(){
+                var thisVal = $("#dope").val();
+                var random = Math.random();
+                var thisVisitorId = $("#tallList .overflow.sel").attr("visitorId");
+                var toId = getUserId(thisVisitorId);
+                console.log("toId===" + toId);
+
+                var messageJson = {
+                    'type':'chatMessage' ,
+                    'msgId': random,
+                    data : {
+                        'to': {
+                            'id': toId,
+                        },
+                        'mine': {
+                            'content': thisVal,
+                            'type': '0',    // 文本消息 0 文件消息 1 表情消息 2
+                        }
+                    }
+                }
+                messageJson = JSON.stringify(messageJson);
+
+                sendMessage(messageJson)
+            })
+
+
 
             var itemListJsonData = [];  // 分组列表数据
             // 分类常用语组列表
@@ -829,14 +857,25 @@
                 var thisVisitorId = $(this).attr("visitorId");
                 $(this).addClass('sel').siblings().removeClass("sel");
 
-
+                var toId = getUserId(thisVisitorId);
+                var random = Math.random();
+                var reqTalkData = {
+                    'type': 'reqTalk' ,
+                    'msgId': random,
+                    'data' : {
+                        'fromId': severUserId,
+                        'toId':toId
+                    }
+                }
+                sendMessage(JSON.stringify(reqTalkData));
 
                 // 根据visitorId 获取 【聊天记录， 访客轨迹， 访客数据】
                 // getVisitorRecordList(thisVisitorId);
             })
 
             // 点击对话列表所得userId
-            function getUserId(visitorId){
+            function getUserId(id){
+                var userId = "";
                 $.ajax({
                     url: urlParam.getVisitor,
                     dataType: "json",
@@ -846,12 +885,14 @@
                     crossDomain: true,
                     async: false,
                     data:{
-                        visitorId: visitorId
+                        id: id
                     },
                     success: function (msg) {
-                        console.log();
+                        console.log(msg);
+                        userId = msg.object.userid;
                     }
                 })
+                return userId;
 
             }
 
@@ -894,12 +935,11 @@
                 $("#dope").val(dopeVal+ "\n" +thisVal);
             })
 
-            
-
             //连接成功时触发
             function onOpen() {
                 // 登录
-                var login_data = '{"type":"init","id":"' + userId + '", "username":"", "avatar":"", "sign":""}';
+                var login_data = '{"type":"init","id":"' + severUserId + '", "username":"", "avatar":"", "sign":""}';
+                console.log(severUserId);
                 socket.send(login_data);
                 console.log("websocket握手成功!");
             }
@@ -912,7 +952,6 @@
 
                 }
             };
-
             function initWebSocket() {
 
                 socket = new WebSocket(wsUrl);
