@@ -1,6 +1,9 @@
 function serviceMaskCommon(json){
     var json = json || {}
     json.companyId = json.companyId || 1;
+    var formId = "";
+    var toId = "";
+
     // websoket连接
     var socket;
     var lockReconnect = false;
@@ -87,7 +90,37 @@ function serviceMaskCommon(json){
             $("#demo").removeClass("none");
             $(".visitorDialogues").addClass("none");
         }
+
+        // 发送消息
+        $("#sendBtn").on("click", function(){
+            var thisVal = $("#dope").val();
+            sendMesg(thisVal);
+            scrollTop()
+        })
     });
+
+    function sendMesg(thisVal){
+        var random = Math.random();
+        var messageJson = {
+            'type':'chatMessage' ,
+            'msgId': random,
+            data : {
+                'to': {
+                    'id': formId,
+                },
+                'mine': {
+                    'content': thisVal,
+                    'type': '0',    // 文本消息 0 文件消息 1 表情消息 2
+                }
+            }
+        }
+        messageJson = JSON.stringify(messageJson);
+        var htmlStr = '<li><div class="answers"><img class="jiao" src="http://www.argen3630.com:8082/img/TIM图片20170926103645_03_02.jpg">'+ thisVal +'</div></li>'
+        $(".newsList").append(htmlStr);
+
+        sendMessage(messageJson);
+        $("#dope").val("");
+    }
 
     //连接成功时触发
     function onOpen() {
@@ -102,9 +135,13 @@ function serviceMaskCommon(json){
         console.log(resData);
 
         // 进入对话状态 type : reqTalk
+
         if(resData.type == "reqTalk") {
             console.log(userJson.userid);
             console.log(resData.data.toId);
+
+            formId = resData.data.fromId;
+
             if(userJson.userid == resData.data.toId ){
                 $(".visitorDialogues").addClass("none");
                 $(".visitorDialogue ").removeClass("none");
@@ -114,8 +151,24 @@ function serviceMaskCommon(json){
             }
         }
 
+        // 点击发送聊天
+        if(resData.message_type == "chatMessage" ){
+            var htmlStr = '<li><div class="news"><img class="jiao" src="http://www.argen3630.com:8082/img/talk.jpg">'+ resData.data.content +'</div></li>'
+            $(".newsList").append(htmlStr)
+        }
+
 
     };
+    function scrollTop(){
+        var conScroll = $(".RightCont").scrollTop();
+        console.log(conScroll);
+        var allHeigh = 0;
+        $(".RightCont li").each(function(){
+            var thisHeight = $(this).height() + 10;
+            allHeigh += thisHeight;
+        })
+        console.log(allHeigh);
+    }
 
     function initWebSocket() {
 

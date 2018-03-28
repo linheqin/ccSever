@@ -466,7 +466,16 @@
 
             // 发送消息
             $("#sendBtn").on("click", function(){
+                if($("#tallList .sel").length == 0){
+                    alert("需要选择一个用户！");
+                    return;
+                }
                 var thisVal = $("#dope").val();
+                if(thisVal == ""){
+                    alert("发送消息不能为空");
+                    return;
+                }
+
                 var random = Math.random();
                 var thisVisitorId = $("#tallList .overflow.sel").attr("visitorId");
                 var toId = getUserId(thisVisitorId);
@@ -487,7 +496,11 @@
                 }
                 messageJson = JSON.stringify(messageJson);
 
-                sendMessage(messageJson)
+                var htmlStr = '<li><div class="news"><img class="jiao" src="http://www.argen3630.com:8082/img/talk.jpg">'+ thisVal +'</div></li>'
+                $(".newsList").append(htmlStr);
+
+                sendMessage(messageJson);
+                $("#dope").val("");
             })
 
 
@@ -951,9 +964,11 @@
             //监听收到的消息
             function onMessage(res) {
                 console.log(res.data);
-                var data = eval("(" + res.data + ")");
-                switch (data['message_type']) {
-
+                var resData = JSON.parse(res.data);
+                // 点击发送聊天
+                if(resData.message_type == "chatMessage" ){
+                    var htmlStr = '<li><div class="answers"><img class="jiao" src="http://www.argen3630.com:8082/img/TIM图片20170926103645_03_02.jpg">'+ resData.data.content +'</div></li>'
+                    $(".newsList").append(htmlStr);
                 }
             };
             function initWebSocket() {
